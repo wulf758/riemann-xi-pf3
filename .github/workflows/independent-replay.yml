@@ -24,6 +24,14 @@ jobs:
         continue-on-error: true
         working-directory: artifact-v1
         run: python replay.py > replay.json
+      - name: Diagnose failing stages
+        if: always()
+        continue-on-error: true
+        working-directory: artifact-v1
+        run: |
+          python tools/rh_h1325_xi_global_d3_h811_assembly.py --no-write > h1325_primary.json 2> h1325_primary.err
+          python tools/rh_h1325_xi_global_d3_h811_independent_audit.py > h1325_independent.json 2> h1325_independent.err
+          python tools/rh_h1326_plucker_pf3_completion.py --full-report > h1326_main.json 2> h1326_main.err
       - name: Upload replay reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -32,6 +40,12 @@ jobs:
           path: |
             artifact-v1/verify.json
             artifact-v1/replay.json
+            artifact-v1/h1325_primary.json
+            artifact-v1/h1325_primary.err
+            artifact-v1/h1325_independent.json
+            artifact-v1/h1325_independent.err
+            artifact-v1/h1326_main.json
+            artifact-v1/h1326_main.err
       - name: Fail if replay failed
         if: steps.full.outcome != 'success'
         run: exit 1
