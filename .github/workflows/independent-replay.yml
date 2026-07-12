@@ -19,25 +19,30 @@ jobs:
       - name: Verify the untouched frozen artifact
         working-directory: artifact-v1
         run: python replay.py --verify-only > verify-original.json
-      - name: Create Linux audit copy and normalize serialized Windows paths
+      - name: Create Linux audit copy and patch cross-platform path parsing
         run: |
           cp -a artifact-v1 audit-artifact
           python - <<'PY'
-          import json
+          import hashlib
           from pathlib import Path
 
-          path = Path('audit-artifact/research/riemann/h1319_full_xi_compact_interval_certificate.json')
-          data = json.loads(path.read_text(encoding='utf-8'))
-          changed = 0
-          for row in data['r_proof_chain']['segments']:
-              normalized = row['path'].replace('\\', '/')
-              if normalized != row['path']:
-                  row['path'] = normalized
-                  changed += 1
-          if changed == 0:
-              raise SystemExit('No Windows-style paths were found to normalize')
-          path.write_text(json.dumps(data, indent=2, sort_keys=True) + '\n', encoding='utf-8')
-          print(f'normalized_paths={changed}')
+          assembly = Path('audit-artifact/tools/rh_h1325_xi_global_d3_h811_assembly.py')
+          text = assembly.read_text(encoding='utf-8')
+          old = 'Path(row["path"]).name'
+          new = 'Path(row["path"].replace("\\\\", "/")).name'
+          if text.count(old) != 1:
+              raise SystemExit(f'Expected exactly one path parser occurrence, found {text.count(old)}')
+          text = text.replace(old, new)
+          assembly.write_text(text, encoding='utf-8')
+          patched_sha = hashlib.sha256(assembly.read_bytes()).hexdigest().upper()
+
+          fail_closed = Path('audit-artifact/tools/rh_h1325_fail_closed_manifest.py')
+          fc_text = fail_closed.read_text(encoding='utf-8')
+          original_sha = '58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F'
+          if fc_text.count(original_sha) != 1:
+              raise SystemExit('Could not locate the pinned assembly hash exactly once')
+          fail_closed.write_text(fc_text.replace(original_sha, patched_sha), encoding='utf-8')
+          print(f'patched_assembly_sha256={patched_sha}')
           PY
       - name: Replay H1325 primary assembly
         working-directory: audit-artifact
