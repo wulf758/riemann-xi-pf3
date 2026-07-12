@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "ARTIFACT.json",
-      "sha256": "BF7F94900CFE405F2594B96EE3ECBB092C5D59DC001A156026DC8F1B52E1BB1C",
-      "size_bytes": 227
+      "sha256": "D27C5285A78D1701DF1598E27D8D9530DBEFFB85D0E0C932476993EFB352CB0E",
+      "size_bytes": 231
     },
     {
       "path": "paper/xi_pf3.tex",
@@ -13,18 +13,18 @@
     },
     {
       "path": "README.md",
-      "sha256": "B3DA7C3F03D40488B8DEC70E3AAA46B5E6A616419A4394D335EB3744EEA0E29C",
-      "size_bytes": 972
+      "sha256": "E91F586A270AA5A5142B9000FB3A90F66463B084BEF7543CE62E3186766EB379",
+      "size_bytes": 1112
     },
     {
       "path": "replay.py",
-      "sha256": "8451763068A0B916599AF0E47191B581C8DA6E715F1280105C50E4D5CE0AD9B5",
-      "size_bytes": 4167
+      "sha256": "FFB41660E4D49AC603FF5D85C51675519DE35D98EE71C30995D9B9A343E6B00D",
+      "size_bytes": 4176
     },
     {
       "path": "requirements.txt",
-      "sha256": "E3A239CB0BA5D541B1340898C1A7D9902682A6989F0A29FA5D2D421ADF4BC9DB",
-      "size_bytes": 51
+      "sha256": "58624DE1BE68D3EC42CEB99815D50CC3F9983518233BF703749835AEA721BA02",
+      "size_bytes": 65
     },
     {
       "path": "research/riemann/claude_d3_alias_repaired_finite_certificate.json",
@@ -848,8 +848,8 @@
     },
     {
       "path": "tools/build_pf3_artifact.py",
-      "sha256": "68FC16EDB7325C4D4B37E54514A15CD9F8992717B9BBC02608E7C970080C45B4",
-      "size_bytes": 4973
+      "sha256": "D53956409179182DE4FCD6B149EEA6E640C196DFB26811B726EF256B0FE383B9",
+      "size_bytes": 5154
     },
     {
       "path": "tools/claude_d3_alias_repaired_finite_certificate.py",
@@ -1173,7 +1173,7 @@
     },
     {
       "path": "tools/rh_h1325_fail_closed_manifest.py",
-      "sha256": "4318C8F166D15F84F7328C224019E80892D3CD56559F1886ACAF59FBE96241FA",
+      "sha256": "BDAF084E780E0F50B67FB3CDD0E548B1ADA5D24E2C7F1CB6FDC280722701D91E",
       "size_bytes": 7587
     },
     {
@@ -1193,8 +1193,8 @@
     },
     {
       "path": "tools/rh_h1325_xi_global_d3_h811_assembly.py",
-      "sha256": "58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F",
-      "size_bytes": 24252
+      "sha256": "6B44A88818E521FCA82C19347431EA03C07732C7AC4B1D7361DE8E418961795B",
+      "size_bytes": 24279
     },
     {
       "path": "tools/rh_h1325_xi_global_d3_h811_independent_audit.py",

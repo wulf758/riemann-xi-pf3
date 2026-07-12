@@ -1,0 +1,96 @@
+name: Independent PF3 replay
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: artifact-v1/requirements.txt
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r artifact-v1/requirements.txt
+
+      - name: Verify repository checksums
+        run: sha256sum --check SHA256SUMS
+
+      - name: Replay repository artifact
+        run: |
+          mkdir -p reports
+          python artifact-v1/replay.py --verify-only > reports/repository-verify.json
+          python artifact-v1/replay.py > reports/repository-replay.json
+
+      - name: Replay packaged archive
+        run: |
+          mkdir -p audit-release
+          unzip -q xi-pf3-artifact-v1.0.1.zip -d audit-release
+          python audit-release/xi-pf3-artifact-v1.0.1/replay.py --verify-only > reports/archive-verify.json
+          python audit-release/xi-pf3-artifact-v1.0.1/replay.py > reports/archive-replay.json
+
+      - name: Build independent Linux summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report_paths = [
+              Path("reports/repository-verify.json"),
+              Path("reports/repository-replay.json"),
+              Path("reports/archive-verify.json"),
+              Path("reports/archive-replay.json"),
+          ]
+          reports = {
+              path.name: json.loads(path.read_text(encoding="utf-8"))
+              for path in report_paths
+          }
+          all_checks_pass = all(
+              report.get("all_checks_pass") is True for report in reports.values()
+          )
+          summary = {
+              "classification": (
+                  "independent_linux_pf3_replay_pass"
+                  if all_checks_pass
+                  else "independent_linux_pf3_replay_failed"
+              ),
+              "all_checks_pass": all_checks_pass,
+              "python": "3.11",
+              "runner": "ubuntu-24.04",
+              "reports": {
+                  name: {
+                      "classification": report.get("classification"),
+                      "all_checks_pass": report.get("all_checks_pass"),
+                  }
+                  for name, report in reports.items()
+              },
+          }
+          Path("reports/independent-summary.json").write_text(
+              json.dumps(summary, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          print(json.dumps(summary, indent=2, sort_keys=True))
+          raise SystemExit(0 if all_checks_pass else 1)
+          PY
+
+      - name: Upload replay reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: independent-replay-reports
+          path: reports/

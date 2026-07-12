@@ -5,5 +5,5 @@
   "permanent_url_or_doi": null,
   "schema": "xi_pf3_artifact.v1",
   "title": "Xi PF3 proof artifact",
-  "version": "1"
+  "version": "1.0.1"
 }
