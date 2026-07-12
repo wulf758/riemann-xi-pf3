@@ -1,0 +1,66 @@
+{
+  "all_checks_pass": true,
+  "certificate_field_checks": {
+    "primary_D2_matches": true,
+    "primary_all_checks_pass": true,
+    "primary_jensen_discriminant_matches": true,
+    "primary_p4_formula_matches": true,
+    "primary_p4_value_matches": true,
+    "primary_special_M_matches": true,
+    "primary_special_R_matches": true,
+    "primary_special_T_ratio_matches": true,
+    "primary_special_a_matches": true,
+    "primary_special_q_matches": true,
+    "primary_toeplitz_determinant_matches": true
+  },
+  "checks": {
+    "R_closed_form_and_entire_bound_n_2_to_200": true,
+    "base_D2_reconstructed": true,
+    "base_T_ratio_reconstructed": true,
+    "closed_identities_n_3_to_200": true,
+    "d3_n_2_to_200": true,
+    "h803_n_2_to_200": true,
+    "jensen_discriminant": true,
+    "p4_formula_equals_toeplitz": true,
+    "pinned_certificate_fields": true,
+    "toeplitz_determinant": true,
+    "unit_barrier_n_3_to_200": true
+  },
+  "classification": "independent_fraction_audit_pass",
+  "implementation": "python_stdlib_fractions_no_primary_import",
+  "range": {
+    "n_max": 200,
+    "n_min": 2
+  },
+  "reconstructed": {
+    "D_2": "13/64",
+    "M_0_to_3": [
+      "1",
+      "2",
+      "12",
+      "90"
+    ],
+    "R_1_to_4": [
+      "1",
+      "1/2",
+      "1/4",
+      "5/32"
+    ],
+    "T_3_over_T_2": "5/12",
+    "a_0_to_4": [
+      "1",
+      "1",
+      "1/2",
+      "1/8",
+      "5/256"
+    ],
+    "jensen_discriminant": "-27/16",
+    "p4_formula_value": "-5/256",
+    "q_2_q_3_q_4": [
+      "1/2",
+      "1/2",
+      "5/8"
+    ],
+    "toeplitz_determinant": "-5/256"
+  }
+}

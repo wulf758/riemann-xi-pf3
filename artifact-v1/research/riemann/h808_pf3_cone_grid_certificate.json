@@ -1,0 +1,180 @@
+{
+  "schema": "rh_h808_pf3_cone_grid_certificate.v0",
+  "classification": "pf2_q_contiguous_d3_exhaustive_grid_survival",
+  "candidate_statement": "Positive Toeplitz sequence + PF2 + nondecreasing q_n + translated contiguous order-3 Toeplitz minors nonnegative implies all order-3 Toeplitz minors nonnegative.",
+  "grid": {
+    "parameters": {
+      "length": 7,
+      "denominator": 16,
+      "batch_size": 8192,
+      "float_tolerance": 0.0,
+      "exact_candidates_per_batch": 12
+    },
+    "stats": {
+      "grid_total": 170544,
+      "checked": 170544,
+      "completed_full_grid": true,
+      "contiguous_d3_nonnegative_float_candidates": 114201,
+      "elapsed_seconds": 30.109935700005735,
+      "exact_candidate_checks": 240,
+      "best_float_margin": -1.734723475976807e-18,
+      "best_float_margin_rows": [
+        0,
+        1,
+        2
+      ],
+      "best_float_margin_cols": [
+        1,
+        5,
+        8
+      ],
+      "best_q_ints": [
+        11,
+        14,
+        15,
+        16,
+        16,
+        16,
+        16
+      ],
+      "best_q_exact_diagnosis": {
+        "q_values": [
+          {
+            "fraction": "11/16",
+            "float": 0.6875
+          },
+          {
+            "fraction": "7/8",
+            "float": 0.875
+          },
+          {
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "fraction": "1",
+            "float": 1.0
+          },
+          {
+            "fraction": "1",
+            "float": 1.0
+          },
+          {
+            "fraction": "1",
+            "float": 1.0
+          },
+          {
+            "fraction": "1",
+            "float": 1.0
+          }
+        ],
+        "contiguous_d3_negative_count": 0,
+        "first_contiguous_d3_negative": null,
+        "all_order3_negative_count": 0,
+        "minimum_order3_minor": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            0,
+            5,
+            6
+          ],
+          "determinant": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        }
+      },
+      "best_contiguous_float_margin": -0.088623046875,
+      "best_contiguous_q_ints": [
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "best_contiguous_q_exact_diagnosis": {
+        "q_values": [
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          },
+          {
+            "fraction": "13/16",
+            "float": 0.8125
+          }
+        ],
+        "contiguous_d3_negative_count": 1,
+        "first_contiguous_d3_negative": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            1,
+            2,
+            3
+          ],
+          "determinant": {
+            "fraction": "-363/4096",
+            "float": -0.088623046875
+          }
+        },
+        "all_order3_negative_count": 84,
+        "minimum_order3_minor": {
+          "rows": [
+            0,
+            1,
+            2
+          ],
+          "cols": [
+            1,
+            2,
+            4
+          ],
+          "determinant": {
+            "fraction": "-1616199/16777216",
+            "float": -0.09633296728134155
+          }
+        }
+      }
+    },
+    "verified_counterexample": null
+  },
+  "decision": "The full monotone rational grid survived without a certified hard counterexample. This remains finite evidence, but it upgrades H807 from random no-hit to a symbolic-proof-worthy order-3 cone candidate.",
+  "limitations": [
+    "This is an exhaustive rational-grid certificate, not a continuum proof.",
+    "Float screening can miss candidates only if exact negativity is hidden behind nonnegative float margins; exact checks are applied to flagged negative candidates and best boundaries.",
+    "The statement is PF3, not PF-infinity or RH."
+  ],
+  "next_target": {
+    "name": "H809 symbolic sparse-minor decomposition",
+    "statement": "Try to decompose each order-3 Toeplitz minor as a nonnegative expression using PF2, q-monotonicity, and translated contiguous D3 constraints."
+  }
+}

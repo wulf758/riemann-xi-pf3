@@ -1,0 +1,85 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "D_prefix_exact_and_positive": true,
+    "D_tail_positive_coefficient_certificate": true,
+    "D_tail_sweep_n8_to_n256": true,
+    "D_tail_symbolic_identity": true,
+    "J4_coefficients_exact": true,
+    "J4_discriminant_exact_negative": true,
+    "PF2_all_minors_on_indices_0_to_20": true,
+    "degree2_prefix_positive": true,
+    "degree3_F_tail_negative_coefficient_certificate": true,
+    "degree3_F_tail_symbolic_identity": true,
+    "degree3_prefix_positive": true,
+    "entire_majorant_inputs": true,
+    "h804_margin_symbolic_identity": true,
+    "h804_sweep_n8_to_n256": true,
+    "h804_tau_symbolic_identity": true,
+    "jensen_degree2_degree3_sweep_shifts_0_to_256": true,
+    "pinned_primary_fields": true,
+    "prefix_q_nondecreasing_below_c": true,
+    "tail_q_delta_symbolic_identity": true,
+    "tail_q_numerical_sweep_n8_to_n256": true
+  },
+  "classification": "independent_fraction_polynomial_audit_pass",
+  "exact_symbolic_engine": "univariate polynomial numerator/denominator cross-products",
+  "finite_sweep": {
+    "jensen_shift_max": 256,
+    "jensen_shift_min": 0,
+    "n_max": 256,
+    "n_min": 8
+  },
+  "implementation": "python_stdlib_Fraction_no_SymPy_no_primary_code_import",
+  "primary_field_checks": {
+    "primary_D_tail_matches": true,
+    "primary_F_tail_matches": true,
+    "primary_J4_discriminant_matches": true,
+    "primary_all_checks_pass": true,
+    "primary_q_prefix_matches": true
+  },
+  "reconstructed": {
+    "D_2_to_D_7": [
+      "37926823/268435456",
+      "28183907/536870912",
+      "28382139/536870912",
+      "50157087/2147483648",
+      "58256935/4294967296",
+      "142163945/6979321856"
+    ],
+    "J4_coefficients_ascending": [
+      "1",
+      "4",
+      "39/8",
+      "71487/32768",
+      "11138032035/34359738368"
+    ],
+    "J4_discriminant": "-691976798016209978769928197/158456325028528675187087900672",
+    "PF2_minor_count_indices_0_to_20": 44100,
+    "degree2_prefix_normalized_discriminants": [
+      "3/4",
+      "89/128",
+      "11/24",
+      "67/128",
+      "61/160",
+      "43/128"
+    ],
+    "degree3_prefix_normalized_discriminants": [
+      "6829930341/17179869184",
+      "9833091326901/70368744177664",
+      "119928981575/824633720832",
+      "96969867412005/1125899906842624",
+      "2602796310705933/43980465111040000",
+      "4456654550901/70368744177664"
+    ],
+    "q_2_to_q_8": [
+      "13/32",
+      "141/256",
+      "85/128",
+      "89/128",
+      "193/256",
+      "201/256",
+      "201/256"
+    ]
+  }
+}

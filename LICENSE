@@ -1,0 +1,20 @@
+Licensing notice
+================
+
+Copyright (c) 2026 Cyril Rodaro
+
+This repository is distributed under two licenses:
+
+1. Source code and scripts, including Python files in `artifact-v1/tools/` and
+   the replay entry point, are licensed under the MIT License. The complete
+   terms are in `LICENSES/MIT.txt`.
+
+2. The manuscript, LaTeX source, documentation, mathematical certificates,
+   JSON data, and generated reports are licensed under the Creative Commons
+   Attribution 4.0 International License (CC BY 4.0). The complete terms are in
+   `LICENSES/CC-BY-4.0.txt`.
+
+The frozen ZIP contains the same project materials in archival form. Files that
+clearly identify a third-party source or a different license remain subject to
+the terms stated in those files; this notice does not relicense third-party
+material.

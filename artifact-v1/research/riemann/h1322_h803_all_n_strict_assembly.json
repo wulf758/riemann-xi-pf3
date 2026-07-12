@@ -1,0 +1,155 @@
+{
+  "schema": "rh_h1322_h803_all_n_strict_assembly.v1",
+  "classification": "h1322_h803_all_n_certified_h907_open",
+  "dependency_policy": {
+    "fail_closed": true,
+    "legacy_H801_or_H804_flags_used_for_finite_proof": false,
+    "finite_source_of_truth": "research/riemann/h1321_h801_alias_repaired_finite_h803.json",
+    "analytic_source_of_truth": [
+      "research/riemann/h1319_full_xi_compact_interval_certificate.json",
+      "research/riemann/h1319_piecewise_h920_conditional_assembly.json"
+    ],
+    "hashes_are_live_sha256": true
+  },
+  "coverage": [
+    {
+      "n": "2 <= n <= 126",
+      "source": "H1321 alias-repaired direct Arb H803 margins",
+      "conclusion": "exact H803 factorial threshold"
+    },
+    {
+      "n": "127 <= n <= 566",
+      "source": "H1319 compact full-Xi curvature plus H920 cube lemma",
+      "conclusion": "unit barrier, hence exact H803 threshold"
+    },
+    {
+      "n": "n >= 567",
+      "source": "H1319 compact/H1317 glued curvature plus H920 cube lemma",
+      "conclusion": "unit barrier, hence exact H803 threshold"
+    }
+  ],
+  "checks": {
+    "finite_h1321": {
+      "schema": true,
+      "classification": true,
+      "top_level_pass": true,
+      "internal_checks_all_true": true,
+      "finite_range_exact": true,
+      "finite_row_count_exact": true,
+      "finite_indices_exact": true,
+      "all_direct_h803_lower_floats_present": true,
+      "all_direct_h803_lower_floats_positive": true,
+      "all_q_lower_floats_positive": true,
+      "alias_formula_recorded": true,
+      "interval_inflation_recorded": true,
+      "canonical_parameters": true
+    },
+    "compact_h1319": {
+      "schema": true,
+      "classification": true,
+      "top_level_pass": true,
+      "internal_checks_all_true": true,
+      "kernel_full_xi": true,
+      "quantity_exact": true,
+      "lower_bound_exact": true,
+      "domain_exact": true,
+      "chain_starts_at_r125": true,
+      "chain_reaches_infinity": true,
+      "all_segments_pass": true,
+      "canonical_generator_exact": true
+    },
+    "piecewise_h920": {
+      "classification": true,
+      "conditional_logic_pass": true,
+      "compact_assumption_discharged": true,
+      "all_required_dependencies_pass": true,
+      "coverage_records_exact_blocks": true,
+      "analytic_tail_starts_at_127": true,
+      "reported_h803_all_n": true,
+      "compact_dependency_accepted": true,
+      "compact_interface_checks_all_true": true
+    },
+    "exact_integer_join": {
+      "finite_range_starts_at_2": true,
+      "finite_range_ends_at_126": true,
+      "analytic_range_starts_at_127": true,
+      "compact_geometric_threshold_passes_at_15": true,
+      "compact_geometric_predecessor_fails": true,
+      "glued_geometric_threshold_passes_at_567": true,
+      "glued_geometric_predecessor_fails": true,
+      "last_compact_block_cube_below_T71": true,
+      "coefficients_glue_in_correct_order": true
+    },
+    "notes": {
+      "h920_note_classification_present": true,
+      "h1319_verified_scope_warning_present": true,
+      "h1321_scope_warning_present": true
+    }
+  },
+  "all_checks_pass": true,
+  "dependencies": {
+    "h1321_h801_alias_repaired_finite_h803.json": {
+      "path": "research/riemann/h1321_h801_alias_repaired_finite_h803.json",
+      "sha256": "75817C6274C23D80044688248CE9540B0DAF3C249BF7E8B4EF8D1703AC9D2F4D",
+      "size_bytes": 1371600
+    },
+    "rh_h1321_h801_alias_repaired_finite_h803.py": {
+      "path": "tools/rh_h1321_h801_alias_repaired_finite_h803.py",
+      "sha256": "9F1527CFE56F758121FDD6B94A68F225734076EFDC64A499557F9F6627A46282",
+      "size_bytes": 11466
+    },
+    "rh_h1321_h801_alias_repaired_finite_h803_canonical.py": {
+      "path": "tools/rh_h1321_h801_alias_repaired_finite_h803_canonical.py",
+      "sha256": "FC99AC580BAFF7E5C40254BE739D7EE075FE43C695348E6C4E279E8F638B5651",
+      "size_bytes": 1082
+    },
+    "h1321_h801_alias_repaired_finite_h803.md": {
+      "path": "research/riemann/h1321_h801_alias_repaired_finite_h803.md",
+      "sha256": "677295D3CE10E507F7A9724133190F9FCCF224E96C9E4902D2DB077913FAF81C",
+      "size_bytes": 4024
+    },
+    "h1319_full_xi_compact_interval_certificate.json": {
+      "path": "research/riemann/h1319_full_xi_compact_interval_certificate.json",
+      "sha256": "DAA4646A67FE5BB0D4CCC0CBD96FE15141F7CCBB020C03D8B42ACE61D9DFAA7B",
+      "size_bytes": 9419
+    },
+    "rh_h1319_full_xi_compact_interval_canonical_certificate.py": {
+      "path": "tools/rh_h1319_full_xi_compact_interval_canonical_certificate.py",
+      "sha256": "5DEA428739F66238068391D36C5F74A5BC75C039558F2DEA07A064BD79FEA0C0",
+      "size_bytes": 4153
+    },
+    "h1319_piecewise_h920_conditional_assembly.json": {
+      "path": "research/riemann/h1319_piecewise_h920_conditional_assembly.json",
+      "sha256": "0F1687E4136A1EB02CA47E6283CADE51D44D3202B9BE7CE1CAC63423CF2B7759",
+      "size_bytes": 5549
+    },
+    "rh_h1319_piecewise_h920_conditional_assembly.py": {
+      "path": "tools/rh_h1319_piecewise_h920_conditional_assembly.py",
+      "sha256": "B9D092648B8FB383F0E79867BFC8FA9349222483EC96DC768C887FCD969DF2AB",
+      "size_bytes": 15462
+    },
+    "h1319_piecewise_h920_verified_closure.md": {
+      "path": "research/riemann/h1319_piecewise_h920_verified_closure.md",
+      "sha256": "295E97A1B9C30A9F3D177F1B10B320AFF50001C25928C366913247FD47E0509B",
+      "size_bytes": 2612
+    },
+    "h920_effective_finite_closure_gate.md": {
+      "path": "research/riemann/h920_effective_finite_closure_gate.md",
+      "sha256": "3657EDE97BEC154ADD52CFCFADB29EFF0A1A803408FBC63079D09606928FC3C8",
+      "size_bytes": 4527
+    }
+  },
+  "conclusions": {
+    "H803_factorial_threshold": "certified for every integer n >= 2",
+    "equivalent_q_statement": "q_(n+1) >= q_n for every integer n >= 2",
+    "H907_status": "open",
+    "not_proved": [
+      "global translated D3 from H877",
+      "all sparse order-3 Toeplitz minors",
+      "PF3",
+      "PF-infinity",
+      "all-degree Jensen hyperbolicity",
+      "the Riemann Hypothesis"
+    ]
+  }
+}

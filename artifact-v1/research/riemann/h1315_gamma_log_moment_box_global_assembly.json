@@ -1,0 +1,324 @@
+{
+  "all_checks_pass": true,
+  "canonical_verifier": "tools/rh_h1315_gamma_log_moment_box_global_certificate.py",
+  "classification": "h1315_gamma_log_moment_box_global_assembly_proved_from_audited_dependencies",
+  "coverage": {
+    "bands": [
+      {
+        "dependency": "H941",
+        "left": "2",
+        "passed": true,
+        "right": "5/2"
+      },
+      {
+        "dependency": "H1314+H1313+exact arithmetic",
+        "left": "5/2",
+        "passed": true,
+        "right": "infinity"
+      }
+    ],
+    "domain": "r>=2",
+    "no_gap": true,
+    "passed": true,
+    "seam": "5/2"
+  },
+  "cumulant_consequence": {
+    "centered_moment_factor": {
+      "decimal": "5",
+      "denominator": 1,
+      "fraction": "5",
+      "numerator": 5
+    },
+    "coefficient_factor": {
+      "decimal": "7",
+      "denominator": 1,
+      "fraction": "7",
+      "numerator": 7
+    },
+    "conclusion": "K_alpha'''(q)>=-35/(q^2*r_q) for alpha=9/4 and r_q>=2",
+    "final_constant": {
+      "decimal": "35",
+      "denominator": 1,
+      "fraction": "35",
+      "numerator": 35
+    },
+    "passed": true
+  },
+  "dependencies": {
+    "H1313": {
+      "note": {
+        "exists": true,
+        "passed": true,
+        "path": "research\\riemann\\h1313_h946_global_even_moment_bounds.md",
+        "required_fragments": [
+          {
+            "found": true,
+            "fragment": "h1313_h946_global_even_moment_subproblem_proved"
+          },
+          {
+            "found": true,
+            "fragment": "every `r>=5/2`"
+          },
+          {
+            "found": true,
+            "fragment": "E_r[W^2] <= 26/25"
+          },
+          {
+            "found": true,
+            "fragment": "E_r[W^4] <= 7/2"
+          },
+          {
+            "found": true,
+            "fragment": "E_r[W^6] <= 21"
+          }
+        ],
+        "sha256": "6d7dba5f90b7bed06a2a550d49029d4e7d926bc0d8e979fef8e30a5e2920952c"
+      },
+      "passed": true,
+      "rerun": {
+        "all_checks_pass": true,
+        "bounds": {
+          "M2": "26/25",
+          "M4": "7/2",
+          "M6": "21"
+        },
+        "dependency_pass": true,
+        "id": "h1313_h946_global_moment_assembly",
+        "passed": true,
+        "range": "r>=5/2"
+      }
+    },
+    "H1314": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h1314_uniform_pair_cap_proved_audited.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h1314_uniform_pair_cap_proved_audited_pending_verifier_persistence"
+        },
+        {
+          "found": true,
+          "fragment": "R_r(t) <= 51/100"
+        },
+        {
+          "found": true,
+          "fragment": "E[W^2 K]"
+        },
+        {
+          "found": true,
+          "fragment": "663/1250"
+        },
+        {
+          "found": true,
+          "fragment": "14229/5000"
+        }
+      ],
+      "sha256": "441b26de7606d80ed01eb66d2bc8076b9325d6bb0a9fb5bbfd35a8d720d858c9"
+    },
+    "H922": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h922_gamma_log_normalized_moment_box_gate.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h922_normalized_moment_box_gate_proved_moment_box_open"
+        },
+        {
+          "found": true,
+          "fragment": "B/A^3 <= 7/(q^2 r_q)"
+        },
+        {
+          "found": true,
+          "fragment": "K_alpha'''(q) >= -35/(q^2 r_q)"
+        },
+        {
+          "found": true,
+          "fragment": "alpha=9/4"
+        },
+        {
+          "found": true,
+          "fragment": "r_q>=2"
+        }
+      ],
+      "sha256": "543e328dacda2cd5dbfd3774d54d372f60721bca632632e0c4b3e3032a15a984"
+    },
+    "H922a": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h922a_gamma_log_mode_asymmetry_signs.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h922a_gamma_log_mode_asymmetry_signs_proved"
+        },
+        {
+          "found": true,
+          "fragment": "E[W] <= 0"
+        },
+        {
+          "found": true,
+          "fragment": "E[W^3] <= 0"
+        }
+      ],
+      "sha256": "17f0a250267c125365e8b416791af043e820cd84bf1b4acac4584f5b2e0ded62"
+    },
+    "H925": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h925_score_excess_budget_reduction.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h925_score_excess_budget_reduction_proved_budget_open"
+        },
+        {
+          "found": true,
+          "fragment": "E[W] = -E[N(W)]"
+        },
+        {
+          "found": true,
+          "fragment": "E[N(W)] <= a"
+        },
+        {
+          "found": true,
+          "fragment": "E[(W^2+2)N(W)] <= 3a"
+        }
+      ],
+      "sha256": "cce9f05ba934adbfe082a4cf49a4b5fc16c21c9e53474f95d6ff1565f44953f5"
+    },
+    "H927": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h927_gamma_log_a_le_one_low_threshold.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h927_gamma_log_a_le_one_r_ge_2_proved"
+        },
+        {
+          "found": true,
+          "fragment": "0<a<=1"
+        },
+        {
+          "found": true,
+          "fragment": "for every `r>=2`"
+        }
+      ],
+      "sha256": "b74eba4bc923164e6a2a92b4132ddc5a42cef8818e4b1ec43d7b194b59071e9d"
+    },
+    "H941": {
+      "exists": true,
+      "passed": true,
+      "path": "research\\riemann\\h941_gamma_log_score_adaptive_cover_to_2p50.md",
+      "required_fragments": [
+        {
+          "found": true,
+          "fragment": "h941_gamma_log_score_adaptive_cover_to_2p50_proved_local_computer_assisted"
+        },
+        {
+          "found": true,
+          "fragment": "2 <= r <= 2.50"
+        },
+        {
+          "found": true,
+          "fragment": "computer-assisted gamma-log H928 lower-sign"
+        },
+        {
+          "found": true,
+          "fragment": "Combining H925, H927, H922a, H922"
+        }
+      ],
+      "sha256": "17f7757ceb8449210a8dacc18a83c133899d9fec9a3f743ba1d0453b3a010071"
+    }
+  },
+  "dependency_checks_pass": true,
+  "does_not_prove": [
+    "effective full-Xi transfer constants",
+    "finite H920 closure",
+    "all-degree Jensen hyperbolicity or total positivity",
+    "the Riemann Hypothesis"
+  ],
+  "exact_arithmetic": {
+    "all_checks_pass": true,
+    "cubic_score_budget": {
+      "derivation": "(51/100)*(7/2+2*(26/25))",
+      "expected": {
+        "decimal": "2.8458",
+        "denominator": 5000,
+        "fraction": "14229/5000",
+        "numerator": 14229
+      },
+      "identity": "E[(W^2+2)N]/a=E[(W^2+2)W^2*K]",
+      "passed": true,
+      "target": "<3",
+      "value": {
+        "decimal": "2.8458",
+        "denominator": 5000,
+        "fraction": "14229/5000",
+        "numerator": 14229
+      }
+    },
+    "first_score_budget": {
+      "derivation": "(51/100)*(26/25)",
+      "expected": {
+        "decimal": "0.5304",
+        "denominator": 1250,
+        "fraction": "663/1250",
+        "numerator": 663
+      },
+      "identity": "E[N]/a=E[W^2*K]",
+      "passed": true,
+      "target": "<1",
+      "value": {
+        "decimal": "0.5304",
+        "denominator": 1250,
+        "fraction": "663/1250",
+        "numerator": 663
+      }
+    },
+    "inputs": {
+      "M2_upper": {
+        "decimal": "1.04",
+        "denominator": 25,
+        "fraction": "26/25",
+        "numerator": 26
+      },
+      "M4_upper": {
+        "decimal": "3.5",
+        "denominator": 2,
+        "fraction": "7/2",
+        "numerator": 7
+      },
+      "uniform_pair_cap": {
+        "decimal": "0.51",
+        "denominator": 100,
+        "fraction": "51/100",
+        "numerator": 51
+      }
+    }
+  },
+  "id": "h1315_gamma_log_moment_box_global_assembly",
+  "moment_box_assembly": {
+    "H922a_upper_signs": "E[W]<=0 and E[W^3]<=0",
+    "H925_lower_signs": "E[W]>=-a and E[W^3]>=-3a",
+    "H927_cubic_coefficient": "0<a<=1",
+    "passed": true
+  },
+  "statement": {
+    "alpha": "9/4",
+    "conclusion": "K_alpha'''(q)>=-35/(q^2*r_q)",
+    "moment_box": [
+      "0<a<=1",
+      "-a<=E[W]<=0",
+      "E[W^3]>=-3a"
+    ],
+    "range": "r_q>=2"
+  },
+  "verification_scope": {
+    "attested": "H1314, H941, H925, H922a, H927, H922 theorem statements",
+    "limitation": "does not recreate H1314's polynomial/Arb proof",
+    "rerun": "H1313 compact Arb/dependency certificate"
+  }
+}

@@ -1,0 +1,918 @@
+{
+  "schema": "rh_h816_d3_cone_sparse_row_coupling.v0",
+  "classification": "h816_d3_cone_direct_certificate_no_hit",
+  "candidate_certificate": "P(q) = Q(q) + sum c_i M_i(q) D3_{s_i}(q), where Q has nonnegative coefficients, c_i>0, M_i are monomials, and D3_s are translated contiguous order-3 Toeplitz minors normalized by positive factors.",
+  "d3_shape": "D3_k = 1 - 2 q_k + q_k^2 q_{k+1} + q_{k-1} q_k^2 - q_{k-1} q_k^2 q_{k+1} for k>=3, with the k=2 endpoint D3_2=1-2q2+q2^2 q3.",
+  "counts": {
+    "h815_remaining_input": 356,
+    "covered_by_direct_d3_cone": 0,
+    "uncovered": 356
+  },
+  "covered_family_counts": [],
+  "uncovered_family_counts": [
+    [
+      "row_gaps=(1,2), col_gaps=(1,2)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,1)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,1)",
+      10
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,3)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,2)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,4)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,2)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,5)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,3), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,3), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(5,1), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(5,1), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(5,2), col_gaps=(1,1)",
+      1
+    ]
+  ],
+  "covered_examples": [],
+  "uncovered_examples": [
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5 - q2*q3*q4 + q2*q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5^2*q6 - q2*q3*q4 + q2*q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,4)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        4,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5^2*q6^2*q7 - q2*q3*q4 + q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        5,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        4,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5^2*q6 - q2*q3*q4*q5 + q2*q3*q4^2*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        5,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        7,
+        5,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5^2*q6^2*q7 - q2*q3*q4*q5 + q2*q3*q4^2*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        6,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(5,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        6,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q5*q6^2*q7 - q2*q3*q4*q5*q6 + q2*q3*q4*q5^2*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4 + q2*q3^3*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5 + q2*q3^3*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,4)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5^2*q6 + q2*q3^3*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,5)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5^2*q6^2*q7 + q2*q3^3*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 3,
+      "polynomial": "1 - 2*q3*q4 + q3^2*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q3*q4^2*q5 + q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    }
+  ],
+  "decision": "The direct monomial-D3 cone did not certify any H815 remainder form. This argues against another local coefficient-greedy refinement; move to Plucker-Dodgson identities or the Xi-kernel analytic pivot.",
+  "next_target": {
+    "name": "H817 Plucker-Dodgson sparse-row identity",
+    "statement": "Search for determinant identities expressing remaining sparse-row minors through H811-covered consecutive-row minors, PF2 minors, and D3 inputs. If direct identities are circular, pivot to the H804 Xi-kernel unit-deficit route."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "rh_h1324_moment_jensen_laguerre_transfer.v0",
+  "classification": "exact_transfer_proved_generic_mixture_shortcut_invalidated",
+  "definitions": {
+    "moments": "M_m = integral u^(2m) dmu(u)",
+    "ordinary_coefficients": "a_m = M_m/(2m)!",
+    "jensen_coefficients": "gamma_m = m!*a_m = m!*M_m/(2m)!",
+    "jensen_polynomial": "J_gamma^(d,n)(X) = sum_(j=0)^d binom(d,j)*gamma_(n+j)*X^j"
+  },
+  "transfer_theorem": {
+    "range": "integers d,n >= 0, whenever M_(n),...,M_(n+d) are finite",
+    "constant": "K_(d,n) = sqrt(pi)*d!/(4^n*Gamma(n+d+1/2))",
+    "identity": "J_gamma^(d,n)(X) = K_(d,n) integral u^(2n) L_d^(n-1/2)(-u^2*X/4) dmu(u)"
+  },
+  "coefficient_proof": {
+    "laguerre_expansion": "L_d^(alpha)(z) = sum_(j=0)^d Gamma(d+alpha+1)/[Gamma(alpha+j+1)(d-j)!j!]*(-z)^j",
+    "raw_M_n_plus_j_coefficient": "4**(-j - n)*sqrt(pi)*gamma(d + 1)/(gamma(j + 1)*gamma(d - j + 1)*gamma(j + n + 1/2))",
+    "duplication_identity": "sqrt(pi)/(4^m*Gamma(m+1/2)) = Gamma(m+1)/Gamma(2m+1), m=n+j",
+    "after_duplication": "gamma(d + 1)*gamma(j + n + 1)/(gamma(j + 1)*gamma(d - j + 1)*gamma(2*j + 2*n + 1))",
+    "target": "binomial(d,j)*(n+j)!/(2n+2j)!",
+    "target_times_moment": "binomial(d,j)*gamma_(n+j)",
+    "symbolic_ratio": "1",
+    "sympy_exact_grid": {
+      "d_min": 0,
+      "d_max": 8,
+      "n_min": 0,
+      "n_max": 6,
+      "coefficient_checks": 315
+    }
+  },
+  "xi_specialization": {
+    "abstract_positive_measure": "Psi(z)=xi(1/2+z)=integral cosh(z*u)dmu_Psi(u); Xi(t)=Psi(i*t)=integral cos(t*u)dmu_Psi(u)",
+    "dbn_convention": "xi(1/2+z)=8*integral_0^infinity Phi_DBN(U)*cosh(2zU)dU",
+    "pushforward_measure": "dmu_Psi(u)=4*Phi_DBN(u/2)du",
+    "moment_normalization": "M_m=integral u^(2m)dmu_Psi(u)=8*4^m*integral_0^infinity U^(2m)Phi_DBN(U)dU",
+    "warning": "Writing dmu=Phi(u)du is exact only if Phi denotes the rescaled Psi-kernel 4*Phi_DBN(u/2); this avoids losing the factors 8 and 4^m."
+  },
+  "atomic_hyperbolicity": {
+    "statement": "For one atom u0>0, J is a positive constant times L_d^(n-1/2)(-u0^2 X/4), hence is hyperbolic.",
+    "roots": "X_k(u0)=-4*lambda_(d,k)^(n-1/2)/u0^2, k=1,...,d",
+    "reason": "n-1/2>-1, so all generalized-Laguerre roots lambda_(d,k) are positive."
+  },
+  "common_interlacing_audit": {
+    "observation": "The atomic root sets are u^(-2) dilations.  On continuous support in u>0, each root curve sweeps toward -infinity as u tends to 0 and toward 0 from below as u tends to infinity.",
+    "conclusion": "No fixed common interlacer is supplied by the representation itself, so the standard common-interlacing sufficient lemma for positive mixtures cannot be invoked automatically.  This is not a theorem that common interlacing or every other preservation mechanism is impossible."
+  },
+  "h790_canary": {
+    "x_measure": "nu=(9/10)delta_1+(1/10)delta_16 in x=u^2",
+    "equivalent_u_measure": "mu=(9/10)delta_1+(1/10)delta_4 in u",
+    "moments_M0_M1_M2": [
+      "1",
+      "5/2",
+      "53/2"
+    ],
+    "gamma_0_1_2": [
+      "1",
+      "5/4",
+      "53/24"
+    ],
+    "J_gamma_2_0": "53*X**2/24 + 5*X/2 + 1",
+    "discriminant": "-31/12",
+    "verdict": "The discriminant is negative, so a positive mixture of individually hyperbolic Laguerre atoms need not be hyperbolic."
+  },
+  "remaining_gap": {
+    "statement": "Prove, using structure special to the Xi measure, that the displayed Laguerre mixture is hyperbolic uniformly for every d,n>=0 (or prove an equivalent all-degree criterion).",
+    "status": "open_not_claimed",
+    "scope": "H1324 is an exact transfer plus an exact obstruction to the generic mixing shortcut.  It does not prove Jensen hyperbolicity, PF-infinity, or RH."
+  },
+  "checks": {
+    "symbolic_duplication_ratio_is_one": true,
+    "sympy_assoc_laguerre_grid": true,
+    "h790_moments_are_1_5over2_53over2": true,
+    "h790_jensen_polynomial": true,
+    "h790_integral_equals_jensen": true,
+    "h790_discriminant_is_minus_31_over_12": true,
+    "atomic_root_argument_maps_to_lambda": true
+  },
+  "all_checks_pass": true
+}

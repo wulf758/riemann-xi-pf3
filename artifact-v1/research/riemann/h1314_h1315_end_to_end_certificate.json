@@ -1,0 +1,303 @@
+{
+  "H1315_to_H1317_link": {
+    "all_checks_pass": true,
+    "checks": {
+      "B_Xi_matches": true,
+      "both_certificates_pass": true,
+      "both_ids_match": true,
+      "both_runs_succeed": true,
+      "deterministic_stdout": true,
+      "full_bound_consumes_70": true,
+      "q_2t_third_derivative_conversion": true
+    },
+    "conversion": "8*35/(2^2)=70 because q=2t and d_t^3=8*d_q^3",
+    "converted_gamma_log_constant": 70,
+    "runs": [
+      {
+        "B_Xi": 45450578214,
+        "all_checks_pass": true,
+        "certificate_id": "h1317_effective_xi_transfer_assembly",
+        "full_bound": "kappa_Xi'''(t) >= -(70/r(t)+B_Xi/t)/t^2",
+        "returncode": 0,
+        "run": 1,
+        "stdout_sha256": "4669b4bf28e9a928bd69c2f62a1a9461390da08ea6823b88c459232d23680e2c"
+      },
+      {
+        "B_Xi": 45450578214,
+        "all_checks_pass": true,
+        "certificate_id": "h1317_effective_xi_transfer_assembly",
+        "full_bound": "kappa_Xi'''(t) >= -(70/r(t)+B_Xi/t)/t^2",
+        "returncode": 0,
+        "run": 2,
+        "stdout_sha256": "4669b4bf28e9a928bd69c2f62a1a9461390da08ea6823b88c459232d23680e2c"
+      }
+    ],
+    "script": "tools/rh_h1317_effective_xi_transfer_assembly.py"
+  },
+  "all_checks_pass": true,
+  "analytic_dependency_boundary": "polynomial, interval, rational, artifact-coverage and constant assemblies are regenerated; cited analytic identities are persisted in the H1314 pairing bridge and their source notes",
+  "components": [
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h921_explicit_saddle_main_coefficient_certificate.json",
+      "name": "H921_main_coefficient",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h921_explicit_saddle_main_coefficient_certificate",
+          "expected_id": "h921_explicit_saddle_main_coefficient_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "5cdbb2ffe83f64ec5acd23c75738338c8a73a54d041732d0fefe49dcb7950376",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h921_explicit_saddle_main_coefficient_certificate",
+          "expected_id": "h921_explicit_saddle_main_coefficient_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "5cdbb2ffe83f64ec5acd23c75738338c8a73a54d041732d0fefe49dcb7950376",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h921_explicit_saddle_main_coefficient_certificate.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h941_gamma_log_score_cover_assembly.json",
+      "name": "H941_low_band",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h941_gamma_log_score_cover_assembly",
+          "expected_id": "h941_gamma_log_score_cover_assembly",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "e85cec58fe242e2b475a3b02b70d32679c30fe79baad36c8ffb365f5d9afaed5",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h941_gamma_log_score_cover_assembly",
+          "expected_id": "h941_gamma_log_score_cover_assembly",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "e85cec58fe242e2b475a3b02b70d32679c30fe79baad36c8ffb365f5d9afaed5",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h941_gamma_log_score_cover_assembly.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h943c_u4_five_interval_certificate.json",
+      "name": "H943C_U4",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h943c_u4_five_interval_certificate",
+          "expected_id": "h943c_u4_five_interval_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "712d2770b125f4b252d2acd960e7568a6cfb972c6bda5392fc9720c66e0db142",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h943c_u4_five_interval_certificate",
+          "expected_id": "h943c_u4_five_interval_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "712d2770b125f4b252d2acd960e7568a6cfb972c6bda5392fc9720c66e0db142",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h943c_u4_five_interval_certificate.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1314_h943c_parameter_polynomial_certificate.json",
+      "name": "H1314_parameters",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_parameter_polynomial_certificate",
+          "expected_id": "h1314_h943c_parameter_polynomial_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "ba233fcd6441545b31bf48a9d9cfad7c26c3c82d9b88cd204c48b765cc4ab421",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_parameter_polynomial_certificate",
+          "expected_id": "h1314_h943c_parameter_polynomial_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "ba233fcd6441545b31bf48a9d9cfad7c26c3c82d9b88cd204c48b765cc4ab421",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1314_h943c_parameter_polynomial_verifier.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1314_h943c_pairing_tail_bridge.json",
+      "name": "H1314_pairing_tail_bridge",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_pairing_tail_bridge",
+          "expected_id": "h1314_h943c_pairing_tail_bridge",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "72e9fee9ebe6b5e8079a61d54def49772a4c5d20d111505df0f0cf5eab3c9e23",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_pairing_tail_bridge",
+          "expected_id": "h1314_h943c_pairing_tail_bridge",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "72e9fee9ebe6b5e8079a61d54def49772a4c5d20d111505df0f0cf5eab3c9e23",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1314_h943c_pairing_tail_bridge.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1314_h943c_uniform_pair_certificate.json",
+      "name": "H1314_uniform_pair",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_uniform_pair_certificate",
+          "expected_id": "h1314_h943c_uniform_pair_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "99ce26e70c7a9f85c8d8d923e9012149a1dded61ed53cc660b9442b995460658",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_uniform_pair_certificate",
+          "expected_id": "h1314_h943c_uniform_pair_certificate",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "99ce26e70c7a9f85c8d8d923e9012149a1dded61ed53cc660b9442b995460658",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1314_h943c_uniform_pair_verifier.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1315_gamma_log_moment_box_global_assembly.json",
+      "name": "H1315_moment_box",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1315_gamma_log_moment_box_global_assembly",
+          "expected_id": "h1315_gamma_log_moment_box_global_assembly",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "f4d38af9ff4c601f960790b5ded7e6d26fb191482ee0ecff1e3983d5bb2ca941",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1315_gamma_log_moment_box_global_assembly",
+          "expected_id": "h1315_gamma_log_moment_box_global_assembly",
+          "id_matches": true,
+          "json_exists": true,
+          "json_sha256": "f4d38af9ff4c601f960790b5ded7e6d26fb191482ee0ecff1e3983d5bb2ca941",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1315_gamma_log_moment_box_global_certificate.py"
+    }
+  ],
+  "dependency_cross_links": {
+    "H1314_budgets": [
+      "663/1250",
+      "14229/5000"
+    ],
+    "H1315_budgets": [
+      "663/1250",
+      "14229/5000"
+    ],
+    "H1315_factors": {
+      "centered_moment": 5,
+      "gamma_log_constant": 35,
+      "main_coefficient": 7
+    },
+    "all_checks_pass": true,
+    "checks": {
+      "H1314_first_budget": true,
+      "H1314_second_budget": true,
+      "H1315_centered_factor": true,
+      "H1315_final_factor": true,
+      "H1315_first_budget_matches_H1314": true,
+      "H1315_global_coverage": true,
+      "H1315_high_band_uses_H1314": true,
+      "H1315_low_band_matches_H941": true,
+      "H1315_moment_box": true,
+      "H1315_second_budget_matches_H1314": true,
+      "H921_conclusion": true,
+      "H921_factor_matches_H1315": true,
+      "H921_range": true,
+      "H941_artifact_count_23": true,
+      "H941_box_count_724": true,
+      "H941_coverage_passes": true,
+      "H941_exact_domain": true,
+      "bridge_pairing_residual_zero": true,
+      "bridge_parameter_hash": true,
+      "bridge_parameter_path": true,
+      "uniform_U4_id": true,
+      "uniform_parameter_id": true,
+      "uniform_parameter_path": true,
+      "uniform_tail_matches_bridge_H1": true,
+      "uniform_tail_matches_bridge_derivative": true
+    }
+  },
+  "id": "h1314_h1315_end_to_end_certificate",
+  "redundant_open_reproducibility_item": "the stronger H946 R<=1/2+C_r*t^2 polynomial is absent from AXMEM; it is not used by this H1314-H1315-H1317 route"
+}

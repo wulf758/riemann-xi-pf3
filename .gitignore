@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+
+# Present only inside the canonical ZIP. Windows cannot safely version this name.
+artifact-v1/NUL.md

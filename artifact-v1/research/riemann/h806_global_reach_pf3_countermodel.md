@@ -1,0 +1,271 @@
+# H806 Global Reach PF3 Countermodel Audit
+
+Classification: `pf2_q_contiguous_d3_counterexample_not_found_bounded_search`
+
+## Question
+
+Does the current H804/H805-style ratio control have global PF3 force, or only local force for selected sparse families?
+
+## Weak Counterexample
+
+PF2 + q_monotone alone does not imply PF3.
+
+```json
+{
+  "q_values": [
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "2/3",
+      "float": 0.6666666666666666
+    },
+    {
+      "fraction": "2/3",
+      "float": 0.6666666666666666
+    }
+  ],
+  "ratios": [
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "1/144",
+      "float": 0.006944444444444444
+    },
+    {
+      "fraction": "1/1728",
+      "float": 0.0005787037037037037
+    },
+    {
+      "fraction": "1/20736",
+      "float": 4.8225308641975306e-05
+    },
+    {
+      "fraction": "1/31104",
+      "float": 3.2150205761316875e-05
+    },
+    {
+      "fraction": "1/46656",
+      "float": 2.143347050754458e-05
+    }
+  ],
+  "sequence": [
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "1/12",
+      "float": 0.08333333333333333
+    },
+    {
+      "fraction": "1/1728",
+      "float": 0.0005787037037037037
+    },
+    {
+      "fraction": "1/2985984",
+      "float": 3.3489797668038406e-07
+    },
+    {
+      "fraction": "1/61917364224",
+      "float": 1.615055828898457e-11
+    },
+    {
+      "fraction": "1/1925877696823296",
+      "float": 5.192437721509958e-16
+    },
+    {
+      "fraction": "1/89853749822987698176",
+      "float": 1.1129196076624567e-20
+    }
+  ],
+  "first_negative_minor": {
+    "rows": [
+      0,
+      1,
+      2
+    ],
+    "cols": [
+      5,
+      6,
+      7
+    ],
+    "determinant": {
+      "fraction": "-1/9613740708890677156322486802972672",
+      "float": -1.0401778353302284e-34
+    }
+  },
+  "negative_minor_count": 1,
+  "contiguous_d3": [
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        0,
+        1,
+        2
+      ],
+      "determinant": {
+        "fraction": "1",
+        "float": 1.0
+      },
+      "nonnegative": true
+    },
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        1,
+        2,
+        3
+      ],
+      "determinant": {
+        "fraction": "1441/1728",
+        "float": 0.8339120370370371
+      },
+      "nonnegative": true
+    },
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        2,
+        3,
+        4
+      ],
+      "determinant": {
+        "fraction": "17303/35831808",
+        "float": 0.0004828949742083905
+      },
+      "nonnegative": true
+    },
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        3,
+        4,
+        5
+      ],
+      "determinant": {
+        "fraction": "17303/106993205379072",
+        "float": 1.6172054981151623e-10
+      },
+      "nonnegative": true
+    },
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        4,
+        5,
+        6
+      ],
+      "determinant": {
+        "fraction": "4345/138015359728109104398336",
+        "float": 3.148200322456624e-20
+      },
+      "nonnegative": true
+    },
+    {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        5,
+        6,
+        7
+      ],
+      "determinant": {
+        "fraction": "-1/9613740708890677156322486802972672",
+        "float": -1.0401778353302284e-34
+      },
+      "nonnegative": false
+    }
+  ]
+}
+```
+
+## Hard Search
+
+Search for PF2 + q_monotone + contiguous_D3_nonnegative but not PF3.
+
+Parameters:
+
+```json
+{
+  "length": 7,
+  "denominator": 64,
+  "attempts": 25000,
+  "seconds": 20.0,
+  "seed": 806
+}
+```
+
+Stats:
+
+```json
+{
+  "checked": 234,
+  "contiguous_d3_nonnegative_candidates": 172,
+  "elapsed_seconds": 20.04861009999877
+}
+```
+
+No hard counterexample found in the bounded search.
+
+
+## Decision
+
+A weak PF2+q counterexample exists, but the bounded hard search did not find a counterexample that also keeps all translated contiguous D3 minors nonnegative. This is not proof; it suggests a possible structural lemma worth formalizing or testing with a stronger solver.
+
+## Limitations
+
+- The hard search is bounded random evidence, not a theorem.
+- The weak counterexample already blocks PF2+q_monotone as a global route.
+- Failure to find the hard counterexample may reflect the search distribution.
+- No statement here invalidates JP2' for the Xi coefficients.
+
+## Next Target
+
+`H807 essential-minor or hard solver audit`: Either prove a PF2+q+contiguous-D3-to-PF3 theorem from total-positivity literature, or use SAT/SMT/nonlinear search to find a hard counterexample.

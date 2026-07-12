@@ -1,0 +1,24 @@
+{
+  "all_checks_pass": true,
+  "argument": "H927 gives a>0 and H943 gives K_r>=0. Thus X=E[W^2 K_r]>=0 and Y=E[(W^2+2)W^2 K_r]>=0; the terms -Y and -2*a^2*X^3 are nonpositive, so kappa3(W)/a<=3*X*E2 is valid.",
+  "checks": {
+    "H1325_main_passes": true,
+    "H927_a_strictly_positive": true,
+    "H943_X_nonnegative_expectation": true,
+    "H943_Y_nonnegative_expectation": true,
+    "H943_exact_K_nonnegative": true,
+    "H943_exact_N_identity": true,
+    "high_F_direct_certificate": true,
+    "high_X_upper_exact": true,
+    "high_identity_exact": true
+  },
+  "classification": "h1325_high_band_discarded_terms_sign_closed",
+  "conclusion": "H1325's high-band upper third-cumulant envelope has all discarded-term signs explicitly certified.",
+  "dependency_hashes": {
+    "research\\riemann\\h1319_full_xi_high_band_r22_analytic_certificate.json": "E93AEB7D4FC9DA17BF76E7D65403F95278511C2822ADA115D18980F636DD9519",
+    "research\\riemann\\h1325_xi_global_d3_h811_consecutive_rows.json": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "research\\riemann\\h927_gamma_log_a_le_one_low_threshold.md": "B74EBA4BC923164E6A2A92B4132DDC5A42CEF8818E4B1EC43D7B194B59071E9D",
+    "research\\riemann\\h943_score_excess_taylor_bridge.md": "D215EBECE963E8823358631CFE1CB020645B4C9293D14E0961415470793562C7"
+  },
+  "schema": "rh_h1325_high_band_sign_audit.v0"
+}

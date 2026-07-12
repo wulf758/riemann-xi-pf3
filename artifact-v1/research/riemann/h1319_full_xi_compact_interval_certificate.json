@@ -1,0 +1,271 @@
+{
+  "all_checks_pass": true,
+  "canonical_generator": "tools/rh_h1319_full_xi_compact_interval_canonical_certificate.py",
+  "checks": {
+    "all_component_hashes_present": true,
+    "all_four_junctions_exact": true,
+    "all_local_lower_bounds_pass": true,
+    "full_domain_covered": true,
+    "full_xi_kernel": true,
+    "high_band_reaches_r71": true,
+    "independent_mean_value_audit_pass": true,
+    "rigorous_interval_arithmetic": true,
+    "saddle_map_covers_t_domain": true
+  },
+  "claim": {
+    "kernel": "full_xi",
+    "lower_bound": "-3/4",
+    "quantity": "t^2*kappa_Xi'''(t)",
+    "saddle_map": "t(r)=(pi*r*exp(r)-(9/4)r-1)/2",
+    "t_domain": {
+      "closed": true,
+      "lower": "125",
+      "upper": "T_71"
+    }
+  },
+  "classification": "h1319_full_xi_compact_interval_closed",
+  "independent_mean_value_audit": {
+    "H1272": {
+      "path": "research/riemann/h1272_gamma_log_even_moment_tail_global.json",
+      "sha256": "AC2749038BAC64DB6F9A14F9DE326BD07C0B9522793CDC347BFC641C9C6E6DA9"
+    },
+    "checks": {
+      "H1272_audit_pass": true,
+      "H1272_live_hash_matches": true,
+      "H1272_range_is_r_ge_5_over_2": true,
+      "all_three_mean_reports_audited": true,
+      "audit_all_checks_pass": true,
+      "audit_classification": true,
+      "audit_declared_canonical": true,
+      "audit_id": true,
+      "audit_runner_all_checks_pass": true,
+      "audit_runner_exit_zero": true,
+      "audited_union_gap_free": true,
+      "audited_union_has_360_boxes": true,
+      "audited_union_is_4_to_22": true,
+      "detailed_report_hashes_match_audit": true,
+      "dual_oracle_all_pass": true,
+      "dual_oracle_failures_empty": true,
+      "engine_live_hash_matches": true,
+      "oracle_digits_at_least_115": true,
+      "oracle_has_explicit_formatting_radius": true,
+      "oracle_mpmath_dps_at_least_140": true,
+      "proof_structure_checks_all_true": true,
+      "runner_live_hash_matches": true,
+      "symbolic_checks_all_true": true
+    },
+    "engine": {
+      "path": "tools/rh_h1319_full_xi_score_mean_value_r_cover_arb.py",
+      "sha256": "229BA6EAA67B4E2E48506A08050851FAB40F0E1941A1DA3F1AC560155355DE2F"
+    },
+    "oracle": {
+      "comparison_count": 180,
+      "explicit_decimal_formatting_radius": true,
+      "formatted_significant_digits": 115,
+      "mpmath_dps": 140
+    },
+    "passes": true,
+    "path": "research/riemann/h1319_score_mean_value_independent_audit_canonical.json",
+    "sha256": "560871B1AB60F15627A917454CC8B48C5A8DCA267301526C333D503588EDD63B"
+  },
+  "r_proof_chain": {
+    "junctions": [
+      [
+        "4",
+        "4"
+      ],
+      [
+        "5",
+        "5"
+      ],
+      [
+        "10",
+        "10"
+      ],
+      [
+        "22",
+        "22"
+      ]
+    ],
+    "lower": "r(125)",
+    "segments": [
+      {
+        "checks": {
+          "all_segment_checks_pass": true,
+          "bracket_passes": true,
+          "classification": true,
+          "desired_closed": true,
+          "desired_lower": true,
+          "desired_upper": true,
+          "internal_checks_all_true": true,
+          "kernel": true,
+          "lower_bound": true,
+          "quantity": true,
+          "schema": true,
+          "t_lower": true
+        },
+        "kind": "quotient_free_arb",
+        "passes": true,
+        "path": "research\\riemann\\h1319_full_xi_segment_interval_certificate.json",
+        "r_domain": {
+          "closed": true,
+          "lower": "r(125)",
+          "upper": "4"
+        },
+        "sha256": "6ED85D97810609453E6EB890C8A5EEE6D0F7F29DD2F509C3A3C6DFA66888525C"
+      },
+      {
+        "accepted_box_count": 20,
+        "checks": {
+          "all_boxes_pass": true,
+          "all_checks_pass": true,
+          "all_margin_lowers_positive": true,
+          "boxes_contiguous": true,
+          "boxes_nonempty": true,
+          "boxes_parse": true,
+          "classification": true,
+          "ends_exactly": true,
+          "global_checks_all_true": true,
+          "id": true,
+          "mean_value_not_sampling": true,
+          "no_finite_differences": true,
+          "r_method_recorded": true,
+          "reported_domain": true,
+          "starts_exactly": true,
+          "summary_box_count": true,
+          "unresolved_empty": true
+        },
+        "kind": "score_mean_value_arb",
+        "passes": true,
+        "path": "research\\riemann\\h1319_full_xi_score_mean_value_r_cover_4_5.json",
+        "r_domain": {
+          "closed": true,
+          "lower": "4",
+          "upper": "5"
+        },
+        "sha256": "13A8B1186351F71F5BA6F34BD0525D5FC45011A237A4C11DECB5B692E9C2F9DD",
+        "worst_margin_lower": "[0.016919990079852051427 +/- 8.92e-23]"
+      },
+      {
+        "accepted_box_count": 100,
+        "checks": {
+          "all_boxes_pass": true,
+          "all_checks_pass": true,
+          "all_margin_lowers_positive": true,
+          "boxes_contiguous": true,
+          "boxes_nonempty": true,
+          "boxes_parse": true,
+          "classification": true,
+          "ends_exactly": true,
+          "global_checks_all_true": true,
+          "id": true,
+          "mean_value_not_sampling": true,
+          "no_finite_differences": true,
+          "r_method_recorded": true,
+          "reported_domain": true,
+          "starts_exactly": true,
+          "summary_box_count": true,
+          "unresolved_empty": true
+        },
+        "kind": "score_mean_value_arb",
+        "passes": true,
+        "path": "research\\riemann\\h1319_full_xi_score_mean_value_r_cover_5_10.json",
+        "r_domain": {
+          "closed": true,
+          "lower": "5",
+          "upper": "10"
+        },
+        "sha256": "92B40CC49C2897368B159DEABE9EEF9AB3A586AA57E968482C764C1EDD519C7E",
+        "worst_margin_lower": "[0.020330350705493984261 +/- 2.51e-22]"
+      },
+      {
+        "accepted_box_count": 240,
+        "checks": {
+          "all_boxes_pass": true,
+          "all_checks_pass": true,
+          "all_margin_lowers_positive": true,
+          "boxes_contiguous": true,
+          "boxes_nonempty": true,
+          "boxes_parse": true,
+          "classification": true,
+          "ends_exactly": true,
+          "global_checks_all_true": true,
+          "id": true,
+          "mean_value_not_sampling": true,
+          "no_finite_differences": true,
+          "r_method_recorded": true,
+          "reported_domain": true,
+          "starts_exactly": true,
+          "summary_box_count": true,
+          "unresolved_empty": true
+        },
+        "kind": "score_mean_value_arb",
+        "passes": true,
+        "path": "research\\riemann\\h1319_full_xi_score_mean_value_r10_to_22_arb.json",
+        "r_domain": {
+          "closed": true,
+          "lower": "10",
+          "upper": "22"
+        },
+        "sha256": "A766CBC188DF9FE142D2D8AE839F41D9866938024FE4A7B7355D86415799ADC7",
+        "worst_margin_lower": "[0.23180417655213579774 +/- 4.11e-21]"
+      },
+      {
+        "checks": {
+          "algebraic_ratio_passes": true,
+          "all_checks_pass": true,
+          "classification": true,
+          "dependency_checks_all_true": true,
+          "domain_closed": true,
+          "domain_lower": true,
+          "domain_upper": true,
+          "exact_total_below_three_quarters": true,
+          "id": true,
+          "local_checks_all_true": true,
+          "lower_bound": true,
+          "monotone_extension": true,
+          "quantity": true,
+          "saddle_map": true
+        },
+        "exact_slack_at_22": "2591189522090224427540556024253486751793/38483616333681579713187289775259765625000",
+        "exact_total_upper_at_22": "26271522728170960357349911307191337466957/38483616333681579713187289775259765625000",
+        "kind": "exact_analytic_high_band",
+        "passes": true,
+        "path": "research\\riemann\\h1319_full_xi_high_band_r22_analytic_certificate.json",
+        "r_domain": {
+          "closed": true,
+          "lower": "22",
+          "upper": "infinity"
+        },
+        "sha256": "E93AEB7D4FC9DA17BF76E7D65403F95278511C2822ADA115D18980F636DD9519"
+      }
+    ],
+    "upper_needed": "71",
+    "upper_proved": "infinity"
+  },
+  "saddle_checks": {
+    "T_71": {
+      "interval": "[7.62581808459514777968833694640e+32 +/- 3.67e+2]",
+      "lower": "[7.62581808459514777968833694640e+32 +/- 3.67e+2]",
+      "upper": "[7.62581808459514777968833694640e+32 +/- 3.67e+2]"
+    },
+    "monotonicity_conclusion": "q'(r)>=q'(323/100)>0 for every r>=323/100",
+    "q_prime_at_323_over_100": {
+      "interval": "[333.689766964794933927817223424 +/- 1.29e-28]",
+      "lower": "[333.689766964794933927817223424 +/- 1.29e-28]",
+      "upper": "[333.689766964794933927817223424 +/- 1.29e-28]"
+    },
+    "q_second_derivative_sign": "pi*exp(r)*(r+2)>0 for r>0"
+  },
+  "schema": "rh_h1319_full_xi_compact_interval_certificate.v1",
+  "scope": {
+    "does_not_prove": [
+      "the finite n<=126 barrier by itself",
+      "the H920 cube-average implication by itself",
+      "the all-degree Jensen/TP condition",
+      "the Riemann Hypothesis"
+    ],
+    "next": "consume this schema in the H1319 piecewise H920 assembly",
+    "proved": "compact H1319 full-Xi pointwise curvature input on 125<=t<=T_71"
+  }
+}

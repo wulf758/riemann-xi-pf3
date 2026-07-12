@@ -1,0 +1,6081 @@
+{
+  "schema": "rh_h819_adjacent_d3_barrier.v0",
+  "classification": "h819_adjacent_two_d3_barrier_grid_counterexample",
+  "question": "Do the 20 H818 no-single-shield four-term failures reduce to an adjacent two-D3 barrier using only D3_start_2 and D3_start_3?",
+  "leftovers": {
+    "h818_stats": {
+      "grid_total": 170544,
+      "checked": 170544,
+      "q2_le_half_candidates": 167112,
+      "h815_four_term_failures": 200,
+      "failures_with_monotone_negative": 102,
+      "failures_with_negative_surviving_all_d3": 0,
+      "failures_with_single_d3_shield": 82,
+      "single_d3_shield_counts": {
+        "1": 0,
+        "2": 82,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      }
+    },
+    "leftover_count": 20,
+    "unique_count": 6,
+    "leftover_family_counts": [
+      [
+        "row_gaps=(1,2), col_gaps=(3,1)",
+        3
+      ],
+      [
+        "row_gaps=(1,3), col_gaps=(2,1)",
+        3
+      ],
+      [
+        "row_gaps=(1,2), col_gaps=(3,2)",
+        2
+      ],
+      [
+        "row_gaps=(1,3), col_gaps=(2,2)",
+        2
+      ],
+      [
+        "row_gaps=(2,2), col_gaps=(3,1)",
+        2
+      ],
+      [
+        "row_gaps=(2,3), col_gaps=(2,1)",
+        2
+      ],
+      [
+        "row_gaps=(1,3), col_gaps=(2,3)",
+        1
+      ],
+      [
+        "row_gaps=(1,3), col_gaps=(3,2)",
+        1
+      ],
+      [
+        "row_gaps=(2,2), col_gaps=(3,2)",
+        1
+      ],
+      [
+        "row_gaps=(2,3), col_gaps=(2,2)",
+        1
+      ],
+      [
+        "row_gaps=(2,3), col_gaps=(3,1)",
+        1
+      ],
+      [
+        "row_gaps=(3,2), col_gaps=(3,1)",
+        1
+      ]
+    ],
+    "unique_polynomials": [
+      {
+        "key": 0,
+        "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+        "multiplicity": 6,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 13,
+            "rows": [
+              0,
+              1,
+              3
+            ],
+            "cols": [
+              2,
+              5,
+              6
+            ],
+            "family": "row_gaps=(1,2), col_gaps=(3,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          },
+          {
+            "failure_index": 32,
+            "rows": [
+              0,
+              1,
+              4
+            ],
+            "cols": [
+              3,
+              5,
+              6
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          },
+          {
+            "failure_index": 136,
+            "rows": [
+              1,
+              2,
+              4
+            ],
+            "cols": [
+              3,
+              6,
+              7
+            ],
+            "family": "row_gaps=(1,2), col_gaps=(3,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          },
+          {
+            "failure_index": 145,
+            "rows": [
+              1,
+              2,
+              5
+            ],
+            "cols": [
+              4,
+              6,
+              7
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          },
+          {
+            "failure_index": 184,
+            "rows": [
+              2,
+              3,
+              5
+            ],
+            "cols": [
+              4,
+              7,
+              8
+            ],
+            "family": "row_gaps=(1,2), col_gaps=(3,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          },
+          {
+            "failure_index": 186,
+            "rows": [
+              2,
+              3,
+              6
+            ],
+            "cols": [
+              5,
+              7,
+              8
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,1)",
+            "negative_count": 72,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 72,
+              "2": 18,
+              "3": 24,
+              "4": 72,
+              "5": 72,
+              "6": 72
+            }
+          }
+        ]
+      },
+      {
+        "key": 1,
+        "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+        "multiplicity": 4,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 14,
+            "rows": [
+              0,
+              1,
+              3
+            ],
+            "cols": [
+              2,
+              5,
+              7
+            ],
+            "family": "row_gaps=(1,2), col_gaps=(3,2)",
+            "negative_count": 48,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 48,
+              "2": 12,
+              "3": 16,
+              "4": 48,
+              "5": 48,
+              "6": 48
+            }
+          },
+          {
+            "failure_index": 79,
+            "rows": [
+              0,
+              2,
+              5
+            ],
+            "cols": [
+              4,
+              6,
+              7
+            ],
+            "family": "row_gaps=(2,3), col_gaps=(2,1)",
+            "negative_count": 48,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 48,
+              "2": 12,
+              "3": 16,
+              "4": 48,
+              "5": 48,
+              "6": 48
+            }
+          },
+          {
+            "failure_index": 137,
+            "rows": [
+              1,
+              2,
+              4
+            ],
+            "cols": [
+              3,
+              6,
+              8
+            ],
+            "family": "row_gaps=(1,2), col_gaps=(3,2)",
+            "negative_count": 48,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 48,
+              "2": 12,
+              "3": 16,
+              "4": 48,
+              "5": 48,
+              "6": 48
+            }
+          },
+          {
+            "failure_index": 165,
+            "rows": [
+              1,
+              3,
+              6
+            ],
+            "cols": [
+              5,
+              7,
+              8
+            ],
+            "family": "row_gaps=(2,3), col_gaps=(2,1)",
+            "negative_count": 48,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 48,
+              "2": 12,
+              "3": 16,
+              "4": 48,
+              "5": 48,
+              "6": 48
+            }
+          }
+        ]
+      },
+      {
+        "key": 2,
+        "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+        "multiplicity": 4,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 33,
+            "rows": [
+              0,
+              1,
+              4
+            ],
+            "cols": [
+              3,
+              5,
+              7
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,2)",
+            "negative_count": 64,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 64,
+              "2": 28,
+              "3": 16,
+              "4": 64,
+              "5": 64,
+              "6": 64
+            }
+          },
+          {
+            "failure_index": 69,
+            "rows": [
+              0,
+              2,
+              4
+            ],
+            "cols": [
+              3,
+              6,
+              7
+            ],
+            "family": "row_gaps=(2,2), col_gaps=(3,1)",
+            "negative_count": 64,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 64,
+              "2": 28,
+              "3": 16,
+              "4": 64,
+              "5": 64,
+              "6": 64
+            }
+          },
+          {
+            "failure_index": 146,
+            "rows": [
+              1,
+              2,
+              5
+            ],
+            "cols": [
+              4,
+              6,
+              8
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,2)",
+            "negative_count": 64,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 64,
+              "2": 28,
+              "3": 16,
+              "4": 64,
+              "5": 64,
+              "6": 64
+            }
+          },
+          {
+            "failure_index": 160,
+            "rows": [
+              1,
+              3,
+              5
+            ],
+            "cols": [
+              4,
+              7,
+              8
+            ],
+            "family": "row_gaps=(2,2), col_gaps=(3,1)",
+            "negative_count": 64,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 64,
+              "2": 28,
+              "3": 16,
+              "4": 64,
+              "5": 64,
+              "6": 64
+            }
+          }
+        ]
+      },
+      {
+        "key": 3,
+        "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+        "multiplicity": 2,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 34,
+            "rows": [
+              0,
+              1,
+              4
+            ],
+            "cols": [
+              3,
+              5,
+              8
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(2,3)",
+            "negative_count": 40,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 40,
+              "2": 14,
+              "3": 16,
+              "4": 40,
+              "5": 40,
+              "6": 40
+            }
+          },
+          {
+            "failure_index": 107,
+            "rows": [
+              0,
+              3,
+              5
+            ],
+            "cols": [
+              4,
+              7,
+              8
+            ],
+            "family": "row_gaps=(3,2), col_gaps=(3,1)",
+            "negative_count": 40,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 40,
+              "2": 14,
+              "3": 16,
+              "4": 40,
+              "5": 40,
+              "6": 40
+            }
+          }
+        ]
+      },
+      {
+        "key": 4,
+        "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+        "multiplicity": 2,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 35,
+            "rows": [
+              0,
+              1,
+              4
+            ],
+            "cols": [
+              3,
+              6,
+              8
+            ],
+            "family": "row_gaps=(1,3), col_gaps=(3,2)",
+            "negative_count": 92,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 92,
+              "2": 74,
+              "3": 8,
+              "4": 92,
+              "5": 92,
+              "6": 92
+            }
+          },
+          {
+            "failure_index": 81,
+            "rows": [
+              0,
+              2,
+              5
+            ],
+            "cols": [
+              4,
+              7,
+              8
+            ],
+            "family": "row_gaps=(2,3), col_gaps=(3,1)",
+            "negative_count": 92,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 92,
+              "2": 74,
+              "3": 8,
+              "4": 92,
+              "5": 92,
+              "6": 92
+            }
+          }
+        ]
+      },
+      {
+        "key": 5,
+        "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+        "multiplicity": 2,
+        "active_d3_starts_among_negatives": [
+          2,
+          3
+        ],
+        "sources": [
+          {
+            "failure_index": 70,
+            "rows": [
+              0,
+              2,
+              4
+            ],
+            "cols": [
+              3,
+              6,
+              8
+            ],
+            "family": "row_gaps=(2,2), col_gaps=(3,2)",
+            "negative_count": 40,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 40,
+              "2": 6,
+              "3": 16,
+              "4": 40,
+              "5": 40,
+              "6": 40
+            }
+          },
+          {
+            "failure_index": 80,
+            "rows": [
+              0,
+              2,
+              5
+            ],
+            "cols": [
+              4,
+              6,
+              8
+            ],
+            "family": "row_gaps=(2,3), col_gaps=(2,2)",
+            "negative_count": 40,
+            "single_d3_nonnegative_survivor_counts": {
+              "1": 40,
+              "2": 6,
+              "3": 16,
+              "4": 40,
+              "5": 40,
+              "6": 40
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scan_summary": {
+    "classification": "h819_adjacent_two_d3_barrier_grid_counterexample",
+    "decision": "The adjacent pair D3_2,D3_3 is not enough on the tested grids. Pivot to a wider Plucker-Dodgson identity or Xi-specific input.",
+    "pair_has_negative": true,
+    "d3_2_only_has_negative": true,
+    "d3_3_only_has_negative": true,
+    "all_d3_has_negative": false,
+    "worst_pair_case": {
+      "denominator": 32,
+      "polynomial_key": "4",
+      "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+      "best_float_value": -0.0065553787778835915,
+      "best_exact": {
+        "fraction": "-236182411370793/36028797018963968",
+        "float": -0.006555378777883619
+      },
+      "best_q_values": [
+        {
+          "name": "q2",
+          "fraction": "1/32",
+          "float": 0.03125
+        },
+        {
+          "name": "q3",
+          "fraction": "11/16",
+          "float": 0.6875
+        },
+        {
+          "name": "q4",
+          "fraction": "29/32",
+          "float": 0.90625
+        },
+        {
+          "name": "q5",
+          "fraction": "31/32",
+          "float": 0.96875
+        },
+        {
+          "name": "q6",
+          "fraction": "31/32",
+          "float": 0.96875
+        },
+        {
+          "name": "q7",
+          "fraction": "31/32",
+          "float": 0.96875
+        },
+        {
+          "name": "q8",
+          "fraction": "31/32",
+          "float": 0.96875
+        }
+      ]
+    }
+  },
+  "scan_table": [
+    {
+      "denominator": 16,
+      "conditions": {
+        "monotone_q2_half": 167112,
+        "d3_2_only": 164947,
+        "d3_3_only": 161521,
+        "d3_2_and_d3_3": 159486,
+        "all_d3": 113542
+      },
+      "polynomials": [
+        {
+          "key": 0,
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "negative_counts": {
+            "monotone_q2_half": 72,
+            "d3_2_only": 18,
+            "d3_3_only": 24,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 1,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 48,
+            "d3_2_only": 12,
+            "d3_3_only": 16,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 2,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 64,
+            "d3_2_only": 28,
+            "d3_3_only": 16,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 3,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 40,
+            "d3_2_only": 14,
+            "d3_3_only": 16,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 4,
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 92,
+            "d3_2_only": 74,
+            "d3_3_only": 8,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 5,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 40,
+            "d3_2_only": 6,
+            "d3_3_only": 16,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "denominator": 24,
+      "conditions": {
+        "monotone_q2_half": 2003976,
+        "d3_2_only": 1985609,
+        "d3_3_only": 1950005,
+        "d3_2_and_d3_3": 1932775,
+        "all_d3": 1350040
+      },
+      "polynomials": [
+        {
+          "key": 0,
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "negative_counts": {
+            "monotone_q2_half": 504,
+            "d3_2_only": 108,
+            "d3_3_only": 180,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 1,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 264,
+            "d3_2_only": 48,
+            "d3_3_only": 120,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 2,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 348,
+            "d3_2_only": 120,
+            "d3_3_only": 120,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 3,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 240,
+            "d3_2_only": 108,
+            "d3_3_only": 84,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 4,
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 618,
+            "d3_2_only": 506,
+            "d3_3_only": 60,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 5,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 204,
+            "d3_2_only": 72,
+            "d3_3_only": 84,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "denominator": 32,
+      "conditions": {
+        "monotone_q2_half": 12449712,
+        "d3_2_only": 12355603,
+        "d3_3_only": 12170932,
+        "d3_2_and_d3_3": 12080581,
+        "all_d3": 8606983
+      },
+      "polynomials": [
+        {
+          "key": 0,
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "negative_counts": {
+            "monotone_q2_half": 1616,
+            "d3_2_only": 297,
+            "d3_3_only": 688,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 1,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 1024,
+            "d3_2_only": 189,
+            "d3_3_only": 464,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 2,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "negative_counts": {
+            "monotone_q2_half": 1280,
+            "d3_2_only": 505,
+            "d3_3_only": 368,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 3,
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 928,
+            "d3_2_only": 377,
+            "d3_3_only": 256,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        },
+        {
+          "key": 4,
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 2176,
+            "d3_2_only": 1794,
+            "d3_3_only": 240,
+            "d3_2_and_d3_3": 62,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "-236182411370793/36028797018963968",
+            "float": -0.006555378777883619
+          }
+        },
+        {
+          "key": 5,
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "negative_counts": {
+            "monotone_q2_half": 816,
+            "d3_2_only": 298,
+            "d3_3_only": 272,
+            "d3_2_and_d3_3": 0,
+            "all_d3": 0
+          },
+          "best_d3_2_and_d3_3": {
+            "fraction": "0",
+            "float": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "full_scans": [
+    {
+      "denominator": 16,
+      "grid_total": 170544,
+      "checked": 170544,
+      "q2_le_half_candidates": 167112,
+      "condition_counts": {
+        "monotone_q2_half": 167112,
+        "d3_2_only": 164947,
+        "d3_3_only": 161521,
+        "d3_2_and_d3_3": 159486,
+        "all_d3": 113542
+      },
+      "polynomial_results": {
+        "0": {
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 72,
+              "best_float_value": -0.023946702480316162,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-401759/16777216",
+                "float": -0.023946702480316162
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 18,
+              "best_float_value": -0.004607975482940674,
+              "best_q_ints": [
+                3,
+                13,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-77309/16777216",
+                "float": -0.004607975482940674
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/16",
+                  "float": 0.1875
+                },
+                {
+                  "name": "q3",
+                  "fraction": "13/16",
+                  "float": 0.8125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 24,
+              "best_float_value": -0.023946702480316162,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-401759/16777216",
+                "float": -0.023946702480316162
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "1": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 48,
+              "best_float_value": -0.03702629894542042,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-2544427889/68719476736",
+                "float": -0.03702629894542042
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 12,
+              "best_float_value": -0.0017529519245726988,
+              "best_q_ints": [
+                3,
+                13,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-120461939/68719476736",
+                "float": -0.0017529519245726988
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/16",
+                  "float": 0.1875
+                },
+                {
+                  "name": "q3",
+                  "fraction": "13/16",
+                  "float": 0.8125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 16,
+              "best_float_value": -0.03702629894542042,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-2544427889/68719476736",
+                "float": -0.03702629894542042
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "2": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 64,
+              "best_float_value": -0.03337993184595689,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-36701623199/1099511627776",
+                "float": -0.03337993184595689
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 28,
+              "best_float_value": -0.012783440933162638,
+              "best_q_ints": [
+                3,
+                13,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-14055541949/1099511627776",
+                "float": -0.012783440933162638
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/16",
+                  "float": 0.1875
+                },
+                {
+                  "name": "q3",
+                  "fraction": "13/16",
+                  "float": 0.8125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 16,
+              "best_float_value": -0.03337993184595689,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-36701623199/1099511627776",
+                "float": -0.03337993184595689
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "3": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 40,
+              "best_float_value": -0.03319752384904673,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-2392133696579039/72057594037927936",
+                "float": -0.033197523849046714
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 14,
+              "best_float_value": -0.012625354002507139,
+              "best_q_ints": [
+                3,
+                13,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-909752633297789/72057594037927936",
+                "float": -0.012625354002507153
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/16",
+                  "float": 0.1875
+                },
+                {
+                  "name": "q3",
+                  "fraction": "13/16",
+                  "float": 0.8125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 16,
+              "best_float_value": -0.03319752384904673,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-2392133696579039/72057594037927936",
+                "float": -0.033197523849046714
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "4": {
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 92,
+              "best_float_value": -0.011227070911502324,
+              "best_q_ints": [
+                1,
+                1,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-197508720209/17592186044416",
+                "float": -0.011227070911502324
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 74,
+              "best_float_value": -0.011227070911502324,
+              "best_q_ints": [
+                1,
+                1,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-197508720209/17592186044416",
+                "float": -0.011227070911502324
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 8,
+              "best_float_value": -0.011227070911502324,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-197508720209/17592186044416",
+                "float": -0.011227070911502324
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "5": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 167112,
+              "negative_count": 40,
+              "best_float_value": -0.04627712031415099,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-3334617948841439/72057594037927936",
+                "float": -0.046277120314150974
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 164947,
+              "negative_count": 6,
+              "best_float_value": -0.009770330444139164,
+              "best_q_ints": [
+                3,
+                13,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-704026504760189/72057594037927936",
+                "float": -0.009770330444139178
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/16",
+                  "float": 0.1875
+                },
+                {
+                  "name": "q3",
+                  "fraction": "13/16",
+                  "float": 0.8125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 161521,
+              "negative_count": 16,
+              "best_float_value": -0.04627712031415099,
+              "best_q_ints": [
+                1,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              "best_exact": {
+                "fraction": "-3334617948841439/72057594037927936",
+                "float": -0.046277120314150974
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 159486,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 113542,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/16",
+                  "float": 0.0625
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "denominator": 24,
+      "grid_total": 2035800,
+      "checked": 2035800,
+      "q2_le_half_candidates": 2003976,
+      "condition_counts": {
+        "monotone_q2_half": 2003976,
+        "d3_2_only": 1985609,
+        "d3_3_only": 1950005,
+        "d3_2_and_d3_3": 1932775,
+        "all_d3": 1350040
+      },
+      "polynomial_results": {
+        "0": {
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 504,
+              "best_float_value": -0.023899402801555558,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-4567247/191102976",
+                "float": -0.023899402801555534
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 108,
+              "best_float_value": -0.010138973450628086,
+              "best_q_ints": [
+                1,
+                20,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-484397/47775744",
+                "float": -0.010138973450628001
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "5/6",
+                  "float": 0.8333333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 180,
+              "best_float_value": -0.023899402801555558,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-4567247/191102976",
+                "float": -0.023899402801555534
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "1": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 264,
+              "best_float_value": -0.04181166432723349,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-110458370089/2641807540224",
+                "float": -0.041811664327233385
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 48,
+              "best_float_value": -0.01594018579280365,
+              "best_q_ints": [
+                1,
+                20,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-10527725755/660451885056",
+                "float": -0.01594018579280359
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "5/6",
+                  "float": 0.8333333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 120,
+              "best_float_value": -0.04181166432723349,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-110458370089/2641807540224",
+                "float": -0.041811664327233385
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "2": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 348,
+              "best_float_value": -0.03966198790434017,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-2514704128943/63403380965376",
+                "float": -0.03966198790433994
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 120,
+              "best_float_value": -0.023845569192179727,
+              "best_q_ints": [
+                1,
+                20,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-377972426957/15850845241344",
+                "float": -0.023845569192179658
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "5/6",
+                  "float": 0.8333333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 120,
+              "best_float_value": -0.03966198790434017,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-2514704128943/63403380965376",
+                "float": -0.03966198790433994
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": -5.551115123125783e-17,
+              "best_q_ints": [
+                1,
+                7,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/24",
+                  "float": 0.2916666666666667
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": -5.551115123125783e-17,
+              "best_q_ints": [
+                1,
+                7,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/24",
+                  "float": 0.2916666666666667
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "3": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 240,
+              "best_float_value": -0.049088348283282346,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-1032608755795750031/21035720123168587776",
+                "float": -0.04908834828328232
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 108,
+              "best_float_value": -0.032042404304303496,
+              "best_q_ints": [
+                1,
+                20,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-168508762254685037/5258930030792146944",
+                "float": -0.03204240430430346
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "5/6",
+                  "float": 0.8333333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 84,
+              "best_float_value": -0.049088348283282346,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-1032608755795750031/21035720123168587776",
+                "float": -0.04908834828328232
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": -5.551115123125783e-17,
+              "best_q_ints": [
+                1,
+                7,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/24",
+                  "float": 0.2916666666666667
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": -5.551115123125783e-17,
+              "best_q_ints": [
+                1,
+                7,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/24",
+                  "float": 0.2916666666666667
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "4": {
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 618,
+              "best_float_value": -0.028619378839433995,
+              "best_q_ints": [
+                1,
+                1,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-43549569109177/1521681143169024",
+                "float": -0.0286193788394338
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 506,
+              "best_float_value": -0.028619378839433995,
+              "best_q_ints": [
+                1,
+                1,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-43549569109177/1521681143169024",
+                "float": -0.0286193788394338
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 60,
+              "best_float_value": -0.028619378839433995,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-43549569109177/1521681143169024",
+                "float": -0.0286193788394338
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "5": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 2003976,
+              "negative_count": 204,
+              "best_float_value": -0.06700060980896028,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-1409406076022910095/21035720123168587776",
+                "float": -0.06700060980896017
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 1985609,
+              "negative_count": 72,
+              "best_float_value": -0.03784361664647906,
+              "best_q_ints": [
+                1,
+                20,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-199016932055954285/5258930030792146944",
+                "float": -0.037843616646479054
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "5/6",
+                  "float": 0.8333333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 1950005,
+              "negative_count": 84,
+              "best_float_value": -0.06700060980896028,
+              "best_q_ints": [
+                1,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              "best_exact": {
+                "fraction": "-1409406076022910095/21035720123168587776",
+                "float": -0.06700060980896017
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q4",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q5",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q6",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q7",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                },
+                {
+                  "name": "q8",
+                  "fraction": "23/24",
+                  "float": 0.9583333333333334
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 1932775,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 1350040,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/24",
+                  "float": 0.041666666666666664
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "denominator": 32,
+      "grid_total": 12620256,
+      "checked": 12620256,
+      "q2_le_half_candidates": 12449712,
+      "condition_counts": {
+        "monotone_q2_half": 12449712,
+        "d3_2_only": 12355603,
+        "d3_3_only": 12170932,
+        "d3_2_and_d3_3": 12080581,
+        "all_d3": 8606983
+      },
+      "polynomial_results": {
+        "0": {
+          "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 1616,
+              "best_float_value": -0.023946702480316162,
+              "best_q_ints": [
+                1,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30
+              ],
+              "best_exact": {
+                "fraction": "-401759/16777216",
+                "float": -0.023946702480316162
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 297,
+              "best_float_value": -0.013080265372991562,
+              "best_q_ints": [
+                12,
+                28,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-3511207/268435456",
+                "float": -0.013080265372991562
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/8",
+                  "float": 0.375
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/8",
+                  "float": 0.875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 688,
+              "best_float_value": -0.023946702480316162,
+              "best_q_ints": [
+                1,
+                30,
+                30,
+                30,
+                30,
+                30,
+                30
+              ],
+              "best_exact": {
+                "fraction": "-401759/16777216",
+                "float": -0.023946702480316162
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q4",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q5",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q6",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q7",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                },
+                {
+                  "name": "q8",
+                  "fraction": "15/16",
+                  "float": 0.9375
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "1": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 1024,
+              "best_float_value": -0.038428169783429666,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-1352071024353/35184372088832",
+                "float": -0.038428169783429666
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 189,
+              "best_float_value": -0.023167855774886448,
+              "best_q_ints": [
+                12,
+                28,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-203786614521/8796093022208",
+                "float": -0.023167855774886448
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/8",
+                  "float": 0.375
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/8",
+                  "float": 0.875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 464,
+              "best_float_value": -0.038428169783429666,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-1352071024353/35184372088832",
+                "float": -0.038428169783429666
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "2": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 1280,
+              "best_float_value": -0.03705261899750578,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-41717540277567/1125899906842624",
+                "float": -0.03705261899750578
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 505,
+              "best_float_value": -0.027513000626779416,
+              "best_q_ints": [
+                12,
+                28,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-7744221210663/281474976710656",
+                "float": -0.027513000626779416
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/8",
+                  "float": 0.375
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/8",
+                  "float": 0.875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 368,
+              "best_float_value": -0.03705261899750578,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-41717540277567/1125899906842624",
+                "float": -0.03705261899750578
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "3": {
+          "polynomial": "1 - q4*q5 - q3*q4^2*q5^3*q6^2*q7 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 928,
+              "best_float_value": -0.048779368643922405,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-57588513884900464063/1180591620717411303424",
+                "float": -0.04877936864392244
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 377,
+              "best_float_value": -0.03810490353322027,
+              "best_q_ints": [
+                12,
+                28,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-11246582454891281575/295147905179352825856",
+                "float": -0.03810490353322027
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/8",
+                  "float": 0.375
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/8",
+                  "float": 0.875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 256,
+              "best_float_value": -0.048779368643922405,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-57588513884900464063/1180591620717411303424",
+                "float": -0.04877936864392244
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "4": {
+          "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 2176,
+              "best_float_value": -0.03047448131538477,
+              "best_q_ints": [
+                1,
+                1,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-1097958901570209/36028797018963968",
+                "float": -0.0304744813153848
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 1794,
+              "best_float_value": -0.03047448131538477,
+              "best_q_ints": [
+                1,
+                1,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-1097958901570209/36028797018963968",
+                "float": -0.0304744813153848
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 240,
+              "best_float_value": -0.03047448131538477,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-1097958901570209/36028797018963968",
+                "float": -0.0304744813153848
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 62,
+              "best_float_value": -0.0065553787778835915,
+              "best_q_ints": [
+                1,
+                22,
+                29,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-236182411370793/36028797018963968",
+                "float": -0.006555378777883619
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "11/16",
+                  "float": 0.6875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "29/32",
+                  "float": 0.90625
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        },
+        "5": {
+          "polynomial": "1 - q4*q5^2*q6 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^4*q6^3*q7^2*q8",
+          "by_filter": {
+            "monotone_q2_half": {
+              "candidate_count": 12449712,
+              "negative_count": 816,
+              "best_float_value": -0.06613401917511141,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-78077268882501178815/1180591620717411303424",
+                "float": -0.06613401917511144
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_only": {
+              "candidate_count": 12355603,
+              "negative_count": 298,
+              "best_float_value": -0.048192493935115155,
+              "best_q_ints": [
+                12,
+                28,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-14223913630317903015/295147905179352825856",
+                "float": -0.048192493935115155
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "3/8",
+                  "float": 0.375
+                },
+                {
+                  "name": "q3",
+                  "fraction": "7/8",
+                  "float": 0.875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_3_only": {
+              "candidate_count": 12170932,
+              "negative_count": 272,
+              "best_float_value": -0.06613401917511141,
+              "best_q_ints": [
+                1,
+                31,
+                31,
+                31,
+                31,
+                31,
+                31
+              ],
+              "best_exact": {
+                "fraction": "-78077268882501178815/1180591620717411303424",
+                "float": -0.06613401917511144
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q4",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q5",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q6",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q7",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                },
+                {
+                  "name": "q8",
+                  "fraction": "31/32",
+                  "float": 0.96875
+                }
+              ]
+            },
+            "d3_2_and_d3_3": {
+              "candidate_count": 12080581,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            },
+            "all_d3": {
+              "candidate_count": 8606983,
+              "negative_count": 0,
+              "best_float_value": 0.0,
+              "best_q_ints": [
+                1,
+                1,
+                32,
+                32,
+                32,
+                32,
+                32
+              ],
+              "best_exact": {
+                "fraction": "0",
+                "float": 0.0
+              },
+              "best_q_values": [
+                {
+                  "name": "q2",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q3",
+                  "fraction": "1/32",
+                  "float": 0.03125
+                },
+                {
+                  "name": "q4",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q5",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q6",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q7",
+                  "fraction": "1",
+                  "float": 1.0
+                },
+                {
+                  "name": "q8",
+                  "fraction": "1",
+                  "float": 1.0
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "underexploited_next_ideas": [
+    {
+      "name": "Adjacent two-D3 jump-barrier lemma",
+      "status": "primary",
+      "reason": "H818 leftovers only need starts 2 and 3 on the grid; H816 did not test this scalar two-barrier form."
+    },
+    {
+      "name": "Dodgson condensation identity for sparse rows",
+      "status": "secondary",
+      "reason": "If the scalar barrier proof stalls, express sparse minors through adjacent contiguous minors and PF2 factors."
+    },
+    {
+      "name": "Xi-specific unit-deficit input",
+      "status": "fallback",
+      "reason": "H817 showed monotone q alone is false; an analytic input from Xi coefficients may avoid proving a general q-cone theorem."
+    },
+    {
+      "name": "Cross-route Nyman-Beurling endpoint bridge",
+      "status": "separate branch",
+      "reason": "Older H520/H662 routes still contain formal candidates, especially endpoint Abel cancellation, not used by the PF3 corridor."
+    }
+  ],
+  "decision": "The adjacent pair D3_2,D3_3 is not enough on the tested grids. Pivot to a wider Plucker-Dodgson identity or Xi-specific input.",
+  "next_target": {
+    "name": "H820 formal adjacent D3 lemma",
+    "statement": "Try to prove the six unique normalized four-term forms from monotonicity, q2<=1/2, D3_2>=0, and D3_3>=0, or produce a continuous counterexample."
+  }
+}

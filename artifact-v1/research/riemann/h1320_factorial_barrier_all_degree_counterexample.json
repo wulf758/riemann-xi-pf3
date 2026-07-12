@@ -1,0 +1,91 @@
+{
+  "all_checks_pass": true,
+  "arithmetic": "exact_sympy_rationals",
+  "checks": {
+    "d3_identity": true,
+    "factorial_slack_identity": true,
+    "jensen_degree3_nonhyperbolic": true,
+    "q_increment_identity": true,
+    "special_d2_positive": true,
+    "special_n2_factorial_equality": true,
+    "t_ratio_identity": true,
+    "toeplitz_order4_negative": true,
+    "unit_slack_identity": true
+  },
+  "classification": "factorial_and_eventual_unit_barriers_do_not_imply_all_degree_jensen_hyperbolicity",
+  "jensen_falsifier": {
+    "J_gamma_3_0": "3*x**3/4 + 3*x**2 + 3*x + 1",
+    "convention": "gamma_j=j!*a_j; J=sum(binomial(3,j)*gamma_j*x^j)",
+    "discriminant": "-27/16",
+    "gamma_0_to_3": [
+      "1",
+      "1",
+      "1",
+      "3/4"
+    ]
+  },
+  "scope": "Exact abstract counterexample to any generic implication from the listed ratio/barrier conditions. It is not a counterexample to the Xi-specific all-degree statement or to RH.",
+  "sequence": {
+    "R_n_for_n_ge_2": "2*4**(1 - n)*binomial(2*n - 2, n - 1)/n",
+    "a_0": "1",
+    "a_1": "1",
+    "entire_majorant": "a_n <= 2^(n-1)/n!",
+    "q_2": "1/2",
+    "q_n_for_n_ge_3": "(2*n - 3)/(2*n)"
+  },
+  "special_n_2": {
+    "D_2": "13/64",
+    "T_3_over_T_2": "5/12",
+    "q_3_minus_q_2": "0",
+    "theta_2": "5/12"
+  },
+  "symbolic_identities_for_n_ge_3": {
+    "T_next_over_T": "(n - 1)*(2*n + 1)/(n*(2*n - 1))",
+    "h803_factorial_slack": "3*(n - 1)*(2*n + 1)/(n**2*(2*n - 1)**2)",
+    "h804_unit_slack": "(n - 1)/(n**2*(2*n - 1))",
+    "q_next_minus_q": "3/(2*n*(n + 1))",
+    "theta_h803": "(n - 1)*(n + 1)*(2*n - 3)*(2*n + 1)/(n**2*(2*n - 1)**2)",
+    "translated_D3": "9*(12*n - 1)/(16*n*(n + 1)**2*(n + 2))"
+  },
+  "toeplitz_falsifier": {
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "determinant": "-5/256",
+    "matrix": [
+      [
+        "1",
+        "1/2",
+        "1/8",
+        "5/256"
+      ],
+      [
+        "1",
+        "1",
+        "1/2",
+        "1/8"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "1/2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "rows": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}

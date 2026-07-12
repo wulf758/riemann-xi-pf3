@@ -1,0 +1,54 @@
+{
+  "schema": "rh_h800_xi_ratio_sequence_theorem_audit.v0",
+  "classification": "ratio_logconvexity_bottleneck_identified",
+  "question": "Audit whether the global Xi coefficient properties needed by H799 are known, provable from standard facts, or a new bottleneck.",
+  "sources": [
+    {
+      "title": "Jensen Polynomials for the Riemann Xi Function",
+      "authors": "Michael Griffin, Ken Ono, Larry Rolen, Jesse Thorner, Zachary Tripp, Ian Wagner",
+      "url": "https://arxiv.org/abs/1910.01227",
+      "use": "Positivity of gamma(n), Polya/Jensen setup, global hyperbolicity for d<=3, effective eventual hyperbolicity for fixed degree."
+    },
+    {
+      "title": "Jensen polynomials for the Riemann zeta function and other sequences",
+      "authors": "Michael Griffin, Ken Ono, Larry Rolen, Don Zagier",
+      "url": "https://arxiv.org/abs/1902.07321",
+      "use": "Asymptotic Hermite modeling and eventual fixed-degree Jensen hyperbolicity; useful but not a direct global ratio-log-convexity proof."
+    },
+    {
+      "title": "Zeros of Jensen polynomials and asymptotics for the Riemann xi function",
+      "authors": "Cormac O'Sullivan",
+      "url": "https://arxiv.org/abs/2007.13582",
+      "use": "Detailed asymptotic expansions for xi Taylor coefficients and related quantities; relevant for eventual tail estimates."
+    },
+    {
+      "title": "Jensen polynomials are not a plausible route to proving the Riemann Hypothesis",
+      "authors": "David W. Farmer",
+      "url": "https://arxiv.org/abs/2008.07206",
+      "use": "Caution that Jensen asymptotics and eventual hyperbolicity should not be treated as RH-level evidence."
+    }
+  ],
+  "covered": {
+    "positivity_a_n": true,
+    "adjacent_log_concavity_a_n": "Covered if using the cited global d=2 Jensen/Turan result for gamma(n); factorial normalization strengthens the inequality by (n+1)/n.",
+    "eventual_tail_smallness": "Follows qualitatively from entire radius plus positive nonincreasing ratios, but no explicit cutoff was extracted."
+  },
+  "bottleneck": {
+    "needed_property": "q_{n+1}=R_{n+1}/R_n >= q_n=R_n/R_{n-1}",
+    "equivalent_R_form": "R_n^2 <= R_{n-1}*R_{n+1}",
+    "equivalent_a_form": "a_n^3*a_{n-2} <= a_{n-1}^3*a_{n+1}",
+    "equivalent_gamma_form": "(gamma_n^3*gamma_{n-2})/(gamma_{n-1}^3*gamma_{n+1}) <= n^2/(n^2-1)",
+    "source_status": "Not found as a direct theorem in the primary sources checked."
+  },
+  "decision": "H799 remains a viable local-global lemma route, but H800 identifies ratio log-convexity of R_n as the hard unsourced bottleneck. Do not claim H798 globally until this is proved or replaced.",
+  "not_proved": [
+    "Global q_{n+1}>=q_n for normalized Xi coefficient ratios.",
+    "Explicit analytic cutoff for the H799 tail bound.",
+    "The H798 family for all m.",
+    "PF3, JP2', PF-infinity, or RH."
+  ],
+  "next_target": {
+    "name": "H801 ratio-log-convexity attack",
+    "statement": "Derive q_{n+1}>=q_n from an integral representation, a coefficient asymptotic with explicit remainder, or invalidate it with a higher-precision coefficient audit beyond H784."
+  }
+}

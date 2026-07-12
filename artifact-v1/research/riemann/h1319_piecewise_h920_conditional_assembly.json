@@ -1,0 +1,149 @@
+{
+  "schema": "rh_h1319_piecewise_h920_conditional_assembly.v1",
+  "classification": "h1319_piecewise_h920_closure_from_verified_dependencies",
+  "constants": {
+    "finite_H803_n_range": [
+      2,
+      126
+    ],
+    "compact_t_domain": [
+      "125",
+      "T_71"
+    ],
+    "compact_a": "3/4",
+    "tail_t_domain": [
+      "T_71",
+      "infinity"
+    ],
+    "tail_a": "141/142",
+    "T_71_definition": "(71*pi*exp(71)-(9/4)*71-1)/2",
+    "strict_T71_lower_from_pi_gt_3_e_gt_2": "2011728121702468861033853/8",
+    "N_geom_compact": 15,
+    "N_geom_tail": 567
+  },
+  "piecewise_coverage": [
+    {
+      "integer_n": "2 <= n <= 126",
+      "input": "existing finite H803 exact-threshold certificate",
+      "conclusion": "H803 factorial threshold (unit barrier not claimed)"
+    },
+    {
+      "integer_n": "127 <= n <= 566",
+      "cube_t": "[n-2,n+1] subset [125,567] subset [125,T_71]",
+      "input": "compact a=3/4 pointwise estimate",
+      "geometry": "N_geom(3/4)=15, hence every n in this block passes",
+      "conclusion": "H908-A unit barrier, hence H803"
+    },
+    {
+      "integer_n": "n >= 567",
+      "cube_t": "[n-2,n+1] subset [125,infinity)",
+      "input": "the compact and H1317 bounds glue to the global weaker a=141/142 estimate on [125,infinity)",
+      "geometry": "N_geom(141/142)=567 exactly",
+      "conclusion": "H908-A unit barrier, hence H803; includes cubes crossing T_71"
+    }
+  ],
+  "exact_checks": {
+    "compact_coefficient_is_below_tail_coefficient": true,
+    "compact_coefficient_is_below_one": true,
+    "tail_coefficient_is_below_one": true,
+    "N_geom_compact_is_exactly_15": true,
+    "N_geom_compact_predecessor_fails": true,
+    "N_geom_compact_threshold_passes": true,
+    "N_geom_tail_is_exactly_567": true,
+    "N_geom_tail_predecessor_fails": true,
+    "N_geom_tail_threshold_passes": true,
+    "first_analytic_cube_starts_at_125": true,
+    "last_compact_block_cube_ends_at_567": true,
+    "T71_strict_lower_bound_exceeds_567": true,
+    "global_block_cube_floor_exceeds_125": true,
+    "tail_coefficient_decomposes_as_H1317": true,
+    "unit_barrier_strictly_implies_H803_for_n_ge_2": true
+  },
+  "dependency_checks": {
+    "finite_base_accepted": true,
+    "H1317_verifier_accepted": true,
+    "H920_note_present": true,
+    "H1317_note_present": true
+  },
+  "finite_dependency": {
+    "path": "C:\\Users\\cyril\\Desktop\\recherche\\research\\riemann\\h804_unit_deficit_barrier_audit.json",
+    "present": true,
+    "accepted": true,
+    "checks": {
+      "classification_expected": true,
+      "indices_are_exactly_2_through_126": true,
+      "row_count_is_125": true,
+      "each_h803_row_available_and_inherits_h801_certificate": true,
+      "top_level_all_h803_conditions_available": true,
+      "small_n_unit_failures_recorded_exactly": true
+    },
+    "classification": "unit_deficit_barrier_supported_with_finite_base",
+    "n_range": [
+      2,
+      126
+    ],
+    "row_count": 125,
+    "interpretation": "finite exact H803-threshold evidence inherited from H801/H803; not an all-small-n unit-barrier certificate"
+  },
+  "H1317_dependency": {
+    "path": "C:\\Users\\cyril\\Desktop\\recherche\\tools\\rh_h1317_effective_xi_transfer_assembly.py",
+    "present": true,
+    "accepted": true,
+    "exit_code": 0,
+    "all_checks_pass": true,
+    "B_Xi": 45450578214,
+    "coefficient": "141/142"
+  },
+  "compact_dependency": {
+    "path": "C:\\Users\\cyril\\Desktop\\recherche\\research\\riemann\\h1319_full_xi_compact_interval_certificate.json",
+    "present": true,
+    "accepted": true,
+    "expected_contract": {
+      "schema": "rh_h1319_full_xi_compact_interval_certificate.v1",
+      "claim": {
+        "kernel": "full_xi",
+        "quantity": "t^2*kappa_Xi'''(t)",
+        "lower_bound": "-3/4",
+        "t_domain": {
+          "lower": "125",
+          "upper": "T_71",
+          "closed": true
+        }
+      },
+      "required_true_checks": [
+        "rigorous_interval_arithmetic",
+        "full_domain_covered",
+        "full_xi_kernel",
+        "saddle_map_covers_t_domain",
+        "all_local_lower_bounds_pass"
+      ],
+      "all_checks_pass": true
+    },
+    "status": "compatible",
+    "interface_checks": {
+      "schema_matches": true,
+      "kernel_is_full_xi": true,
+      "quantity_matches": true,
+      "lower_bound_is_exactly_minus_three_quarters": true,
+      "domain_lower_is_125": true,
+      "domain_upper_is_T71": true,
+      "domain_is_closed": true,
+      "rigorous_interval_arithmetic": true,
+      "full_domain_covered": true,
+      "full_xi_kernel": true,
+      "saddle_map_covers_t_domain": true,
+      "all_local_lower_bounds_pass": true,
+      "all_checks_pass": true
+    },
+    "warning": "This assembly checks the certificate interface, not the internal interval arithmetic; the compact verifier remains primary evidence."
+  },
+  "conditional_logic_checks_pass": true,
+  "compact_assumption_discharged": true,
+  "all_required_dependencies_pass": true,
+  "conclusions": {
+    "conditional_H908A_unit_barrier": "every integer n >= 127",
+    "conditional_H803_factorial_barrier": "every integer n >= 2",
+    "small_n_warning": "The unit barrier is false for n=2,...,7 in H804; only the weaker exact H803 threshold is assembled for all n.",
+    "scope": "Closes only the H803/H908 moment-curvature obligation if the compact certificate is supplied; H907 all-degree Jensen/TP and RH remain open."
+  }
+}

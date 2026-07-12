@@ -1,0 +1,113 @@
+# H811 Repaired Consecutive-Row PF3 Theorem
+
+Classification: `repaired_consecutive_row_pf3_theorem_formalized`
+
+## Theorem
+
+Let a_n>0 and R_n=a_n/a_{n-1}. Assume PF2 (R_n nonincreasing), q_n=R_n/R_{n-1} is nondecreasing with q_2<=1/2, and translated contiguous order-3 Toeplitz minors rows (0,1,2), cols (m,m+1,m+2) are nonnegative. Then every order-3 Toeplitz minor with consecutive rows is nonnegative.
+
+Scope: consecutive rows only; no claim for sparse-row or PF-infinity minors
+
+## Proof By Family
+
+| family | claim | input |
+| --- | --- | --- |
+| `negative-shift triangular cases` | If a shifted column index is negative, the one-sided Toeplitz matrix is triangular or has a zero determinant/nonnegative diagonal product. | one-sided Toeplitz convention a_k=0 for k<0 |
+| `cols (0,j,k)` | det = a0*a_{j-2}*a_{k-2}*(R_{j-1}-R_{k-1}) >= 0 | PF2 |
+| `cols (1,j,k)` | det = positive_factor*(G_j-G_k), G_c=R_{c-1}(R1-R_c), and H810 gives G_j>=G_k | q_n nondecreasing and q2<=1/2 |
+| `cols (i,j,k), i>=2` | det = positive_factor*orientation((R_{c-1},R_{c-1}R_c)); translated contiguous D3 gives local convexity, hence all triple orientations | PF2 plus translated contiguous D3 |
+
+## Dependencies
+
+```json
+{
+  "H809": "exact identities and family split",
+  "H810": "anchored fixed-left G monotonicity from q2<=1/2 and q monotonicity",
+  "known_input_needed_for_Xi": "global q-monotonicity and global translated D3 for a_n=gamma_n/n!"
+}
+```
+
+## Diagnostics
+
+```json
+{
+  "H796": {
+    "sequence": [
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "7",
+        "float": 7.0
+      },
+      {
+        "fraction": "42",
+        "float": 42.0
+      },
+      {
+        "fraction": "252",
+        "float": 252.0
+      },
+      {
+        "fraction": "1512",
+        "float": 1512.0
+      },
+      {
+        "fraction": "7560",
+        "float": 7560.0
+      }
+    ],
+    "q2": {
+      "fraction": "6/7",
+      "float": 0.8571428571428571
+    },
+    "pf2": true,
+    "q_monotone": false,
+    "q2_le_half": false,
+    "translated_d3_nonnegative": true,
+    "negative_minor": {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        1,
+        2,
+        5
+      ],
+      "determinant": {
+        "fraction": "-1260",
+        "float": -1260.0
+      }
+    },
+    "theorem_applicable": false
+  },
+  "H801": {
+    "source": "research\\riemann\\h801_xi_ratio_logconvexity_audit.json",
+    "classification": "xi_ratio_logconvexity_survives_extended_stable_window",
+    "q2_upper": "0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649374824461530360033557751848020942354731674297445893848501087051652078702585675540938039167948973965501924065522328953573413866874665705838173963958249107691528651148565304988611187657",
+    "q2_upper_less_than_half": true,
+    "q_margins_positive": true,
+    "q_margin_rows": 126,
+    "translated_d3_source": "degree-3 Jensen/Turan input still must be cited/proved globally; not supplied by H801 itself",
+    "h799_tail_rows": 124
+  }
+}
+```
+
+## Decision
+
+H811 safely consolidates the repaired proof slice. H796 is rejected by the q2<=1/2 condition, while H801 finite Xi evidence supports q2<1/2 and q-monotonicity. The route should now move to sparse-row minors or to proving global q-monotonicity/translated D3 for Xi.
+
+## Limitations
+
+- This theorem is conditional; it does not prove the Xi hypotheses globally.
+- It covers consecutive-row order-3 minors only.
+- Sparse-row/consecutive-column and fully sparse minors remain the PF3 bottleneck.
+- PF3 is still far weaker than PF-infinity/RH.
+
+## Next Target
+
+`H812 sparse-row PF3 obstruction map`: Classify sparse-row order-3 minors after quotienting by the repaired consecutive-row theorem; try a dual anchored hierarchy or find an exact countermodel satisfying H811 inputs.

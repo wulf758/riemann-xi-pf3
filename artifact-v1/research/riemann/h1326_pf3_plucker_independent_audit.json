@@ -1,0 +1,119 @@
+{
+  "schema": "rh_h1326_pf3_plucker_independent_audit.v0",
+  "classification": "h1326_pf3_plucker_independent_audit_pass",
+  "all_checks_pass": true,
+  "check_count": 22,
+  "failed_checks": [],
+  "theorem_audited": "For a positive one-sided Toeplitz sequence with strict PF2, nonnegativity of every order-3 minor having consecutive rows implies full PF3.",
+  "symbolic_checks": {
+    "adjacent_plucker_identity_exact": true,
+    "gap_reduction_plucker_identity_exact": true,
+    "mirror_adjacent_identity_is_same_gap_orientation": true,
+    "wrong_sign_canary_is_killed": true
+  },
+  "structural_factorization_checks": {
+    "structural_row_factorization_exact": true,
+    "structural_tail_h_is_positive_index": true
+  },
+  "index_partition_audit": {
+    "max_index": 10,
+    "target_count": 27225,
+    "partition_counts": {
+      "last_row_zero": 11154,
+      "last_row_structural_pf2": 10791,
+      "first_column_structural_pf2": 2640,
+      "induction_region": 2640
+    },
+    "partition_is_exhaustive": true,
+    "adjacent_induction_steps": 924,
+    "general_induction_steps": 1386,
+    "mirror_steps_audited": 462,
+    "strict_partner_sources": {
+      "triangular_positive_diagonal": 210,
+      "strict_ratio_product": 2100
+    },
+    "failure_count": 0,
+    "failure_examples": []
+  },
+  "strict_partner_proof": {
+    "triangular_case": "x<=c0<y<=c1 gives a positive diagonal product because a_(c0-y)=0.",
+    "positive_entry_case": "For delta=y-x>0, g=c1-c0>0, p=c0-y>=0, strict decrease of R gives a_(p+delta)/a_p > a_(p+delta+g)/a_(p+g), hence the 2x2 determinant is positive."
+  },
+  "nonmonotone_exact_canary": {
+    "q_values": [
+      "1/2",
+      "7/16",
+      "11/16",
+      "23/32",
+      "9/16",
+      "9/16",
+      "5/16"
+    ],
+    "q_strictly_between_zero_and_one": true,
+    "q_is_nondecreasing": false,
+    "ratios_strictly_decreasing": true,
+    "consecutive_row_minor_count": 588,
+    "active_consecutive_row_minor_count": 210,
+    "all_consecutive_row_minors_nonnegative": true,
+    "all_active_consecutive_row_minors_positive": true,
+    "all_order3_minor_count": 7056,
+    "all_order3_minors_nonnegative": true,
+    "negative_order3_count": 0,
+    "minimum_positive_consecutive_minor": "22214064166294973949202264358047497/182687704666362864775460604089535377456991567872",
+    "minimum_order3_minor": "0"
+  },
+  "exhaustive_rational_grid": {
+    "grid": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "length": 5,
+    "checked": 243,
+    "consecutive_row_survivors": 48,
+    "nonmonotone_q_survivors": 37,
+    "pf3_failures_among_survivors": 0,
+    "first_failure": null
+  },
+  "random_rational_scan": {
+    "seed": 1326,
+    "denominator": 32,
+    "checked": 256,
+    "consecutive_row_survivors": 13,
+    "nonmonotone_q_survivors": 13,
+    "pf3_failures_among_survivors": 0
+  },
+  "dependencies": {
+    "H1325_sha256": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "H1325_dependencies_sha256": "F034A24C08EED9FC8E0A0405D596DF47A4227CFBEC7E7664D2823062A45A26B4",
+    "H811_sha256": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+    "H1325_global_D3_H811_closed": true,
+    "Xi_coefficients_positive": true,
+    "Xi_strict_adjacent_PF2_closed": true,
+    "H811_exact_scope_is_consecutive_rows": true
+  },
+  "checks": {
+    "adjacent_plucker_identity_exact": true,
+    "gap_reduction_plucker_identity_exact": true,
+    "mirror_adjacent_identity_is_same_gap_orientation": true,
+    "wrong_sign_canary_is_killed": true,
+    "structural_row_factorization_exact": true,
+    "structural_tail_h_is_positive_index": true,
+    "index_partition_exhaustive": true,
+    "index_partner_and_termination_scan_passes": true,
+    "triangular_partner_boundary_was_exercised": true,
+    "strict_ratio_partner_case_was_exercised": true,
+    "nonmonotone_canary_really_nonmonotone": true,
+    "nonmonotone_canary_strict_PF2": true,
+    "nonmonotone_canary_active_consecutive_strict": true,
+    "nonmonotone_canary_full_PF3": true,
+    "exhaustive_grid_has_nonmonotone_survivor": true,
+    "exhaustive_grid_no_PF3_failure": true,
+    "random_scan_has_survivor": true,
+    "random_scan_no_PF3_failure": true,
+    "H1325_dependency_closed": true,
+    "Xi_positive_dependency_closed": true,
+    "Xi_strict_PF2_dependency_closed": true,
+    "H811_scope_dependency_closed": true
+  }
+}

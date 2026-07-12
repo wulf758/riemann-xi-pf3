@@ -1,0 +1,1934 @@
+{
+  "schema": "rh_h815_four_term_sparse_bridge.v0",
+  "classification": "h815_four_term_sparse_bridge_partial_with_failures",
+  "lemma": {
+    "name": "Four-term sparse bridge",
+    "statement": "For 0<q2<=q3<=...<=1 with q2<=1/2, certify normalized determinant polynomials P=1-A-B+Z by either: (i) B contains q2, Z=B*W, and W>=A^beta for some beta<=2; or (ii) the stronger subcase B=A*q2*U, U<=1, Z=B*W, and W^2>=A^3.",
+    "scalar_reduction": "case (i): P>=1/2-A+(1/2)A^beta>=1/2-A+(1/2)A^2>=0; case (ii): P>=1-A-(A/2)*(1-A^(3/2))>=0."
+  },
+  "counts": {
+    "h813_mixed_unclassified_input": 441,
+    "covered_by_four_term_bridge": 85,
+    "four_term_failures": 200,
+    "not_four_term_remaining": 156
+  },
+  "covered_family_counts": [
+    [
+      "row_gaps=(1,2), col_gaps=(1,1)",
+      5
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,1)",
+      4
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,1)",
+      4
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,1)",
+      4
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(5,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(5,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(5,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,2)",
+      2
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,2)",
+      2
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(4,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(3,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(2,1)",
+      2
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(1,1)",
+      2
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,2)",
+      2
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(4,1)",
+      2
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(4,1)",
+      2
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,2)",
+      2
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(6,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(6,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(6,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(6,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,6), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,6), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,6), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,6), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,6), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(4,1)",
+      1
+    ]
+  ],
+  "remaining_family_counts": [
+    [
+      "row_gaps=(1,2), col_gaps=(1,2)",
+      10
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,1)",
+      10
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,1)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,1)",
+      10
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,3)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,2)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,1)",
+      6
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,2)",
+      6
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,1)",
+      6
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,4)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,2)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(3,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(2,1)",
+      3
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(4,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,3)",
+      3
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,2)",
+      3
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,2)",
+      3
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(1,1)",
+      3
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(3,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(4,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(1,5)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,2), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(4,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,3), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(5,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(1,4), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(2,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(4,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,2), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,4), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,5), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(2,3)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(4,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(3,2), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,3), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(3,4), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(2,2)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(3,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(4,2), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,3), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(4,3), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(5,1), col_gaps=(2,1)",
+      1
+    ],
+    [
+      "row_gaps=(5,2), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(5,1)",
+      1
+    ],
+    [
+      "row_gaps=(1,5), col_gaps=(1,1)",
+      1
+    ],
+    [
+      "row_gaps=(2,1), col_gaps=(1,4)",
+      1
+    ],
+    [
+      "row_gaps=(2,3), col_gaps=(3,2)",
+      1
+    ],
+    [
+      "row_gaps=(3,1), col_gaps=(1,3)",
+      1
+    ],
+    [
+      "row_gaps=(4,1), col_gaps=(1,2)",
+      1
+    ],
+    [
+      "row_gaps=(5,1), col_gaps=(1,1)",
+      1
+    ]
+  ],
+  "covered_examples": [
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q2*q3*q4 + q2*q3^2*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3*q4",
+        "B": "q2*q3*q4",
+        "Z": "q2*q3^2*q4^2*q5",
+        "W_Z_over_B": "q3*q4*q5",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        5,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5 - q2*q3*q4*q5 + q2*q3*q4^2*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q4*q5",
+        "B": "q2*q3*q4*q5",
+        "Z": "q2*q3*q4^2*q5^2*q6",
+        "W_Z_over_B": "q4*q5*q6",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        6,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(5,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        7,
+        5,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q5*q6 - q2*q3*q4*q5*q6 + q2*q3*q4*q5^2*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q5*q6",
+        "B": "q2*q3*q4*q5*q6",
+        "Z": "q2*q3*q4*q5^2*q6^2*q7",
+        "W_Z_over_B": "q5*q6*q7",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        7,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(6,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        9,
+        7,
+        5,
+        3,
+        1,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q6*q7 - q2*q3*q4*q5*q6*q7 + q2*q3*q4*q5*q6^2*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q6*q7",
+        "B": "q2*q3*q4*q5*q6*q7",
+        "Z": "q2*q3*q4*q5*q6^2*q7^2*q8",
+        "W_Z_over_B": "q6*q7*q8",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        4
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3 + q2*q3^2*q4",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3",
+        "B": "q2*q3",
+        "Z": "q2*q3^2*q4",
+        "W_Z_over_B": "q3*q4",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        1,
+        5,
+        6
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(4,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4*q5 - q2*q3*q4*q5 + q2*q3^2*q4^2*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3*q4*q5",
+        "B": "q2*q3*q4*q5",
+        "Z": "q2*q3^2*q4^2*q5^2*q6",
+        "W_Z_over_B": "q3*q4*q5*q6",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        1,
+        6,
+        7
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(5,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        4,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5*q6 - q2*q3*q4*q5*q6 + q2*q3*q4^2*q5^2*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q4*q5*q6",
+        "B": "q2*q3*q4*q5*q6",
+        "Z": "q2*q3*q4^2*q5^2*q6^2*q7",
+        "W_Z_over_B": "q4*q5*q6*q7",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        1,
+        7,
+        8
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(6,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        6,
+        4,
+        2,
+        1,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q5*q6*q7 - q2*q3*q4*q5*q6*q7 + q2*q3*q4*q5^2*q6^2*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q5*q6*q7",
+        "B": "q2*q3*q4*q5*q6*q7",
+        "Z": "q2*q3*q4*q5^2*q6^2*q7^2*q8",
+        "W_Z_over_B": "q5*q6*q7*q8",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        2,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(2,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q2*q3*q4 + q2*q3^2*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3*q4",
+        "B": "q2*q3*q4",
+        "Z": "q2*q3^2*q4^2*q5",
+        "W_Z_over_B": "q3*q4*q5",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        2,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(2,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q2*q3^2*q4^2*q5 + q2*q3^3*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3*q4",
+        "B": "q2*q3^2*q4^2*q5",
+        "Z": "q2*q3^3*q4^3*q5^2*q6",
+        "W_Z_over_B": "q3*q4*q5*q6",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        3,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,3), col_gaps=(1,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4 - q2*q3*q4 + q2*q3*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q4",
+        "B": "q2*q3*q4",
+        "Z": "q2*q3*q4^2*q5",
+        "W_Z_over_B": "q4*q5",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    },
+    {
+      "rows": [
+        0,
+        1,
+        5
+      ],
+      "cols": [
+        1,
+        6,
+        7
+      ],
+      "family": "row_gaps=(1,4), col_gaps=(5,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4*q5*q6 - q2*q3*q4*q5*q6 + q2*q3^2*q4^2*q5^2*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null,
+      "h815_certificate": {
+        "type": "half_compensated_four_term_bridge",
+        "A": "q3*q4*q5*q6",
+        "B": "q2*q3*q4*q5*q6",
+        "Z": "q2*q3^2*q4^2*q5^2*q6^2*q7",
+        "W_Z_over_B": "q3*q4*q5*q6*q7",
+        "beta": "2/1",
+        "proof": "P=1-A-B+Z=1-A-B*(1-W). Since B contains q2, B<=1/2. Since W>=A^beta with beta<=2 under monotone q_i, P>=1-A-(1/2)*(1-A^beta)>=1/2-A+(1/2)*A^2>=0."
+      }
+    }
+  ],
+  "four_term_failure_examples": [
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5 - q2*q3*q4 + q2*q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5^2*q6 - q2*q3*q4 + q2*q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        4,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,4)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        4,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4^2*q5^2*q6^2*q7 - q2*q3*q4 + q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        5,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        4,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5^2*q6 - q2*q3*q4*q5 + q2*q3*q4^2*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        5,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        7,
+        5,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q4*q5^2*q6^2*q7 - q2*q3*q4*q5 + q2*q3*q4^2*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        1,
+        6,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(5,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        6,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q5*q6^2*q7 - q2*q3*q4*q5*q6 + q2*q3*q4*q5^2*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4 + q2*q3^3*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5 + q2*q3^3*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,4)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5^2*q6 + q2*q3^3*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        3,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,5)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3 - q2*q3^2*q4^2*q5^2*q6^2*q7 + q2*q3^3*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q3*q4^2*q5 + q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 4,
+      "polynomial": "1 - q3*q4 - q3*q4^2*q5^2*q6 + q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    }
+  ],
+  "not_four_term_examples": [
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 3,
+      "polynomial": "1 - 2*q3*q4 + q3^2*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        5
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4 - q3*q4 + q3*q4^2*q5 + q2*q3^2*q4^2 - q2*q3^2*q4^2*q5",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        6,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4 - q3*q4^2*q5 + q3*q4^3*q5^2*q6 + q2*q3^2*q4^3*q5 - q2*q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        7,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4 - q3*q4^2*q5^2*q6 + q3*q4^3*q5^3*q6^2*q7 + q2*q3^2*q4^3*q5^2*q6 - q2*q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,4)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        5,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4 - q3*q4^2*q5^2*q6^2*q7 + q3*q4^3*q5^3*q6^3*q7^2*q8 + q2*q3^2*q4^3*q5^2*q6^2*q7 - q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        5,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        7,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 5,
+      "polynomial": "1 - 2*q4*q5 + q4^2*q5^2*q6 + q2*q3^2*q4^3*q5^2 - q2*q3^2*q4^3*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        5,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4*q5 - q4*q5^2*q6 + q4^2*q5^3*q6^2*q7 + q2*q3^2*q4^3*q5^3*q6 - q2*q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        5,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(2,3)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        9,
+        6,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q4*q5 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8 + q2*q3^2*q4^3*q5^3*q6^2*q7 - q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        6,
+        7
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        9,
+        6,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q5*q6 - q4*q5*q6 + q4*q5^2*q6^2*q7 + q2*q3^2*q4^3*q5^3*q6^2 - q2*q3^2*q4^3*q5^3*q6^2*q7",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        6,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(3,2)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        10,
+        7,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q5*q6^2*q7 - q4*q5*q6 + q4*q5^2*q6^3*q7^2*q8 + q2*q3^2*q4^3*q5^3*q6^3*q7 - q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        7,
+        8
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(4,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        11,
+        8,
+        5,
+        3,
+        1,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q6*q7 - q4*q5*q6*q7 + q4*q5*q6^2*q7^2*q8 + q2*q3^2*q4^3*q5^3*q6^3*q7^2 - q2*q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    },
+    {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        4,
+        5,
+        6
+      ],
+      "family": "row_gaps=(1,2), col_gaps=(1,1)",
+      "removed_positive_monomial_exponents_q2_to_qmax": [
+        8,
+        5,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "term_count": 6,
+      "polynomial": "1 - q5 - q4*q5 + q4*q5^2*q6 + q3*q4^2*q5^2 - q3*q4^2*q5^2*q6",
+      "certificate": {
+        "type": "mixed",
+        "one_minus_factor_candidates": [],
+        "adjacent_monotone_equality_vanishes": []
+      },
+      "matches_translated_contiguous_d3": null
+    }
+  ],
+  "decision": "The four-term bridge proves many H813 mixed forms but not every four-term case. Inspect the failed four-term cases before promoting this to a lemma.",
+  "next_target": {
+    "name": "H816 six-term boundary/D3 coupling",
+    "statement": "Use the translated contiguous D3 input to certify the remaining higher-term mixed sparse-row polynomials, or pivot to a Plucker-Dodgson identity if direct product bounds stall."
+  }
+}

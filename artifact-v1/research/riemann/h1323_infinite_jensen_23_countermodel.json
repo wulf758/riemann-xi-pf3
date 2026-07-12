@@ -1,0 +1,234 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "D_prefix_positive_n2_to_n7": true,
+    "D_tail_factorization_exact": true,
+    "D_tail_positive_for_n_ge_8": true,
+    "degree2_prefix_positive": true,
+    "degree2_tail_positive": true,
+    "degree3_prefix_positive": true,
+    "degree3_tail_F_factorization_exact": true,
+    "degree3_tail_F_negative": true,
+    "entire_root_bound_tends_to_zero": true,
+    "h804_tau_ratio_identity": true,
+    "h804_unit_margin_identity": true,
+    "jensen_degree4_discriminant_negative": true,
+    "prefix_q_below_c": true,
+    "prefix_q_nondecreasing": true,
+    "tail_connects_at_q8": true,
+    "tail_q_below_c_below_one": true,
+    "tail_q_delta_identity": true
+  },
+  "classification": "h1323_infinite_exact_countermodel_to_jensen_degree_2_3_patch",
+  "construction": {
+    "a_0_to_a_8": [
+      "1",
+      "1",
+      "13/32",
+      "23829/262144",
+      "3712677345/274877906944",
+      "51482378742657525/36893488147419103232",
+      "137780358867535803360449625/1267650600228229401496703205376",
+      "74116017527011654140509561088083443125/11150372599265311570767859136324180752990208",
+      "8013696610621053214779376588460805228656159159915625/25108406941546723055343157692830665664409421777856138051584"
+    ],
+    "c": "201/208",
+    "definitions": [
+      "R_1=a_0=a_1=1",
+      "R_n/R_(n-1)=q_n",
+      "a_n/a_(n-1)=R_n",
+      "gamma_n=n!*a_n"
+    ],
+    "gamma_0_to_gamma_8": [
+      "1",
+      "1",
+      "13/16",
+      "71487/131072",
+      "11138032035/34359738368",
+      "772235681139862875/4611686018427387904",
+      "6200116149039111151220233125/79228162514264337593543950336",
+      "23346545521008671054260511742746284584375/696898287454081973172991196020261297061888",
+      "2524314432345631762655503625365153647026690135373421875/196159429230833773869868419475239575503198607639501078528"
+    ],
+    "q_2_to_q_8": [
+      "13/32",
+      "141/256",
+      "85/128",
+      "89/128",
+      "193/256",
+      "201/256",
+      "201/256"
+    ],
+    "q_n_for_n_ge_8": "(201/208)*(2*n-3)/(2*n)"
+  },
+  "degree4_falsifier": {
+    "coefficients_ascending": [
+      "1",
+      "4",
+      "39/8",
+      "71487/32768",
+      "11138032035/34359738368"
+    ],
+    "conclusion": "the negative discriminant forces one conjugate nonreal pair",
+    "discriminant": "-691976798016209978769928197/158456325028528675187087900672",
+    "polynomial": "11138032035*x**4/34359738368 + 71487*x**3/32768 + 39*x**2/8 + 4*x + 1",
+    "shift": 0
+  },
+  "entire_function": {
+    "Phi": "sum_(n>=0) a_n*z**n",
+    "conclusion": "Phi is entire by the root test",
+    "majorant": [
+      "q_n<c",
+      "R_n<=c**(n-1)",
+      "a_n<=c**(n*(n-1)/2)",
+      "a_n**(1/n)<=c**((n-1)/2)->0"
+    ]
+  },
+  "global_q_pf2_h803": {
+    "H803_reason": "q_(n+1)>=q_n for every integer n>=2",
+    "PF2_reason": "R_(n+1)/R_n=q_(n+1)<1; hence a is positive log-concave, which is equivalent to one-sided PF2",
+    "prefix_differences": [
+      "37/256",
+      "29/256",
+      "1/32",
+      "15/256",
+      "1/32",
+      "0"
+    ],
+    "tail_bound": "0<q_n<c=201/208<1",
+    "tail_difference": "603/(416*n*(n + 1))"
+  },
+  "h804_unit_barrier_tail": {
+    "barrier": "1-1/n**2",
+    "definitions": "C_n=(2*n)*(2*n-1), tau_n=q_n*C_n/C_(n-1)",
+    "range": "n>=8",
+    "strict_margin": "(n - 1)/(n**2*(2*n - 1))",
+    "tau_(n+1)/tau_n": "(n - 1)*(2*n + 1)/(n*(2*n - 1))"
+  },
+  "h851_translated_D3": {
+    "definition": "D_n=(1-q_(n+1))**2-q_(n+1)**2*(1-q_n)*(1-q_(n+2))",
+    "prefix_n_2_to_7": [
+      {
+        "D_n": "37926823/268435456",
+        "n": 2,
+        "positive": true
+      },
+      {
+        "D_n": "28183907/536870912",
+        "n": 3,
+        "positive": true
+      },
+      {
+        "D_n": "28382139/536870912",
+        "n": 4,
+        "positive": true
+      },
+      {
+        "D_n": "50157087/2147483648",
+        "n": 5,
+        "positive": true
+      },
+      {
+        "D_n": "58256935/4294967296",
+        "n": 6,
+        "positive": true
+      },
+      {
+        "D_n": "142163945/6979321856",
+        "n": 7,
+        "positive": true
+      }
+    ],
+    "tail_formula": "(2244592*n**4 + 297357088*n**3 + 13154707832*n**2 + 192552254264*n - 15372297693)/(29948379136*n*(n + 1)**2*(n + 2))",
+    "tail_numerator": "2244592*n**4 + 297357088*n**3 + 13154707832*n**2 + 192552254264*n - 15372297693",
+    "tail_positivity_reason": "all nonconstant coefficients are positive and already the linear coefficient exceeds the absolute constant for n>=1",
+    "tail_range": "n>=8"
+  },
+  "jensen_degree_2_3_all_shifts": {
+    "F_definition": "u**2*v**2-6*u*v+4*u+4*v-3",
+    "F_tail_factorization": "-3*(1509200*n**4 + 73874752*n**3 + 1236652088*n**2 + 7568113136*n + 5859746333)/(29948379136*(n + 1)**2*(n + 2)**2)",
+    "conclusion": "every degree-2 and degree-3 Jensen polynomial is strictly hyperbolic",
+    "convention": "J_gamma^(d,n)(X)=sum_(j=0)^d binom(d,j)*gamma_(n+j)*X**j",
+    "degree2_prefix": [
+      {
+        "normalized_discriminant": "3/4",
+        "shift": 0,
+        "u": "13/16"
+      },
+      {
+        "normalized_discriminant": "89/128",
+        "shift": 1,
+        "u": "423/512"
+      },
+      {
+        "normalized_discriminant": "11/24",
+        "shift": 2,
+        "u": "85/96"
+      },
+      {
+        "normalized_discriminant": "67/128",
+        "shift": 3,
+        "u": "445/512"
+      },
+      {
+        "normalized_discriminant": "61/160",
+        "shift": 4,
+        "u": "579/640"
+      },
+      {
+        "normalized_discriminant": "43/128",
+        "shift": 5,
+        "u": "469/512"
+      }
+    ],
+    "degree2_tail_normalized_discriminant": "(14*n + 215)/(104*(n + 1))",
+    "degree3_prefix": [
+      {
+        "normalized_discriminant": "6829930341/17179869184",
+        "shift": 0,
+        "u": "13/16",
+        "v": "423/512"
+      },
+      {
+        "normalized_discriminant": "9833091326901/70368744177664",
+        "shift": 1,
+        "u": "423/512",
+        "v": "85/96"
+      },
+      {
+        "normalized_discriminant": "119928981575/824633720832",
+        "shift": 2,
+        "u": "85/96",
+        "v": "445/512"
+      },
+      {
+        "normalized_discriminant": "96969867412005/1125899906842624",
+        "shift": 3,
+        "u": "445/512",
+        "v": "579/640"
+      },
+      {
+        "normalized_discriminant": "2602796310705933/43980465111040000",
+        "shift": 4,
+        "u": "579/640",
+        "v": "469/512"
+      },
+      {
+        "normalized_discriminant": "4456654550901/70368744177664",
+        "shift": 5,
+        "u": "469/512",
+        "v": "201/224"
+      }
+    ],
+    "degree3_tail_normalized_discriminant": "3272481*(2*n + 1)**2*(1509200*n**4 + 73874752*n**3 + 1236652088*n**2 + 7568113136*n + 5859746333)/(5182746699759616*(n + 1)**4*(n + 2)**2)",
+    "normalization": "with y=P_(n+1)X and Q_m=m*q_m/(m-1): d=2 gives 1+2y+u*y**2; d=3 gives 1+3y+3u*y**2+u**2*v*y**3",
+    "prefix_shifts": "n=0,...,5",
+    "tail_shifts": "n>=6",
+    "tail_u": "201*(2*n + 1)/(416*(n + 1))",
+    "tail_v": "201*(2*n + 3)/(416*(n + 2))"
+  },
+  "scope": {
+    "invalidated_patch": "PF2 + H803 + H804 tail + global H851 D_n + entire positivity + all shifted Jensen degrees 2 and 3 does not imply Jensen degree 4",
+    "not_claimed": "the constructed sequence is not Xi and does not refute any Xi-specific property"
+  }
+}

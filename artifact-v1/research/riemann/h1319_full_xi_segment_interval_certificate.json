@@ -1,0 +1,107 @@
+{
+  "all_segment_checks_pass": true,
+  "checks": {
+    "all_box_statuses_certified": true,
+    "all_target_polynomial_lowers_positive": true,
+    "box_count_is_192": true,
+    "detailed_all_certified": true,
+    "detailed_classification_certified": true,
+    "detailed_failed_boxes_empty": true,
+    "exact_cover_contiguous": true,
+    "exact_cover_ends_at_4": true,
+    "exact_cover_starts_at_323_over_100": true,
+    "h1271_h1316_dependencies_pass": true,
+    "quantity_is_full_xi_third_cumulant": true,
+    "r125_bracket_passes": true,
+    "r125_bracket_starts_at_cover_lower": true,
+    "t_strictly_increasing_on_cover": true,
+    "target_beta_is_3_over_4": true,
+    "target_polynomial_is_recorded": true
+  },
+  "claim": {
+    "desired_r_segment": {
+      "closed": true,
+      "lower": "r(125)",
+      "upper": "4"
+    },
+    "kernel": "full_xi",
+    "lower_bound": "-3/4",
+    "quantity": "t^2*kappa_Xi'''(t)",
+    "r_cover_domain": {
+      "closed": true,
+      "lower": "323/100",
+      "upper": "4"
+    },
+    "t_domain": {
+      "closed": true,
+      "lower": "125",
+      "upper": "2*pi*exp(4)-5"
+    }
+  },
+  "classification": "h1319_full_xi_first_compact_segment_certified",
+  "endpoint_checks": {
+    "r125_bracket": {
+      "all_pass": true,
+      "bracket": [
+        "323/100",
+        "13/4"
+      ],
+      "checks": {
+        "q_at_hi_above_250": true,
+        "q_at_lo_below_250": true,
+        "q_strictly_increasing_on_bracket": true
+      },
+      "definition": "r(125) is the unique r with q(r)=2*125=250",
+      "q_at_hi": {
+        "interval": "[255.0114128566712911129 +/- 3.19e-20]",
+        "lower": "[255.0114128566712911129 +/- 3.19e-20]",
+        "radius": "[1.497292097943378014330e-78 +/- 2.93e-100]",
+        "upper": "[255.0114128566712911129 +/- 3.19e-20]"
+      },
+      "q_at_lo": {
+        "interval": "[248.2538823395479046305 +/- 3.91e-20]",
+        "lower": "[248.2538823395479046305 +/- 3.91e-20]",
+        "radius": "[3.186404229651264696149e-78 +/- 2.49e-100]",
+        "upper": "[248.2538823395479046305 +/- 3.91e-20]"
+      },
+      "q_prime_on_bracket": {
+        "interval": "[3.4e+2 +/- 6.33]",
+        "lower": "[333.6737218311528116225 +/- 4.83e-20]",
+        "radius": "[4.211467534303665161133 +/- 1.88e-22]",
+        "upper": "[342.0966568997601419448 +/- 1.39e-20]"
+      }
+    },
+    "t_at_4": {
+      "interval": "[338.050294087438535398368221316 +/- 2.42e-28]",
+      "lower": "[338.050294087438535398368221316 +/- 2.42e-28]",
+      "upper": "[338.050294087438535398368221316 +/- 2.42e-28]"
+    },
+    "t_prime_on_r_cover": {
+      "interval": "[+/- 4.28e+2]",
+      "lower": "[149.114327406557564184731484693 +/- 8.40e-29]",
+      "upper": "[427.687873339327339575356484693 +/- 8.40e-29]"
+    }
+  },
+  "evidence": {
+    "canonical_generator": "tools/rh_h1319_full_xi_adaptive_rbox_certificate.py",
+    "detailed_certificate": "research\\riemann\\h1319_full_xi_adaptive_rbox_cover.json",
+    "detailed_certificate_sha256": "7F1B0F3C01FEB9CDCEB8B6B33B65BCF467BC69AAE7DDE55CBE5149FD68826F3C"
+  },
+  "global_compact_status": {
+    "full_domain_covered": false,
+    "global_manifest_eligible": false,
+    "global_schema": "rh_h1319_full_xi_compact_interval_certificate.v1",
+    "global_t_domain": {
+      "closed": true,
+      "lower": "125",
+      "upper": "T_71"
+    },
+    "reason": "the certified first segment ends at r=4, while H1317 starts at r=71",
+    "remaining_r_gap": {
+      "lower": "4",
+      "open": true,
+      "upper": "71"
+    }
+  },
+  "schema": "rh_h1319_full_xi_segment_interval_certificate.v1"
+}
