@@ -137,7 +137,8 @@ def hash_chain_checks() -> tuple[dict[str, bool], dict[str, str]]:
     manifest = load(MANIFEST)
     segment = load(SEGMENT)
     segments = {
-        Path(row["path"]).name: row for row in manifest["r_proof_chain"]["segments"]
+        Path(row["path"].replace("\\", "/")).name: row
+        for row in manifest["r_proof_chain"]["segments"]
     }
     checks: dict[str, bool] = {
         "manifest_passes": bool(manifest.get("all_checks_pass")),

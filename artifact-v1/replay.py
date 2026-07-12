@@ -35,7 +35,7 @@ def verify_manifest() -> tuple[dict[str, bool], list[str]]:
 def dependency_versions() -> tuple[dict[str, str], list[str]]:
     versions: dict[str, str] = {"python": sys.version.split()[0]}
     missing: list[str] = []
-    for module_name in ("sympy", "flint", "mpmath"):
+    for module_name in ("sympy", "flint", "mpmath", "numpy"):
         try:
             module = __import__(module_name)
             versions[module_name] = str(getattr(module, "__version__", "unknown"))

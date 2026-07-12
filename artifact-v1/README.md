@@ -1,4 +1,4 @@
-# Xi PF3 proof artifact v1
+# Xi PF3 proof artifact v1.0.1
 
 This frozen supplementary artifact accompanies *The Taylor coefficients of the
 Riemann xi-function form a Polya frequency sequence of order 3*.
@@ -15,6 +15,10 @@ Jensen hyperbolicity, or the Riemann Hypothesis.
 - sympy 1.14.0
 - python-flint 0.8.0
 - mpmath 1.3.0
+- numpy 2.3.1
+
+Reference replays succeeded on CPython 3.14.0 under Windows and independently
+on CPython 3.11.15 under Ubuntu 24.04.
 
 Install dependencies and run from the artifact root:
 

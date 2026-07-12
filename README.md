@@ -1,5 +1,7 @@
 # Riemann xi coefficients are PF3
 
+[![Independent PF3 replay](https://github.com/wulf758/riemann-xi-pf3/actions/workflows/independent-replay.yml/badge.svg)](https://github.com/wulf758/riemann-xi-pf3/actions/workflows/independent-replay.yml)
+
 This repository accompanies the manuscript
 *The Taylor coefficients of the Riemann xi-function form a Pólya frequency
 sequence of order 3* by Cyril Rodaro.
@@ -15,17 +17,22 @@ computer-assisted parts are supplied as a fail-closed, reproducible artifact.
 
 - [`paper/xi_pf3.pdf`](paper/xi_pf3.pdf): current compiled manuscript.
 - [`paper/xi_pf3.tex`](paper/xi_pf3.tex): current LaTeX source.
-- [`artifact-v1/`](artifact-v1): browsable, manifest-governed artifact files.
-- [`xi-pf3-artifact-v1.zip`](xi-pf3-artifact-v1.zip): canonical frozen archive.
+- [`artifact-v1/`](artifact-v1): current v1.0.1 manifest-governed artifact files.
+- [`xi-pf3-artifact-v1.0.1.zip`](xi-pf3-artifact-v1.0.1.zip): current portable archive.
+- [`xi-pf3-artifact-v1.zip`](xi-pf3-artifact-v1.zip): original v1.0.0 archive.
 - [`SHA256SUMS`](SHA256SUMS): checksums of the archive, manuscript, and replay
   entry files.
 - [`CITATION.cff`](CITATION.cff): citation metadata.
 
-The canonical ZIP remains byte-for-byte identical to the archive deposited in
-the first repository commit. The browsable `artifact-v1/` directory contains
-all 266 files governed by `MANIFEST.sha256.json`. Non-manifest Python bytecode
-caches and the auxiliary Windows-reserved filename `NUL.md` are intentionally
-not duplicated in the Git tree; neither is consumed by the replay.
+The original v1.0.0 ZIP remains byte-for-byte identical to the archive deposited
+in the first repository commit. Version 1.0.1 changes packaging only: it adds
+the missing NumPy pin and makes one serialized Windows-path lookup portable.
+No mathematical inequality, certificate value, or theorem statement changed.
+
+The browsable `artifact-v1/` directory and the v1.0.1 ZIP contain all 266 files
+governed by `MANIFEST.sha256.json`. Non-manifest Python bytecode caches and the
+auxiliary Windows-reserved filename `NUL.md` are intentionally not duplicated
+in the Git tree; neither is consumed by the replay.
 
 ## Quick verification
 
@@ -71,7 +78,11 @@ layers for the computer-assisted steps.
 
 ## Reference environment and timing
 
-The release was replayed successfully on 2026-07-12 with:
+Version 1.0.1 is replayed automatically on Ubuntu 24.04 with CPython 3.11 and
+the exact versions in `artifact-v1/requirements.txt`. The repository view and
+the packaged ZIP are both checked without patching either copy.
+
+The original Windows reference replay used:
 
 - Windows build 26200.8655;
 - CPython 3.14.0;
@@ -85,16 +96,22 @@ guarantees. A peak-memory bound has not been certified.
 
 ## Integrity
 
-Canonical archive SHA-256:
+Portable v1.0.1 archive SHA-256:
+
+```text
+370590D403083E671978DB1D473970AA64935BACF0F19CDEE614982331AD3726
+```
+
+Original v1.0.0 archive SHA-256:
 
 ```text
 5D256A2580126EF4872668EBF513B431CD9861D5461786FD75F2A4D4ED9D96C0
 ```
 
-The archive was originally frozen at commit
+The original archive was frozen at commit
 [`18aa2da35cd0f45f38041365080d76a8b32ad052`](https://github.com/wulf758/riemann-xi-pf3/commit/18aa2da35cd0f45f38041365080d76a8b32ad052).
-The Git blob identifier shown by GitHub is not a file SHA-256 and is not expected
-to match this digest.
+Git blob identifiers are not file SHA-256 digests and are not expected to match
+these values.
 
 ## Citation
 

@@ -1,104 +1,96 @@
 name: Independent PF3 replay
 
 on:
+  push:
+    branches: [ main ]
+    tags: [ "v*" ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   replay:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Install pinned dependencies and missing audit dependency
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: artifact-v1/requirements.txt
+
+      - name: Install pinned dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r artifact-v1/requirements.txt
-          python -m pip install numpy==2.3.1
-      - name: Verify the untouched frozen artifact
-        working-directory: artifact-v1
-        run: python replay.py --verify-only > verify-original.json
-      - name: Create Linux audit copy and patch cross-platform path parsing
+
+      - name: Verify repository checksums
+        run: sha256sum --check SHA256SUMS
+
+      - name: Replay repository artifact
         run: |
-          cp -a artifact-v1 audit-artifact
-          python - <<'PY'
-          import hashlib
-          from pathlib import Path
+          mkdir -p reports
+          python artifact-v1/replay.py --verify-only > reports/repository-verify.json
+          python artifact-v1/replay.py > reports/repository-replay.json
 
-          assembly = Path('audit-artifact/tools/rh_h1325_xi_global_d3_h811_assembly.py')
-          text = assembly.read_text(encoding='utf-8')
-          old = 'Path(row["path"]).name'
-          new = 'Path(row["path"].replace("\\\\", "/")).name'
-          if text.count(old) != 1:
-              raise SystemExit(f'Expected exactly one path parser occurrence, found {text.count(old)}')
-          text = text.replace(old, new)
-          assembly.write_text(text, encoding='utf-8')
-          patched_sha = hashlib.sha256(assembly.read_bytes()).hexdigest().upper()
+      - name: Replay packaged archive
+        run: |
+          mkdir -p audit-release
+          unzip -q xi-pf3-artifact-v1.0.1.zip -d audit-release
+          python audit-release/xi-pf3-artifact-v1.0.1/replay.py --verify-only > reports/archive-verify.json
+          python audit-release/xi-pf3-artifact-v1.0.1/replay.py > reports/archive-replay.json
 
-          fail_closed = Path('audit-artifact/tools/rh_h1325_fail_closed_manifest.py')
-          fc_text = fail_closed.read_text(encoding='utf-8')
-          original_sha = '58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F'
-          if fc_text.count(original_sha) != 1:
-              raise SystemExit('Could not locate the pinned assembly hash exactly once')
-          fail_closed.write_text(fc_text.replace(original_sha, patched_sha), encoding='utf-8')
-          print(f'patched_assembly_sha256={patched_sha}')
-          PY
-      - name: Replay H1325 primary assembly
-        working-directory: audit-artifact
-        run: python tools/rh_h1325_xi_global_d3_h811_assembly.py --no-write > h1325-primary.json
-      - name: Replay H1325 independent audit
-        working-directory: audit-artifact
-        run: python tools/rh_h1325_xi_global_d3_h811_independent_audit.py > h1325-independent.json
-      - name: Replay complete H1325 fail-closed package
-        working-directory: audit-artifact
-        run: python tools/rh_h1325_fail_closed_manifest.py --no-write > h1325-fail-closed.json
-      - name: Replay complete H1326 PF3 completion package
-        working-directory: audit-artifact
-        run: python tools/rh_h1326_fail_closed_manifest.py > h1326-fail-closed.json
-      - name: Build independent audit summary
-        working-directory: audit-artifact
+      - name: Build independent Linux summary
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
 
-          files = [
-              'h1325-primary.json',
-              'h1325-independent.json',
-              'h1325-fail-closed.json',
-              'h1326-fail-closed.json',
+          report_paths = [
+              Path("reports/repository-verify.json"),
+              Path("reports/repository-replay.json"),
+              Path("reports/archive-verify.json"),
+              Path("reports/archive-replay.json"),
           ]
-          reports = {name: json.loads(Path(name).read_text(encoding='utf-8')) for name in files}
+          reports = {
+              path.name: json.loads(path.read_text(encoding="utf-8"))
+              for path in report_paths
+          }
+          all_checks_pass = all(
+              report.get("all_checks_pass") is True for report in reports.values()
+          )
           summary = {
-              'classification': 'independent_linux_pf3_replay_pass',
-              'all_checks_pass': all(report.get('all_checks_pass') is True for report in reports.values()),
-              'reports': {
+              "classification": (
+                  "independent_linux_pf3_replay_pass"
+                  if all_checks_pass
+                  else "independent_linux_pf3_replay_failed"
+              ),
+              "all_checks_pass": all_checks_pass,
+              "python": "3.11",
+              "runner": "ubuntu-24.04",
+              "reports": {
                   name: {
-                      'classification': report.get('classification'),
-                      'all_checks_pass': report.get('all_checks_pass'),
+                      "classification": report.get("classification"),
+                      "all_checks_pass": report.get("all_checks_pass"),
                   }
                   for name, report in reports.items()
               },
           }
-          if not summary['all_checks_pass']:
-              summary['classification'] = 'independent_linux_pf3_replay_failed'
-          Path('independent-summary.json').write_text(json.dumps(summary, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          Path("reports/independent-summary.json").write_text(
+              json.dumps(summary, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
           print(json.dumps(summary, indent=2, sort_keys=True))
-          raise SystemExit(0 if summary['all_checks_pass'] else 1)
+          raise SystemExit(0 if all_checks_pass else 1)
           PY
+
       - name: Upload replay reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: independent-replay-reports
-          path: |
-            artifact-v1/verify-original.json
-            audit-artifact/h1325-primary.json
-            audit-artifact/h1325-independent.json
-            audit-artifact/h1325-fail-closed.json
-            audit-artifact/h1326-fail-closed.json
-            audit-artifact/independent-summary.json
+          path: reports/

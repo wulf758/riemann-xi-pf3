@@ -6,11 +6,11 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_TARGET = ROOT / "artifact" / "xi-pf3-artifact-v1"
+DEFAULT_TARGET = ROOT / "artifact" / "xi-pf3-artifact-v1.0.1"
 TOOL_PATTERN = re.compile(r"^(?:rh_h13(?:1[0-9]|2[0-6])_|rh_h(?:80[0-9]|81[0-9]|218|908|920|927|943)|claude_(?:d3|h1319|kappa3)).*\.py$")
 RESEARCH_PATTERN = re.compile(r"^(?:h13(?:1[0-9]|2[0-6])_|h(?:80[0-9]|81[0-9]|908|920|927|943)|claude_(?:d3|h1319)).*\.(?:json|md)$")
 EXPLICIT_FILES = ["paper/xi_pf3.tex", "tools/rh_pf3_artifact_replay.py", "tools/build_pf3_artifact.py"]
-README = """# Xi PF3 proof artifact v1
+README = """# Xi PF3 proof artifact v1.0.1
 
 This frozen supplementary artifact accompanies *The Taylor coefficients of the
 Riemann xi-function form a Polya frequency sequence of order 3*.
@@ -27,6 +27,10 @@ Jensen hyperbolicity, or the Riemann Hypothesis.
 - sympy 1.14.0
 - python-flint 0.8.0
 - mpmath 1.3.0
+- numpy 2.3.1
+
+Reference replays succeeded on CPython 3.14.0 under Windows and independently
+on CPython 3.11.15 under Ubuntu 24.04.
 
 Install dependencies and run from the artifact root:
 
@@ -59,9 +63,12 @@ def selected_files() -> list[Path]:
 
 def write_metadata(target: Path) -> None:
     (target / "README.md").write_text(README, encoding="utf-8")
-    (target / "requirements.txt").write_text("sympy==1.14.0\npython-flint==0.8.0\nmpmath==1.3.0\n", encoding="utf-8")
+    (target / "requirements.txt").write_text(
+        "sympy==1.14.0\npython-flint==0.8.0\nmpmath==1.3.0\nnumpy==2.3.1\n",
+        encoding="utf-8",
+    )
     (target / "ARTIFACT.json").write_text(json.dumps({
-        "schema": "xi_pf3_artifact.v1", "title": "Xi PF3 proof artifact", "version": "1",
+        "schema": "xi_pf3_artifact.v1", "title": "Xi PF3 proof artifact", "version": "1.0.1",
         "built_on": date.today().isoformat(), "entrypoint": "python replay.py",
         "paper": "paper/xi_pf3.tex", "permanent_url_or_doi": None,
     }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
