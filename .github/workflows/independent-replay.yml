@@ -18,7 +18,20 @@ jobs:
         run: python -m pip install --upgrade pip && python -m pip install -r artifact-v1/requirements.txt
       - name: Verify manifest and environment
         working-directory: artifact-v1
-        run: python replay.py --verify-only
+        run: python replay.py --verify-only > verify.json
       - name: Run full fail-closed replay
+        id: full
+        continue-on-error: true
         working-directory: artifact-v1
-        run: python replay.py
+        run: python replay.py > replay.json
+      - name: Upload replay reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: independent-replay-reports
+          path: |
+            artifact-v1/verify.json
+            artifact-v1/replay.json
+      - name: Fail if replay failed
+        if: steps.full.outcome != 'success'
+        run: exit 1
