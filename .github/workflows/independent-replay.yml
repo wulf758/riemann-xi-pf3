@@ -14,8 +14,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install pinned dependencies
-        run: python -m pip install --upgrade pip && python -m pip install -r artifact-v1/requirements.txt
+      - name: Install pinned dependencies and missing audit dependency
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r artifact-v1/requirements.txt
+          python -m pip install numpy==2.3.1
       - name: Verify the untouched frozen artifact
         working-directory: artifact-v1
         run: python replay.py --verify-only > verify-original.json
