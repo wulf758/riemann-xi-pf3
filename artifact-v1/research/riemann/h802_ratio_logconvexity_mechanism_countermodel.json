@@ -1,0 +1,252 @@
+{
+  "schema": "rh_h802_ratio_logconvexity_mechanism_countermodel.v0",
+  "classification": "generic_ratio_logconvexity_mechanism_invalidated_xi_special_needed",
+  "question": "Does q_{n+1}>=q_n follow from positivity, adjacent log-concavity, decreasing ratios with R_n->0, or generic H799-style tail smallness?",
+  "counterexample": {
+    "definition": {
+      "a0": "1",
+      "ratios": {
+        "R_1": {
+          "fraction": "1/2",
+          "decimal": "0.5",
+          "positive": true,
+          "negative": false
+        },
+        "R_2": {
+          "fraction": "1/4",
+          "decimal": "0.25",
+          "positive": true,
+          "negative": false
+        },
+        "R_3": {
+          "fraction": "1/5",
+          "decimal": "0.20000000000000001",
+          "positive": true,
+          "negative": false
+        },
+        "R_4": {
+          "fraction": "1/20",
+          "decimal": "0.050000000000000003",
+          "positive": true,
+          "negative": false
+        },
+        "R_5": {
+          "fraction": "1/50",
+          "decimal": "0.02",
+          "positive": true,
+          "negative": false
+        }
+      },
+      "tail_continuation": "For n>=5, set R_{n+1}=R_n/2. Then R_n decreases to 0 geometrically and the ordinary generating function has infinite radius."
+    },
+    "a_values": {
+      "a_0": {
+        "fraction": "1/1",
+        "decimal": "1",
+        "positive": true,
+        "negative": false
+      },
+      "a_1": {
+        "fraction": "1/2",
+        "decimal": "0.5",
+        "positive": true,
+        "negative": false
+      },
+      "a_2": {
+        "fraction": "1/8",
+        "decimal": "0.125",
+        "positive": true,
+        "negative": false
+      },
+      "a_3": {
+        "fraction": "1/40",
+        "decimal": "0.025000000000000001",
+        "positive": true,
+        "negative": false
+      },
+      "a_4": {
+        "fraction": "1/800",
+        "decimal": "0.00125",
+        "positive": true,
+        "negative": false
+      },
+      "a_5": {
+        "fraction": "1/40000",
+        "decimal": "2.5000000000000001e-05",
+        "positive": true,
+        "negative": false
+      }
+    },
+    "checks": {
+      "positive_values": true,
+      "positive_ratios": true,
+      "ratios_nonincreasing": true,
+      "finite_log_concavity": true,
+      "entire_tail_possible": true,
+      "q_monotonicity_fails": true
+    },
+    "q_values": {
+      "q_0": null,
+      "q_1": null,
+      "q_2": {
+        "fraction": "1/2",
+        "decimal": "0.5",
+        "positive": true,
+        "negative": false
+      },
+      "q_3": {
+        "fraction": "4/5",
+        "decimal": "0.80000000000000004",
+        "positive": true,
+        "negative": false
+      },
+      "q_4": {
+        "fraction": "1/4",
+        "decimal": "0.25",
+        "positive": true,
+        "negative": false
+      },
+      "q_5": {
+        "fraction": "2/5",
+        "decimal": "0.40000000000000002",
+        "positive": true,
+        "negative": false
+      }
+    },
+    "q_failure": {
+      "q_3": {
+        "fraction": "4/5",
+        "decimal": "0.80000000000000004",
+        "positive": true,
+        "negative": false
+      },
+      "q_4": {
+        "fraction": "1/4",
+        "decimal": "0.25",
+        "positive": true,
+        "negative": false
+      },
+      "q_4_minus_q_3": {
+        "fraction": "-11/20",
+        "decimal": "-0.55000000000000004",
+        "positive": false,
+        "negative": true
+      }
+    },
+    "h799_tail_rows": [
+      {
+        "m": 3,
+        "tail_margin": {
+          "fraction": "-11/100",
+          "decimal": "-0.11",
+          "positive": false,
+          "negative": true
+        },
+        "p_minus_q": {
+          "fraction": "-11/20",
+          "decimal": "-0.55000000000000004",
+          "positive": false,
+          "negative": true
+        },
+        "one_minus_p": {
+          "fraction": "3/4",
+          "decimal": "0.75",
+          "positive": true,
+          "negative": false
+        },
+        "condition_pass": false
+      },
+      {
+        "m": 4,
+        "tail_margin": {
+          "fraction": "3/16",
+          "decimal": "0.1875",
+          "positive": true,
+          "negative": false
+        },
+        "p_minus_q": {
+          "fraction": "3/20",
+          "decimal": "0.14999999999999999",
+          "positive": true,
+          "negative": false
+        },
+        "one_minus_p": {
+          "fraction": "3/5",
+          "decimal": "0.59999999999999998",
+          "positive": true,
+          "negative": false
+        },
+        "condition_pass": true
+      }
+    ]
+  },
+  "xi_comparison": {
+    "source": "research\\riemann\\h801_xi_ratio_logconvexity_audit.json",
+    "classification": "xi_ratio_logconvexity_survives_extended_stable_window",
+    "parameters": {
+      "n_max": 128,
+      "samples": 8192,
+      "radii": [
+        "10",
+        "11",
+        "12"
+      ],
+      "reference_radius": "11",
+      "dps": 280,
+      "flint_path": "C:/tmp/h784_pydeps_copy",
+      "stability_threshold": "1e-40",
+      "python_flint_version": "0.8.0"
+    },
+    "checks": {
+      "all_gamma_positive_reference": true,
+      "all_a_positive_reference": true,
+      "all_R_decrease_margins_positive_reference": true,
+      "all_q_logconvex_margins_positive_reference": true,
+      "all_h799_tail_conditions_certified_reference": false,
+      "all_h799_tail_conditions_certified_from_m4_reference": true,
+      "h799_base_cases_not_tail_certified": [
+        3
+      ],
+      "q_cross_radius_relative_spread_small": true,
+      "R_cross_radius_relative_spread_small": true
+    },
+    "min_q_margin": {
+      "n": 127,
+      "q_n": {
+        "repr": "[0.987914579264416291975211282 +/- 8.17e-28]",
+        "lower": "0.9879145792644162919752112811831601677420013765470329239136062472826530167719152886185440820554504171013832092285156250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "upper": "0.9879145792644162919752112828019014482620706779727551474887378810350815436128017743566687158818240277469158172607421875000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lower_float": 0.9879145792644163,
+        "upper_float": 0.9879145792644163,
+        "mid": "0.9879145792644162919752112819925308080020360272598940357011720641588672801923585314876063989686372224241495132446289062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "rad": "8.093706402600346507128611117875658168762142634204432428690623169131868053227663040161132812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-28",
+        "positive_lower_bound": true,
+        "negative_upper_bound": false
+      },
+      "q_next_minus_q": {
+        "repr": "[8.9669199562387267581e-5 +/- 7.24e-25]",
+        "lower": "8.966919956238726758106100020070926787606456606167375233183952500532406539555940749863793826079927384853363037109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-5",
+        "upper": "8.966919956238726758172392810983719544543129238285010394626906426914433336471110802534667527652345597743988037109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-5",
+        "lower_float": 8.966919956238727e-05,
+        "upper_float": 8.966919956238727e-05,
+        "mid": "8.966919956238726758139246415527323166074792922226192813905429463723419938013525776199230676866136491298675537109375000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-5",
+        "rad": "3.314639545639637846833631605881758072147696319101339845758502633543685078620910644531250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-25",
+        "positive_lower_bound": true,
+        "negative_upper_bound": false
+      }
+    },
+    "certified_h799_tail_from_m4_count": 123,
+    "total_h799_tail_from_m4_count": 123
+  },
+  "decision": "The generic mechanism is false: positive log-concave sequences with decreasing ratios and an entire tail can have q_{n+1}<q_n. Therefore H801's Xi behavior is not explained by the broad properties isolated in H800. H802 must pivot to a Xi-specific mechanism, such as an integral representation with a special kernel or explicit coefficient asymptotics.",
+  "not_proved": [
+    "Ratio log-convexity for Xi coefficients.",
+    "A Xi-specific analytic mechanism.",
+    "The H798 family for all m.",
+    "PF3, JP2', PF-infinity, or RH."
+  ],
+  "next_target": {
+    "name": "H803 Xi-specific ratio-log-convexity mechanism",
+    "statement": "Use the Riemann Xi integral representation or coefficient asymptotics to seek a special proof of q_{n+1}>=q_n, since generic log-concavity/entire-tail assumptions are insufficient."
+  }
+}

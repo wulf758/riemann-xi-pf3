@@ -1,0 +1,137 @@
+{
+  "all_checks_pass": true,
+  "arithmetic": "exact_sympy_rationals",
+  "checks": {
+    "d2_reconstructed_positive": true,
+    "d3_symbolic": true,
+    "factorial_slack_symbolic": true,
+    "jensen_degree3_nonhyperbolic": true,
+    "n2_factorial_ratio_reconstructed": true,
+    "n2_q_reconstructed": true,
+    "p4_evaluation_matches_toeplitz": true,
+    "p4_symbolic_identity": true,
+    "q_increment_symbolic": true,
+    "t_ratio_symbolic": true,
+    "toeplitz_order4_negative": true,
+    "unit_slack_symbolic": true
+  },
+  "classification": "factorial_and_eventual_unit_barriers_do_not_imply_all_degree_jensen_hyperbolicity",
+  "jensen_falsifier": {
+    "J_gamma_3_0": "3*x**3/4 + 3*x**2 + 3*x + 1",
+    "convention": "gamma_j=j!*a_j; J=sum(binomial(3,j)*gamma_j*x^j)",
+    "discriminant": "-27/16",
+    "gamma_0_to_3": [
+      "1",
+      "1",
+      "1",
+      "3/4"
+    ]
+  },
+  "order4_missing_invariant": {
+    "counterexample_q2_q3_q4": [
+      "1/2",
+      "1/2",
+      "5/8"
+    ],
+    "counterexample_value": "-5/256",
+    "derived_determinant": "-q2**3*q3**2*q4 + 2*q2**2*q3 + q2**2 - 3*q2 + 1",
+    "normalization": "a_0=a_1=1",
+    "normalized_formula": "1 - 3*q2 + q2**2*(1 + 2*q3) - q2**3*q3**2*q4"
+  },
+  "scope": "Exact abstract counterexample to a generic implication from the listed ratio/barrier conditions; not an Xi or RH counterexample.",
+  "sequence": {
+    "R_n_for_n_ge_2": "2*4**(1 - n)*binomial(2*n - 2, n - 1)/n",
+    "a_0": "1",
+    "a_1": "1",
+    "entire_majorant": "a_n <= 2^(n-1)/n!",
+    "q_2": "1/2",
+    "q_n_for_n_ge_3": "(2*n - 3)/(2*n)"
+  },
+  "special_n_2_reconstructed": {
+    "D_2": "13/64",
+    "M_0_to_3": [
+      "1",
+      "2",
+      "12",
+      "90"
+    ],
+    "R_1_to_4": [
+      "1",
+      "1/2",
+      "1/4",
+      "5/32"
+    ],
+    "S_1_to_3": [
+      "2",
+      "6",
+      "15/2"
+    ],
+    "T_2_T_3": [
+      "3",
+      "5/4"
+    ],
+    "T_3_over_T_2": "5/12",
+    "a_0_to_4": [
+      "1",
+      "1",
+      "1/2",
+      "1/8",
+      "5/256"
+    ],
+    "q_2_q_3_q_4": [
+      "1/2",
+      "1/2",
+      "5/8"
+    ],
+    "theta_2": "5/12"
+  },
+  "symbolic_identities_for_n_ge_3": {
+    "T_next_over_T": "(n - 1)*(2*n + 1)/(n*(2*n - 1))",
+    "h803_factorial_slack": "3*(n - 1)*(2*n + 1)/(n**2*(2*n - 1)**2)",
+    "h804_unit_slack": "(n - 1)/(n**2*(2*n - 1))",
+    "q_next_minus_q": "3/(2*n*(n + 1))",
+    "theta_h803": "(n - 1)*(n + 1)*(2*n - 3)*(2*n + 1)/(n**2*(2*n - 1)**2)",
+    "translated_D3": "9*(12*n - 1)/(16*n*(n + 1)**2*(n + 2))"
+  },
+  "toeplitz_falsifier": {
+    "columns": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "determinant": "-5/256",
+    "matrix": [
+      [
+        "1",
+        "1/2",
+        "1/8",
+        "5/256"
+      ],
+      [
+        "1",
+        "1",
+        "1/2",
+        "1/8"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "1/2"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "rows": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}

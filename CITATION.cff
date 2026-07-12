@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this manuscript or its reproducible artifact, please cite it using these metadata."
+title: "Riemann xi coefficients are PF3: manuscript and reproducible artifact"
+type: software
+authors:
+  - family-names: Rodaro
+    given-names: Cyril
+    affiliation: Independent researcher
+    email: cyril-rodaro@outlook.fr
+version: 1.0.0
+date-released: 2026-07-12
+repository-code: "https://github.com/wulf758/riemann-xi-pf3"
+url: "https://github.com/wulf758/riemann-xi-pf3"
+keywords:
+  - Riemann xi-function
+  - Pólya frequency sequences
+  - total positivity
+  - Toeplitz minors
+  - computer-assisted proof
+preferred-citation:
+  type: article
+  title: "The Taylor coefficients of the Riemann xi-function form a Pólya frequency sequence of order 3"
+  authors:
+    - family-names: Rodaro
+      given-names: Cyril
+      affiliation: Independent researcher
+      email: cyril-rodaro@outlook.fr
+  year: 2026
+  url: "https://github.com/wulf758/riemann-xi-pf3"

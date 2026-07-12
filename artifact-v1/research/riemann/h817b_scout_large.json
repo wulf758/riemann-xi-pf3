@@ -1,0 +1,59 @@
+{
+  "schema": "rh_h817b_h811_sparse_nonlinear_countercheck.v0",
+  "classification": "h811_scalar_package_nonlinear_search_no_counterexample",
+  "question": "Do positivity, PF2, q2<=1/2, nondecreasing q, and every translated contiguous D3 minor imply full PF3?",
+  "method": "Search the H815/H816 unresolved normalized determinant polynomials in a deficit/slack parametrization that enforces monotone q and D3 exactly by construction; rationalize every negative candidate and recheck with Fraction.",
+  "search": {
+    "parameters": {
+      "length": 7,
+      "batch_size": 8192,
+      "batches": 200,
+      "seed": 8172,
+      "float_tolerance": 1e-12,
+      "max_denominator": 65536
+    },
+    "counts": {
+      "h815_remaining_polynomials": 356,
+      "feasible_points_evaluated": 1638400,
+      "negative_float_candidates": 0
+    },
+    "elapsed_seconds": 57.57395170000382,
+    "best_float_candidate": {
+      "value": -2.5725407047649806e-16,
+      "pair_index": 104,
+      "rows": [
+        0,
+        2,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        6
+      ],
+      "family": "row_gaps=(2,1), col_gaps=(1,2)",
+      "polynomial": "1 - 2*q3*q4 + q3^2*q4^3*q5^2*q6 + q2*q3^2*q4^2 - q2*q3^2*q4^3*q5^2*q6",
+      "q_values": [
+        0.0001815412136217942,
+        0.9999960086481428,
+        0.9999999999840661,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "slacks": [
+        0.9996369175727564,
+        3.992076583651887e-06,
+        0.9999991662179758,
+        0.9274981577226904,
+        0.9553196618807598,
+        0.9252373428257361,
+        0.9999952923505926
+      ],
+      "batch_index": 159
+    },
+    "exact_witness": null
+  },
+  "decision": "No falsification was found in this nonlinear feasible-set search; this is evidence, not a proof."
+}

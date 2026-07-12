@@ -1,0 +1,729 @@
+# H812 Sparse-Row PF3 Obstruction Map
+
+Classification: `h812_sparse_row_grid_survival_under_h811_inputs`
+
+## Candidate
+
+Under H811 inputs (PF2, nondecreasing q_n, q2<=1/2, and all translated contiguous order-3 Toeplitz minors nonnegative), the only remaining PF3 obstructions are sparse-row order-3 minors; search those directly.
+
+## H811 Quotient
+
+Covered: all consecutive-row order-3 Toeplitz minors
+
+Remaining: nonconsecutive-row order-3 Toeplitz minors
+
+## Grid
+
+Parameters:
+
+```json
+{
+  "length": 7,
+  "denominator": 16,
+  "batch_size": 4096,
+  "float_tolerance": 0.0,
+  "exact_candidates_per_batch": 12,
+  "max_seconds": 90.0
+}
+```
+
+Shape counts:
+
+```json
+{
+  "all_order3_pairs": 7056,
+  "consecutive_row_pairs_covered_by_h811": 588,
+  "sparse_row_pairs_total": 6468,
+  "sparse_row_structural_zero_pairs": 4158,
+  "active_sparse_row_pairs_checked": 2310,
+  "contiguous_d3_inputs_checked": 7
+}
+```
+
+Stats:
+
+```json
+{
+  "grid_total": 170544,
+  "checked": 170544,
+  "completed_full_grid": true,
+  "q2_le_half_float_candidates": 167112,
+  "h811_input_float_candidates": 113138,
+  "elapsed_seconds": 56.98299649999535,
+  "exact_candidate_checks": 460,
+  "best_sparse_float_margin": -5.421010862427522e-20,
+  "best_sparse_rows": [
+    0,
+    1,
+    5
+  ],
+  "best_sparse_cols": [
+    4,
+    5,
+    7
+  ],
+  "best_sparse_q_ints": [
+    7,
+    13,
+    15,
+    16,
+    16,
+    16,
+    16
+  ],
+  "best_sparse_exact_diagnosis": {
+    "q_values": [
+      {
+        "fraction": "7/16",
+        "float": 0.4375
+      },
+      {
+        "fraction": "13/16",
+        "float": 0.8125
+      },
+      {
+        "fraction": "15/16",
+        "float": 0.9375
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      }
+    ],
+    "q2": {
+      "fraction": "7/16",
+      "float": 0.4375
+    },
+    "ratios": [
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "7/16",
+        "float": 0.4375
+      },
+      {
+        "fraction": "91/256",
+        "float": 0.35546875
+      },
+      {
+        "fraction": "1365/4096",
+        "float": 0.333251953125
+      },
+      {
+        "fraction": "1365/4096",
+        "float": 0.333251953125
+      },
+      {
+        "fraction": "1365/4096",
+        "float": 0.333251953125
+      },
+      {
+        "fraction": "1365/4096",
+        "float": 0.333251953125
+      },
+      {
+        "fraction": "1365/4096",
+        "float": 0.333251953125
+      }
+    ],
+    "sequence": [
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "7/16",
+        "float": 0.4375
+      },
+      {
+        "fraction": "637/4096",
+        "float": 0.155517578125
+      },
+      {
+        "fraction": "869505/16777216",
+        "float": 0.051826536655426025
+      },
+      {
+        "fraction": "1186874325/68719476736",
+        "float": 0.017271294564125128
+      },
+      {
+        "fraction": "1620083453625/281474976710656",
+        "float": 0.0057556926464918945
+      },
+      {
+        "fraction": "2211413914198125/1152921504606846976",
+        "float": 0.001918095816030624
+      },
+      {
+        "fraction": "3018579992880440625/4722366482869645213696",
+        "float": 0.0006392091769730962
+      }
+    ],
+    "q2_le_half": true,
+    "contiguous_d3_negative_count": 0,
+    "first_contiguous_d3_negative": null,
+    "consecutive_row_minimum": {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        0,
+        5,
+        6
+      ],
+      "determinant": {
+        "fraction": "0",
+        "float": 0.0
+      }
+    },
+    "sparse_row_structural_zero_count": 4158,
+    "sparse_row_negative_count": 0,
+    "first_sparse_row_negative": null,
+    "active_sparse_row_minimum": {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        0,
+        6,
+        7
+      ],
+      "determinant": {
+        "fraction": "0",
+        "float": 0.0
+      }
+    },
+    "sparse_negative_family_counts": {}
+  },
+  "best_contiguous_float_margin": -0.0040283203125,
+  "best_contiguous_q_ints": [
+    8,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14
+  ],
+  "best_contiguous_exact_diagnosis": {
+    "q_values": [
+      {
+        "fraction": "1/2",
+        "float": 0.5
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      },
+      {
+        "fraction": "7/8",
+        "float": 0.875
+      }
+    ],
+    "q2": {
+      "fraction": "1/2",
+      "float": 0.5
+    },
+    "ratios": [
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1/2",
+        "float": 0.5
+      },
+      {
+        "fraction": "7/16",
+        "float": 0.4375
+      },
+      {
+        "fraction": "49/128",
+        "float": 0.3828125
+      },
+      {
+        "fraction": "343/1024",
+        "float": 0.3349609375
+      },
+      {
+        "fraction": "2401/8192",
+        "float": 0.2930908203125
+      },
+      {
+        "fraction": "16807/65536",
+        "float": 0.2564544677734375
+      },
+      {
+        "fraction": "117649/524288",
+        "float": 0.2243976593017578
+      }
+    ],
+    "sequence": [
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1",
+        "float": 1.0
+      },
+      {
+        "fraction": "1/2",
+        "float": 0.5
+      },
+      {
+        "fraction": "7/32",
+        "float": 0.21875
+      },
+      {
+        "fraction": "343/4096",
+        "float": 0.083740234375
+      },
+      {
+        "fraction": "117649/4194304",
+        "float": 0.028049707412719727
+      },
+      {
+        "fraction": "282475249/34359738368",
+        "float": 0.008221111755119637
+      },
+      {
+        "fraction": "4747561509943/2251799813685248",
+        "float": 0.002108340839665157
+      },
+      {
+        "fraction": "558545864083284007/1180591620717411303424",
+        "float": 0.00047310674943116393
+      }
+    ],
+    "q2_le_half": true,
+    "contiguous_d3_negative_count": 1,
+    "first_contiguous_d3_negative": {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        2,
+        3,
+        4
+      ],
+      "determinant": {
+        "fraction": "-33/8192",
+        "float": -0.0040283203125
+      }
+    },
+    "consecutive_row_minimum": {
+      "rows": [
+        0,
+        1,
+        2
+      ],
+      "cols": [
+        2,
+        3,
+        4
+      ],
+      "determinant": {
+        "fraction": "-33/8192",
+        "float": -0.0040283203125
+      }
+    },
+    "sparse_row_structural_zero_count": 4158,
+    "sparse_row_negative_count": 57,
+    "first_sparse_row_negative": {
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        2,
+        4,
+        5
+      ],
+      "determinant": {
+        "fraction": "-4207/4194304",
+        "float": -0.0010030269622802734
+      }
+    },
+    "active_sparse_row_minimum": {
+      "rows": [
+        0,
+        2,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        5
+      ],
+      "determinant": {
+        "fraction": "-22575/8388608",
+        "float": -0.0026911497116088867
+      }
+    },
+    "sparse_negative_family_counts": {
+      "row_gaps=(1,2), col_gaps=(2,1)": 4,
+      "row_gaps=(1,2), col_gaps=(2,2)": 3,
+      "row_gaps=(1,2), col_gaps=(1,1)": 4,
+      "row_gaps=(1,2), col_gaps=(1,2)": 3,
+      "row_gaps=(1,2), col_gaps=(1,3)": 2,
+      "row_gaps=(1,3), col_gaps=(1,1)": 3,
+      "row_gaps=(2,1), col_gaps=(1,1)": 4,
+      "row_gaps=(2,1), col_gaps=(1,2)": 3,
+      "row_gaps=(2,1), col_gaps=(1,3)": 2,
+      "row_gaps=(2,1), col_gaps=(1,4)": 1,
+      "row_gaps=(2,1), col_gaps=(2,1)": 3,
+      "row_gaps=(2,1), col_gaps=(2,2)": 2,
+      "row_gaps=(2,2), col_gaps=(2,1)": 3,
+      "row_gaps=(2,2), col_gaps=(1,1)": 3,
+      "row_gaps=(2,2), col_gaps=(1,2)": 2,
+      "row_gaps=(3,1), col_gaps=(1,1)": 3,
+      "row_gaps=(3,1), col_gaps=(1,2)": 2,
+      "row_gaps=(3,1), col_gaps=(1,3)": 1,
+      "row_gaps=(3,1), col_gaps=(2,1)": 2,
+      "row_gaps=(3,2), col_gaps=(1,1)": 2,
+      "row_gaps=(4,1), col_gaps=(1,1)": 2,
+      "row_gaps=(4,1), col_gaps=(1,2)": 1,
+      "row_gaps=(4,2), col_gaps=(1,1)": 1,
+      "row_gaps=(5,1), col_gaps=(1,1)": 1
+    }
+  },
+  "top_sparse_family_minima": [
+    {
+      "family": "row_gaps=(1,2), col_gaps=(1,4)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        4,
+        8
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(1,2), col_gaps=(2,2)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "cols": [
+        3,
+        5,
+        7
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(1,3), col_gaps=(1,2)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        1,
+        4
+      ],
+      "cols": [
+        4,
+        5,
+        7
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(1,4), col_gaps=(1,2)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        1,
+        5
+      ],
+      "cols": [
+        4,
+        5,
+        7
+      ],
+      "q_ints": [
+        7,
+        13,
+        15,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(1,5), col_gaps=(2,1)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        1,
+        6
+      ],
+      "cols": [
+        4,
+        6,
+        7
+      ],
+      "q_ints": [
+        7,
+        13,
+        15,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,1), col_gaps=(2,3)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        3
+      ],
+      "cols": [
+        3,
+        5,
+        8
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,1), col_gaps=(3,1)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        3
+      ],
+      "cols": [
+        3,
+        6,
+        7
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,2), col_gaps=(1,3)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        4
+      ],
+      "cols": [
+        4,
+        5,
+        8
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,2), col_gaps=(2,1)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        4
+      ],
+      "cols": [
+        4,
+        6,
+        7
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,3), col_gaps=(1,1)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        5
+      ],
+      "cols": [
+        5,
+        6,
+        7
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(2,4), col_gaps=(1,1)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        2,
+        6
+      ],
+      "cols": [
+        5,
+        6,
+        7
+      ],
+      "q_ints": [
+        7,
+        13,
+        15,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "family": "row_gaps=(3,1), col_gaps=(2,2)",
+      "float_margin": -5.421010862427522e-20,
+      "rows": [
+        0,
+        3,
+        4
+      ],
+      "cols": [
+        4,
+        6,
+        8
+      ],
+      "q_ints": [
+        7,
+        15,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    }
+  ]
+}
+```
+
+No certified sparse-row counterexample was found in this scan.
+
+
+## Decision
+
+No certified sparse-row obstruction was found on the full rational grid. Combined with H811, this makes the remaining PF3 bridge symbolically plausible at order 3, but still finite evidence only.
+
+## Limitations
+
+- This is a finite rational-grid obstruction map, not a continuum proof.
+- The scan assumes H811 as a proved conditional slice and only checks sparse-row minors.
+- Even full PF3 would remain far weaker than PF-infinity/RH.
+
+## Next Target
+
+`H813 sparse-row symbolic hierarchy`: Use the top H812 sparse-row boundary families to seek an anchored or planar-orientation lemma in standard ratio variables.

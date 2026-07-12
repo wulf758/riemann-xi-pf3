@@ -1,0 +1,48 @@
+{
+  "H811_input_map": {
+    "PF2": "H1325 finite q_n<1 through 128 plus tail X_n<1 from 127 onward",
+    "a_n_positive": "H908 positive-kernel moment representation",
+    "q2_le_half": "H1325 alias-repaired q2 interval",
+    "q_n_nondecreasing": "H1322 as loaded by H1325",
+    "translated_contiguous_D3": "H1325 starts 0, 1, 2..126, and n>=127"
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "H1325_main_assembly_passes": true,
+    "H1325_main_classification_closed": true,
+    "H1325_supplies_global_PF2": true,
+    "H1325_supplies_global_q_monotonicity": true,
+    "H1325_supplies_global_translated_D3": true,
+    "H1325_supplies_q2_gate": true,
+    "H811_scope_exact": true,
+    "H811_theorem_loaded": true,
+    "H908_moment_identity": true,
+    "H908_nonzero_positive_moments": true,
+    "H908_positive_kernel_measure": true,
+    "high_algebraic_ratio_certificate_passes": true,
+    "high_exact_F_conclusion": true
+  },
+  "classification": "h1325_h811_explicit_dependency_gates_closed",
+  "conclusion": "H1325's H811 conclusion is fully explicit: every consecutive-row order-3 Toeplitz minor is nonnegative for the Xi coefficient sequence.",
+  "dependency_hashes": {
+    "research\\riemann\\h1319_full_xi_high_band_r22_analytic_certificate.json": "E93AEB7D4FC9DA17BF76E7D65403F95278511C2822ADA115D18980F636DD9519",
+    "research\\riemann\\h1325_xi_global_d3_h811_consecutive_rows.json": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "research\\riemann\\h811_repaired_consecutive_row_theorem.json": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+    "research\\riemann\\h908_xi_log_saddle_moment_curvature_reduction.md": "10E3B7F623E7530342EB2B7A9DF0D941517B3417F5755797D5938BD185543099"
+  },
+  "high_band_upper_sign_gate": {
+    "exact_conclusion": "0<q^2*r*B/A^3<1 for every real r>=4",
+    "source": "h1319_full_xi_high_band_r22_analytic_certificate.json"
+  },
+  "schema": "rh_h1325_h811_dependency_addendum.v0",
+  "scope": [
+    "consecutive-row order-3 Toeplitz minors only",
+    "not sparse-row PF3",
+    "not PF-infinity",
+    "not the Riemann Hypothesis"
+  ],
+  "strict_coefficient_positivity": {
+    "argument": "M_n=(2n)!a_n is a nonzero moment of the positive Xi kernel; hence a_n>0 for every n",
+    "source": "h908_xi_log_saddle_moment_curvature_reduction.md"
+  }
+}

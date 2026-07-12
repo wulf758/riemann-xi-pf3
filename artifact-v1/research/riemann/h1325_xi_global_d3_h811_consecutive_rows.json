@@ -1,0 +1,315 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "compact_bounds": {
+      "adaptive_all_certified": true,
+      "all_scaled_third_uppers_below_one_eighth": true,
+      "all_second_moment_enclosures_below_five_four": true,
+      "box_count_is_552": true,
+      "compact_kappa2_coefficient_below_four_fifths": true,
+      "compact_kappa3_one_eighth_below_eleven_twentieths": true
+    },
+    "exact_tail": {
+      "D_lower_identity_exact": true,
+      "X_below_one_for_all_n_ge_127": true,
+      "Y_below_one_for_all_n_ge_127": true,
+      "all_shifted_coefficients_positive": true,
+      "coupled_derivative_identity_exact": true,
+      "independent_checker_n_min_127": true,
+      "independent_checker_returncode_zero": true,
+      "independent_checker_status_ok": true,
+      "independent_checker_stderr_empty": true,
+      "terminal_H_positive_for_all_n_ge_127": true,
+      "u_and_v_below_one_at_127": true
+    },
+    "finite_and_H811": {
+      "H1322_global_q_monotonicity": true,
+      "H1322_passes": true,
+      "H811_scope_is_consecutive_rows_only": true,
+      "H811_theorem_loaded": true,
+      "boundary_start_0_positive": true,
+      "boundary_start_1_strictly_positive": true,
+      "finite_PF2_through_q128": true,
+      "finite_all_D3_determinant_lowers_positive": true,
+      "finite_all_D3_q_lowers_positive": true,
+      "finite_certificate_passes": true,
+      "finite_range_exactly_2_to_126": true,
+      "finite_row_count_125": true,
+      "finite_tail_integer_join_exact": true,
+      "q2_strictly_below_one_half": true,
+      "q3_strictly_positive": true,
+      "tail_starts_at_127": true
+    },
+    "hash_chain": {
+      "adaptive_hash_matches_segment": true,
+      "hash_h1319_full_xi_high_band_r22_analytic_certificate": true,
+      "hash_h1319_full_xi_score_mean_value_r10_to_22_arb": true,
+      "hash_h1319_full_xi_score_mean_value_r_cover_4_5": true,
+      "hash_h1319_full_xi_score_mean_value_r_cover_5_10": true,
+      "manifest_passes": true,
+      "segment_hash_matches_manifest": true,
+      "segment_passes": true
+    },
+    "high_bounds": {
+      "B1_is_1415": true,
+      "B2_is_7073": true,
+      "B2_log_is_8023046": true,
+      "B_Xi_is_45450578214": true,
+      "F_strictly_below_one": true,
+      "U_is_25857_over_15625": true,
+      "X_upper_is_663_over_1250": true,
+      "h1317_checker_passes": true,
+      "high_kappa2_coefficient_below_four_fifths": true,
+      "high_kappa3_coefficient_below_eleven_twentieths": true,
+      "high_report_passes": true,
+      "monotone_extension_recorded": true,
+      "q22_lower_positive": true
+    }
+  },
+  "classification": "xi_global_translated_d3_h811_consecutive_rows_closed",
+  "decision": "Global translated contiguous D3 is proved for Xi; H811 is now unconditional for its exact consecutive-row scope.",
+  "dependency_hashes": {
+    "research\\riemann\\claude_d3_alias_repaired_finite_certificate.json": "4AC291EC2FB43D5469A6BD317993645BA56CA68E8F86E7763A24486771E313E1",
+    "research\\riemann\\h1319_full_xi_adaptive_rbox_cover.json": "7F1B0F3C01FEB9CDCEB8B6B33B65BCF467BC69AAE7DDE55CBE5149FD68826F3C",
+    "research\\riemann\\h1319_full_xi_compact_interval_certificate.json": "DAA4646A67FE5BB0D4CCC0CBD96FE15141F7CCBB020C03D8B42ACE61D9DFAA7B",
+    "research\\riemann\\h1319_full_xi_high_band_r22_analytic_certificate.json": "E93AEB7D4FC9DA17BF76E7D65403F95278511C2822ADA115D18980F636DD9519",
+    "research\\riemann\\h1319_full_xi_score_mean_value_r10_to_22_arb.json": "A766CBC188DF9FE142D2D8AE839F41D9866938024FE4A7B7355D86415799ADC7",
+    "research\\riemann\\h1319_full_xi_score_mean_value_r_cover_4_5.json": "13A8B1186351F71F5BA6F34BD0525D5FC45011A237A4C11DECB5B692E9C2F9DD",
+    "research\\riemann\\h1319_full_xi_score_mean_value_r_cover_5_10.json": "92B40CC49C2897368B159DEABE9EEF9AB3A586AA57E968482C764C1EDD519C7E",
+    "research\\riemann\\h1319_full_xi_segment_interval_certificate.json": "6ED85D97810609453E6EB890C8A5EEE6D0F7F29DD2F509C3A3C6DFA66888525C",
+    "research\\riemann\\h1322_h803_all_n_strict_assembly.json": "335FFEAAA2114212392D712CC7EC6EFA0AE61257B8249553513C956F10877177",
+    "research\\riemann\\h811_repaired_consecutive_row_theorem.json": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12"
+  },
+  "exact_tail": {
+    "conclusion": "D_n>0 for every integer n>=127",
+    "factorial_factor_f_n": "(n - 1)*(2*n - 3)/(n*(2*n - 1))",
+    "increment_multiplier_upper_S": "20*n**2*(n - 2)**2*(2*n - 1)**2/((n - 1)*(n + 1)*(2*n - 3)*(2*n + 1)*(20*n**2 - 80*n + 69))",
+    "logical_chain": [
+      "exp(w)<=1/(1-w) for 0<=w<1",
+      "q_n<=X and q_(n+1)/q_n<=S",
+      "q-monotonicity gives z>=y and D_n>=(1-y)H(x,y)",
+      "the coupled function H(x,Sx) decreases on 0<x<=X because SX<1 and X<1",
+      "H(x,y)>=H(X,SX)>0"
+    ],
+    "n_range": "n>=127",
+    "q_next_upper_Y": "100*n*(n - 2)**3*(2*n - 1)/((n + 1)*(2*n + 1)*(5*n - 14)*(20*n**2 - 80*n + 69))",
+    "q_upper_X": "5*(n - 2)*(n - 1)*(2*n - 3)/(n*(2*n - 1)*(5*n - 14))",
+    "shift_n_equals_m_plus_127": {
+      "1-X": [
+        12,
+        2997,
+        187101
+      ],
+      "1-Y": [
+        240,
+        119910,
+        22464533,
+        1870351659,
+        58391098660
+      ],
+      "H": [
+        66000,
+        71861600,
+        34728981600,
+        9776538943040,
+        1766546204164425,
+        212447203445671919,
+        17002045136190509679,
+        872992942774568354661,
+        26091652886219863549980,
+        345765753375849332067600
+      ],
+      "S-1": [
+        204,
+        102868,
+        19451635,
+        1634721866,
+        51517811540
+      ]
+    },
+    "terminal_H": "(66000*n**9 - 3576400*n**8 + 40100000*n**7 - 200152160*n**6 + 524481545*n**5 - 731323556*n**4 + 477221477*n**3 - 69637882*n**2 - 25713204*n - 13064184)/((n + 1)**2*(2*n + 1)**2*(5*n - 14)**3*(20*n**2 - 80*n + 69)**2)"
+  },
+  "global_assembly": {
+    "H811_conclusion": "every order-3 Toeplitz minor with consecutive rows is nonnegative for a_n=gamma_n/n!",
+    "PF2_cover": [
+      {
+        "q_indices": "2<=n<=128",
+        "source": "alias-repaired finite coefficient balls"
+      },
+      {
+        "q_indices": "n>=127",
+        "source": "q_n<=X_n<1 from the tail envelope"
+      }
+    ],
+    "q2_upper": "[0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649375 +/- 7.49e-102]",
+    "q_monotonicity": "q_(n+1) >= q_n for every integer n >= 2",
+    "scope": [
+      "consecutive-row order-3 Toeplitz minors only",
+      "no sparse-row PF3 claim",
+      "no PF-infinity claim",
+      "no all-degree Jensen-hyperbolicity claim",
+      "no Riemann-Hypothesis claim"
+    ],
+    "translated_D3_cover": [
+      {
+        "source": "lower-triangular positive boundary",
+        "starts": "0"
+      },
+      {
+        "lower": "[0.2053791172062373599579549476120108283994398443808238757315100961273836854892258740473442135768326842 +/- 4.33e-101]",
+        "source": "q2<1/2 and q3>0",
+        "starts": "1"
+      },
+      {
+        "source": "claude_d3_alias_repaired_finite_certificate.json",
+        "starts": "2<=n<=126"
+      },
+      {
+        "source": "two-sided cumulant tail",
+        "starts": "n>=127"
+      }
+    ]
+  },
+  "h1317_replay": {
+    "B_Xi": 45450578214,
+    "R5_derivative_constants": {
+      "B1": 207,
+      "B2": 1035,
+      "B3": 7659
+    },
+    "all_checks_pass": true,
+    "c5": "[0.477464829275686007306651290118 +/- 4.57e-31]",
+    "checks": {
+      "B1_is_1415": true,
+      "B2_is_7073": true,
+      "B3_is_52337": true,
+      "B_Xi_is_45450578214": true,
+      "H920_geometric_threshold_below_567": true,
+      "T71_lower_exceeds_142_BXi": true,
+      "coefficient_is_141_over_142": true,
+      "coefficient_lt_1": true,
+      "dependencies_exist": true,
+      "one_over_400_lt_c5": true,
+      "theta_tail_lt_1_over_400": true
+    },
+    "dependency_status": {
+      "audit": true,
+      "beta5": true,
+      "moments": true,
+      "mtail": true
+    },
+    "effective_choice": {
+      "H920_geometric_threshold_upper": 567,
+      "coefficient": "141/142",
+      "r_floor": 71,
+      "t_floor": "T_71=(71*pi*exp(71)-(9/4)*71-1)/2"
+    },
+    "exact_T71_lower": "2011728121702468861033853/8",
+    "full_bound": "kappa_Xi'''(t) >= -(70/r(t)+B_Xi/t)/t^2",
+    "id": "h1317_effective_xi_transfer_assembly",
+    "mtail_derivative_constants": {
+      "B1": 1311,
+      "B2": 6555,
+      "B3": 48507
+    },
+    "pointwise_sign_tail_upper": "[0.00129119326621096792616392802880 +/- 1.01e-33]",
+    "required_142_BXi": 6453982106388,
+    "scope": "effective eventual Xi transfer; finite H803/Jensen/RH gaps remain",
+    "total_epsilon_constants": {
+      "B1": 1415,
+      "B2": 7073,
+      "B3": 52337
+    }
+  },
+  "limitations": [
+    "consecutive-row order-3 Toeplitz minors only",
+    "no sparse-row PF3 claim",
+    "no PF-infinity claim",
+    "no all-degree Jensen-hyperbolicity claim",
+    "no Riemann-Hypothesis claim"
+  ],
+  "schema": "rh_h1325_xi_global_d3_h811_assembly.v0",
+  "two_sided_cumulant_bounds": {
+    "compact": {
+      "box_count": 552,
+      "conclusion": [
+        "kappa_Xi''(t)<4/(5t)",
+        "kappa_Xi'''(t)<11/(20t^2)"
+      ],
+      "derived_kappa2_coefficient": {
+        "decimal": 0.7739938080495357,
+        "denominator": 323,
+        "exact": "250/323",
+        "numerator": 250
+      },
+      "domain": "125<=t<=t(22)",
+      "r_cover": "r(125)<=r<=22, enclosed by 323/100<=r<=22",
+      "saddle_bound": "A>2*t*r",
+      "variance_identity": "kappa_Xi''(t)=4*Var(W)/A",
+      "worst_scaled_third_upper": {
+        "r_box": [
+          "10",
+          "201/20"
+        ],
+        "slack_below_1_over_8": "[0.0001986209844161546261617578155456184570037764089658107726985014629406123276567086577415466308593749997 +/- 3.15e-104]",
+        "source": "h1319_full_xi_score_mean_value_r10_to_22_arb.json",
+        "value": "[0.1248013790155838453738382421844543815429962235910341892273014985370593876723432913422584533691406250 +/- 2.70e-103]"
+      },
+      "worst_second_moment_upper": {
+        "r_box": [
+          "10",
+          "201/20"
+        ],
+        "slack_below_5_over_4": "0.01275203563272953033447265625000000000000000000000000000000000000000000000000000000000000000000000000",
+        "source": "h1319_full_xi_score_mean_value_r10_to_22_arb.json",
+        "value": "1.237247964367270469665527343750000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "high": {
+      "conclusion": [
+        "kappa_Xi''(t)<4/(5t)",
+        "kappa_Xi'''(t)<11/(20t^2)"
+      ],
+      "domain": "r>=22, equivalently t>=t(22)",
+      "dominant_third_upper_U": {
+        "decimal": 1.654848,
+        "denominator": 15625,
+        "exact": "25857/15625",
+        "numerator": 25857
+      },
+      "kappa2_coefficient_at_22": {
+        "decimal": 0.09461550371674875,
+        "denominator": 492590289071124220328797309123325,
+        "exact": "46606678326443294424723416932878/492590289071124220328797309123325",
+        "numerator": 46606678326443294424723416932878
+      },
+      "kappa2_slack_below_4_over_5": {
+        "decimal": 0.7053844962832513,
+        "denominator": 492590289071124220328797309123325,
+        "exact": "347465552930456081838314430365782/492590289071124220328797309123325",
+        "numerator": 347465552930456081838314430365782
+      },
+      "kappa3_coefficient_at_22": {
+        "decimal": 0.5472694801844131,
+        "denominator": 307868930669452637705498318202078125,
+        "exact": "168487269652402462458669370436858871/307868930669452637705498318202078125",
+        "numerator": 168487269652402462458669370436858871
+      },
+      "kappa3_slack_below_11_over_20": {
+        "decimal": 0.0027305198155868947,
+        "denominator": 1231475722677810550821993272808312500,
+        "exact": "3362568863185953117418818297136391/1231475722677810550821993272808312500",
+        "numerator": 3362568863185953117418818297136391
+      },
+      "monotonicity": "52/(25r)+B2log/t and 2U/r+B_Xi/t decrease with r",
+      "second_log_correction_constant": 8023046,
+      "t22_strict_lower": {
+        "decimal": 114534488442.46178,
+        "denominator": 15639284194331952196,
+        "exact": "1791237414804088073922899305903/15639284194331952196",
+        "numerator": 1791237414804088073922899305903
+      }
+    },
+    "statement": "kappa''(t)<4/(5t) and kappa'''(t)<11/(20t^2) for every t>=125"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "rh_h1326_pf2_arbitrary_gap_independent_addendum.v0",
+  "classification": "h1326_arbitrary_gap_strict_pf2_partner_pass",
+  "all_checks_pass": true,
+  "identity": "D=a_(x+alpha)*a_(x+beta)-a_(x+alpha+beta)*a_x",
+  "ratio_comparison": "D/(a_x*a_(x+beta))=prod_{k=1..alpha}R_(x+k)-prod_{k=1..alpha}R_(x+beta+k)>0",
+  "max_gap": 5,
+  "product_cases": 150,
+  "symbolic_factorizations_passed": 150,
+  "shifted_ratio_product_orderings_passed": 150,
+  "exact_strict_rational_canaries_passed": 150,
+  "triangular_i_le_p_lt_j_cases_passed": 450,
+  "failed_checks": []
+}

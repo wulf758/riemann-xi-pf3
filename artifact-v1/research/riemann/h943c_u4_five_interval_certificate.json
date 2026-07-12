@@ -1,0 +1,186 @@
+{
+  "all_checks_pass": true,
+  "analytic_reduction": {
+    "proof": "after squaring, the inequality reduces to sinh(u)^2>=u^2; this follows from sinh(u)>=u",
+    "substitution": "y=z^2",
+    "tanh_bound": "tanh(u)>=u/sqrt(1+u^2) for u>=0"
+  },
+  "coverage_check": true,
+  "exponential_certificates": [
+    {
+      "bound": "657/272",
+      "check": true,
+      "coarse_bound": "5/2",
+      "documented_lt_coarse": true,
+      "exact_upper": "23047/9600",
+      "tail_ratio": "7/32",
+      "taylor_degree": 2,
+      "x": "7/8"
+    },
+    {
+      "bound": "123/32",
+      "check": true,
+      "coarse_bound": "4",
+      "documented_lt_coarse": true,
+      "exact_upper": "82223/22016",
+      "tail_ratio": "21/64",
+      "taylor_degree": 2,
+      "x": "21/16"
+    },
+    {
+      "bound": "986581/133120",
+      "check": true,
+      "coarse_bound": "8",
+      "documented_lt_coarse": true,
+      "exact_upper": "183362731/25427968",
+      "tail_ratio": "63/160",
+      "taylor_degree": 3,
+      "x": "63/32"
+    },
+    {
+      "bound": "32507/3800",
+      "check": true,
+      "coarse_bound": "9",
+      "documented_lt_coarse": true,
+      "exact_upper": "1912987/232000",
+      "tail_ratio": "21/50",
+      "taylor_degree": 3,
+      "x": "21/10"
+    },
+    {
+      "bound": "2278981/163840",
+      "check": true,
+      "coarse_bound": "14",
+      "documented_lt_coarse": true,
+      "exact_upper": "181259639/13107200",
+      "tail_ratio": "3/8",
+      "taylor_degree": 5,
+      "x": "21/8"
+    }
+  ],
+  "id": "h943c_u4_five_interval_certificate",
+  "interval_certificates": [
+    {
+      "checks": {
+        "hyperbolic_coefficient": true,
+        "maximum_lt_1_over_100": true,
+        "maximum_matches_record": true,
+        "quadratic_monotonicity": true
+      },
+      "derivative_at_left": "61/960",
+      "derivative_at_right": "1727/25920",
+      "endpoint_rule": "increasing_on_interval",
+      "exp_coarse_bound": "5/2",
+      "hyperbolic_coefficient_lower": "0",
+      "index": 1,
+      "maximum": "1687/233280",
+      "quadratic_y2_coefficient": "1/72",
+      "y_interval": [
+        "0",
+        "1/9"
+      ],
+      "z_interval": [
+        "0",
+        "1/3"
+      ]
+    },
+    {
+      "checks": {
+        "hyperbolic_coefficient": true,
+        "maximum_lt_1_over_100": true,
+        "maximum_matches_record": true,
+        "quadratic_monotonicity": true
+      },
+      "derivative_at_left": "-157/5184",
+      "derivative_at_right": "-85/576",
+      "endpoint_rule": "decreasing_on_interval",
+      "exp_coarse_bound": "4",
+      "hyperbolic_coefficient_lower": "4/9",
+      "index": 2,
+      "maximum": "431/233280",
+      "quadratic_y2_coefficient": "-19/45",
+      "y_interval": [
+        "1/9",
+        "1/4"
+      ],
+      "z_interval": [
+        "1/3",
+        "1/2"
+      ]
+    },
+    {
+      "checks": {
+        "hyperbolic_coefficient": true,
+        "maximum_lt_1_over_100": true,
+        "maximum_matches_record": true,
+        "quadratic_monotonicity": true
+      },
+      "derivative_at_left": "-2549/37440",
+      "derivative_at_right": "-2903/12480",
+      "endpoint_rule": "decreasing_on_interval",
+      "exp_coarse_bound": "8",
+      "hyperbolic_coefficient_lower": "4/13",
+      "index": 3,
+      "maximum": "-17/29952",
+      "quadratic_y2_coefficient": "-154/585",
+      "y_interval": [
+        "1/4",
+        "9/16"
+      ],
+      "z_interval": [
+        "1/2",
+        "3/4"
+      ]
+    },
+    {
+      "checks": {
+        "hyperbolic_coefficient": true,
+        "maximum_lt_1_over_100": true,
+        "maximum_matches_record": true,
+        "quadratic_monotonicity": true
+      },
+      "derivative_at_left": "-395/2112",
+      "derivative_at_right": "-58489/264000",
+      "endpoint_rule": "decreasing_on_interval",
+      "exp_coarse_bound": "9",
+      "hyperbolic_coefficient_lower": "3/11",
+      "index": 4,
+      "maximum": "-489/14080",
+      "quadratic_y2_coefficient": "-49/220",
+      "y_interval": [
+        "9/16",
+        "16/25"
+      ],
+      "z_interval": [
+        "3/4",
+        "4/5"
+      ]
+    },
+    {
+      "checks": {
+        "hyperbolic_coefficient": true,
+        "maximum_lt_1_over_100": true,
+        "maximum_matches_record": true,
+        "quadratic_monotonicity": true
+      },
+      "derivative_at_left": "-2657/72000",
+      "derivative_at_right": "-269/2880",
+      "endpoint_rule": "decreasing_on_interval",
+      "exp_coarse_bound": "14",
+      "hyperbolic_coefficient_lower": "5/32",
+      "index": 5,
+      "maximum": "959/112500",
+      "quadratic_y2_coefficient": "-113/1440",
+      "y_interval": [
+        "16/25",
+        "1"
+      ],
+      "z_interval": [
+        "4/5",
+        "1"
+      ]
+    }
+  ],
+  "scope": "exact scalar H943-C U4 certificate; parameter polynomials are separate",
+  "statement": "U4(z)=61*z^2/960+z^4*exp(21*z/8)/180-z*tanh(3*z^3)/6 < 1/100 on 0<=z<=1"
+}

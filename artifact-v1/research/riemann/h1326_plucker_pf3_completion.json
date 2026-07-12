@@ -1,0 +1,63 @@
+{
+  "schema": "rh_h1326_plucker_pf3_completion.v0",
+  "classification": "h1326_strict_pf2_plus_h811_implies_pf3_closed",
+  "all_checks_pass": true,
+  "abstract_theorem": {
+    "inputs": [
+      "a_n>0 for n>=0 and a_n=0 for n<0",
+      "R_n=a_n/a_(n-1) is strictly decreasing (strict PF2)",
+      "every order-3 one-sided Toeplitz minor with consecutive rows is nonnegative"
+    ],
+    "conclusion": "every order-3 Toeplitz minor is nonnegative; together with the first two inputs, the sequence is PF3"
+  },
+  "proof_components": {
+    "one_sided_boundaries": "zero or a positive coefficient times a PF2 minor",
+    "added_row": "for d=c1+1, Delta_(i,j,d)^C=a_(c2-c1-1) times the PF2 minor on rows i,j and columns c0,c1",
+    "adjacent_forward": "Delta_(r,r+1,s) Delta_(r+1,r+2,d) = Delta_(r,r+1,r+2) Delta_(r+1,s,d) + Delta_(r,r+1,d) Delta_(r+1,r+2,s)",
+    "adjacent_backward": "Delta_(r,s-1,s) Delta_(s-2,s-1,d) = Delta_(r,s-2,s-1) Delta_(s-1,s,d) + Delta_(r,s-1,d) Delta_(s-2,s-1,s)",
+    "general_induction": "Delta_(r,u,s) Delta_(r+1,u,d) = Delta_(r,r+1,u) Delta_(u,s,d) + Delta_(r,u,d) Delta_(r+1,u,s)",
+    "duality": "Delta_R^C=Delta_(L-C_rev)^(L-R_rev)"
+  },
+  "Xi_instantiation": {
+    "positive_coefficients": "H908 as pinned by the H1325 dependency addendum",
+    "strict_PF2": "H1325 certifies q_n<1 through n=128 and q_n<=X_n<1 for n>=127, so every R_n/R_(n-1)=q_n<1",
+    "consecutive_rows": "H1325 closes translated D3 and invokes H811",
+    "conclusion": "the Xi coefficient sequence a_n=gamma_n/n! is PF3"
+  },
+  "exact_replays": {
+    "main": "python tools/rh_h1326_plucker_pf3_completion.py --full-report",
+    "strict_PF2_multigap": "python tools/rh_h1326_strict_pf2_multigap_audit.py",
+    "main_checks": "35/35",
+    "strict_PF2_multigap_canaries": 512,
+    "strict_PF2_boundary_classes": {
+      "strict_interior": 1155,
+      "strict_triangular": 924,
+      "zero_first_column": 896,
+      "zero_lower_row": 210
+    }
+  },
+  "finite_universe_audits": {
+    "H813_active_sparse": 2310,
+    "H813_proved": 2310,
+    "H813_failures": 0,
+    "H816_residual_input": 356,
+    "H816_adjacent_rows": 242,
+    "H816_adjacent_rows_or_columns": 344,
+    "H816_all_six_term_forms_closed_before_general_step": "125/125",
+    "H816_four_gap_residual_before_general_induction": 12,
+    "H816_full_induction_proved": 356,
+    "H816_failures": 0
+  },
+  "dependency_hashes_sha256": {
+    "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.json": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "research/riemann/h1325_h811_dependency_addendum.json": "F034A24C08EED9FC8E0A0405D596DF47A4227CFBEC7E7664D2823062A45A26B4",
+    "research/riemann/h811_repaired_consecutive_row_theorem.json": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+    "research/riemann/h813_sparse_row_symbolic_hierarchy.json": "C92E94BAED6251E729F3B3C02AE5B93A92653118022B32682E7D8B7E24EE5ED6",
+    "research/riemann/h816_d3_cone_sparse_row_coupling.json": "8E6F0364C259FBBBC1AB66D9B1C250D2F706004FE1842644AFC584D07BDC2A00"
+  },
+  "scope_limitations": [
+    "PF3 does not imply PF4 or PF-infinity",
+    "PF3 does not prove all Jensen-polynomial degrees",
+    "this is not a proof of the Riemann Hypothesis"
+  ]
+}

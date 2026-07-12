@@ -1,0 +1,61 @@
+{
+  "schema": "rh_h1324_moment_jensen_laguerre_transfer_independent_audit.v0",
+  "classification": "independent_fraction_audit_pass",
+  "implementation": "python_stdlib_fraction_no_sympy_no_primary_import",
+  "coefficient_grid": {
+    "d_min": 0,
+    "d_max": 12,
+    "n_min": 0,
+    "n_max": 12,
+    "checks": 1183
+  },
+  "h790_reconstruction": {
+    "x_atoms": [
+      "1",
+      "16"
+    ],
+    "u_atoms": [
+      "1",
+      "4"
+    ],
+    "weights": [
+      "9/10",
+      "1/10"
+    ],
+    "moments_M0_M1_M2": [
+      "1",
+      "5/2",
+      "53/2"
+    ],
+    "gamma_0_1_2": [
+      "1",
+      "5/4",
+      "53/24"
+    ],
+    "jensen_ascending_coefficients": [
+      "1",
+      "5/2",
+      "53/24"
+    ],
+    "discriminant": "-31/12"
+  },
+  "primary_field_checks": {
+    "classification": true,
+    "primary_all_checks_pass": true,
+    "transfer_constant": true,
+    "transfer_identity": true,
+    "h790_coordinate_dictionary": true,
+    "h790_discriminant": true,
+    "remaining_gap_is_open": true
+  },
+  "checks": {
+    "fraction_coefficient_grid": true,
+    "h790_moments": true,
+    "h790_gamma": true,
+    "h790_jensen_coefficients": true,
+    "h790_integral_coefficients": true,
+    "h790_discriminant": true,
+    "primary_fields": true
+  },
+  "all_checks_pass": true
+}

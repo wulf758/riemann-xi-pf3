@@ -1,0 +1,248 @@
+# H810 Anchored-Minor q2 Lemma
+
+Classification: `anchored_minor_q2_lemma_supported_and_repairs_h809_gap`
+
+## Lemma
+
+Let x_n=R_n/R1, x_1=1, q_n=x_n/x_{n-1}. If 0<q_n<=q_{n+1}<=1 for n>=2 and q_2<=1/2, then G_c=x_{c-1}(1-x_c) is nonincreasing for c>=2. Hence all fixed-left anchored minors rows (0,1,2), cols (1,c,c+1) are nonnegative.
+
+## Proof Sketch
+
+- For c=2, G_2-G_3=(1-q2)-q2(1-q2*q3) >= 1-2*q2 >= 0.
+- For c>=3, x_{c-1}<=x_2=q2<=1/2.
+- G_c-G_{c+1}=x_{c-1}*((1-q_c)-x_{c-1}*q_c*(1-q_c*q_{c+1})).
+- It is enough that x_{c-1}<=(1-q_c)/(q_c*(1-q_c*q_{c+1})).
+- Since q_{c+1}>=q_c and q_c<=1, the right side is >=1/(q_c*(1+q_c))>=1/2.
+
+## H809 Repair
+
+```json
+{
+  "invalidated_step": "translated contiguous D3 was incorrectly used to prove G_c monotone",
+  "replacement_input": "q monotonicity plus q2<=1/2 proves the anchored fixed-left minors",
+  "remaining_inputs_for_consecutive_rows": [
+    "PF2 for first_col_0",
+    "H810 anchored lemma for first_col_1",
+    "translated contiguous D3/local convexity for first_col_ge2"
+  ]
+}
+```
+
+## H796 Diagnosis
+
+```json
+{
+  "sequence": [
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "7",
+      "float": 7.0
+    },
+    {
+      "fraction": "42",
+      "float": 42.0
+    },
+    {
+      "fraction": "252",
+      "float": 252.0
+    },
+    {
+      "fraction": "1512",
+      "float": 1512.0
+    },
+    {
+      "fraction": "7560",
+      "float": 7560.0
+    }
+  ],
+  "ratios": [
+    null,
+    {
+      "fraction": "7",
+      "float": 7.0
+    },
+    {
+      "fraction": "6",
+      "float": 6.0
+    },
+    {
+      "fraction": "6",
+      "float": 6.0
+    },
+    {
+      "fraction": "6",
+      "float": 6.0
+    },
+    {
+      "fraction": "5",
+      "float": 5.0
+    }
+  ],
+  "q_values": [
+    null,
+    null,
+    {
+      "fraction": "6/7",
+      "float": 0.8571428571428571
+    },
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "1",
+      "float": 1.0
+    },
+    {
+      "fraction": "5/6",
+      "float": 0.8333333333333334
+    }
+  ],
+  "q2_le_half": false,
+  "translated_contiguous_d3": [
+    {
+      "start": 0,
+      "cols": [
+        0,
+        1,
+        2
+      ],
+      "determinant": {
+        "fraction": "1",
+        "float": 1.0
+      }
+    },
+    {
+      "start": 1,
+      "cols": [
+        1,
+        2,
+        3
+      ],
+      "determinant": {
+        "fraction": "7",
+        "float": 7.0
+      }
+    },
+    {
+      "start": 2,
+      "cols": [
+        2,
+        3,
+        4
+      ],
+      "determinant": {
+        "fraction": "0",
+        "float": 0.0
+      }
+    },
+    {
+      "start": 3,
+      "cols": [
+        3,
+        4,
+        5
+      ],
+      "determinant": {
+        "fraction": "0",
+        "float": 0.0
+      }
+    }
+  ],
+  "fixed_left_anchored_minors": [
+    {
+      "c": 2,
+      "cols": [
+        1,
+        2,
+        3
+      ],
+      "determinant": {
+        "fraction": "7",
+        "float": 7.0
+      }
+    },
+    {
+      "c": 3,
+      "cols": [
+        1,
+        3,
+        4
+      ],
+      "determinant": {
+        "fraction": "0",
+        "float": 0.0
+      }
+    },
+    {
+      "c": 4,
+      "cols": [
+        1,
+        4,
+        5
+      ],
+      "determinant": {
+        "fraction": "-63504",
+        "float": -63504.0
+      }
+    }
+  ],
+  "negative_sparse_minor": {
+    "rows": [
+      0,
+      1,
+      2
+    ],
+    "cols": [
+      1,
+      2,
+      5
+    ],
+    "determinant": {
+      "fraction": "-1260",
+      "float": -1260.0
+    }
+  }
+}
+```
+
+## H801 Xi Diagnosis
+
+```json
+{
+  "source": "research\\riemann\\h801_xi_ratio_logconvexity_audit.json",
+  "classification": "xi_ratio_logconvexity_survives_extended_stable_window",
+  "q2_upper": "0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649374824461530360033557751848020942354731674297445893848501087051652078702585675540938039167948973965501924065522328953573413866874665705838173963958249107691528651148565304988611187657",
+  "q2_upper_less_than_half": true,
+  "q_margin_rows": 126,
+  "all_q_next_minus_q_certified_positive": true,
+  "q2_record": {
+    "repr": "[0.46518380969515456525408779214655611858123156585686259020082894509181881194997030231284211890816493748244615303600335577518480209423547316742974458938485010870516520787025856755409380391679489739655019240655223289535734138668746657058381739639582491076915286511485653049886112 +/- 3.56e-276]",
+    "lower": "[0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649374824461530360033557751848020942354731674297445893848501087051652078702585675540938039167948973965501924065522328953573413866874665705838173963958249107691528651148565304988611164493 +/- 4.46e-281]",
+    "upper": "[0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649374824461530360033557751848020942354731674297445893848501087051652078702585675540938039167948973965501924065522328953573413866874665705838173963958249107691528651148565304988611187657 +/- 2.73e-281]",
+    "lower_float": 0.46518380969515455,
+    "upper_float": 0.46518380969515455,
+    "mid": "[0.4651838096951545652540877921465561185812315658568625902008289450918188119499703023128421189081649374824461530360033557751848020942354731674297445893848501087051652078702585675540938039167948973965501924065522328953573413866874665705838173963958249107691528651148565304988611176075 +/- 3.59e-281]",
+    "rad": "[1.158202539716266927096613325228529217987807701776657794718113473159983465044577418452689864173854923690039577308042198753261299165223590810459559700540870571608442034422504585567724092085168885687831207844276526294061632463039143775347951549117241430642936910087763051957970088436e-276 +/- 4.39e-556]",
+    "positive_lower_bound": true,
+    "negative_upper_bound": false
+  }
+}
+```
+
+## Decision
+
+H810 is a useful repair: H796 invalidates PF2+translated-D3, but it fails q2<=1/2. The Xi finite window satisfies q2<1/2 and q-monotonicity, so the anchored-minor gap found in H809 is aligned with the H801/H804 route rather than a dead end.
+
+## Limitations
+
+- This repairs only the consecutive-row sparse-column part of order-3 PF.
+- The Xi conclusion is finite to the H801 audited window unless global q-monotonicity is proved.
+- Translated contiguous D3 and sparse-row minors remain separate bottlenecks.
+
+## Next Target
+
+`H811 repaired consecutive-row PF3 lemma`: Combine H809 identities with H810 anchored lemma and translated contiguous D3 to formalize a repaired consecutive-row order-3 theorem; then move to sparse rows.

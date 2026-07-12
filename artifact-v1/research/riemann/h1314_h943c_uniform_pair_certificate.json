@@ -1,0 +1,121 @@
+{
+  "H943C_budgets": {
+    "all_checks_pass": true,
+    "checks": {
+      "first_exact": true,
+      "first_lt_1": true,
+      "second_exact": true,
+      "second_lt_3": true
+    },
+    "first_budget": "663/1250",
+    "first_target": "1",
+    "second_budget": "14229/5000",
+    "second_target": "3"
+  },
+  "all_checks_pass": true,
+  "analytic_dependencies": {
+    "all_checks_pass": true,
+    "checks": {
+      "K_at_zero": true,
+      "K_nonnegative": true,
+      "curvature_distortion": true,
+      "exact_taylor_identity": true,
+      "left_pair_cap": true
+    },
+    "classification": "proved analytic dependency, not re-proved by coefficient code",
+    "required_fragments": {
+      "K_at_zero": "K_r(0)=1/2",
+      "K_nonnegative": "K_r(w)>=0",
+      "curvature_distortion": "0 < d/dy log V'''(y) <= x+3",
+      "exact_taylor_identity": "N(w)=a w^2 K_r(w)",
+      "left_pair_cap": "w <= 0  =>  K_r(w) <= 1/2"
+    },
+    "source": "research/riemann/h943_score_excess_taylor_bridge.md"
+  },
+  "compact_certificate": {
+    "all_checks_pass": true,
+    "checks": {
+      "EX3_bound_is_61_over_40": true,
+      "EX3_le_61_over_40": true,
+      "Ko_lower_coefficient_is_1_over_6": true,
+      "O_lower_coefficient_is_3": true,
+      "U4_exact_certificate_passes": true,
+      "parameter_package_passes": true,
+      "s_ge_18": true,
+      "tilted_EX5_bound": true,
+      "tilted_coefficient_is_1_over_180": true
+    },
+    "continuity_at_zero": {
+      "Ke_limit": "E[X]/2=1/2",
+      "Ko_limit": "0",
+      "O_limit": "0",
+      "R_limit": "1/2",
+      "covered": true
+    },
+    "derived_majorant": "U4(z)=61*z^2/960+z^4*exp(21*z/8)/180-z*tanh(3*z^3)/6",
+    "range": "0 <= z <= 1",
+    "taylor_inequalities": {
+      "Ke": "Ke-1/2 <= z^2*E[X^3]/24 + z^4*E[X^5 exp(zX)]/720",
+      "Ko": "Ko >= z*E[X^2]/6 >= z/6",
+      "O": "O >= s*z^3/6 >= 3*z^3"
+    },
+    "u4_certificate_id": "h943c_u4_five_interval_certificate",
+    "u4_statement": "U4(z)=61*z^2/960+z^4*exp(21*z/8)/180-z*tanh(3*z^3)/6 < 1/100 on 0<=z<=1"
+  },
+  "coverage": {
+    "all_z_nonnegative": true,
+    "compact": "0<=z<=1",
+    "t_relation": "z=a*t with a>0, so t>=0 maps to z>=0",
+    "tail": "z>=1",
+    "z_zero": "continuous value R=1/2"
+  },
+  "dimensionless_identities": {
+    "Ke": "E[(cosh(zX)-1)/(z^2 X)]",
+    "Ko": "E[(sinh(zX)-zX)/(z^2 X)]",
+    "O": "s E[(sinh(zX)-zX)/X^2]",
+    "R": "Ke-Ko*tanh(O)",
+    "normalization": "E_nu[X]=1, mu=B/A, s=A^3/B^2"
+  },
+  "id": "h1314_h943c_uniform_pair_certificate",
+  "parameter_certificate": {
+    "all_checks_pass": true,
+    "canonical_json": "research/riemann/h1314_h943c_parameter_polynomial_certificate.json",
+    "id": "h1314_h943c_parameter_polynomial_certificate"
+  },
+  "scope": "closes the exact gamma-log H943-C budgets; does not by itself prove a Xi transfer or RH",
+  "statement": "R_r(t)<=51/100 for r>=5/2 and t>=0",
+  "tail_certificate": {
+    "all_checks_pass": true,
+    "checks": {
+      "H1_le_minus_17_over_4": true,
+      "derivative_margin_is_11_over_4": true,
+      "junction_lt_1_over_100": true,
+      "mu_floor_is_4": true,
+      "negative_part_at_one_ge_6": true,
+      "positive_part_at_one_le_7_over_4": true,
+      "q_shift_bound_recorded": true,
+      "s_floor_is_18": true,
+      "sinh1_minus1_gt_1_over_6": true
+    },
+    "junction": {
+      "H1_upper": "-17/4",
+      "half_exp_minus_17_over_4": {
+        "interval": "[0.00713211695449962763664347292800 +/- 7.73e-34]",
+        "lower": "[0.00713211695449962763664347292800 +/- 7.73e-34]",
+        "upper": "[0.00713211695449962763664347292800 +/- 7.73e-34]"
+      },
+      "negative_part_lower": "6",
+      "positive_part_upper": "7/4",
+      "target": "1/100"
+    },
+    "monotonicity": {
+      "H_derivative_upper": "-(11/4)exp(z)<0",
+      "cosh_bound": "cosh(z)-1>=exp(z)/8 for z>=1; put y=exp(z)>=2 and use 3y+4/y-8>=0",
+      "negative_derivative_lower": "2s(cosh(z)-1)>=(9/2)exp(z)",
+      "positive_derivative_upper": "exp(z/4)+3/4 <= (7/4)exp(z)"
+    },
+    "pair_tail_input": "R-1/2 <= (1/2) exp(H(z)), H=r(exp(z/mu)-1)+3z/mu-2s(sinh(z)-z)",
+    "range": "z >= 1"
+  },
+  "uniform_cap": "1/2+1/100=51/100"
+}

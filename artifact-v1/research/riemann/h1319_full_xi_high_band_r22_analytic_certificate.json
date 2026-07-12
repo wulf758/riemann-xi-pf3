@@ -1,0 +1,483 @@
+{
+  "algebraic_ratio_certificate": {
+    "all_checks_pass": true,
+    "checks": {
+      "comparison_difference_identity": true,
+      "comparison_lower_at_4_exact": true,
+      "comparison_lower_shift_coefficients_positive": true,
+      "d_guard_shift_coefficients_positive": true,
+      "normalized_ratio_identity": true
+    },
+    "comparison_difference": "-d**3 + d**2*(3*r + 3) - d*(3*r**2 + 5*r + 3) + 2*r + 1",
+    "comparison_lower": "5r/4-1/4-3/(4r)-1/(64r^3)",
+    "comparison_lower_at_4": {
+      "decimal": 4.562255859375,
+      "denominator": 4096,
+      "exact": "18687/4096",
+      "numerator": 18687
+    },
+    "comparison_lower_shift_polynomial": "80*x**4 + 1264*x**3 + 7440*x**2 + 19328*x + 18687",
+    "conclusion": "0<q^2*r*B/A^3<1 for every real r>=4",
+    "d_guard_shift_polynomial": "3*x**2/2 + 6*x + 3",
+    "d_upper": "d<1/(4r) for r>=4",
+    "definitions": {
+      "A": "r*(P*(r+1)-9/4)",
+      "B": "r*(P*(r^2+3r+1)-9/4)",
+      "F": "q^2*r*B/A^3",
+      "P": "pi*exp(r)",
+      "d": "9/(4P)",
+      "epsilon": "1/(rP)",
+      "q": "r*P-(9/4)*r-1"
+    },
+    "normalized_identity": "F=r*(1-d-epsilon)^2*(r^2+3r+1-d)/(r+1-d)^3"
+  },
+  "all_checks_pass": true,
+  "classification": "h1319_full_xi_high_band_r22_analytic_closed",
+  "dependency_checks": {
+    "H1313_M2_exact": true,
+    "H1313_M4_exact": true,
+    "H1313_M6_exact": true,
+    "H1313_global_moments_pass": true,
+    "H1313_range_exact": true,
+    "H1314_end_to_end_pass": true,
+    "H1314_statement_exact": true,
+    "H1314_uniform_pair_pass": true,
+    "H1316_BXi_present": true,
+    "H1316_beta5_formulas_present": true,
+    "H1316_denominator_safety_present": true,
+    "H1316_mtail_constants_present": true,
+    "H1316_mtail_global_range_present": true,
+    "H921_certificate_pass": true,
+    "H921_factor_7_present": true,
+    "H927_a_cap_present": true
+  },
+  "dominant_stein_bound": {
+    "D": {
+      "decimal": 3.144228668928,
+      "denominator": 1953125000,
+      "exact": "6141071619/1953125000",
+      "numerator": 6141071619
+    },
+    "X_upper": {
+      "decimal": 0.5304,
+      "denominator": 1250,
+      "exact": "663/1250",
+      "numerator": 663
+    },
+    "Y_upper": {
+      "decimal": 2.8458,
+      "denominator": 5000,
+      "exact": "14229/5000",
+      "numerator": 14229
+    },
+    "conclusion": "kappa3(W)>=-D*a",
+    "identity": "kappa3(W)/a=-Y+3*X*E2-2*a^2*X^3",
+    "pair_cap": "51/100"
+  },
+  "factor_audit": {
+    "H921_fallback": "q^2*r*B/A^3<=7 gives -14D/r",
+    "exact_scaled_dominant": "-2*D*q^2*B/A^3",
+    "factor_seven_not_silently_dropped": true,
+    "improved_consequence": "t^2*kappa_9'''(t)>-2D/r",
+    "new_exact_algebra": "q^2*r*B/A^3<1 for r>=4"
+  },
+  "full_xi_transfer": {
+    "B_Xi": 45450578214,
+    "checks": {
+      "assembly_BXi_exact": true,
+      "global_R5_constants_in_note": true,
+      "global_range_in_note": true,
+      "global_transfer_in_assembly": true,
+      "verifier_BXi_exact": true,
+      "verifier_all_checks_pass": true,
+      "verifier_id_exact": true,
+      "verifier_returncode_zero": true
+    },
+    "dependency": "H1317 beta-5 H923 derivative certificate",
+    "range": "r>=5/2",
+    "scaled_correction": "t^2*G'''(t)>=-B_Xi/t=-2B_Xi/q"
+  },
+  "id": "h1319_full_xi_high_band_r22_analytic_certificate",
+  "local_checks": {
+    "D_exact": true,
+    "D_lt_63_over_20": true,
+    "R21_same_coarse_envelope_fails": true,
+    "R22_below_71": true,
+    "R22_below_previous_R59": true,
+    "R22_first_integer_for_this_proof": true,
+    "cleared_integer_exact": true,
+    "dominant_split_lt_63_over_220": true,
+    "e_taylor6_gt_19_over_7": true,
+    "exact_total_below_target": true,
+    "q22_clears_transfer_split": true,
+    "q22_lower_positive": true,
+    "split_sums_to_3_over_4": true,
+    "transfer_split_lt_51_over_110": true
+  },
+  "monotone_extension": {
+    "conclusion": "the endpoint r=22 proves every r>=22",
+    "dominant": "2D/r strictly decreases",
+    "transfer": "q'(r)=pi*exp(r)*(r+1)-9/4=A/r>0"
+  },
+  "provenance": {
+    "H1317": {
+      "files": {
+        "research\\riemann\\h1317_beta5_h923_derivative_certificate.md": "54472F33D4C500CCBB6771CB9D20F6178D90D9C24026294C36766C9E7BE74B03",
+        "research\\riemann\\h1317_effective_xi_transfer_assembly.md": "137A9B45BD57DADE217A8921A4EA539BC9B1FCAD7BFC35D97E88934B3F85EEB4",
+        "tools\\rh_h1317_beta5_h923_derivative_certificate.py": "34634E4F66EBE60617EB3526D377D9E6F0FDB514B727E3B8ACE833071D5767E3"
+      },
+      "verifier_report": {
+        "B_Xi": 45450578214,
+        "all_checks_pass": true,
+        "beta5_derivative_constants": {
+          "B1": 207,
+          "B2": 1035,
+          "B3": 7659
+        },
+        "checks": {
+          "B_Xi_is_45450578214": true,
+          "M2_present": true,
+          "M4_present": true,
+          "M6_is_21": true,
+          "M6_present": true,
+          "base_is_69": true,
+          "beta5_B1_is_207": true,
+          "beta5_B2_is_1035": true,
+          "beta5_B3_is_7659": true,
+          "correction_sign_present": true,
+          "full_B1_is_1415": true,
+          "full_B2_is_7073": true,
+          "full_B3_is_52337": true,
+          "moment_file_exists": true,
+          "moment_range_present": true,
+          "mu1_lt_4": true,
+          "mu2_lt_4": true,
+          "mu3_lt_4": true,
+          "mu4_lt_4": true,
+          "quarter_threshold_is_181802312856": true,
+          "tail_B1_present": true,
+          "tail_B2_present": true,
+          "tail_B3_present": true
+        },
+        "dependency_checks": {
+          "M2_present": true,
+          "M4_present": true,
+          "M6_present": true,
+          "correction_sign_present": true,
+          "moment_file_exists": true,
+          "moment_range_present": true,
+          "tail_B1_present": true,
+          "tail_B2_present": true,
+          "tail_B3_present": true
+        },
+        "full_epsilon_derivative_constants": {
+          "B1": 1415,
+          "B2": 7073,
+          "B3": 52337
+        },
+        "id": "h1317_beta5_h923_derivative_certificate",
+        "quarter_transfer_threshold": 181802312856
+      },
+      "verifier_stderr": ""
+    },
+    "base_dependencies": {
+      "H1313_live_report": {
+        "all_checks_pass": true,
+        "canonical_s30": {
+          "all_moments_pass": true,
+          "cumulants": {
+            "1": {
+              "interval": "[-0.0917941871134589474500635482841940032625043 +/- 8.6e-46]",
+              "lower": "[-0.0917941871134589474500635482841940032625043 +/- 8.6e-46]",
+              "radius": "[4.33870378721266332251421811445404924839929e-76 +/- 2.86e-118]",
+              "upper": "[-0.0917941871134589474500635482841940032625043 +/- 8.6e-46]"
+            },
+            "2": {
+              "interval": "[1.01685181073219832641278166533012349408725 +/- 2.88e-42]",
+              "lower": "[1.01685181073219832641278166533012349408725 +/- 2.88e-42]",
+              "radius": "[3.34810941716785073836761676521792576328686e-77 +/- 5.3e-122]",
+              "upper": "[1.01685181073219832641278166533012349408725 +/- 2.88e-42]"
+            },
+            "3": {
+              "interval": "[-0.188761384607751568149376373844644237772343 +/- 4.54e-43]",
+              "lower": "[-0.188761384607751568149376373844644237772343 +/- 4.54e-43]",
+              "radius": "[7.78939000712207226236008203028565230100165e-78 +/- 4.99e-120]",
+              "upper": "[-0.188761384607751568149376373844644237772343 +/- 4.54e-43]"
+            },
+            "4": {
+              "interval": "[0.0700740329826251615414061938934374827626029 +/- 1.01e-44]",
+              "lower": "[0.0700740329826251615414061938934374827626029 +/- 1.01e-44]",
+              "radius": "[2.02979388674334448126192642198923707812167e-78 +/- 3.76e-120]",
+              "upper": "[0.0700740329826251615414061938934374827626029 +/- 1.01e-44]"
+            },
+            "5": {
+              "interval": "[-0.0390167272201258573752628792592616103473849 +/- 8.38e-45]",
+              "lower": "[-0.0390167272201258573752628792592616103473849 +/- 8.38e-45]",
+              "radius": "[1.70576668631867342975496445694313348464990e-78 +/- 4.30e-121]",
+              "upper": "[-0.0390167272201258573752628792592616103473849 +/- 8.38e-45]"
+            },
+            "6": {
+              "interval": "[0.0289628863276363845096945387340132046791213 +/- 4.28e-44]",
+              "lower": "[0.0289628863276363845096945387340132046791213 +/- 4.28e-44]",
+              "radius": "[7.15973601134139612409632010263597580886106e-79 +/- 4.59e-121]",
+              "upper": "[0.0289628863276363845096945387340132046791213 +/- 4.28e-44]"
+            }
+          },
+          "definition": "W=sqrt(s)*(log(Y)-log(s)), Y~Gamma(s,1)",
+          "moments": {
+            "2": {
+              "moment": {
+                "interval": "[1.02527798352001903910376321111276544279213 +/- 4.80e-42]",
+                "lower": "[1.02527798352001903910376321111276544279213 +/- 4.80e-42]",
+                "radius": "[1.30541929592257501139368583436383021726216e-76 +/- 4.80e-118]",
+                "upper": "[1.02527798352001903910376321111276544279213 +/- 4.80e-42]"
+              },
+              "passed": true,
+              "slack": {
+                "interval": "[0.0147220164799809608962367888872345572078652 +/- 1.88e-45]",
+                "lower": "[0.0147220164799809608962367888872345572078652 +/- 1.88e-45]",
+                "radius": "[1.47814266831135330126842010115457625205241e-76 +/- 2.96e-118]",
+                "upper": "[0.0147220164799809608962367888872345572078652 +/- 1.88e-45]"
+              },
+              "target": {
+                "interval": "[1.04000000000000000000000000000000000000000 +/- 3e-46]",
+                "lower": "[1.04000000000000000000000000000000000000000 +/- 3e-46]",
+                "radius": "[1.72723371101888892507727037256007991422320e-77 +/- 7.30e-121]",
+                "upper": "[1.04000000000000000000000000000000000000000 +/- 1e-46]"
+              }
+            },
+            "4": {
+              "moment": {
+                "interval": "[3.29282565411347218644581918283424841226268 +/- 2.93e-42]",
+                "lower": "[3.29282565411347218644581918283424841226268 +/- 2.93e-42]",
+                "radius": "[1.25557132343095194406850676294041964550164e-75 +/- 3.66e-117]",
+                "upper": "[3.29282565411347218644581918283424841226268 +/- 2.93e-42]"
+              },
+              "passed": true,
+              "slack": {
+                "interval": "[0.207174345886527813554180817165751587737323 +/- 7.12e-44]",
+                "lower": "[0.207174345886527813554180817165751587737323 +/- 7.12e-44]",
+                "radius": "[1.25557132343095194406850676294041964550164e-75 +/- 3.66e-117]",
+                "upper": "[0.207174345886527813554180817165751587737323 +/- 7.12e-44]"
+              },
+              "target": {
+                "interval": "3.50000000000000000000000000000000000000000",
+                "lower": "3.50000000000000000000000000000000000000000",
+                "radius": "0",
+                "upper": "3.50000000000000000000000000000000000000000"
+              }
+            },
+            "6": {
+              "moment": {
+                "interval": "[18.7088437782569320159946190958899240735189 +/- 3.67e-41]",
+                "lower": "[18.7088437782569320159946190958899240735189 +/- 3.67e-41]",
+                "radius": "[1.38640505769062784498916637352552814773003e-74 +/- 3.55e-118]",
+                "upper": "[18.7088437782569320159946190958899240735189 +/- 3.67e-41]"
+              },
+              "passed": true,
+              "slack": {
+                "interval": "[2.29115622174306798400538090411007592648106 +/- 3.37e-42]",
+                "lower": "[2.29115622174306798400538090411007592648106 +/- 3.37e-42]",
+                "radius": "[1.38640505769062784498916637352552814773003e-74 +/- 3.55e-118]",
+                "upper": "[2.29115622174306798400538090411007592648106 +/- 3.37e-42]"
+              },
+              "target": {
+                "interval": "21.0000000000000000000000000000000000000000",
+                "lower": "21.0000000000000000000000000000000000000000",
+                "radius": "0",
+                "upper": "21.0000000000000000000000000000000000000000"
+              }
+            }
+          },
+          "s": 30
+        },
+        "coverage": {
+          "bands": [
+            {
+              "dependency": "H1311+H1282",
+              "left": "5/2",
+              "right": "3"
+            },
+            {
+              "dependency": "H1312+H1302+canonical s=30",
+              "left": "3",
+              "right": "49/5"
+            },
+            {
+              "dependency": "H1279",
+              "left": "49/5",
+              "right": "infinity"
+            }
+          ],
+          "domain": "r>=5/2",
+          "no_gap": true
+        },
+        "dependencies": {
+          "h1279_high_band": {
+            "all_checks_pass": true,
+            "moment_checks_pass": true,
+            "path": "research\\riemann\\h1279_gamma_log_threshold49over5_moments.json",
+            "role": "direct moment bounds on r>=49/5"
+          },
+          "h1282_endpoint_anchor": {
+            "all_checks_pass": true,
+            "all_three_moments_pass": true,
+            "path": "research\\riemann\\h1282_gamma_log_endpoint_even_moment_certificate_360k.json"
+          },
+          "h1302_canonical_monotonicity": {
+            "exists": true,
+            "passed": true,
+            "path": "research\\riemann\\h1302_canonical_log_gamma_even_moment_monotonicity.md",
+            "required_fragments": {
+              "h1302_canonical_log_gamma_all_even_moments_decrease": true,
+              "strictly decreasing in `s`": true
+            }
+          },
+          "h1311_low_band": {
+            "drivers": {
+              "tools\\rh_h1306b_finite_covariance_certificate_pilot.py": true,
+              "tools\\rh_h1306c_paired_finite_covariance_pilot.py": true,
+              "tools\\rh_h1306d_paired_cover_pilot.py": true
+            },
+            "note": {
+              "exists": true,
+              "passed": true,
+              "path": "research\\riemann\\h1311_h1296_finite_covariance_certificate_to_3.md",
+              "required_fragments": {
+                "5/2<=r<=3": true,
+                "Hence the exact moments `M_2,M_4,M_6` are": true,
+                "h1311_h1296_finite_covariance_certificate_to_3_proved": true
+              }
+            },
+            "passed": true,
+            "role": "moment monotonicity on 5/2<=r<=3"
+          },
+          "h1312_middle_band": {
+            "certificate_all_checks_pass": true,
+            "note": {
+              "exists": true,
+              "passed": true,
+              "path": "research\\riemann\\h1312_radial_likelihood_ratio_certificate.md",
+              "required_fragments": {
+                "3 <= r <= 49/5": true,
+                "h1312_exact_radial_lr_domination": true,
+                "likelihood-ratio dominated": true
+              }
+            },
+            "passed": true,
+            "role": "exact-to-canonical radial LR comparison on 3<=r<=49/5"
+          }
+        },
+        "dependency_pass": true,
+        "does_not_prove": [
+          "the H946 corrected-pair pointwise inequality",
+          "H943-C",
+          "the gamma-log-to-Xi transfer",
+          "the Riemann Hypothesis"
+        ],
+        "id": "h1313_h946_global_moment_assembly",
+        "limitation": "H1311 and H1279 are consumed as published checked artifacts, not rerun here",
+        "statement": {
+          "bounds": {
+            "M2": "26/25",
+            "M4": "7/2",
+            "M6": "21"
+          },
+          "range": "r>=5/2",
+          "scope": "H946 coarse even-moment subproblem only"
+        }
+      },
+      "files": {
+        "research\\riemann\\h1313_h946_global_even_moment_bounds.md": "6D7DBA5F90B7BED06A2A550D49029D4E7D926BC0D8E979FEF8E30A5E2920952C",
+        "research\\riemann\\h1314_h1315_end_to_end_certificate.json": "5169DA3CB27D2444112A1B26E334AD129533680DCE169713B78421831887904F",
+        "research\\riemann\\h1314_h943c_uniform_pair_certificate.json": "99CE26E70C7A9F85C8D8D923E9012149A1DDED61ED53CC660B9442B995460658",
+        "research\\riemann\\h1316_beta5_epsilon_derivative_box.md": "FA009571E984125EB659554266AC1FD7A856102B5D1E7C1A6D8D72BBAF5358C5",
+        "research\\riemann\\h1316_full_xi_transfer_assembly.md": "0C273475977C8403E2CB681E21017C2B843573C5E4A1987B21273BB63098CE6E",
+        "research\\riemann\\h1316_xi_mtail_explicit_transfer.md": "4DAAC3479587C9C73ED34230D1C6646301C46E22AEA4D727574C8BD1AD2C1EC2",
+        "research\\riemann\\h921_explicit_saddle_main_coefficient_bound.md": "9E75836C0EA0F6FACC09DD88C3B8DD54062D270BC773A498C602F54443C500B9",
+        "research\\riemann\\h921_explicit_saddle_main_coefficient_certificate.json": "5CDBB2FFE83F64EC5ACD23C75738338C8A73A54D041732D0FEFE49DCB7950376",
+        "research\\riemann\\h927_gamma_log_a_le_one_low_threshold.md": "B74EBA4BC923164E6A2A92B4132DDC5A42CEF8818E4B1EC43D7B194B59071E9D"
+      },
+      "hash_algorithm": "SHA-256"
+    }
+  },
+  "scope": {
+    "does_not_prove": [
+      "the remaining compact gap 4<r<22",
+      "the global H920 input by itself",
+      "the Riemann Hypothesis"
+    ],
+    "proved": "full-Xi high analytic band r>=22",
+    "remaining_compact_gap_after_first_segment": "4<r<22",
+    "supersedes_high_band_fallback": "r>=59 certificate remains valid but is weaker"
+  },
+  "statement": {
+    "lower_bound": "-3/4",
+    "quantity": "t(r)^2*kappa_Xi'''(t(r))",
+    "r_domain": {
+      "closed": true,
+      "lower": "22",
+      "upper": "infinity"
+    },
+    "saddle_map": "t(r)=(pi*r*exp(r)-(9/4)r-1)/2"
+  },
+  "threshold_budget": {
+    "R": 22,
+    "R_minus_1_total": {
+      "decimal": 1.4278477560874745,
+      "denominator": 175762492975518257872766410387695312500,
+      "exact": "250962081199434241598036175227112792843/175762492975518257872766410387695312500",
+      "numerator": 250962081199434241598036175227112792843
+    },
+    "dominant_upper": {
+      "decimal": 0.2858389699025455,
+      "denominator": 21484375000,
+      "exact": "6141071619/21484375000",
+      "numerator": 6141071619
+    },
+    "e_degree6_taylor": {
+      "decimal": 2.7180555555555554,
+      "denominator": 720,
+      "exact": "1957/720",
+      "numerator": 1957
+    },
+    "e_lower_used": "19/7",
+    "first_passing_integer_for_this_proof": 22,
+    "hand_split": {
+      "cleared_integer": 13163512111608071206071088227213,
+      "dominant": "<63/220",
+      "sum": "3/4",
+      "transfer": "<51/110"
+    },
+    "q_R_lower": {
+      "decimal": 229068976884.92355,
+      "denominator": 7819642097165976098,
+      "exact": "1791237414804088073922899305903/7819642097165976098",
+      "numerator": 1791237414804088073922899305903
+    },
+    "slack": {
+      "decimal": 0.06733227718576872,
+      "denominator": 38483616333681579713187289775259765625000,
+      "exact": "2591189522090224427540556024253486751793/38483616333681579713187289775259765625000",
+      "numerator": 2591189522090224427540556024253486751793
+    },
+    "target": {
+      "decimal": 0.75,
+      "denominator": 4,
+      "exact": "3/4",
+      "numerator": 3
+    },
+    "total_upper": {
+      "decimal": 0.6826677228142313,
+      "denominator": 38483616333681579713187289775259765625000,
+      "exact": "26271522728170960357349911307191337466957/38483616333681579713187289775259765625000",
+      "numerator": 26271522728170960357349911307191337466957
+    },
+    "transfer_upper": {
+      "decimal": 0.39682875291168584,
+      "denominator": 1791237414804088073922899305903,
+      "exact": "710814509485458368763607057944/1791237414804088073922899305903",
+      "numerator": 710814509485458368763607057944
+    }
+  }
+}

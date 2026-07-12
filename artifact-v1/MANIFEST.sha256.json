@@ -1,0 +1,1336 @@
+{
+  "file_count": 266,
+  "files": [
+    {
+      "path": "ARTIFACT.json",
+      "sha256": "BF7F94900CFE405F2594B96EE3ECBB092C5D59DC001A156026DC8F1B52E1BB1C",
+      "size_bytes": 227
+    },
+    {
+      "path": "paper/xi_pf3.tex",
+      "sha256": "A8AFFD17C1A837B91DFA59DCB360A3DA6EF30FB5C62CE7AB783C8EF8E5D77629",
+      "size_bytes": 41343
+    },
+    {
+      "path": "README.md",
+      "sha256": "B3DA7C3F03D40488B8DEC70E3AAA46B5E6A616419A4394D335EB3744EEA0E29C",
+      "size_bytes": 972
+    },
+    {
+      "path": "replay.py",
+      "sha256": "8451763068A0B916599AF0E47191B581C8DA6E715F1280105C50E4D5CE0AD9B5",
+      "size_bytes": 4167
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "E3A239CB0BA5D541B1340898C1A7D9902682A6989F0A29FA5D2D421ADF4BC9DB",
+      "size_bytes": 51
+    },
+    {
+      "path": "research/riemann/claude_d3_alias_repaired_finite_certificate.json",
+      "sha256": "4AC291EC2FB43D5469A6BD317993645BA56CA68E8F86E7763A24486771E313E1",
+      "size_bytes": 1261141
+    },
+    {
+      "path": "research/riemann/claude_d3_alias_repaired_finite_certificate.md",
+      "sha256": "9DEAFA97B10550AC30B4C87DD8AF409A46F9E0517CD8A8F477FD5BF7A0866153",
+      "size_bytes": 2836
+    },
+    {
+      "path": "research/riemann/claude_d3_kappa2_average_pilot.json",
+      "sha256": "D2A169A4902D83C7A2B7EF927D99A4BA4E6A64079E0DF84F6A60D1D073FE5BAB",
+      "size_bytes": 35553
+    },
+    {
+      "path": "research/riemann/claude_d3_kappa2_average_pilot.md",
+      "sha256": "AA17A166594EB047F849474BDE5770AA7187DBBFC0532B6C78D6040939B67C1C",
+      "size_bytes": 1396
+    },
+    {
+      "path": "research/riemann/claude_d3_kappa2_average_pilot_replay.json",
+      "sha256": "8D3F645893138080CB50D35C0EB0D8BA20AC77B6E3509D54C3E62B92E086BA5C",
+      "size_bytes": 32217
+    },
+    {
+      "path": "research/riemann/claude_d3_kappa2_average_pilot_replay.md",
+      "sha256": "B0A311599E9C73EAB2A0A65CC9AAF62A95F4B7E366A05D8D993813CD559F84BC",
+      "size_bytes": 1358
+    },
+    {
+      "path": "research/riemann/claude_h1319_box_variance_upper_certificate.json",
+      "sha256": "0F92080BCBCD338C928077D2CBA859D5D0AEBE084CA00554EECD11194FD0320B",
+      "size_bytes": 3735944
+    },
+    {
+      "path": "research/riemann/claude_h1319_box_variance_upper_certificate.md",
+      "sha256": "169D4CC21C196C23BEC6AED461C09342B6D942C7C536448A04691D1D7D988A49",
+      "size_bytes": 1484
+    },
+    {
+      "path": "research/riemann/h1310_mellin_cumulant_hierarchy.md",
+      "sha256": "1808A94059955744F6285539C0249323FDD330E1F58CC47217927779B41AD9DB",
+      "size_bytes": 3694
+    },
+    {
+      "path": "research/riemann/h1311_h1296_finite_covariance_certificate_to_3.md",
+      "sha256": "8C2A53FD3CED4E68C3E205B921FC1DA4F5CFCDD5AA15FD31E65920293FC86C9A",
+      "size_bytes": 4360
+    },
+    {
+      "path": "research/riemann/h1312_radial_likelihood_ratio_certificate.md",
+      "sha256": "CF90B84779929CBAD5727A5E26CAD69C8106271ABEAF6A0BD773D200A24878A9",
+      "size_bytes": 5855
+    },
+    {
+      "path": "research/riemann/h1313_h946_global_even_moment_bounds.md",
+      "sha256": "6D7DBA5F90B7BED06A2A550D49029D4E7D926BC0D8E979FEF8E30A5E2920952C",
+      "size_bytes": 4072
+    },
+    {
+      "path": "research/riemann/h1314_h1315_end_to_end_certificate.json",
+      "sha256": "5169DA3CB27D2444112A1B26E334AD129533680DCE169713B78421831887904F",
+      "size_bytes": 11138
+    },
+    {
+      "path": "research/riemann/h1314_h1315_end_to_end_reproducibility.md",
+      "sha256": "2CEDAA24269B0555559602A4122BBAAD877C3C29CF216827494EA721D911C10F",
+      "size_bytes": 4396
+    },
+    {
+      "path": "research/riemann/h1314_h1315_materialized_chain.json",
+      "sha256": "FBCA135D0612C535B23978C395B9EA255019802AF14FD87B054CA071268BB66E",
+      "size_bytes": 5283
+    },
+    {
+      "path": "research/riemann/h1314_h943c_pairing_and_tail_analytic_bridge.md",
+      "sha256": "8DD10954AC2DCF3F9BB746C371D02E93B7A7FF908BD6BD4B60D48BE3D2FED810",
+      "size_bytes": 7052
+    },
+    {
+      "path": "research/riemann/h1314_h943c_pairing_tail_bridge.json",
+      "sha256": "72E9FEE9EBE6B5E8079A61D54DEF49772A4C5D20D111505DF0F0CF5EAB3C9E23",
+      "size_bytes": 4043
+    },
+    {
+      "path": "research/riemann/h1314_h943c_parameter_polynomial_certificate.json",
+      "sha256": "BA233FCD6441545B31BF48A9D9CFAD7C26C3C82D9B88CD204C48B765CC4AB421",
+      "size_bytes": 7441
+    },
+    {
+      "path": "research/riemann/h1314_h943c_reproducible_uniform_pair_certificate.md",
+      "sha256": "F9D1AC131ACA15D1F22C7B1E1D67A6F34F23837D5FDB7F27DD91263E7BCEB5F4",
+      "size_bytes": 4079
+    },
+    {
+      "path": "research/riemann/h1314_h943c_uniform_pair_certificate.json",
+      "sha256": "99CE26E70C7A9F85C8D8D923E9012149A1DDED61ED53CC660B9442B995460658",
+      "size_bytes": 4250
+    },
+    {
+      "path": "research/riemann/h1314_h946_corrected_pair_global_proof.md",
+      "sha256": "896FDC7746EFB2BB6F48101BB2FA9219EA7969648D63C0AC4714EE6303CD68BE",
+      "size_bytes": 2662
+    },
+    {
+      "path": "research/riemann/h1314_independent_uniform_pair_cap_audit.md",
+      "sha256": "321ADBC7FE3C46ED7ECAC26E6B8FED677431DA2BE7A09333BB169CBBC5BFABC1",
+      "size_bytes": 2564
+    },
+    {
+      "path": "research/riemann/h1314_uniform_pair_cap_proved_audited.md",
+      "sha256": "441B26DE7606D80ED01EB66D2BC8076B9325D6BB0A9FB5BBFD35A8D720D858C9",
+      "size_bytes": 2710
+    },
+    {
+      "path": "research/riemann/h1314_uniform_pair_cap_readonly_certificate.md",
+      "sha256": "9C8170425C54EAD26B0E6E25B5F26DB8323B267923E9489C896007ABBB67E694",
+      "size_bytes": 2197
+    },
+    {
+      "path": "research/riemann/h1315_gamma_log_moment_box_global_assembly.json",
+      "sha256": "F4D38AF9FF4C601F960790B5DED7E6D26FB191482EE0ECFF1E3983D5BB2CA941",
+      "size_bytes": 8766
+    },
+    {
+      "path": "research/riemann/h1315_gamma_log_moment_box_global_assembly.md",
+      "sha256": "5557C6DE0126E5EDA36B6A5C70C8F8D15F18549DA82A8FB7517ED4914B92D74C",
+      "size_bytes": 4579
+    },
+    {
+      "path": "research/riemann/h1315_gamma_log_moment_box_global_assembly_verifier_addendum.md",
+      "sha256": "3D02C3B8DFEE4AF0904D2E582E4C89829A8C72245EC794703F759E452E8BE3AA",
+      "size_bytes": 1031
+    },
+    {
+      "path": "research/riemann/h1316_beta5_direct_transfer_bound.md",
+      "sha256": "780D40F27CD0B821BFF203CE5F9D0D939891D66BEAE62001CCA656B1112F6FDB",
+      "size_bytes": 3462
+    },
+    {
+      "path": "research/riemann/h1316_beta5_epsilon_derivative_box.md",
+      "sha256": "FA009571E984125EB659554266AC1FD7A856102B5D1E7C1A6D8D72BBAF5358C5",
+      "size_bytes": 4692
+    },
+    {
+      "path": "research/riemann/h1316_full_xi_transfer_assembly.md",
+      "sha256": "0C273475977C8403E2CB681E21017C2B843573C5E4A1987B21273BB63098CE6E",
+      "size_bytes": 5466
+    },
+    {
+      "path": "research/riemann/h1316_xi_mtail_explicit_transfer.md",
+      "sha256": "4DAAC3479587C9C73ED34230D1C6646301C46E22AEA4D727574C8BD1AD2C1EC2",
+      "size_bytes": 6824
+    },
+    {
+      "path": "research/riemann/h1316_xi_transfer_chain_independent_audit.md",
+      "sha256": "9A05555D3694ADAC7227FC706C9D2FF798C69DE4001B6A4B841612B7A2D84692",
+      "size_bytes": 8574
+    },
+    {
+      "path": "research/riemann/h1317_beta5_h923_derivative_certificate.md",
+      "sha256": "54472F33D4C500CCBB6771CB9D20F6178D90D9C24026294C36766C9E7BE74B03",
+      "size_bytes": 4890
+    },
+    {
+      "path": "research/riemann/h1317_effective_xi_transfer_assembly.md",
+      "sha256": "137A9B45BD57DADE217A8921A4EA539BC9B1FCAD7BFC35D97E88934B3F85EEB4",
+      "size_bytes": 5453
+    },
+    {
+      "path": "research/riemann/h1318_effective_gamma_log_to_xi_transfer.md",
+      "sha256": "9C3B7F75DDD7545D1A942894C0E507FAC97E8C23766D9A9E98368F59E25FF0C8",
+      "size_bytes": 3825
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_adaptive_rbox_cover.json",
+      "sha256": "7F1B0F3C01FEB9CDCEB8B6B33B65BCF467BC69AAE7DDE55CBE5149FD68826F3C",
+      "size_bytes": 1111977
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_adaptive_rbox_cover.md",
+      "sha256": "4FF00F151962A4255FD757682E6D068A0FDF64AC1849CED8B2B3A32F9B90747C",
+      "size_bytes": 1430
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_compact_interval_certificate.json",
+      "sha256": "DAA4646A67FE5BB0D4CCC0CBD96FE15141F7CCBB020C03D8B42ACE61D9DFAA7B",
+      "size_bytes": 9419
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_compact_interval_certificate.md",
+      "sha256": "566C95AA57793D094800693F36FD18676CCB0F566A67F59F94651004B128A07D",
+      "size_bytes": 1719
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_compact_scaled_cumulant_scout.json",
+      "sha256": "288B12A992A1500805CB851F68DA58DA0699DEFB2075E425B0C4ED0CFAAF2828",
+      "size_bytes": 311406
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_compact_scaled_cumulant_scout.md",
+      "sha256": "3029C0E780CB187DB08F22FBB005CE6A6DFCA26C31A860E8A82531B831A60664",
+      "size_bytes": 5878
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_fixed_r_arb_pilot.json",
+      "sha256": "CB3C65CD70B3D1F598B4EF9B1B4E92A2A7B327248532F035D839C515248E0114",
+      "size_bytes": 4933
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_fixed_r_arb_pilot.md",
+      "sha256": "194BE4F25A62A73CC4D1F4FBB1C2BBCACAA31BCCBFBC32DAE97B16D178D54A25",
+      "size_bytes": 1972
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_fixed_r_score_arb.json",
+      "sha256": "50C6DF155D742BA159FBC8C81FE45110A56CFFB6F79BB33874F93F6D34CD9B6E",
+      "size_bytes": 8670
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_fixed_r_series_arb.json",
+      "sha256": "B419A526208828CFB497B24749748B04B4C6D6F73363A7853E22DAEDC7FB5EA6",
+      "size_bytes": 4826
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_fixed_r_stable_arb.json",
+      "sha256": "D20A29AA8C6A991DBF8ACDFCEF8BAF7546E6936EDF43EF619ED7EF34D4847579",
+      "size_bytes": 5073
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_high_band_r22_analytic_certificate.json",
+      "sha256": "E93AEB7D4FC9DA17BF76E7D65403F95278511C2822ADA115D18980F636DD9519",
+      "size_bytes": 20221
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_high_band_r22_analytic_certificate.md",
+      "sha256": "72A28C658FCB9B040237584C338E7CA7D1443FFF99995F40833BE5B8606D54CD",
+      "size_bytes": 2552
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_high_band_r59_analytic_certificate.json",
+      "sha256": "57F26BF7EA1B276F7C8EB892B27D8430BB449C5D9C85B77DDCDABD65D94AB86E",
+      "size_bytes": 16853
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_high_band_r59_analytic_certificate.md",
+      "sha256": "2E454EBE309125B44ED6438F8916F6FBD7837F29EA8EA63736B94CDBEC60CE27",
+      "size_bytes": 2490
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r10_to_22_arb.json",
+      "sha256": "A766CBC188DF9FE142D2D8AE839F41D9866938024FE4A7B7355D86415799ADC7",
+      "size_bytes": 1689149
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r30_to_71_arb.json",
+      "sha256": "8A8E57F68B6BE1A3B531EFCCD851E44114A783FC71233E216810DA67C7DA4E06",
+      "size_bytes": 2327224
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r4_to_5_arb.json",
+      "sha256": "68C186EDEBF3401454322BBFBCF7A7F7C78B22C2C263D031584C15017007B21C",
+      "size_bytes": 355546
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r_cover_4_5.json",
+      "sha256": "13A8B1186351F71F5BA6F34BD0525D5FC45011A237A4C11DECB5B692E9C2F9DD",
+      "size_bytes": 146852
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r_cover_5_10.json",
+      "sha256": "92B40CC49C2897368B159DEABE9EEF9AB3A586AA57E968482C764C1EDD519C7E",
+      "size_bytes": 704042
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_segment_interval_certificate.json",
+      "sha256": "6ED85D97810609453E6EB890C8A5EEE6D0F7F29DD2F509C3A3C6DFA66888525C",
+      "size_bytes": 3682
+    },
+    {
+      "path": "research/riemann/h1319_mv_test.json",
+      "sha256": "1A647E2A1AC12796695F140A074B7DABDABD19FB90072B0FD222AEED07A0EF02",
+      "size_bytes": 15112
+    },
+    {
+      "path": "research/riemann/h1319_piecewise_h920_conditional_assembly.json",
+      "sha256": "0F1687E4136A1EB02CA47E6283CADE51D44D3202B9BE7CE1CAC63423CF2B7759",
+      "size_bytes": 5549
+    },
+    {
+      "path": "research/riemann/h1319_piecewise_h920_conditional_assembly.md",
+      "sha256": "E0F6A955220015CA7193E5BB714DA0D6024E6BF08D2E62F1859F4009466BB637",
+      "size_bytes": 6088
+    },
+    {
+      "path": "research/riemann/h1319_piecewise_h920_verified_closure.md",
+      "sha256": "295E97A1B9C30A9F3D177F1B10B320AFF50001C25928C366913247FD47E0509B",
+      "size_bytes": 2612
+    },
+    {
+      "path": "research/riemann/h1319_piecewise_h920_verified_closure_h1321_addendum.md",
+      "sha256": "C58AFD7312D5582D4425C039FCEDFE8A337080E87FBBB4211AC046522B963BCF",
+      "size_bytes": 1123
+    },
+    {
+      "path": "research/riemann/h1319_score_mean_value_independent_audit.json",
+      "sha256": "AFBE3EA9FE60EDDEC893A83A0FA2D48C8012A573FD369EBE5132527E040589E3",
+      "size_bytes": 4870
+    },
+    {
+      "path": "research/riemann/h1319_score_mean_value_independent_audit.md",
+      "sha256": "D7A236A204A57C17AA6A4E9D88260082A2C5B40DBDE9DC4967BCD4768A366E63",
+      "size_bytes": 7374
+    },
+    {
+      "path": "research/riemann/h1319_score_mean_value_independent_audit_canonical.json",
+      "sha256": "560871B1AB60F15627A917454CC8B48C5A8DCA267301526C333D503588EDD63B",
+      "size_bytes": 4971
+    },
+    {
+      "path": "research/riemann/h1319_segment_r125_to_4_certificate_and_gap.md",
+      "sha256": "FC1EF75FDB3B60F0C92F44EF87AFF0DBE67AB6D483F6D72F040B6FFD22889635",
+      "size_bytes": 4473
+    },
+    {
+      "path": "research/riemann/h1320_factorial_barrier_all_degree_certificate.json",
+      "sha256": "B33F0B10F930C68E1DEF086325508955FE3D59D1F772F15B76A9B704860C70F7",
+      "size_bytes": 2979
+    },
+    {
+      "path": "research/riemann/h1320_factorial_barrier_all_degree_counterexample.json",
+      "sha256": "04776FBBDD78CF4375EDFB113830C0174951526DF278D57114CF8D83EF74AF96",
+      "size_bytes": 2175
+    },
+    {
+      "path": "research/riemann/h1320_factorial_barrier_all_degree_counterexample.md",
+      "sha256": "F7418C48109F60CC55119D1CB394C1D087EF301F5BC948CA2D324CF4C9FAEB7E",
+      "size_bytes": 4976
+    },
+    {
+      "path": "research/riemann/h1320_factorial_barrier_counterexample_verified.md",
+      "sha256": "517E3373F4F48493795DFA89C0053CBA788758775368990A52F1DC3ADE7D9E4F",
+      "size_bytes": 3850
+    },
+    {
+      "path": "research/riemann/h1320_factorial_barrier_independent_audit.json",
+      "sha256": "1FE369A2D3E4FB9AB8F9913925F3EF94EF0DC815A1468AD69FFE87F14F88E3E5",
+      "size_bytes": 1594
+    },
+    {
+      "path": "research/riemann/h1320_independent_audit_and_h907_witness_selection.md",
+      "sha256": "4EF99453CD3FFA6294CF9EA4C99C682FF74F3BDE55B88024244560D2E0F2395A",
+      "size_bytes": 5835
+    },
+    {
+      "path": "research/riemann/h1321_h801_alias_repaired_finite_h803.json",
+      "sha256": "75817C6274C23D80044688248CE9540B0DAF3C249BF7E8B4EF8D1703AC9D2F4D",
+      "size_bytes": 1371600
+    },
+    {
+      "path": "research/riemann/h1321_h801_alias_repaired_finite_h803.md",
+      "sha256": "677295D3CE10E507F7A9724133190F9FCCF224E96C9E4902D2DB077913FAF81C",
+      "size_bytes": 4024
+    },
+    {
+      "path": "research/riemann/h1322_h803_all_n_strict_assembly.json",
+      "sha256": "335FFEAAA2114212392D712CC7EC6EFA0AE61257B8249553513C956F10877177",
+      "size_bytes": 6170
+    },
+    {
+      "path": "research/riemann/h1322_h803_all_n_strict_assembly_and_h907_gap.md",
+      "sha256": "ADA0E95D5CF9E9D138EEA6A87983F04A54FD829BCE66D648A2618C5BE6214F7C",
+      "size_bytes": 8026
+    },
+    {
+      "path": "research/riemann/h1323_infinite_jensen_23_countermodel.json",
+      "sha256": "B9C6BCB066B360A103A4B690801D1C51A195A66F553F713A7D65C83DE0195375",
+      "size_bytes": 7302
+    },
+    {
+      "path": "research/riemann/h1323_infinite_jensen_23_countermodel.md",
+      "sha256": "F9A9228FC9DF706D8B747B80302A66320FC0E6D659240C44E860A1CB5562292C",
+      "size_bytes": 7350
+    },
+    {
+      "path": "research/riemann/h1323_infinite_jensen_23_countermodel_independent_audit.json",
+      "sha256": "D236E8AC6B21B4905D1834AC10B7601256D6E6861B6AB66964A193CD1739376C",
+      "size_bytes": 2534
+    },
+    {
+      "path": "research/riemann/h1324_moment_jensen_laguerre_transfer.json",
+      "sha256": "FBF848FD4B199ECF7304EACE60AA54E02F732233C49B054709EC0FE6786B358E",
+      "size_bytes": 4042
+    },
+    {
+      "path": "research/riemann/h1324_moment_jensen_laguerre_transfer.md",
+      "sha256": "AAA098B1C3FB47102224CD68CB74952292B9F4B6F854B47FB86C2CEE1DD4027C",
+      "size_bytes": 7031
+    },
+    {
+      "path": "research/riemann/h1324_moment_jensen_laguerre_transfer_independent_audit.json",
+      "sha256": "5BC9AED7F984AD06DCFC422096EC76E08CEBF253827BF403C5487F52DA9118A9",
+      "size_bytes": 1281
+    },
+    {
+      "path": "research/riemann/h1325_fail_closed_manifest.json",
+      "sha256": "0B4E90453B766B7C7EB9CDE1FCAAA01AAD9C865CBA7C9AEC291E53FC4FBC6B47",
+      "size_bytes": 8862
+    },
+    {
+      "path": "research/riemann/h1325_fail_closed_manifest.md",
+      "sha256": "8AECB9FD9867928BE72329D77FFAFEDE6495B7B5AA90AA715CDE5BF684A73E84",
+      "size_bytes": 681
+    },
+    {
+      "path": "research/riemann/h1325_h811_dependency_addendum.json",
+      "sha256": "F034A24C08EED9FC8E0A0405D596DF47A4227CFBEC7E7664D2823062A45A26B4",
+      "size_bytes": 2381
+    },
+    {
+      "path": "research/riemann/h1325_h811_dependency_addendum.md",
+      "sha256": "BE89D3B0DDE39310BD4634D7D36AA21B2CC7EA7FD917E649F0CA2B2A7DCCD143",
+      "size_bytes": 682
+    },
+    {
+      "path": "research/riemann/h1325_high_band_sign_audit.json",
+      "sha256": "17705AD7F520FC06003A727EF0A92EAE16435522AB0F9EEA11419ACECFBB354F",
+      "size_bytes": 1402
+    },
+    {
+      "path": "research/riemann/h1325_high_band_sign_audit.md",
+      "sha256": "3B11770721E7262F983FBF90526CE38BD47DDD0E20191A3BDCEFE4802F1218F1",
+      "size_bytes": 392
+    },
+    {
+      "path": "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.json",
+      "sha256": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+      "size_bytes": 12658
+    },
+    {
+      "path": "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.md",
+      "sha256": "68D305D0F00B6A1A341BBFD8F089D42BA20F5ECB68462372CB9F814D27BB895B",
+      "size_bytes": 2680
+    },
+    {
+      "path": "research/riemann/h1326_fail_closed_manifest.md",
+      "sha256": "255295997F3C58268E3D5D59A47DAB3FE9AA18E9D058936B3D1DD0A38BC787E0",
+      "size_bytes": 1097
+    },
+    {
+      "path": "research/riemann/h1326_pf2_arbitrary_gap_independent_addendum.json",
+      "sha256": "6D6097D660DA1E7D226D5240DC7875771326455FD0E27F5F5853AB1F5E52FD9A",
+      "size_bytes": 586
+    },
+    {
+      "path": "research/riemann/h1326_pf2_arbitrary_gap_independent_addendum.md",
+      "sha256": "B779F56787E0E57329B34127F5931AEB7179D5ABD80A2ECAC0E1FB1A3CA4E805",
+      "size_bytes": 687
+    },
+    {
+      "path": "research/riemann/h1326_pf3_plucker_independent_audit.json",
+      "sha256": "8FF12C6E5B20948EBDADE9D8308B4E63757A413BAF9987F182142AF311B6BF5C",
+      "size_bytes": 4455
+    },
+    {
+      "path": "research/riemann/h1326_pf3_plucker_independent_audit.md",
+      "sha256": "C91C916691D6EE0821F26CDB30E14FE923EBA0C29BD6E95B424270567CE67EBB",
+      "size_bytes": 1287
+    },
+    {
+      "path": "research/riemann/h1326_plucker_pf3_completion.json",
+      "sha256": "96A9FB69A96D34CAEF61372967DD25773F1CDB418D44C3C824160E09C615FB23",
+      "size_bytes": 3243
+    },
+    {
+      "path": "research/riemann/h1326_plucker_pf3_completion.md",
+      "sha256": "3B8A06A2C190DCD177E1F7F7F4F9B866FCE48C404BAA8E9303BCB0524380EF2C",
+      "size_bytes": 7860
+    },
+    {
+      "path": "research/riemann/h800_xi_ratio_sequence_theorem_audit.json",
+      "sha256": "E28330CD8B140B33BB4E40F4CA4176E76469DE23C7076B23DD232EB8E01691F9",
+      "size_bytes": 3108
+    },
+    {
+      "path": "research/riemann/h800_xi_ratio_sequence_theorem_audit.md",
+      "sha256": "972183DA7749D5E1CB09F4C07F0A2B514EECF4360855307F05CE597CEC3158D9",
+      "size_bytes": 4774
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit.json",
+      "sha256": "BADA8E895CF06530178169B4CDA16D94E2230E44A028866A6DAD449A208B15EE",
+      "size_bytes": 1266753
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit.md",
+      "sha256": "2369B5E1B23B28DD73BE08D50F3CFB4103D09F9A85F8EAF57B858973B1F88CA3",
+      "size_bytes": 36637
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n100_r789.json",
+      "sha256": "135AF24514BCCCDAF16E0E7B491F93F4CE2EB1A87A7BC52D38C8022399C8C8F1",
+      "size_bytes": 856305
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n100_r789.md",
+      "sha256": "594D9E889AF25661C665C77670870582BAF4E20EE3DCF8943310655F0686DE42",
+      "size_bytes": 29005
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n100_r8910.json",
+      "sha256": "4FE5958073973C5132D4157DC3C140FEB14A557A0B3AC91B213B4114F83342BC",
+      "size_bytes": 920054
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n100_r8910.md",
+      "sha256": "C5B74576AFE8E700AFB5CE486A2D61453E76799E33619A3C12F9034B5176DE12",
+      "size_bytes": 31694
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n128_r101112.json",
+      "sha256": "BADA8E895CF06530178169B4CDA16D94E2230E44A028866A6DAD449A208B15EE",
+      "size_bytes": 1266753
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n128_r101112.md",
+      "sha256": "2369B5E1B23B28DD73BE08D50F3CFB4103D09F9A85F8EAF57B858973B1F88CA3",
+      "size_bytes": 36637
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n64.json",
+      "sha256": "41CF25CE1B29381CE4F777AFCD6B60226DC7FD66BA019B79611D345294C61D3B",
+      "size_bytes": 475622
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n64.md",
+      "sha256": "7FB74D86D11ECC6C35F3B2F80C4E4766D5639574B81D0096FD53647360989CD4",
+      "size_bytes": 21148
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n64_r567.json",
+      "sha256": "7F7C59064D1961694B74B8D429DD8D445B0CF638318D13821C3ADD129F1BED4D",
+      "size_bytes": 498899
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n64_r567.md",
+      "sha256": "E00AD2DB2A07BA3E1559CFCCF8EF51DDEFB63F65A4A196AD7A72476C1A07D5BF",
+      "size_bytes": 22636
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n68.json",
+      "sha256": "940A0103F2C9536D1C1C4722F5069AF9AD3630FACBF6BD27CC32A6A96BCB77DB",
+      "size_bytes": 497449
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n68.md",
+      "sha256": "6699AA45A184883A0AC84BEEC24E377465FCAB1539E51DB8E6AC9E689FD46C59",
+      "size_bytes": 21102
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n68_r567.json",
+      "sha256": "54C3C9F2F14C762AE24422EEE8DFFD6DD1DB3955AF9A9D0D6B75BFFCFBACC2B0",
+      "size_bytes": 522010
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n68_r567.md",
+      "sha256": "59AA6AE437812B4E0C8E8B46F0A9067F07F3976A64CAD54FD2B7CF9C1B7AF773",
+      "size_bytes": 22626
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80.json",
+      "sha256": "E5363AABE7A5E7763F406A167335B793E086273C451892DC6C11D3C0DE550540",
+      "size_bytes": 529737
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80.md",
+      "sha256": "4CC4C3F65EDED62A7F387304BA4A4C1B9062DCC57BA93D4BDDEA044ECDDA44EB",
+      "size_bytes": 19094
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80_r567.json",
+      "sha256": "C2B5002F511F1C19F688D9697E942BE99FF450279A2597D34BB10292C00B3015",
+      "size_bytes": 617663
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80_r567.md",
+      "sha256": "D1FC2F5F592DB8325DB5EC9DB11EEF5699E9D94813AD7910740A553E583F0196",
+      "size_bytes": 23698
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80_r678.json",
+      "sha256": "D65B1DF846F2E604D10DC35E3C2100F480F0E97699A7947E672ACD458C985D68",
+      "size_bytes": 645882
+    },
+    {
+      "path": "research/riemann/h801_xi_ratio_logconvexity_audit_n80_r678.md",
+      "sha256": "877E22D724EF91E59CFB894109837F5BE76E76216F4C85A4629CF7936936F757",
+      "size_bytes": 25255
+    },
+    {
+      "path": "research/riemann/h802_ratio_logconvexity_mechanism_countermodel.json",
+      "sha256": "29DC861D45E6B3612978AAA6B72BE7F8BB9D3481F6C8F05DC8349F8A83437E4D",
+      "size_bytes": 9729
+    },
+    {
+      "path": "research/riemann/h802_ratio_logconvexity_mechanism_countermodel.md",
+      "sha256": "E5F8BF8EE2434D787697D3AFDCDD6D95C54091C8BF326DD660F9CBF1119E85C5",
+      "size_bytes": 2953
+    },
+    {
+      "path": "research/riemann/h803_xi_moment_curvature_decomposition.json",
+      "sha256": "F5CF71D3319543734C11999F8CA7B7033054930E2EF5378BFB1D56063271409B",
+      "size_bytes": 108171
+    },
+    {
+      "path": "research/riemann/h803_xi_moment_curvature_decomposition.md",
+      "sha256": "B0B25543B20EF6DCD5FFDD324B9B655EADAF0CFF2EB5ACA3807C70DCDBC934B5",
+      "size_bytes": 6387
+    },
+    {
+      "path": "research/riemann/h804_unit_deficit_barrier_audit.json",
+      "sha256": "C049C66F337C457477B5F77427A1E3F6703F2347EE3351E63A12A35A4FB3667E",
+      "size_bytes": 161497
+    },
+    {
+      "path": "research/riemann/h804_unit_deficit_barrier_audit.md",
+      "sha256": "1C3BA0CB9C99E28CCA685D59E9AB39ED4E833EDB7E5F889443B4E77BF19F3D69",
+      "size_bytes": 6865
+    },
+    {
+      "path": "research/riemann/h806_global_reach_pf3_countermodel.json",
+      "sha256": "F90DF97FCC68F74ED38DD73FA5BF8839B8584A9885692DAD2BF44D29A49955A2",
+      "size_bytes": 6427
+    },
+    {
+      "path": "research/riemann/h806_global_reach_pf3_countermodel.md",
+      "sha256": "9582CAECEA2F12D298894FEEDE631EFF1F53C294CDBA11284A12DF9DBBAC21FB",
+      "size_bytes": 5310
+    },
+    {
+      "path": "research/riemann/h807_essential_minor_hard_solver_audit.json",
+      "sha256": "A72210C50AB014CD93DD51122B69A7B35D92987194BD7F6EA7F6DD6BFB3795AD",
+      "size_bytes": 4552
+    },
+    {
+      "path": "research/riemann/h807_essential_minor_hard_solver_audit.md",
+      "sha256": "5BD32F9146B053573F5EFC5EDA13CEBEE482421F0844BAD03004ACDAC8B02B01",
+      "size_bytes": 3955
+    },
+    {
+      "path": "research/riemann/h808_pf3_cone_grid_certificate.json",
+      "sha256": "947C59DB66B9D4246354D3F51489E2A84568F6E4C9D8667C70406CB0939F078A",
+      "size_bytes": 4744
+    },
+    {
+      "path": "research/riemann/h808_pf3_cone_grid_certificate.md",
+      "sha256": "919CE3B8693479620AF104AE6FEA2EF8CFA3F05A88F52C10F3DAB0185237688E",
+      "size_bytes": 4067
+    },
+    {
+      "path": "research/riemann/h809_consecutive_row_pf3_decomposition.json",
+      "sha256": "AFF5B629E225B390D1BAC17C6A9AD1A63CC6172D85B4B67AB98AAE13C2CAE345",
+      "size_bytes": 4060
+    },
+    {
+      "path": "research/riemann/h809_consecutive_row_pf3_decomposition.md",
+      "sha256": "0F6C2341222960D2188894FE1F337E4EAAE90840A8BBEDC9787C9E717A599106",
+      "size_bytes": 3551
+    },
+    {
+      "path": "research/riemann/h810_anchored_minor_q2_lemma.json",
+      "sha256": "F8164B2B4F40EAEC36B73AD5AA0429206F63EF8B05650AF860DBBC2A8EE2E5AB",
+      "size_bytes": 7374
+    },
+    {
+      "path": "research/riemann/h810_anchored_minor_q2_lemma.md",
+      "sha256": "6C6502461414338232899CBECCDD1AA22A1AE68126AB3E4E18386E3BFC0B5691",
+      "size_bytes": 6817
+    },
+    {
+      "path": "research/riemann/h811_repaired_consecutive_row_theorem.json",
+      "sha256": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+      "size_bytes": 4456
+    },
+    {
+      "path": "research/riemann/h811_repaired_consecutive_row_theorem.md",
+      "sha256": "4484F38617FD99E6951C24D3B57B3A5D8E4041D39A534E975D1B204749B03E92",
+      "size_bytes": 3970
+    },
+    {
+      "path": "research/riemann/h812_sparse_row_pf3_obstruction_map.json",
+      "sha256": "231C1BDA49A8C92AC9DD47873D5213453D1A8F4C3B12DA8998D8E7695A194029",
+      "size_bytes": 16818
+    },
+    {
+      "path": "research/riemann/h812_sparse_row_pf3_obstruction_map.md",
+      "sha256": "2D4F79C93939CA3459ABF7B175C92367A1E8AE3A303FA54656D03091F2213530",
+      "size_bytes": 14047
+    },
+    {
+      "path": "research/riemann/h813_sparse_row_symbolic_hierarchy.json",
+      "sha256": "C92E94BAED6251E729F3B3C02AE5B93A92653118022B32682E7D8B7E24EE5ED6",
+      "size_bytes": 23598
+    },
+    {
+      "path": "research/riemann/h813_sparse_row_symbolic_hierarchy.md",
+      "sha256": "FDD460A2BB435DCE435A1C03AA57DD53F4EACBE6815C1BEFF264FBC60199DC63",
+      "size_bytes": 8057
+    },
+    {
+      "path": "research/riemann/h814_sparse_row_lemma_candidates.md",
+      "sha256": "CA2357585FEE7B000DEE7551B9903AEE4AA1346895C428D7071E69F29836CD80",
+      "size_bytes": 3701
+    },
+    {
+      "path": "research/riemann/h815_four_term_sparse_bridge.json",
+      "sha256": "F0FF7C2F077AB426A992C03281F23F221697EA33990C6E8FF9F7865C5044DDCF",
+      "size_bytes": 41523
+    },
+    {
+      "path": "research/riemann/h815_four_term_sparse_bridge.md",
+      "sha256": "D3439721DC35EE1BBAC4BC18A6EC98A1AD63C5557209C3FEF0292E7002697F13",
+      "size_bytes": 6436
+    },
+    {
+      "path": "research/riemann/h816_d3_cone_sparse_row_coupling.json",
+      "sha256": "8E6F0364C259FBBBC1AB66D9B1C250D2F706004FE1842644AFC584D07BDC2A00",
+      "size_bytes": 17757
+    },
+    {
+      "path": "research/riemann/h816_d3_cone_sparse_row_coupling.md",
+      "sha256": "A5F7DB38B206F5896C79BD375023A9ABBE844938A1BC85B1B6C78F7B0C38709F",
+      "size_bytes": 1963
+    },
+    {
+      "path": "research/riemann/h817_four_term_monotone_countercheck.json",
+      "sha256": "03E9F261DDF45DC5A50743808B1B2F3C73857632E3600E74E2EBD353B58738D4",
+      "size_bytes": 17374
+    },
+    {
+      "path": "research/riemann/h817_four_term_monotone_countercheck.md",
+      "sha256": "01C21C32B98A8DD6BA986DEF1B87F6C70E9BB632F562A15C79A579DAEB34A5F7",
+      "size_bytes": 13257
+    },
+    {
+      "path": "research/riemann/h817b_h811_sparse_nonlinear_countercheck.json",
+      "sha256": "5EE857E17982AB3AF715A72A9CAE17942FB8F28989CBDB35AA957E2490D5F6A8",
+      "size_bytes": 1872
+    },
+    {
+      "path": "research/riemann/h817b_scout.json",
+      "sha256": "16BE0E9919B3A5FD7971BDABCB994E4BD80DDB305DFCF4943D8624BBC92F51BF",
+      "size_bytes": 1910
+    },
+    {
+      "path": "research/riemann/h817b_scout_large.json",
+      "sha256": "8A9462805D45C47C964D5FB2D42F513CE5ACB4BDCEB28F93366FAFEB5BD9F7BA",
+      "size_bytes": 1872
+    },
+    {
+      "path": "research/riemann/h818_d3_shield_audit.json",
+      "sha256": "8C98B59EF99489888179D394931756A8F718047880D82F0F17483B6D54559D08",
+      "size_bytes": 24919
+    },
+    {
+      "path": "research/riemann/h818_d3_shield_audit.md",
+      "sha256": "E3CAE4C5059FE081747EFFC967DD7F8A4C084EC83913E94DF033ED52DBF462EB",
+      "size_bytes": 19543
+    },
+    {
+      "path": "research/riemann/h819_adjacent_d3_barrier.json",
+      "sha256": "6B278064B4CB78D9BFE9C801F2A977B7CE83BFBA67693A1DE86D3D04F91D7884",
+      "size_bytes": 173629
+    },
+    {
+      "path": "research/riemann/h819_adjacent_d3_barrier.md",
+      "sha256": "4AED1F36147655C2AE39F0B1D4BE3BF5C4784896C7408870A4F735CBCD55DDE3",
+      "size_bytes": 12956
+    },
+    {
+      "path": "research/riemann/h908_xi_log_saddle_moment_curvature_reduction.md",
+      "sha256": "10E3B7F623E7530342EB2B7A9DF0D941517B3417F5755797D5938BD185543099",
+      "size_bytes": 4481
+    },
+    {
+      "path": "research/riemann/h920_effective_finite_closure_gate.md",
+      "sha256": "3657EDE97BEC154ADD52CFCFADB29EFF0A1A803408FBC63079D09606928FC3C8",
+      "size_bytes": 4527
+    },
+    {
+      "path": "research/riemann/h927_gamma_log_a_le_one_low_threshold.md",
+      "sha256": "B74EBA4BC923164E6A2A92B4132DDC5A42CEF8818E4B1EC43D7B194B59071E9D",
+      "size_bytes": 2649
+    },
+    {
+      "path": "research/riemann/h943_score_excess_taylor_bridge.md",
+      "sha256": "D215EBECE963E8823358631CFE1CB020645B4C9293D14E0961415470793562C7",
+      "size_bytes": 5121
+    },
+    {
+      "path": "research/riemann/h943c_u4_five_interval_certificate.json",
+      "sha256": "712D2770B125F4B252D2ACD960E7568A6CFB972C6BDA5392FC9720C66E0DB142",
+      "size_bytes": 5043
+    },
+    {
+      "path": "research/riemann/h943c_u4_five_interval_proof.md",
+      "sha256": "F099C05BC6516B50CAA1F63445B1C8D1A010A2AF354E0700950832253F44D7B9",
+      "size_bytes": 1115
+    },
+    {
+      "path": "research/riemann/h943c_u4_five_interval_verifier_addendum.md",
+      "sha256": "20A87566266D5BF605D2871123B143D5DB76CDA5EF65FBCC4275A591124FA05A",
+      "size_bytes": 968
+    },
+    {
+      "path": "research/riemann/h943c_uniform_51over100_route_validated.md",
+      "sha256": "B6CD220FD006B8A2E2B25DC9C8EBD1D2F6D53AF6F2CF2D0C84E7F525D732A497",
+      "size_bytes": 2079
+    },
+    {
+      "path": "tools/build_pf3_artifact.py",
+      "sha256": "68FC16EDB7325C4D4B37E54514A15CD9F8992717B9BBC02608E7C970080C45B4",
+      "size_bytes": 4973
+    },
+    {
+      "path": "tools/claude_d3_alias_repaired_finite_certificate.py",
+      "sha256": "E2604F1B13868DD61D3044DC64BC5317F59EF6D79E9BBC7132F5F8957E5BDB3F",
+      "size_bytes": 17152
+    },
+    {
+      "path": "tools/claude_d3_alias_repaired_finite_certificate_canonical.py",
+      "sha256": "58A87E4A78591841FB310A0A5D06E0E51C010B3645881A68669633428F4904BA",
+      "size_bytes": 823
+    },
+    {
+      "path": "tools/claude_d3_kappa2_average_pilot.py",
+      "sha256": "7BC6CBAF94B5D02CBAAADB925AE47A1B3A0A3E229290B7A77643239096304978",
+      "size_bytes": 15019
+    },
+    {
+      "path": "tools/claude_d3_kappa2_exact_reduction_check.py",
+      "sha256": "7C3D4D6EF4A6F1F4F571135140690BCEC2EB2E7ECF33C7BF02F92C187706FCA9",
+      "size_bytes": 4858
+    },
+    {
+      "path": "tools/claude_d3_two_sided_tail_lemma_independent_check.py",
+      "sha256": "EE26E735E14E0294D2163CB3A8C6BAAE5F9E1DC9F825EBE48ADEEECB76DD890D",
+      "size_bytes": 7388
+    },
+    {
+      "path": "tools/claude_h1319_box_variance_upper_certificate.py",
+      "sha256": "9E13E0399EA45E8EC6EBA3F87EE0CA11D938750EB04B0F6B1D258E4987AFBA8F",
+      "size_bytes": 17538
+    },
+    {
+      "path": "tools/claude_h1319_box_variance_upper_certificate_canonical.py",
+      "sha256": "67D59A059B5FE3C5592997B029BC7754ED76C13ED7E7F359484F8164C0A4214B",
+      "size_bytes": 7560
+    },
+    {
+      "path": "tools/claude_h1319_box_variance_upper_certificate_canonical_v2.py",
+      "sha256": "EF5BB8DF7F0DD44289293F09177F09E3FDFBBE721B4A1600CAFB4A168770A137",
+      "size_bytes": 813
+    },
+    {
+      "path": "tools/claude_kappa3_window_certificate.py",
+      "sha256": "0B67B8E8F91B7EA7D42A4FB0395B83F570402384E46CDC7AE561012C9232E99B",
+      "size_bytes": 9606
+    },
+    {
+      "path": "tools/rh_h1312_radial_lr_moment_certificate.py",
+      "sha256": "981BDC30C87E8C80D9E7467CC35FAAEB8D3DFF957C5282517DD22B57A3C3A43F",
+      "size_bytes": 10126
+    },
+    {
+      "path": "tools/rh_h1313_h946_global_moment_assembly.py",
+      "sha256": "86230FA2C4BD682E15BFBC0E2B52E890D93A03B2179072569727102B3418F0B0",
+      "size_bytes": 7992
+    },
+    {
+      "path": "tools/rh_h1314_h1315_end_to_end_certificate.py",
+      "sha256": "32A156571EF8DC0B82A5A74175FB1B483F2DA903C5775237EC5ADBA5010F451B",
+      "size_bytes": 11533
+    },
+    {
+      "path": "tools/rh_h1314_h1315_materialized_chain.py",
+      "sha256": "8147F33CBEA75256C45E27789F73EB00AA042C4914307B29AA8DB6DCD50CD0AB",
+      "size_bytes": 6981
+    },
+    {
+      "path": "tools/rh_h1314_h943c_pairing_tail_bridge.py",
+      "sha256": "C81965DC5CD73B405E5D9D750B9AD4E9F0183510BC4C29AC7299AAB42F8C19CC",
+      "size_bytes": 9059
+    },
+    {
+      "path": "tools/rh_h1314_h943c_parameter_polynomial_certificate.py",
+      "sha256": "77EAB77FEE3B0A20E9E5FAC7943C1566957F0233AE70F56B668CDBF857AB1DF8",
+      "size_bytes": 12676
+    },
+    {
+      "path": "tools/rh_h1314_h943c_parameter_polynomial_verifier.py",
+      "sha256": "CB277D00367C72E7AB17B7F450DF43FBC6C13EF716387FE7336DA1C828CAE409",
+      "size_bytes": 1919
+    },
+    {
+      "path": "tools/rh_h1314_h943c_uniform_pair_verifier.py",
+      "sha256": "EAF36BC0FD14089F0D7422EA041F80A3A4FC70F704DA22BD1A4F4267F9AA73A0",
+      "size_bytes": 9291
+    },
+    {
+      "path": "tools/rh_h1315_gamma_log_moment_box_global_assembly.py",
+      "sha256": "24B764504804088EF017B746183579B0F05DD4076451D4B91CF625215C0F037A",
+      "size_bytes": 11597
+    },
+    {
+      "path": "tools/rh_h1315_gamma_log_moment_box_global_certificate.py",
+      "sha256": "03354CA20107A5A7BCD46DA34A003364D7DC8021A8B9E30FBB571A4492EBA1DD",
+      "size_bytes": 10913
+    },
+    {
+      "path": "tools/rh_h1316_beta5_direct_transfer_certificate.py",
+      "sha256": "B3C4352FC1D9BD8411123474B792CC07B9E6A12CB121263987EB2238AADFD3DA",
+      "size_bytes": 758
+    },
+    {
+      "path": "tools/rh_h1316_beta5_epsilon_box_certificate.py",
+      "sha256": "4C532EFD8A752B56323C26D0CFA30FD98A1DDAB3C2EC6A2A35C7BA1C3A1D2E3A",
+      "size_bytes": 596
+    },
+    {
+      "path": "tools/rh_h1316_beta5_transfer_scout.py",
+      "sha256": "53902711B5E3D24C1F0E66C16410D3F2F680D84275303F918092C7668BE426FC",
+      "size_bytes": 3342
+    },
+    {
+      "path": "tools/rh_h1316_full_xi_transfer_assembly.py",
+      "sha256": "66386B82187B731806AE165A26CBBC0EEB18B6FB6E5CF2248888652D9240E30A",
+      "size_bytes": 2807
+    },
+    {
+      "path": "tools/rh_h1316_xi_mtail_explicit_transfer.py",
+      "sha256": "9788885C43AEEE2D78AB55ED4D6471362BE68D61F033E8B091426573DE4756CD",
+      "size_bytes": 4111
+    },
+    {
+      "path": "tools/rh_h1316_xi_transfer_scout.py",
+      "sha256": "3221F77CC50158AF3DBA9DE1D7D54C51D602EB3A06EF97F76F8CF7160956546A",
+      "size_bytes": 5035
+    },
+    {
+      "path": "tools/rh_h1317_beta5_h923_derivative_certificate.py",
+      "sha256": "34634E4F66EBE60617EB3526D377D9E6F0FDB514B727E3B8ACE833071D5767E3",
+      "size_bytes": 3510
+    },
+    {
+      "path": "tools/rh_h1317_effective_xi_transfer_assembly.py",
+      "sha256": "7BEB0228BEB1DF2EE31CD58A396DC3724B053D4724FCDF83C16186A177D0D52A",
+      "size_bytes": 3931
+    },
+    {
+      "path": "tools/rh_h1318_effective_gamma_log_to_xi_transfer.py",
+      "sha256": "F03564B268784B8D2B0E19AFC0E1D7DE05CF26EB276D6ACC086BF0505EE51295",
+      "size_bytes": 2728
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_adaptive_rbox_certificate.py",
+      "sha256": "78BA67C0DD3AB928A95F5756690173089FA08D57E6B5156233701277A6DDAD23",
+      "size_bytes": 2169
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_adaptive_rbox_cover.py",
+      "sha256": "B0BB56B1FFA2EBB4D0308F7DF5666C1F518CC65BC8F2FBE93F178EB108054356",
+      "size_bytes": 22078
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_hybrid_scout.py",
+      "sha256": "2B4DAE77E165D68F674F6522DAA645ED0E37ADB833C6F4F73A39A123CF474D01",
+      "size_bytes": 8613
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_interval_canonical_certificate.py",
+      "sha256": "5DEA428739F66238068391D36C5F74A5BC75C039558F2DEA07A064BD79FEA0C0",
+      "size_bytes": 4153
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_interval_certificate.py",
+      "sha256": "66FB71DF4B58B6E904393BAFC1F53C4E33B9566458FB5C428225D94C69EDBBDB",
+      "size_bytes": 3326
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_interval_manifest.py",
+      "sha256": "884252ED436602B1C930D7DC8EEFF92DD6DD35FD2C696FA527B76BC6F49CC998",
+      "size_bytes": 15133
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_interval_verified_certificate.py",
+      "sha256": "82B5179F0AB86B2733F5947F7711D0049AEA238F73E3651142E2D43719E5A9BF",
+      "size_bytes": 9439
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_compact_scaled_cumulant_scout.py",
+      "sha256": "9E2CF5A0A949712C31C7ACDC73688BF4BDDB6D1373E7406FDCF4157BB9889271",
+      "size_bytes": 16925
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_fixed_r_arb_pilot.py",
+      "sha256": "C1BCC496461C3419617E5233C811AE5E76100E0194D4B81B2DE9B421923D93C5",
+      "size_bytes": 6657
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_fixed_r_score_arb.py",
+      "sha256": "AD213C63628E191C3AD9AECFE7F055D720468CACE2699FCBB2DF5DFDE84DEFD4",
+      "size_bytes": 12553
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_fixed_r_series_arb.py",
+      "sha256": "675F5919A6AE6A01A7BCCB716AF36086B6351700FE3F4073F3AE9560A7AA1809",
+      "size_bytes": 5507
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_fixed_r_stable_arb.py",
+      "sha256": "760B03E586B7A8005310978CE88E6ACDD3EBE0EA383FE18764652435AE7A2530",
+      "size_bytes": 4545
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_high_band_r22_analytic_certificate.py",
+      "sha256": "72DF00C2E0365E84A30E7A64343954A1C240B35F264A96755397468B53AD0E53",
+      "size_bytes": 16875
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_high_band_r59_analytic_certificate.py",
+      "sha256": "54BF00120B49B63A5A03B3D6259A6A7C762DC2CA939D439624080568636668B5",
+      "size_bytes": 16883
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_normalized_score_rbox_pilot.py",
+      "sha256": "6AA9A752A506FA2E1490DA4695D25228CF6EFFA931A7B28C33D704D939013E2B",
+      "size_bytes": 8432
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_normalized_score_rbox_v2.py",
+      "sha256": "06377DF997BE7ADC90A121B42531DF01084D3CAC6432A0014049D32D44D4344D",
+      "size_bytes": 5776
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_r_taylor_box_pilot.py",
+      "sha256": "7669A52B23D5E19DB8B390FB420DC0D060588A3CF016A8B1048DBDB68E224FC8",
+      "size_bytes": 9775
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_score_mean_value_r_cover_arb.py",
+      "sha256": "229BA6EAA67B4E2E48506A08050851FAB40F0E1941A1DA3F1AC560155355DE2F",
+      "size_bytes": 21319
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_score_r_cover_arb.py",
+      "sha256": "F463A256A27B7ED9B0C068E3D156A3FE4A3B19458D07F8D7FFCED3A9184B7518",
+      "size_bytes": 11108
+    },
+    {
+      "path": "tools/rh_h1319_full_xi_segment_manifest.py",
+      "sha256": "392FFA0A509AAAD666DA00BFE88D40499EFEFEF1B5E8113526D80A7C5A484668",
+      "size_bytes": 6524
+    },
+    {
+      "path": "tools/rh_h1319_piecewise_h920_conditional_assembly.py",
+      "sha256": "B9D092648B8FB383F0E79867BFC8FA9349222483EC96DC768C887FCD969DF2AB",
+      "size_bytes": 15462
+    },
+    {
+      "path": "tools/rh_h1319_score_mean_value_independent_audit.py",
+      "sha256": "D9C08192B09BDCFC1AE0C257E1095521D914AD4F3B6BDA2A82CA7730E86CD858",
+      "size_bytes": 13542
+    },
+    {
+      "path": "tools/rh_h1319_score_mean_value_independent_audit_runner.py",
+      "sha256": "FE39F6B022639C2E9B508AD198FC0A13F8161E91E5FEF7957363CBA34A1E3287",
+      "size_bytes": 490
+    },
+    {
+      "path": "tools/rh_h1319_score_mean_value_independent_audit_runner_v2.py",
+      "sha256": "F34A648848F6E8AC817040D921ED5434DD819E3601267A781C7B2F4AF3E9E76E",
+      "size_bytes": 3422
+    },
+    {
+      "path": "tools/rh_h1320_factorial_barrier_all_degree_certificate.py",
+      "sha256": "519DF64223F2819B5303F77438004502D7D87A4CE4DCB38B8D8C3D8D37B36FF8",
+      "size_bytes": 7988
+    },
+    {
+      "path": "tools/rh_h1320_factorial_barrier_all_degree_certificate_canonical.py",
+      "sha256": "D3684F59E47397F2920FD1206695D56AE69992CCC21E9BB1A46FA29E46AB7BA3",
+      "size_bytes": 1468
+    },
+    {
+      "path": "tools/rh_h1320_factorial_barrier_all_degree_counterexample.py",
+      "sha256": "9B41B0E8DA836B273553E673B7D5F3B997081B07BFE9DAF358C844779A6AAF03",
+      "size_bytes": 5965
+    },
+    {
+      "path": "tools/rh_h1320_factorial_barrier_all_degree_counterexample_canonical.py",
+      "sha256": "C8C7909BF5D3F85D5C1386AC71EF1770A1DF0DC1C5A3345BD54B27212B8533D4",
+      "size_bytes": 1393
+    },
+    {
+      "path": "tools/rh_h1320_factorial_barrier_independent_audit.py",
+      "sha256": "4C3025D5E05FEED5BF4B0D81D43F1199A128D79F52CEC78C18ECD9C51CDC01ED",
+      "size_bytes": 9133
+    },
+    {
+      "path": "tools/rh_h1321_h801_alias_repaired_finite_h803.py",
+      "sha256": "9F1527CFE56F758121FDD6B94A68F225734076EFDC64A499557F9F6627A46282",
+      "size_bytes": 11466
+    },
+    {
+      "path": "tools/rh_h1321_h801_alias_repaired_finite_h803_canonical.py",
+      "sha256": "FC99AC580BAFF7E5C40254BE739D7EE075FE43C695348E6C4E279E8F638B5651",
+      "size_bytes": 1082
+    },
+    {
+      "path": "tools/rh_h1322_h803_all_n_strict_assembly.py",
+      "sha256": "30328A7EB4F2EDA26DB5C33D9C224BDF151DFEEAF8B63D13CDF06D7446539AB1",
+      "size_bytes": 13593
+    },
+    {
+      "path": "tools/rh_h1323_infinite_jensen_23_countermodel_canonical_certificate.py",
+      "sha256": "2283050090F75E3EE041A3387834633F56B11F998F709CE23C3D5A4277926054",
+      "size_bytes": 10171
+    },
+    {
+      "path": "tools/rh_h1323_infinite_jensen_23_countermodel_independent_audit.py",
+      "sha256": "362313005607F5E2DCA8D67A49984F4395B298D09EFB4A9FF919A781A492AF42",
+      "size_bytes": 14736
+    },
+    {
+      "path": "tools/rh_h1324_moment_jensen_laguerre_transfer_canonical.py",
+      "sha256": "CF19A3E6452FC569B4F8F7F98EEAA3D979C0DC9A42D22462C32B3A20A49225C2",
+      "size_bytes": 9552
+    },
+    {
+      "path": "tools/rh_h1324_moment_jensen_laguerre_transfer_independent_audit.py",
+      "sha256": "43372F890309822AB53FF83D60248FBFC787BC86080B944F70F2E8AF543BD363",
+      "size_bytes": 5604
+    },
+    {
+      "path": "tools/rh_h1325_fail_closed_manifest.py",
+      "sha256": "4318C8F166D15F84F7328C224019E80892D3CD56559F1886ACAF59FBE96241FA",
+      "size_bytes": 7587
+    },
+    {
+      "path": "tools/rh_h1325_h811_dependency_addendum.py",
+      "sha256": "98FDB99B25D092A31E69FA1A6597AFFF0D40C5C877BA29324B54D6895CD70913",
+      "size_bytes": 6814
+    },
+    {
+      "path": "tools/rh_h1325_high_band_sign_audit.py",
+      "sha256": "59FB38405C3D3E0FFE402E81835E960762938322458D31A97E3EB35D6848C978",
+      "size_bytes": 4372
+    },
+    {
+      "path": "tools/rh_h1325_high_band_sign_dependency_audit.py",
+      "sha256": "9508F56F7C38EFF46CE249F6BFB058AA8AC0042B285FCA5ABF3BB850CAC9CE82",
+      "size_bytes": 1930
+    },
+    {
+      "path": "tools/rh_h1325_xi_global_d3_h811_assembly.py",
+      "sha256": "58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F",
+      "size_bytes": 24252
+    },
+    {
+      "path": "tools/rh_h1325_xi_global_d3_h811_independent_audit.py",
+      "sha256": "7AF810D1A0CF489F3DA45955FBE15C1C957F0B6C3F05357A96FA59B3BA325C5B",
+      "size_bytes": 3699
+    },
+    {
+      "path": "tools/rh_h1326_fail_closed_manifest.py",
+      "sha256": "ED1FA7D8042765C96371F9742F175A791E13530981155603ABBA974B2CCDF18E",
+      "size_bytes": 6534
+    },
+    {
+      "path": "tools/rh_h1326_pf2_arbitrary_gap_independent_addendum.py",
+      "sha256": "8433E43FDD2161E5D4C846B005395894194862C2C4C1CC6608E35C64467D0222",
+      "size_bytes": 6759
+    },
+    {
+      "path": "tools/rh_h1326_pf3_plucker_independent_audit.py",
+      "sha256": "A26D63DFF24C776BAC7B15FB2296D4E361E9C430DA939A6E176561AD8FC16B85",
+      "size_bytes": 20433
+    },
+    {
+      "path": "tools/rh_h1326_plucker_first_gap_bridge.py",
+      "sha256": "975F9D98FC4CBCA22CCEB1286B8F7F59A984E347AC25235220A55E9704209470",
+      "size_bytes": 9059
+    },
+    {
+      "path": "tools/rh_h1326_plucker_pf3_completion.py",
+      "sha256": "4F3B58AFD4F15ACD30A3A4B6487E2644DFB199E222EC843CF93EC72CDDFFEC39",
+      "size_bytes": 15224
+    },
+    {
+      "path": "tools/rh_h1326_strict_pf2_multigap_audit.py",
+      "sha256": "1F918065DE0293997BDBC30C1C45087DA9D9C306CDED88F8C28E20F7C19BCE3D",
+      "size_bytes": 4155
+    },
+    {
+      "path": "tools/rh_h218_jensen_arb_discriminants.py",
+      "sha256": "A2574654D2AB17F52D692E474392596FB641E34BEB71497B3D4F52CDA5BDE4A0",
+      "size_bytes": 13358
+    },
+    {
+      "path": "tools/rh_h801_xi_ratio_logconvexity_audit.py",
+      "sha256": "3C81407B31C13B4465E0355407D2ED5A33087677351908A96E3D2142626EB67B",
+      "size_bytes": 16125
+    },
+    {
+      "path": "tools/rh_h802_ratio_logconvexity_mechanism_countermodel.py",
+      "sha256": "A41125E0814B64223D2DB73B88B103F0E7B3E189A07DB329CD9A164854748C8C",
+      "size_bytes": 10162
+    },
+    {
+      "path": "tools/rh_h803_xi_moment_curvature_decomposition.py",
+      "sha256": "6951E59FAEFF0B347E9CFD397347D7EEF9C21B70062EA252813BBE0A2FD47986",
+      "size_bytes": 9830
+    },
+    {
+      "path": "tools/rh_h804_unit_deficit_barrier_audit.py",
+      "sha256": "75C76EFB8A8D3056FE18EA963FD46FD0C1A7138D69EC93023965688C59917C53",
+      "size_bytes": 12107
+    },
+    {
+      "path": "tools/rh_h806_global_reach_pf3_countermodel.py",
+      "sha256": "62B3C7B1818347CF8625B91F5E4BC36E07D02E42BFED6E2853CCE75256113C5E",
+      "size_bytes": 12275
+    },
+    {
+      "path": "tools/rh_h807_essential_minor_hard_solver_audit.py",
+      "sha256": "1FB5FF2BF6DE5770E403F3D8370629A1AF64B5F9663A9B6FA6D28A4966996E85",
+      "size_bytes": 17712
+    },
+    {
+      "path": "tools/rh_h808_pf3_cone_grid_certificate.py",
+      "sha256": "6BD57DC4E468F5834614540FE50D5C2F464C68E1ECD58C29B68EB2F8D69B57DA",
+      "size_bytes": 10226
+    },
+    {
+      "path": "tools/rh_h809_consecutive_row_pf3_decomposition.py",
+      "sha256": "19147F3B4C9978B7C89C3EF5ADFDF29E21780A8590D96963FD7A6781AA377153",
+      "size_bytes": 13047
+    },
+    {
+      "path": "tools/rh_h810_anchored_minor_q2_lemma.py",
+      "sha256": "ED38C6599EA861EB16B4405F359A62E68B4BF820291E0EA9ED25A2BB2A2F5BFC",
+      "size_bytes": 9664
+    },
+    {
+      "path": "tools/rh_h811_repaired_consecutive_row_theorem.py",
+      "sha256": "AC6ED78842D640213D260D271FFA33338E742264BE833D7B3FA1F10E1DF4745E",
+      "size_bytes": 9973
+    },
+    {
+      "path": "tools/rh_h812_sparse_row_pf3_obstruction_map.py",
+      "sha256": "13B4435BB71FAD99293DDF7E5C9AC710673925CEDB8B290E20AF707E121F7C38",
+      "size_bytes": 17384
+    },
+    {
+      "path": "tools/rh_h813_sparse_row_symbolic_hierarchy.py",
+      "sha256": "355DC4B3996053F376762FCBD287F677C831E29F52FDE1BEA00626EA3F668D94",
+      "size_bytes": 17307
+    },
+    {
+      "path": "tools/rh_h815_four_term_sparse_bridge.py",
+      "sha256": "733BC0B016AB205C2AECA69D2104DB3BB2E323895EFB1F4B75699B17051A5177",
+      "size_bytes": 11514
+    },
+    {
+      "path": "tools/rh_h816_d3_cone_sparse_row_coupling.py",
+      "sha256": "59F84C3205DF0F345926B80E324D5D6F94C399554A1ABD56BEFAD7A6758A483A",
+      "size_bytes": 12174
+    },
+    {
+      "path": "tools/rh_h817_four_term_monotone_countercheck.py",
+      "sha256": "D40B239DAECE082ACD1F9788EB5786A65A1DE4ADBEB6CD2F580F5AA2B1A8A438",
+      "size_bytes": 9528
+    },
+    {
+      "path": "tools/rh_h817b_h811_sparse_nonlinear_countercheck.py",
+      "sha256": "2976C49A146B3EB3A79ECF3CC4ACE17DC20222466F38C726097147BCB33C81DC",
+      "size_bytes": 11666
+    },
+    {
+      "path": "tools/rh_h818_d3_shield_audit.py",
+      "sha256": "5FBA4B70128C4C1487D4722BEFFDD05519125F06BAE7BE813BFE41672DFE4BF4",
+      "size_bytes": 10790
+    },
+    {
+      "path": "tools/rh_h819_adjacent_d3_barrier.py",
+      "sha256": "60E88BEA384A84878CF97B7EF7D576D563130D123110E5AEB8203A32DCA04300",
+      "size_bytes": 17480
+    },
+    {
+      "path": "tools/rh_h943c_u4_five_interval_certificate.py",
+      "sha256": "E5454EDFC532B9F58E425063DB1F41BB6AFB0FE65D249B3FD17AA9161C3F73C0",
+      "size_bytes": 5725
+    }
+  ],
+  "schema": "xi_pf3_artifact_manifest.v1"
+}

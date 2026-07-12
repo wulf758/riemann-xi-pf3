@@ -1,0 +1,121 @@
+{
+  "id": "h1319_score_mean_value_independent_audit_canonical",
+  "classification": "independent_audit_pass_not_a_new_curvature_certificate",
+  "canonical": true,
+  "supersedes": "research/riemann/h1319_score_mean_value_independent_audit.json",
+  "audited_statement": "The three Arb reports form a rigorous gap-free certificate of t(r)^2*kappa_Xi'''(t(r)) >= -3/4 for 4<=r<=22.",
+  "engine": {
+    "path": "tools/rh_h1319_full_xi_score_mean_value_r_cover_arb.py",
+    "sha256": "229BA6EAA67B4E2E48506A08050851FAB40F0E1941A1DA3F1AC560155355DE2F",
+    "modified_by_audit": false,
+    "py_compile_pass": true
+  },
+  "audit": {
+    "base_checks": "tools/rh_h1319_score_mean_value_independent_audit.py",
+    "base_checks_sha256": "D9C08192B09BDCFC1AE0C257E1095521D914AD4F3B6BDA2A82CA7730E86CD858",
+    "canonical_runner": "tools/rh_h1319_score_mean_value_independent_audit_runner_v2.py",
+    "canonical_runner_sha256": "F34A648848F6E8AC817040D921ED5434DD819E3601267A781C7B2F4AF3E9E76E",
+    "command": "python tools/rh_h1319_score_mean_value_independent_audit_runner_v2.py",
+    "exit_code": 0,
+    "mpmath_dps": 140,
+    "formatted_significant_digits": 115,
+    "explicit_decimal_formatting_radius": true,
+    "all_checks_pass": true
+  },
+  "symbolic_identity_checks": {
+    "phi2_derivative": true,
+    "stable_dominant_score_identity": true,
+    "finite_kernel_w_derivative": true,
+    "cumulant_perturbation_gradient": true,
+    "all_pass": true
+  },
+  "dual_against_independent_mpmath": {
+    "probe_count": 9,
+    "fields_per_probe": 10,
+    "value_and_r_derivative_comparison_count": 180,
+    "failures": [],
+    "all_pass": true
+  },
+  "proof_structure_checks": {
+    "stable_phi2_value_has_rigorous_Taylor_remainder": true,
+    "phi2_r_derivative_is_exact_expm1_times_input_derivative": true,
+    "Psi_H_Hw_and_score_r_derivatives_are_complete": true,
+    "score_Stein_identities_are_valid": true,
+    "scale_factor_8_is_valid_from_q_equals_2t": true,
+    "finite_F_scalar_mean_value_form_is_valid": true,
+    "omitted_m_tail_needs_no_r_derivative_after_uniform_perturbation_split": true,
+    "four_integral_perturbation_gradient_is_exact": true,
+    "H1272_outer_score_tails_follow_by_integration_by_parts": true,
+    "global_zero_lt_H_lt_one_argument_is_valid": true,
+    "all_pass": true
+  },
+  "H1272_dependency": {
+    "path": "research/riemann/h1272_gamma_log_even_moment_tail_global.json",
+    "sha256": "AC2749038BAC64DB6F9A14F9DE326BD07C0B9522793CDC347BFC641C9C6E6DA9",
+    "declared_range": "r>=5/2",
+    "dependency_all_checks_pass": true,
+    "tail_0_below_2e_minus_40": true,
+    "tail_2_below_2e_minus_37": true,
+    "tail_4_below_7e_minus_35": true,
+    "all_pass": true
+  },
+  "reports": [
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r_cover_4_5.json",
+      "sha256": "13A8B1186351F71F5BA6F34BD0525D5FC45011A237A4C11DECB5B692E9C2F9DD",
+      "covered_r_interval": ["4", "5"],
+      "accepted_boxes": 20,
+      "unresolved_boxes": 0,
+      "exact_fraction_chain": true,
+      "worst_box": ["4", "81/20"],
+      "worst_scaled_lower": "-0.73308000992014794857",
+      "worst_margin_lower": "0.016919990079852051427",
+      "worst_box_recomputed": true,
+      "all_pass": true
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r_cover_5_10.json",
+      "sha256": "92B40CC49C2897368B159DEABE9EEF9AB3A586AA57E968482C764C1EDD519C7E",
+      "covered_r_interval": ["5", "10"],
+      "accepted_boxes": 100,
+      "unresolved_boxes": 0,
+      "exact_fraction_chain": true,
+      "worst_box": ["5", "101/20"],
+      "worst_scaled_lower": "-0.72966964929450601574",
+      "worst_margin_lower": "0.020330350705493984261",
+      "worst_box_recomputed": true,
+      "all_pass": true
+    },
+    {
+      "path": "research/riemann/h1319_full_xi_score_mean_value_r10_to_22_arb.json",
+      "sha256": "A766CBC188DF9FE142D2D8AE839F41D9866938024FE4A7B7355D86415799ADC7",
+      "covered_r_interval": ["10", "22"],
+      "accepted_boxes": 240,
+      "unresolved_boxes": 0,
+      "exact_fraction_chain": true,
+      "worst_box": ["10", "201/20"],
+      "worst_scaled_lower": "-0.51819582344786420226",
+      "worst_margin_lower": "0.23180417655213579774",
+      "worst_box_recomputed": true,
+      "all_pass": true
+    }
+  ],
+  "union": {
+    "covered_r_interval": ["4", "22"],
+    "accepted_box_count": 360,
+    "unresolved_box_count": 0,
+    "exact_gap_free_chain": true
+  },
+  "known_nonblocking_limitation": {
+    "description": "The generic CLI does not reject r_min<5/2 or nonpositive r, although H1272 starts at r=5/2 and the X>=pi argument assumes positive r.",
+    "impact_on_audited_reports": "none; every audited report starts at r>=4",
+    "recommended_hardening": "reject r_min<5/2 before evaluating a cover"
+  },
+  "does_not_claim": [
+    "A new independent proof of H1272",
+    "Coverage below r=4 or above r=22",
+    "The separate H920 assembly",
+    "The Riemann Hypothesis"
+  ],
+  "all_checks_pass": true
+}

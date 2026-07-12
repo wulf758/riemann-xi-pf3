@@ -1,0 +1,716 @@
+{
+  "schema": "rh_h817_four_term_monotone_countercheck.v0",
+  "classification": "h817_monotone_only_four_term_counterexamples_found",
+  "question": "Are H815 four-term failures already nonnegative under 0<q2<=q3<=...<=1 and q2<=1/2, without using translated D3?",
+  "grid": {
+    "parameters": {
+      "length": 7,
+      "denominator": 16,
+      "batch_size": 4096,
+      "float_tolerance": 1e-14
+    },
+    "stats": {
+      "grid_total": 170544,
+      "checked": 170544,
+      "q2_le_half_candidates": 167112,
+      "h815_four_term_failures": 200,
+      "negative_failure_polynomial_count": 102,
+      "best_float_value": -0.09533622273195352,
+      "best_exact": {
+        "float_value": -0.09533622273195352,
+        "failure_index": 68,
+        "q_ints": [
+          1,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "rows": [
+          0,
+          2,
+          4
+        ],
+        "cols": [
+          3,
+          5,
+          8
+        ],
+        "polynomial": "1 - q3*q4^2*q5 - q3*q4^2*q5^2*q6 + q3^2*q4^4*q5^4*q6^3*q7^2*q8",
+        "exact_value": {
+          "fraction": "-1758642901690517759/18446744073709551616",
+          "float": -0.09533622273195354
+        }
+      }
+    },
+    "counterexamples": [
+      {
+        "rows": [
+          0,
+          1,
+          4
+        ],
+        "cols": [
+          3,
+          6,
+          8
+        ],
+        "family": "row_gaps=(1,3), col_gaps=(3,2)",
+        "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-197508720209/17592186044416",
+          "float": -0.011227070911502324
+        }
+      },
+      {
+        "rows": [
+          0,
+          2,
+          5
+        ],
+        "cols": [
+          4,
+          7,
+          8
+        ],
+        "family": "row_gaps=(2,3), col_gaps=(3,1)",
+        "polynomial": "1 - q4*q5*q6 - q4*q5^2*q6^2*q7 + q4^2*q5^3*q6^3*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-197508720209/17592186044416",
+          "float": -0.011227070911502324
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          4,
+          6
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(2,2)",
+        "polynomial": "1 - q3*q4 - q3*q4^2*q5 + q3^2*q4^3*q5^2*q6",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-234775679/4294967296",
+          "float": -0.05466297245584428
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          4,
+          7
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(2,3)",
+        "polynomial": "1 - q3*q4 - q3*q4^2*q5^2*q6 + q3^2*q4^3*q5^3*q6^2*q7",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-1163876361809/17592186044416",
+          "float": -0.06615871153650232
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          4,
+          8
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(2,4)",
+        "polynomial": "1 - q3*q4 - q3*q4^2*q5^2*q6^2*q7 + q3^2*q4^3*q5^3*q6^3*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-5079519296579039/72057594037927936",
+          "float": -0.07049249096362285
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          5,
+          6
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(3,1)",
+        "polynomial": "1 - q4*q5 - q3*q4*q5 + q3*q4^2*q5^2*q6",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-401759/16777216",
+          "float": -0.023946702480316162
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          5,
+          7
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(3,2)",
+        "polynomial": "1 - q4*q5^2*q6 - q3*q4*q5 + q3*q4^2*q5^3*q6^2*q7",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-2544427889/68719476736",
+          "float": -0.03702629894542042
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          5,
+          8
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(3,3)",
+        "polynomial": "1 - q4*q5^2*q6^2*q7 - q3*q4*q5 + q3*q4^2*q5^3*q6^3*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-11809895382719/281474976710656",
+          "float": -0.04195717687138867
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          6,
+          7
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(4,1)",
+        "polynomial": "1 - q5*q6 - q3*q4*q5*q6 + q3*q4*q5^2*q6^2*q7",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-3994769/268435456",
+          "float": -0.014881674200296402
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          6,
+          8
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(4,2)",
+        "polynomial": "1 - q5*q6^2*q7 - q3*q4*q5*q6 + q3*q4*q5^2*q6^3*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-22531101599/1099511627776",
+          "float": -0.02049191752939805
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          3
+        ],
+        "cols": [
+          2,
+          7,
+          8
+        ],
+        "family": "row_gaps=(1,2), col_gaps=(5,1)",
+        "polynomial": "1 - q6*q7 - q3*q4*q5*q6*q7 + q3*q4*q5*q6^2*q7^2*q8",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-27415679/4294967296",
+          "float": -0.006383210187777877
+        }
+      },
+      {
+        "rows": [
+          0,
+          1,
+          4
+        ],
+        "cols": [
+          2,
+          5,
+          7
+        ],
+        "family": "row_gaps=(1,3), col_gaps=(3,2)",
+        "polynomial": "1 - q3*q4*q5 - q3*q4^2*q5^2*q6 + q3^2*q4^3*q5^3*q6^2*q7",
+        "q_values": [
+          {
+            "name": "q2",
+            "fraction": "1/16",
+            "float": 0.0625
+          },
+          {
+            "name": "q3",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q4",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q5",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q6",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q7",
+            "fraction": "15/16",
+            "float": 0.9375
+          },
+          {
+            "name": "q8",
+            "fraction": "15/16",
+            "float": 0.9375
+          }
+        ],
+        "determinant_polynomial_value": {
+          "fraction": "-197508720209/17592186044416",
+          "float": -0.011227070911502324
+        }
+      }
+    ]
+  },
+  "decision": "Some H815 four-term failures are genuinely negative under monotonicity and q2<=1/2 alone. Therefore Lemma B cannot be rescued as a monotone product lemma; D3, Plucker-Dodgson, or a Xi-specific analytic input is necessary.",
+  "next_target": {
+    "name": "H818 Plucker-Dodgson or Xi-kernel pivot",
+    "statement": "If H817 finds monotone-only counterexamples, abandon monotone-only Lemma B and either derive a determinant identity using D3/H811 or pivot to the Xi-kernel unit-deficit route."
+  }
+}

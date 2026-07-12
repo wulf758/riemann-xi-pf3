@@ -1,0 +1,120 @@
+{
+  "Kminus_bound": {
+    "checks": {
+      "first_derivative_at_zero": true,
+      "second_derivative_identity": true,
+      "slack_at_zero": true
+    },
+    "proof": "d(0)=d'(0)=0 and d''(x)=1-exp(-x)>=0 for x>=0; therefore exp(-x)-1+x<=x^2/2 and K_minus<=E[X]/2=1/2",
+    "scalar_slack": "x**2/2 - x + 1 - exp(-x)"
+  },
+  "Kplus_bound": {
+    "E": "r*(exp(u)-1)+3u",
+    "conclusion": "K_plus<=(1/2)exp(E)",
+    "curvature_checks": {
+      "K_integral": true,
+      "left_cap": true,
+      "log_curvature_bound": true
+    },
+    "curvature_fragments": {
+      "K_integral": "K_r(w)=int_0^1 (1-t) V'''(z+t w/sqrt(A))/B dt",
+      "left_cap": "w <= 0 => K_r(w) <= 1/2",
+      "log_curvature_bound": "0 < d/dy log V'''(y) <= x+3"
+    },
+    "curvature_source": "research/riemann/h943_score_excess_taylor_bridge.md",
+    "u": "z/mu=t/sqrt(A)"
+  },
+  "O_lower_bound": {
+    "conclusions": [
+      "O>=s*(sinh(z)-z)",
+      "O>=s*z^3/6"
+    ],
+    "jensen": "E[X^n]>=(E[X])^n=1 for integer n>=1",
+    "series": "O=s*sum_{k>=1} z^(2k+1) E[X^(2k-1)]/(2k+1)!"
+  },
+  "all_checks_pass": true,
+  "checks": {
+    "H1_upper_is_minus_17_over_4": true,
+    "Hprime_margin_is_11_over_4": true,
+    "Kminus_scalar_proof": true,
+    "cosh_exact_factorization": true,
+    "curvature_dependency": true,
+    "dimensionless_identities": true,
+    "even_expectation_identity": true,
+    "junction_lt_1_over_100": true,
+    "pairing_identity": true,
+    "parameter_inputs": true,
+    "sinh_exact_lower": true
+  },
+  "dimensionless_identities": {
+    "K_even": "E[(cosh(zX)-1)/(z^2 X)]",
+    "K_odd": "E[(sinh(zX)-zX)/(z^2 X)]",
+    "O": "s E[(sinh(zX)-zX)/X^2]",
+    "checks": {
+      "Ke_numerator": true,
+      "Ko_numerator": true,
+      "O_numerator": true
+    }
+  },
+  "exact_hyperbolic_bounds": {
+    "cosh_tail": {
+      "checks": {
+        "e_gt_2_from_series": true,
+        "factorization": true,
+        "factors_nonnegative_for_Y_ge_2": true
+      },
+      "identity": "cosh(z)-1-exp(z)/8=(3Y-2)(Y-2)/(8Y), Y=exp(z)"
+    },
+    "sinh1_minus1": {
+      "checks": {
+        "partial_gt_1_over_6": true,
+        "partial_is_7_over_40": true,
+        "remaining_terms_positive": true
+      },
+      "partial_lower": "7/40",
+      "target": "1/6"
+    }
+  },
+  "id": "h1314_h943c_pairing_tail_bridge",
+  "pairing_algebra": {
+    "conclusion": "R=K_even-K_odd*tanh(O)",
+    "definitions": {
+      "K_even": "(K_plus+K_minus)/2",
+      "K_odd": "(K_plus-K_minus)/2",
+      "R": "(K_plus*exp(-2O)+K_minus)/(1+exp(-2O))",
+      "p_ratio": "p_plus/p_minus=exp(-2O)"
+    },
+    "even_expectation": "for every even g, E[g(W)K(W)]=E[g(W)R(|W|)] under the paired radial law",
+    "even_expectation_symbolic_residual": "0",
+    "symbolic_residual": "0"
+  },
+  "parameter_dependency": {
+    "checks": {
+      "all_checks_pass": true,
+      "json_exists": true,
+      "mu_floor_identity_passes": true,
+      "s_ge_18": true
+    },
+    "path": "research/riemann/h1314_h943c_parameter_polynomial_certificate.json",
+    "sha256": "ba233fcd6441545b31bf48a9d9cfad7c26c3c82d9b88cd204c48b765cc4ab421"
+  },
+  "scope": "analytic pairing and z>=1 tail bridge for the exact gamma-log H1314 route; no strong-H946 polynomial is used",
+  "tail_constants": {
+    "H1_negative_lower": "6",
+    "H1_positive_upper": "7/4",
+    "H1_upper": "-17/4",
+    "Hprime_negative_coefficient": "9/2",
+    "Hprime_negative_margin": "11/4",
+    "Hprime_positive_coefficient": "7/4",
+    "half_exp_minus_17_over_4": {
+      "interval": "[0.00713211695449962763664347292800 +/- 7.73e-34]",
+      "lower": "[0.00713211695449962763664347292800 +/- 7.73e-34]",
+      "upper": "[0.00713211695449962763664347292800 +/- 7.73e-34]"
+    },
+    "junction_target": "1/100"
+  },
+  "tail_pair_bound": {
+    "O_substitution": "R-1/2<=(1/2)exp(r(exp(z/mu)-1)+3z/mu-2s(sinh(z)-z))",
+    "derivation": "K_minus<=1/2 and denominator 1+exp(-2O)>=1 imply R-1/2<=K_plus*exp(-2O)<=(1/2)exp(E-2O)"
+  }
+}

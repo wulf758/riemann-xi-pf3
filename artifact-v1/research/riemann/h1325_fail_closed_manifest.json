@@ -1,0 +1,183 @@
+{
+  "all_checks_pass": true,
+  "certified_conclusion": "For a_n=gamma_n/n!, translated contiguous D3 holds globally and every order-3 Toeplitz minor with consecutive rows is nonnegative.",
+  "classification": "h1325_xi_global_d3_h811_fail_closed_replayed",
+  "current_sha256": {
+    "research/riemann/claude_d3_alias_repaired_finite_certificate.json": "4AC291EC2FB43D5469A6BD317993645BA56CA68E8F86E7763A24486771E313E1",
+    "research/riemann/h1322_h803_all_n_strict_assembly.json": "335FFEAAA2114212392D712CC7EC6EFA0AE61257B8249553513C956F10877177",
+    "research/riemann/h1325_h811_dependency_addendum.json": "F034A24C08EED9FC8E0A0405D596DF47A4227CFBEC7E7664D2823062A45A26B4",
+    "research/riemann/h1325_high_band_sign_audit.json": "17705AD7F520FC06003A727EF0A92EAE16435522AB0F9EEA11419ACECFBB354F",
+    "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.json": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "research/riemann/h811_repaired_consecutive_row_theorem.json": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+    "research/riemann/h908_xi_log_saddle_moment_curvature_reduction.md": "10E3B7F623E7530342EB2B7A9DF0D941517B3417F5755797D5938BD185543099",
+    "research/riemann/h927_gamma_log_a_le_one_low_threshold.md": "B74EBA4BC923164E6A2A92B4132DDC5A42CEF8818E4B1EC43D7B194B59071E9D",
+    "research/riemann/h943_score_excess_taylor_bridge.md": "D215EBECE963E8823358631CFE1CB020645B4C9293D14E0961415470793562C7",
+    "tools/rh_h1325_h811_dependency_addendum.py": "98FDB99B25D092A31E69FA1A6597AFFF0D40C5C877BA29324B54D6895CD70913",
+    "tools/rh_h1325_high_band_sign_audit.py": "59FB38405C3D3E0FFE402E81835E960762938322458D31A97E3EB35D6848C978",
+    "tools/rh_h1325_xi_global_d3_h811_assembly.py": "58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F",
+    "tools/rh_h1325_xi_global_d3_h811_independent_audit.py": "7AF810D1A0CF489F3DA45955FBE15C1C957F0B6C3F05357A96FA59B3BA325C5B"
+  },
+  "hash_checks": {
+    "research/riemann/claude_d3_alias_repaired_finite_certificate.json": true,
+    "research/riemann/h1322_h803_all_n_strict_assembly.json": true,
+    "research/riemann/h1325_h811_dependency_addendum.json": true,
+    "research/riemann/h1325_high_band_sign_audit.json": true,
+    "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.json": true,
+    "research/riemann/h811_repaired_consecutive_row_theorem.json": true,
+    "research/riemann/h908_xi_log_saddle_moment_curvature_reduction.md": true,
+    "research/riemann/h927_gamma_log_a_le_one_low_threshold.md": true,
+    "research/riemann/h943_score_excess_taylor_bridge.md": true,
+    "tools/rh_h1325_h811_dependency_addendum.py": true,
+    "tools/rh_h1325_high_band_sign_audit.py": true,
+    "tools/rh_h1325_xi_global_d3_h811_assembly.py": true,
+    "tools/rh_h1325_xi_global_d3_h811_independent_audit.py": true
+  },
+  "pinned_sha256": {
+    "research/riemann/claude_d3_alias_repaired_finite_certificate.json": "4AC291EC2FB43D5469A6BD317993645BA56CA68E8F86E7763A24486771E313E1",
+    "research/riemann/h1322_h803_all_n_strict_assembly.json": "335FFEAAA2114212392D712CC7EC6EFA0AE61257B8249553513C956F10877177",
+    "research/riemann/h1325_h811_dependency_addendum.json": "F034A24C08EED9FC8E0A0405D596DF47A4227CFBEC7E7664D2823062A45A26B4",
+    "research/riemann/h1325_high_band_sign_audit.json": "17705AD7F520FC06003A727EF0A92EAE16435522AB0F9EEA11419ACECFBB354F",
+    "research/riemann/h1325_xi_global_d3_h811_consecutive_rows.json": "9308258F232A84CB964F0CE4357C2BE279D5E2FE3A49B227B37CCD7E6D43A1A0",
+    "research/riemann/h811_repaired_consecutive_row_theorem.json": "09C0B09673CD582BB1F9968466B5304FBA13A4B8AE0D97B6348EAD60498D6A12",
+    "research/riemann/h908_xi_log_saddle_moment_curvature_reduction.md": "10E3B7F623E7530342EB2B7A9DF0D941517B3417F5755797D5938BD185543099",
+    "research/riemann/h927_gamma_log_a_le_one_low_threshold.md": "B74EBA4BC923164E6A2A92B4132DDC5A42CEF8818E4B1EC43D7B194B59071E9D",
+    "research/riemann/h943_score_excess_taylor_bridge.md": "D215EBECE963E8823358631CFE1CB020645B4C9293D14E0961415470793562C7",
+    "tools/rh_h1325_h811_dependency_addendum.py": "98FDB99B25D092A31E69FA1A6597AFFF0D40C5C877BA29324B54D6895CD70913",
+    "tools/rh_h1325_high_band_sign_audit.py": "59FB38405C3D3E0FFE402E81835E960762938322458D31A97E3EB35D6848C978",
+    "tools/rh_h1325_xi_global_d3_h811_assembly.py": "58086C0928D487B4C71686A8B64E10F047CE617A3D29C285CAE242D05E8EBD6F",
+    "tools/rh_h1325_xi_global_d3_h811_independent_audit.py": "7AF810D1A0CF489F3DA45955FBE15C1C957F0B6C3F05357A96FA59B3BA325C5B"
+  },
+  "replay_checks": {
+    "exact_kappa2_reduction": true,
+    "exact_tail_lemma": true,
+    "finite_D3_full_replay": true,
+    "high_sign_addendum": true,
+    "independent_audit": true,
+    "n127_kappa2_seam_replay": true,
+    "positivity_addendum": true,
+    "primary": true,
+    "q_monotone_report_replay": true
+  },
+  "replays": {
+    "exact_kappa2_reduction": {
+      "all_checks_pass": null,
+      "classification": null,
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/claude_d3_kappa2_exact_reduction_check.py"
+      ],
+      "returncode": 0,
+      "status": "ok",
+      "stderr": ""
+    },
+    "exact_tail_lemma": {
+      "all_checks_pass": null,
+      "classification": null,
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/claude_d3_two_sided_tail_lemma_independent_check.py"
+      ],
+      "returncode": 0,
+      "status": "ok",
+      "stderr": ""
+    },
+    "finite_D3_full_replay": {
+      "all_checks_pass": true,
+      "classification": "xi_translated_d3_alias_repaired_finite_certified",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/claude_d3_alias_repaired_finite_certificate_canonical.py",
+        "--out",
+        "NUL"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "high_sign_addendum": {
+      "all_checks_pass": true,
+      "classification": "h1325_high_band_discarded_terms_sign_closed",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/rh_h1325_high_band_sign_audit.py",
+        "--no-write"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "independent_audit": {
+      "all_checks_pass": true,
+      "classification": "h1325_xi_global_d3_h811_independently_audited",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/rh_h1325_xi_global_d3_h811_independent_audit.py"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "n127_kappa2_seam_replay": {
+      "all_checks_pass": true,
+      "classification": "xi_d3_kappa2_average_pilot_certified",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/claude_d3_kappa2_average_pilot.py",
+        "--out",
+        "NUL",
+        "--target-n",
+        "127",
+        "--prec",
+        "192"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "positivity_addendum": {
+      "all_checks_pass": true,
+      "classification": "h1325_h811_explicit_dependency_gates_closed",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/rh_h1325_h811_dependency_addendum.py",
+        "--no-write"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "primary": {
+      "all_checks_pass": true,
+      "classification": "xi_global_translated_d3_h811_consecutive_rows_closed",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/rh_h1325_xi_global_d3_h811_assembly.py",
+        "--no-write"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    },
+    "q_monotone_report_replay": {
+      "all_checks_pass": true,
+      "classification": "h1322_h803_all_n_certified_h907_open",
+      "command": [
+        "C:\\Users\\cyril\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "tools/rh_h1322_h803_all_n_strict_assembly.py",
+        "--check-report"
+      ],
+      "returncode": 0,
+      "status": null,
+      "stderr": ""
+    }
+  },
+  "schema": "rh_h1325_fail_closed_manifest.v0",
+  "scope": [
+    "global translated contiguous D3 for Xi",
+    "H811 consecutive-row order-3 minors",
+    "not sparse-row PF3",
+    "not PF-infinity",
+    "not all-degree Jensen hyperbolicity",
+    "not the Riemann Hypothesis"
+  ]
+}

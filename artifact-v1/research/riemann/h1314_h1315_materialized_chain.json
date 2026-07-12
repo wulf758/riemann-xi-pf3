@@ -1,0 +1,147 @@
+{
+  "H1314_to_H1315_cross_link": {
+    "H1314_budget_values": [
+      "663/1250",
+      "14229/5000"
+    ],
+    "H1315_budget_values": [
+      "663/1250",
+      "14229/5000"
+    ],
+    "all_checks_pass": true,
+    "checks": {
+      "h1314_first_budget_is_663_over_1250": true,
+      "h1314_second_budget_is_14229_over_5000": true,
+      "h1315_coverage_passes": true,
+      "h1315_final_constant_is_35": true,
+      "h1315_first_budget_matches_h1314_json": true,
+      "h1315_moment_box_passes": true,
+      "h1315_second_budget_matches_h1314_json": true,
+      "parameter_json_consumed": true,
+      "uniform_pair_json_consumes_parameter": true,
+      "uniform_pair_statement": true
+    }
+  },
+  "all_checks_pass": true,
+  "analytic_dependency_boundary": "the scripts regenerate polynomial, rational, Arb and assembly calculations; proved analytic pairing identities remain cited inputs",
+  "components": [
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h943c_u4_five_interval_certificate.json",
+      "name": "H943C_U4",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h943c_u4_five_interval_certificate",
+          "json_exists": true,
+          "json_sha256": "712d2770b125f4b252d2acd960e7568a6cfb972c6bda5392fc9720c66e0db142",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h943c_u4_five_interval_certificate",
+          "json_exists": true,
+          "json_sha256": "712d2770b125f4b252d2acd960e7568a6cfb972c6bda5392fc9720c66e0db142",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h943c_u4_five_interval_certificate.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1314_h943c_parameter_polynomial_certificate.json",
+      "name": "H1314_parameters",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_parameter_polynomial_certificate",
+          "json_exists": true,
+          "json_sha256": "ba233fcd6441545b31bf48a9d9cfad7c26c3c82d9b88cd204c48b765cc4ab421",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_parameter_polynomial_certificate",
+          "json_exists": true,
+          "json_sha256": "ba233fcd6441545b31bf48a9d9cfad7c26c3c82d9b88cd204c48b765cc4ab421",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1314_h943c_parameter_polynomial_verifier.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1314_h943c_uniform_pair_certificate.json",
+      "name": "H1314_uniform_pair",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_uniform_pair_certificate",
+          "json_exists": true,
+          "json_sha256": "99ce26e70c7a9f85c8d8d923e9012149a1dded61ed53cc660b9442b995460658",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1314_h943c_uniform_pair_certificate",
+          "json_exists": true,
+          "json_sha256": "99ce26e70c7a9f85c8d8d923e9012149a1dded61ed53cc660b9442b995460658",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1314_h943c_uniform_pair_verifier.py"
+    },
+    {
+      "deterministic_json": true,
+      "json": "research/riemann/h1315_gamma_log_moment_box_global_assembly.json",
+      "name": "H1315_moment_box",
+      "passed": true,
+      "runs": [
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1315_gamma_log_moment_box_global_assembly",
+          "json_exists": true,
+          "json_sha256": "f4d38af9ff4c601f960790b5ded7e6d26fb191482ee0ecff1e3983d5bb2ca941",
+          "returncode": 0,
+          "run": 1,
+          "stderr_tail": ""
+        },
+        {
+          "all_checks_pass": true,
+          "certificate_id": "h1315_gamma_log_moment_box_global_assembly",
+          "json_exists": true,
+          "json_sha256": "f4d38af9ff4c601f960790b5ded7e6d26fb191482ee0ecff1e3983d5bb2ca941",
+          "returncode": 0,
+          "run": 2,
+          "stderr_tail": ""
+        }
+      ],
+      "script": "tools/rh_h1315_gamma_log_moment_box_global_certificate.py"
+    }
+  ],
+  "downstream_H1317_smoke": {
+    "all_checks_pass": true,
+    "certificate_id": "h1317_effective_xi_transfer_assembly",
+    "passed": true,
+    "returncode": 0,
+    "scope": "downstream smoke test, not a replacement for analytic dependencies",
+    "script": "tools/rh_h1317_effective_xi_transfer_assembly.py"
+  },
+  "id": "h1314_h1315_materialized_chain",
+  "redundant_unmaterialized_branch": "the stronger H946 R<=1/2+C_r*t^2 polynomial is absent from the cards and is not used by this H1314-H1315-Xi transfer chain"
+}

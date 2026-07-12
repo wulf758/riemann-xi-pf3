@@ -1,0 +1,211 @@
+{
+  "P_compact_rectangle": {
+    "all_checks_pass": true,
+    "certified_lower_product": "16744818679/437649408",
+    "certified_upper_product": "22324672/353125",
+    "checks": {
+      "arb_pi_gt_333_over_106": true,
+      "arb_pi_lt_355_over_113": true,
+      "e_upper_lt_68_over_25": true,
+      "exp_5_over_2_taylor9_gt_required": true,
+      "lower_product_gt_153_over_4": true,
+      "upper_product_lt_64": true
+    },
+    "conclusion": "153/4 < P=pi*exp(r) < 64",
+    "e_geometric_tail_upper": "1/35840",
+    "e_partial_degree_7": "685/252",
+    "e_upper": "876809/322560",
+    "exp_5_over_2_taylor_degree_9_lower": "452562667/37158912",
+    "pi_arb": {
+      "interval": "[3.14159265358979323846264338328 +/- 4.98e-31]",
+      "lower": "[3.14159265358979323846264338328 +/- 4.98e-31]",
+      "upper": "[3.14159265358979323846264338328 +/- 4.98e-31]"
+    },
+    "pi_rational_bounds": [
+      "333/106",
+      "355/113"
+    ],
+    "range": "5/2 <= r <= 3",
+    "required_exp_5_over_2_lower": "901/74"
+  },
+  "P_high_floor": {
+    "all_checks_pass": true,
+    "conclusion": "P=pi*exp(r)>60 from pi>3",
+    "exp3_taylor_degree_8_lower": "89641/4480",
+    "range": "r >= 3",
+    "three_times_lower_minus_60": "123/4480"
+  },
+  "all_checks_pass": true,
+  "canonical_verifier": "tools/rh_h1314_h943c_parameter_polynomial_verifier.py",
+  "compact_bernstein_certificates": [
+    {
+      "all_coefficients_strictly_positive": true,
+      "basis": "tensor Bernstein basis on r in [5/2,3], P in [153/4,64]",
+      "coefficient_count": 28,
+      "coefficient_sha256": "133e0bab7453c2279cab996b7665f5ca4aabd3d3578db69969d0c1af9b834f30",
+      "degrees": {
+        "P": 3,
+        "r": 6
+      },
+      "minimum_coefficient": "438438825/4096",
+      "minimum_flat_index": 0,
+      "name": "s_ge_18"
+    },
+    {
+      "all_coefficients_strictly_positive": true,
+      "basis": "tensor Bernstein basis on r in [5/2,3], P in [153/4,64]",
+      "coefficient_count": 21,
+      "coefficient_sha256": "7aa3091dbff441a3744ae5895e6223e1dffaafa70a61554f2609b0b320389886",
+      "degrees": {
+        "P": 2,
+        "r": 6
+      },
+      "minimum_coefficient": "362076075/1024",
+      "minimum_flat_index": 0,
+      "name": "delta2_le_3_over_20"
+    },
+    {
+      "all_coefficients_strictly_positive": true,
+      "basis": "tensor Bernstein basis on r in [5/2,3], P in [153/4,64]",
+      "coefficient_count": 36,
+      "coefficient_sha256": "07df068432c89e3b1b6c520083e3700fc7b88ed87b89a020ed05104aa4da8696",
+      "degrees": {
+        "P": 3,
+        "r": 8
+      },
+      "minimum_coefficient": "1687066835625/16384",
+      "minimum_flat_index": 0,
+      "name": "delta3_le_7_over_2_delta2"
+    },
+    {
+      "all_coefficients_strictly_positive": true,
+      "basis": "tensor Bernstein basis on r in [5/2,3], P in [153/4,64]",
+      "coefficient_count": 96,
+      "coefficient_sha256": "3a3fd1ace87de9e958405a9e6b8fa5bb7dba8b9fe69342da8845f670925a5e89",
+      "degrees": {
+        "P": 5,
+        "r": 15
+      },
+      "minimum_coefficient": "64926150610239650503125/33554432",
+      "minimum_flat_index": 0,
+      "name": "EX5_le_16_over_5"
+    }
+  ],
+  "definitions": {
+    "A": "V_2",
+    "B": "V_3",
+    "EXj": "A^(j-1)*V_(j+2)/B^j",
+    "G": "A*V_4-B^2",
+    "P": "pi*exp(r)",
+    "V_n": "P*T_n(r)-(9/4)r",
+    "alpha": "9/4",
+    "s": "A^3/B^2"
+  },
+  "denominator_positivity": {
+    "A_positive": true,
+    "A_positive_floor_factor": "1053/8",
+    "B_positive": true,
+    "B_positive_floor_factor": "8991/16"
+  },
+  "engine_module": "tools/rh_h1314_h943c_parameter_polynomial_certificate.py",
+  "engine_note": "the engine reconstructs all polynomials; its direct CLI serializer is noncanonical because it does not normalize SymPy booleans",
+  "global_consequences": {
+    "EX3_le_61_over_40": true,
+    "EX5_le_16_over_5": true,
+    "EX5_le_4": true,
+    "delta2_le_3_over_20": true,
+    "delta3_le_7_over_2_delta2": true,
+    "s_ge_18": true,
+    "tilted_EX5_le_4_exp_21z_over_8": true
+  },
+  "high_r_monomial_certificates": [
+    {
+      "all_dense_coefficients_nonnegative": true,
+      "all_nonzero_coefficients_strictly_positive": true,
+      "basis": "monomials in X=r-3 and Y=P-60",
+      "degrees": {
+        "P": 3,
+        "r": 6
+      },
+      "dense_coefficient_count": 28,
+      "dense_coefficient_sha256": "145ab4f367e19fad7113790bd64a32da26479311e1d7c2736a6793f400872923",
+      "minimum_nonzero_coefficient": "1",
+      "name": "s_ge_30",
+      "nonzero_coefficient_count": 28,
+      "zero_coefficient_count": 0
+    },
+    {
+      "all_dense_coefficients_nonnegative": true,
+      "all_nonzero_coefficients_strictly_positive": true,
+      "basis": "monomials in X=r-3 and Y=P-60",
+      "degrees": {
+        "P": 2,
+        "r": 6
+      },
+      "dense_coefficient_count": 21,
+      "dense_coefficient_sha256": "39a018c0cb589bc11bee03af6bac6e7cdacaa541fdfa0eb9f3d73a96eba83091",
+      "minimum_nonzero_coefficient": "3",
+      "name": "delta2_le_3_over_20",
+      "nonzero_coefficient_count": 21,
+      "zero_coefficient_count": 0
+    },
+    {
+      "all_dense_coefficients_nonnegative": true,
+      "all_nonzero_coefficients_strictly_positive": true,
+      "basis": "monomials in X=r-3 and Y=P-60",
+      "degrees": {
+        "P": 3,
+        "r": 8
+      },
+      "dense_coefficient_count": 36,
+      "dense_coefficient_sha256": "d1c02e7993c4214a9df818a96acab93b5d108c29702585e4987eb9e43d03928a",
+      "minimum_nonzero_coefficient": "1/2",
+      "name": "delta3_le_7_over_2_delta2",
+      "nonzero_coefficient_count": 36,
+      "zero_coefficient_count": 0
+    },
+    {
+      "all_dense_coefficients_nonnegative": true,
+      "all_nonzero_coefficients_strictly_positive": true,
+      "basis": "monomials in X=r-3 and Y=P-60",
+      "degrees": {
+        "P": 5,
+        "r": 15
+      },
+      "dense_coefficient_count": 96,
+      "dense_coefficient_sha256": "9b06e98966493146a4fbf912f2bb615ed1ad5a4ba462566b4eaf121ed01b33ea",
+      "minimum_nonzero_coefficient": "21",
+      "name": "EX5_le_31_over_10",
+      "nonzero_coefficient_count": 96,
+      "zero_coefficient_count": 0
+    }
+  ],
+  "id": "h1314_h943c_parameter_polynomial_certificate",
+  "scope": "exact gamma-log parameter package for r>=5/2; scalar U4 and large-z pair bounds are separate",
+  "tilted_fifth_moment_growth": {
+    "V_ratio_statement": "V8(q)/V7(q) <= q+7 for q>=5/2",
+    "all_checks_pass": true,
+    "checks": {
+      "V_correction_shift_coefficients_positive": true,
+      "mu_identity": true,
+      "mu_identity_positive_on_r_ge_5_over_2": true,
+      "rate_margin_nonnegative": true,
+      "touchard_identity": true
+    },
+    "correction_floor_coefficients": [
+      "3213/4",
+      "166005/8",
+      "1579725/8",
+      "13990473/16",
+      "116583561/64",
+      "184640553/128"
+    ],
+    "correction_floor_shift": "q=5/2+q_shift, pi*exp(q)>=153/4",
+    "mu_floor_conclusion": "mu=B/A >= r+3/2",
+    "mu_floor_identity": "r*(4*P*r - 4*P + 18*r + 9)/8",
+    "q_shift_bound": "for 0<=z<=1, log(1+1/r)>=1/(r+1)>1/mu, so q=r*exp(z/mu)<=r+1",
+    "rate_conclusion": "d/dz log E[X^5 exp(zX)] <= (r+8)/(r+3/2) <= 21/8",
+    "rate_margin": "13*(2*r - 5)/2",
+    "touchard_identity": "21*q**5 + 280*q**4 + 1050*q**3 + 1204*q**2 + 315*q + 6"
+  }
+}

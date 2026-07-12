@@ -1,0 +1,964 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\PF}{PF}
+\newcommand{\Xice}{\Xi}
+\newcommand{\minor}[2]{\Delta_{#1}^{#2}}
+
+\title[The $\xi$ coefficients form a $\PF_3$ sequence]{The Taylor coefficients of the Riemann $\xi$-function\\ form a P\'olya frequency sequence of order $3$}
+
+% AUTHOR PLACEHOLDER — to be completed before submission
+\author{[Author name]}
+\address{[Affiliation or ``Independent researcher'']}
+\email{[email]}
+
+\date{July 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and write
+$\xi(\tfrac12+z)=\sum_{n\ge 0}\gamma_n z^{2n}/n!$, so that all
+$\gamma_n>0$. We prove, unconditionally, that the normalized sequence
+$a_n=\gamma_n/n!$ is a P\'olya frequency sequence of order $3$: every
+minor of order at most $3$ of the one-sided Toeplitz matrix
+$(a_{j-i})_{i,j\ge 0}$ is nonnegative. By the theory of
+Aissen--Schoenberg--Whitney--Edrei, the corresponding statement for
+minors of \emph{every} order is equivalent to the Riemann Hypothesis;
+order $2$ (the Tur\'an inequalities) was established by Csordas,
+Norfolk and Varga in 1986, and the degree-$3$ statement on the parallel
+Jensen-polynomial ladder by Dimitrov and Lucas in 2011.
+
+The proof combines four ingredients: (i) a structure theorem reducing
+all consecutive-row order-$3$ minors of a positive one-sided Toeplitz
+sequence to four ratio conditions; (ii) a completion theorem, proved by
+two signed Grassmann--Pl\"ucker inductions, showing that for strictly
+log-concave sequences the consecutive-row case already implies full
+$\PF_3$; (iii) certified interval-arithmetic verification of the ratio
+conditions for $2\le n\le 126$; and (iv) an analytic proof of the ratio
+conditions for all $n\ge 127$ via two-sided bounds on the cumulants of
+an exponentially tilted moment family, with explicit rational
+constants.
+
+The result is sharp for the method: we exhibit explicit rational
+sequences satisfying all four ratio conditions, and even full
+window-$\PF_3$, for which an order-$4$ Toeplitz minor is negative.
+Consequently no ratio-type hypothesis of the kind used here can reach
+$\PF_4$, and further progress on the P\'olya frequency ladder for $\xi$
+requires structural information specific to $\xi$. All computational
+claims are backed by a reproducible artifact with fail-closed
+manifests, pinned dependency hashes, and deterministic replay.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Write
+\begin{equation}\label{eq:xi}
+\xi(s)=\tfrac12\,s(s-1)\,\pi^{-s/2}\,\Gamma(s/2)\,\zeta(s),
+\qquad
+\Psi(z):=\xi(\tfrac12+z)=\sum_{n\ge 0}\frac{\gamma_n}{n!}\,z^{2n},
+\end{equation}
+so that $\gamma_n>0$ for all $n\ge 0$. The Riemann Hypothesis (RH)
+asserts that all zeros of $\Psi$ are purely imaginary; equivalently,
+setting
+\begin{equation}\label{eq:F}
+F(w):=\Psi(\sqrt{w})=\sum_{n\ge 0}a_n w^{n},
+\qquad a_n:=\frac{\gamma_n}{n!}>0,
+\end{equation}
+RH asserts that the entire function $F$, which has genus $0$, has only
+real nonpositive zeros.
+
+A classical theorem of Aissen, Schoenberg and Whitney, completed by
+Edrei \cite{ASW52,Edrei52}, characterizes exactly this situation in
+terms of total positivity: a sequence $(a_n)_{n\ge0}$ of nonnegative
+numbers is a \emph{P\'olya frequency sequence} ($\PF_\infty$), i.e.\
+every finite minor of the one-sided Toeplitz matrix
+\[
+T(a)=(a_{j-i})_{i,j\ge 0},\qquad a_k:=0 \text{ for } k<0,
+\]
+is nonnegative, if and only if its generating function has the form
+$C z^m e^{\gamma z}\prod_i (1+\alpha_i z)/(1-\beta_i z)$ with
+$C,\gamma,\alpha_i,\beta_i\ge 0$. For the genus-$0$ function $F$ of
+\eqref{eq:F} this reduces to: \emph{$(a_n)$ is $\PF_\infty$ if and only
+if RH holds}. Total positivity of finite order therefore provides a
+ladder of unconditional statements converging to RH: for $r\ge 1$, the
+sequence is $\PF_r$ when every minor of $T(a)$ of order at most $r$ is
+nonnegative.
+
+The history of this ladder, and of its close relative built from Jensen
+polynomials, is short. Order $2$ --- log-concavity of $(a_n)$, which
+amounts to $\gamma_n^{2}\ge\frac{n}{n+1}\gamma_{n-1}\gamma_{n+1}$ and
+is therefore implied by (and slightly weaker than) the Tur\'an
+inequalities $\gamma_n^{2}\ge\gamma_{n-1}\gamma_{n+1}$ --- follows from
+the work of Csordas, Norfolk and Varga \cite{CNV86}. On the
+Jensen ladder, hyperbolicity of the degree-$3$ Jensen polynomials for
+all shifts (the ``higher order Tur\'an inequalities'') was proved by
+Dimitrov and Lucas \cite{DL11}. Griffin, Ono, Rolen and Zagier
+\cite{GORZ19} (see also \cite{GORTTW,OSullivan}) later proved that for
+each fixed degree $d$ the Jensen polynomials $J^{d,n}$ are hyperbolic
+for all sufficiently large shifts $n$. Families of \emph{contiguous}
+order-$3$ determinants attached to $\xi$ also appear in the
+determinantal programme of Nuttall \cite{Nuttall11}, which discusses
+positivity for particular contiguous subfamilies. To our knowledge,
+however, no unconditional statement covering \emph{all} order-$3$
+Toeplitz minors of $(a_n)$ --- sparse rows and columns included ---
+has appeared. The present paper closes this order:
+
+\begin{theorem}[Main Theorem]\label{thm:main}
+The sequence $a_n=\gamma_n/n!$ of normalized Taylor coefficients of
+$\xi$ is $\PF_3$: every minor of order at most $3$ of the one-sided
+Toeplitz matrix $T(a)$ is nonnegative. Moreover the order-$1$ entries
+and all nonzero order-$2$ minors are strictly positive, and the
+contiguous order-$3$ minors are strictly positive.
+\end{theorem}
+
+The proof is organized around two abstract theorems and two
+$\xi$-specific inputs.
+
+\begin{itemize}
+\item[\textbf{(A)}] A \emph{structure theorem}
+(Theorem~\ref{thm:consec}): for any positive one-sided Toeplitz
+sequence, four ratio conditions --- log-concavity, monotonicity of the
+second-order ratios $q_n$, the initial bound $q_2\le\tfrac12$, and
+nonnegativity of the \emph{contiguous} order-$3$ minors --- imply
+nonnegativity of every order-$3$ minor with three \emph{consecutive
+rows} (arbitrary columns).
+\item[\textbf{(B)}] A \emph{completion theorem}
+(Theorem~\ref{thm:plucker}): for strictly log-concave positive
+sequences, the consecutive-row case of order $3$ already implies full
+$\PF_3$. The proof runs two signed three-term Grassmann--Pl\"ucker
+inductions in which every divisor is strictly positive and no
+sign-unknown minor ever appears with a negative coefficient.
+\item[\textbf{(C)}] \emph{Certified finite verification}: the four
+ratio conditions hold for $2\le n\le 126$, verified in ball arithmetic
+(Arb \cite{Johansson17}) with rigorous enclosures of $\gamma_2,\dots,
+\gamma_{130}$ and directed rounding throughout.
+\item[\textbf{(D)}] An \emph{analytic tail}: for all $n\ge 127$ the
+ratio conditions follow from new two-sided bounds on the second and
+third cumulants of an exponentially tilted moment family attached to
+the classical integral representation of $\Xi$, with explicit rational
+constants; the conversion to the discrete conditions is a finite list
+of coefficient-positive polynomial identities.
+\end{itemize}
+
+The result is \emph{sharp for its method} in a strong sense.
+
+\begin{theorem}[Sharpness; see \S\ref{sec:sharp}]\label{thm:sharp-intro}
+There exist explicit rational positive sequences satisfying all four
+ratio conditions of (A) --- indeed satisfying every order-$3$
+nonnegativity requirement on a window containing the failure --- for
+which an explicit order-$4$ Toeplitz minor is negative. There also
+exists a positive sequence with entire generating function satisfying
+the same ratio conditions for which already the degree-$3$ Jensen
+polynomial $J^{3,0}$ fails to be hyperbolic.
+\end{theorem}
+
+Thus ratio-type conditions of the kind that power Theorem~\ref{thm:main}
+cannot prove $\PF_4$, nor even degree-$3$ Jensen hyperbolicity, for any
+abstract sequence: any ascent of the ladder beyond order $3$ must use
+information specific to $\xi$ that is invisible to these invariants.
+We regard this negative statement as of equal practical importance to
+the positive one; it delimits precisely where the present technique
+stops. Under RH, of course, $(a_n)$ is $\PF_r$ for every $r$; our
+countermodels are abstract sequences, not related to $\xi$.
+
+\subsection*{Relation to the Jensen ladder}
+Theorem~\ref{thm:main} and the Dimitrov--Lucas theorem \cite{DL11} are
+statements on two different ladders which intersect only at infinity.
+Hyperbolicity of degree-$d$ Jensen polynomials is a discriminant-type
+condition; $\PF_r$ is a determinantal one. At finite level neither
+family of statements implies the other in any obvious way, and the
+countermodels of \S\ref{sec:sharp} separate them explicitly in one
+direction. The two ladders coincide, by \cite{ASW52,Edrei52} and by
+P\'olya's classical equivalence, only in the limit
+$r=\infty$/$d=\infty$, where both are RH.
+
+\subsection*{Computer assistance and reproducibility}
+Steps (C) and parts of (D) are computer-assisted in the tradition of
+\cite{PlattTrudgian}: every numerical claim entering the proof is a
+certified ball-arithmetic enclosure with outward rounding, produced by
+open-source tools (Arb via \texttt{python-flint}), assembled by a
+fail-closed checker that pins the exact inputs by cryptographic hash
+and refuses to report success unless every dependency replays. The
+complete artifact (code, certificates, manifests, replay instructions)
+accompanies the paper; see \S\ref{sec:comp}. The research programme
+that produced the mathematics was conducted by autonomous AI reasoning
+agents under human direction and audit; we describe the workflow and
+the verification discipline in \S\ref{sec:disclosure}, and emphasize
+that the proof as presented is human-readable and independent of any
+claim about how it was found.
+
+\section{Notation and main results}\label{sec:notation}
+
+Throughout, $(a_n)_{n\ge 0}$ is a sequence with $a_n>0$, extended by
+$a_k=0$ for $k<0$. Define
+\begin{equation}\label{eq:ratios}
+R_n=\frac{a_n}{a_{n-1}}\ (n\ge 1),
+\qquad
+q_n=\frac{R_n}{R_{n-1}}\ (n\ge 2).
+\end{equation}
+Log-concavity of $(a_n)$ ($\PF_2$) is $q_n\le 1$ for all $n\ge2$;
+\emph{strict} $\PF_2$ is $q_n<1$, i.e.\ $R_n$ strictly decreasing.
+
+For increasing index triples $R=(r_0,r_1,r_2)$, $C=(c_0,c_1,c_2)$ set
+\[
+\minor{R}{C}=\det\bigl(a_{c_j-r_i}\bigr)_{0\le i,j\le 2}.
+\]
+A minor is \emph{contiguous} when both $R$ and $C$ are triples of
+consecutive integers; it has \emph{consecutive rows} when $R$ is. For
+$m\ge 0$ we write
+\[
+D_m:=\minor{(0,1,2)}{(m,m+1,m+2)}
+\]
+for the \emph{translated contiguous determinant at start $m$}; by the
+Toeplitz structure every contiguous minor is some $D_m$.
+
+\begin{definition}\label{def:ratio-conditions}
+We say $(a_n)$ satisfies the \emph{ratio conditions} when:
+\begin{enumerate}
+\item[(R1)] $q_n\le 1$ for all $n\ge 2$ \hfill($\PF_2$);
+\item[(R2)] $q_{n+1}\ge q_n$ for all $n\ge 2$;
+\item[(R3)] $q_2\le \tfrac12$;
+\item[(R4)] every contiguous order-$3$ minor is nonnegative.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Consecutive rows from ratio conditions]\label{thm:consec}
+If $(a_n)$ satisfies the ratio conditions, then every order-$3$ minor
+of $T(a)$ with consecutive rows is nonnegative.
+\end{theorem}
+
+\begin{theorem}[Pl\"ucker completion]\label{thm:plucker}
+Let $(a_n)$ be positive and strictly $\PF_2$, and suppose every
+order-$3$ minor of $T(a)$ with consecutive rows is nonnegative. Then
+$(a_n)$ is $\PF_3$.
+\end{theorem}
+
+\begin{theorem}[Analytic and certified inputs for $\xi$]\label{thm:inputs}
+For $a_n=\gamma_n/n!$:
+\begin{enumerate}
+\item[(i)] $a_n>0$ for all $n\ge0$;
+\item[(ii)] $q_n<1$ for all $n\ge 2$ (strict $\PF_2$);
+\item[(iii)] $q_2<\tfrac12$;
+\item[(iv)] $q_{n+1}\ge q_n$ for all $n\ge2$;
+\item[(v)] every contiguous order-$3$ minor is strictly positive.
+\end{enumerate}
+\end{theorem}
+
+Theorem~\ref{thm:main} follows at once:
+Theorem~\ref{thm:inputs} verifies the ratio conditions for $\xi$,
+Theorem~\ref{thm:consec} yields all consecutive-row order-$3$ minors,
+and Theorem~\ref{thm:plucker} completes to $\PF_3$.
+
+\section{Consecutive rows from the ratio conditions}\label{sec:consec}
+
+Fix rows $(m,m+1,m+2)$; by the Toeplitz structure it suffices to treat
+$m=0$, replacing columns $(c_0,c_1,c_2)$ by their translates. Columns
+containing an index $<0$ produce structurally triangular or zero
+minors: if $c_0<0$ the first column has at most one nonzero entry and
+the minor reduces, with nonnegative cofactor by $\PF_2$, to an
+order-$2$ case. So assume $0\le c_0<c_1<c_2$ and write the columns as
+$(c_0,c_1,c_2)$.
+
+The proof splits into three families according to $c_0$.
+
+\subsection{Columns $(0,j,k)$}
+An exact factorization gives
+\begin{equation}\label{eq:fam0}
+\minor{(0,1,2)}{(0,j,k)}
+= a_0\,a_{j-2}\,a_{k-2}\,\bigl(R_{j-1}-R_{k-1}\bigr),
+\qquad 2\le j<k,
+\end{equation}
+which is nonnegative by (R1) since $j-1<k-1$. (For $j\le 2$ the minor
+is triangular.)
+
+\subsection{Columns $(1,j,k)$}
+With $G_c:=R_{c-1}\,(R_1-R_c)$ one has the exact factorization
+\begin{equation}\label{eq:fam1}
+\minor{(0,1,2)}{(1,j,k)}
+= a_0\,a_{j-2}\,a_{k-2}\,\bigl(G_j-G_k\bigr),
+\qquad 2\le j<k .
+\end{equation}
+Monotonicity of $c\mapsto G_c$ on $c\ge 2$ is exactly where (R2) and
+(R3) enter: writing $G_{c+1}-G_c$ in terms of the $q$'s, the
+anchored inequality $q_2\le\tfrac12$ together with $q$ nondecreasing
+forces $G$ nonincreasing, hence \eqref{eq:fam1} is nonnegative.
+
+\subsection{Columns $(i,j,k)$, $i\ge 2$}
+Here the minor factors as a positive product times the orientation
+determinant of the three planar points
+\[
+P_c=\bigl(R_{c-1},\,R_{c-1}R_c\bigr),\qquad c\in\{i,j,k\},
+\]
+taken in decreasing abscissa order (by strict monotonicity of
+$R$). Nonnegativity of all such orientations is a discrete convexity
+statement for the polygonal curve $c\mapsto P_c$; the contiguous case
+$(i,i+1,i+2)$ is precisely condition (R4), and the general case follows
+from the contiguous one because convexity of consecutive triples of a
+planar polygonal chain with monotone abscissae implies convexity of all
+triples.
+
+A complete symbolic expansion of the three families, including all
+boundary and triangular cases, is replayed in the artifact
+(\S\ref{sec:comp}); the identities \eqref{eq:fam0}--\eqref{eq:fam1} are
+elementary to verify by direct expansion. \qed
+
+\begin{remark}
+Conditions (R1)--(R4) are close to minimal for
+Theorem~\ref{thm:consec}: dropping (R3), or replacing (R2) by any
+bounded number of its instances, admits counterexamples already at
+order $3$; see the artifact for exact witnesses. The sharpness examples
+of \S\ref{sec:sharp} show the conclusion cannot be strengthened to
+$\PF_4$.
+\end{remark}
+
+\section{The Pl\"ucker completion}\label{sec:plucker}
+
+We prove Theorem~\ref{thm:plucker}. All identities keep the column
+triple $C=(c_0,c_1,c_2)$ fixed and vary rows; $\minor{(x,y,z)}{}$
+abbreviates $\minor{(x,y,z)}{C}$.
+
+\subsection{Strict order-2 positivity for arbitrary gaps}
+For rows $i<j$ and columns $p<q$ the order-$2$ minor is
+$a_{p-i}a_{q-j}-a_{q-i}a_{p-j}$. If $i\le p<j\le q$ it is triangular
+with strictly positive diagonal. In the interior case $p\ge j$, put
+$x=p-j$, $\alpha=j-i$, $\beta=q-p$; then
+\begin{equation}\label{eq:pf2gap}
+a_{x+\alpha}a_{x+\beta}-a_{x+\alpha+\beta}a_{x}
+= a_x a_{x+\beta}\Bigl(\ \prod_{t=1}^{\alpha}R_{x+t}
+\;-\;\prod_{t=1}^{\alpha}R_{x+\beta+t}\Bigr)>0,
+\end{equation}
+strictly, term by term, because $R$ is strictly decreasing. Thus every
+order-$2$ minor is nonnegative, and strictly positive unless it is
+structurally zero.
+
+\subsection{The auxiliary row $d=c_1+1$}
+For any rows $i<j<d$ with $d:=c_1+1$, the row of $T(a)$ indexed by $d$
+restricted to the columns $C$ is $(0,0,a_{c_2-c_1-1})$, whence the
+exact factorization
+\begin{equation}\label{eq:drow}
+\minor{(i,j,d)}{}
+= a_{c_2-c_1-1}\,
+\det\begin{pmatrix} a_{c_0-i}&a_{c_1-i}\\ a_{c_0-j}&a_{c_1-j}
+\end{pmatrix},
+\end{equation}
+whose scalar prefix is strictly positive (equal to $a_0$ at the edge
+$c_2=d$) and whose determinant is an order-$2$ minor, nonnegative by
+\eqref{eq:pf2gap}.
+
+\subsection{Boundary reductions}
+Three one-sided cases are removed before any division: if $c_2<r_2$ the
+last row vanishes; if $c_1<r_2\le c_2$, expansion along the last row
+factors the minor as a positive entry times an order-$2$ minor; if
+$c_0<r_1\le c_1$, expansion along the first column does the same. The
+remaining \emph{inductive region} is
+\begin{equation}\label{eq:region}
+c_1\ge r_2\quad\text{and}\quad c_0\ge r_1 ,
+\end{equation}
+in which $d=c_1+1$ exceeds every row in play and all divisors below are
+strictly positive interior order-$2$ cases of \eqref{eq:pf2gap} (or the
+triangular edge case).
+
+\subsection{Adjacent-pair rows}
+Let $R=(r,r+1,s)$ with $s>r+2$. The three-term Grassmann--Pl\"ucker
+identity on the five rows $r,r+1,r+2,s,d$ reads
+\begin{equation}\label{eq:pl5}
+\minor{(r,r+1,s)}{}\ \minor{(r+1,r+2,d)}{}
+= \minor{(r,r+1,r+2)}{}\ \minor{(r+1,s,d)}{}
++ \minor{(r,r+1,d)}{}\ \minor{(r+1,r+2,s)}{} .
+\end{equation}
+On the right, the first factor has consecutive rows (nonnegative by
+hypothesis), the two $d$-minors are nonnegative by \eqref{eq:drow}, and
+the last factor has the same adjacent pair with row gap smaller by one;
+the divisor $\minor{(r+1,r+2,d)}{}$ is strictly positive in the region
+\eqref{eq:region}. Induction from the consecutive base $s=r+2$ shows
+every minor with an adjacent \emph{leading} pair is nonnegative. The
+mirrored identity
+\begin{equation}\label{eq:pl6}
+\minor{(r,s-1,s)}{}\ \minor{(s-2,s-1,d)}{}
+= \minor{(r,s-2,s-1)}{}\ \minor{(s-1,s,d)}{}
++ \minor{(r,s-1,d)}{}\ \minor{(s-2,s-1,s)}{}
+\end{equation}
+handles an adjacent \emph{trailing} pair by induction on the first row
+gap. Hence every order-$3$ minor containing at least one adjacent pair
+of rows is nonnegative. In both identities no sign-unknown minor occurs
+with a negative coefficient and no possibly-zero minor is divided out.
+
+\subsection{Sparse rows}
+Let $R=(r,u,s)$ with $r+1<u<s$. Pl\"ucker on the five rows
+$r,r+1,u,s,d$ with common row $u$ gives, with the exact orientation,
+\begin{equation}\label{eq:pl7}
+\minor{(r,u,s)}{}\ \minor{(r+1,u,d)}{}
+= \minor{(r,r+1,u)}{}\ \minor{(u,s,d)}{}
++ \minor{(r,u,d)}{}\ \minor{(r+1,u,s)}{} .
+\end{equation}
+The divisor $\minor{(r+1,u,d)}{}$ is strictly positive in the region
+\eqref{eq:region}; the two $d$-minors are nonnegative by
+\eqref{eq:drow}; $\minor{(r,r+1,u)}{}$ is covered by the adjacent-pair
+case; and $\minor{(r+1,u,s)}{}$ has first gap $u-(r+1)<u-r$. Induction
+on $u-r$, with the adjacent-pair case as base, proves every order-$3$
+minor nonnegative. Together with positivity of the entries and
+\eqref{eq:pf2gap}, $(a_n)$ is $\PF_3$. \qed
+
+\begin{remark}[Duality check]
+For $L\ge\max(r_2,c_2)$ the substitution $R^*=(L-c_2,L-c_1,L-c_0)$,
+$C^*=(L-r_2,L-r_1,L-r_0)$ satisfies
+$\minor{R}{C}=\minor{R^*}{C^*}$ (reflection--transposition of the
+Toeplitz structure). It maps adjacent column pairs to adjacent row
+pairs and provides an independent cross-check of the intermediate
+reduction, although it is not needed once \eqref{eq:pl7} is in place.
+\end{remark}
+
+\begin{remark}
+The identities \eqref{eq:pl5}--\eqref{eq:pl7} were verified exactly on
+$500$ random integer matrices each, in addition to the symbolic
+expansion replayed in the artifact.
+\end{remark}
+
+\section{The inputs for $\xi$: certified range and analytic tail}
+\label{sec:inputs}
+
+We now prove Theorem~\ref{thm:inputs}. Recall the classical
+representation (see e.g.\ \cite{PolyaCollected,CNV86})
+\begin{equation}\label{eq:moment}
+\xi(\tfrac12+z)=\int_0^\infty \Phi(u)\cosh(uz)\,du,
+\qquad
+\Phi(u)=4\sum_{m\ge1}\bigl(2\pi^2m^4e^{9u/2}-3\pi m^2e^{5u/2}\bigr)
+e^{-\pi m^2 e^{2u}} ,
+\end{equation}
+with $\Phi>0$ (each summand is positive since
+$2\pi m^2e^{2u}/3>1$). Hence
+\begin{equation}\label{eq:an-moment}
+a_n=\frac{\gamma_n}{n!}=\frac{M_{2n}}{(2n)!},
+\qquad
+M_t:=\int_0^\infty u^{t}\,\Phi(u)\,du ,
+\end{equation}
+so $(M_t)_{t>0}$ is the moment family of a fixed positive density and
+in particular $a_n>0$, proving (i).
+
+\subsection{Certified range $2\le n\le 126$}
+Rigorous enclosures of $\gamma_2,\dots,\gamma_{130}$ are computed in
+ball arithmetic with directed outward rounding, using a
+discretization of \eqref{eq:moment} whose aliasing error is bounded
+rigorously (an earlier enclosure set lacking the alias bound was
+detected by internal audit and repaired; the certified set used here
+carries the explicit alias term). From these balls, the quantities
+$q_n$, $q_{n+1}-q_n$, and every contiguous order-$3$ determinant are
+evaluated with certified comparisons, establishing (ii)--(v) in the
+range $2\le n\le 126$; in particular
+\[
+q_2=0.4651838096951545\ldots<\tfrac12 .
+\]
+All comparisons are fail-closed: an undecidable ball comparison aborts
+the run rather than reporting success.
+
+\subsection{The tilted cumulant bounds}
+For the tail we study the cumulant generating function in the
+\emph{shift} variable,
+\[
+\kappa(t):=\log\int_0^\infty u^{2t}\,\Phi(u)\,du ,
+\qquad\text{so that}\qquad
+\log a_n=\kappa(n)-\log(2n)! .
+\]
+Writing $\int_0^\infty u^{2t}\Phi(u)\,du=\int_{\mathbb R}e^{2ts}V(s)\,ds$
+with $V(s)=e^{s}\Phi(e^{s})>0$ (substitution $u=e^{s}$), the function
+$\kappa$ is, up to the reparametrization $t\mapsto2t$, the cumulant
+generating function of an exponentially tilted family; in particular
+$\kappa''(t)>0$ (log-convexity) and $\kappa'''(t)$ is a positive
+multiple of the third cumulant of the tilt. All constants below are
+stated in this normalization, which is the one used by the artifact.
+
+\begin{proposition}[Two-sided cumulant bounds]\label{prop:cumulant}
+There is an explicit threshold
+$T_{71}=\bigl[71\pi e^{71}-\tfrac94\cdot 71-1\bigr]/2
+\approx 7.63\cdot 10^{32}$ such that:
+\begin{enumerate}
+\item[(i)] $0<\kappa''(t)<\dfrac{4}{5t}$ for all $t\ge 125$;
+\item[(ii)] $\kappa'''(t)<\dfrac{11}{20\,t^{2}}$ for all $t\ge 125$;
+\item[(iii)] $t^{2}\kappa'''(t)\ge -\dfrac34$ for $125\le t\le T_{71}$,
+and $t^{2}\kappa'''(t)\ge -\dfrac{141}{142}$ for all $t\ge T_{71}$.
+In particular $\kappa'''(t)\ge -\frac{141}{142}\,t^{-2}$, with constant
+strictly below $1$, for every $t\ge 125$.
+\end{enumerate}
+\end{proposition}
+
+We stress the logical roles: the \emph{lower} bound (iii) on the third
+cumulant is what drives the monotonicity $q_{n+1}\ge q_n$ (it prevents
+the third difference of $\log a_n$ from going negative), while the
+upper bounds (i)--(ii) drive $q_n<1$ and the positivity of the
+contiguous determinants. A one-sided upper bound on $\kappa'''$ alone
+would be vacuous for monotonicity.
+
+The proof of (i)--(ii) and of (iii) on the compact and banded ranges
+assembles $552$ rigorous Arb boxes with directed endpoints, together
+with analytic band certificates and exact rational endpoint envelopes;
+the worst certified box values are
+\[
+\text{(second moment)}\quad 1.2372479\ldots<\tfrac54,
+\qquad
+t^2\kappa'''(t)\le 0.1248013790\ldots<\tfrac18
+\]
+on the compact part, and from the exact endpoint regime onward the
+envelopes, e.g.
+\[
+t\,\kappa''(t)\ \le\
+\tfrac{46606678326443294424723416932878}
+{492590289071124220328797309123325},
+\]
+decrease monotonically. The bound (iii) beyond $T_{71}$ is an
+\emph{effective transfer estimate} from the dominant saddle family of
+the kernel to the full kernel: with $r=r(t)$ the dominant saddle
+parameter defined by $\pi r e^{r}=2t+\tfrac94 r+1$, one proves
+\[
+\kappa'''(t)\ \ge\ -\Bigl[\frac{70}{r}+\frac{45450578214}{t}\Bigr]
+\frac{1}{t^{2}}\qquad (r\ge\tfrac52),
+\]
+whose bracket is $\le\frac{141}{142}$ once $r\ge 71$, i.e.\ $t\ge
+T_{71}$; the intermediate range $125\le t\le T_{71}$ is covered by the
+certified boxes and the analytic band certificates (with the stronger
+constant $\tfrac34$). Full details, including the exact rational
+constants and their monotonicity certificates, are in the artifact.
+
+\subsection{From cumulant bounds to the discrete conditions}
+Since $\log a_n=\kappa(n)-\log(2n)!$, second and third finite
+differences of $\log a_n$ are, by the exact integral representations
+\[
+\Delta^2\kappa(m)
+=\iint_{[0,1]^2}\kappa''\bigl(m+x+y\bigr)\,dx\,dy,
+\qquad
+\Delta^3\kappa(m)
+=\iiint_{[0,1]^3}\kappa'''\bigl(m+x{+}y{+}z\bigr)\,dx\,dy\,dz,
+\]
+controlled two-sidedly by Proposition~\ref{prop:cumulant} (all
+arguments lie in $[n-2,n+1]\subset[125,\infty)$ for $n\ge 127$), while
+the factorial parts are explicit rationals. This yields, for
+$n\ge127$, explicit \emph{rational} upper envelopes $q_n\le X_n<1$ and
+$q_{n+1}/q_n\le S_n$ (Appendix~\ref{app:envelopes}), and with
+$Y_n:=S_nX_n\ (\ge q_{n+1})$ the inequalities
+\[
+X_n<1,\qquad Y_n<1,\qquad H(X_n,Y_n):=1-Y_n-Y_n^{2}(1-X_n)>0
+\]
+are proved by exhibiting coefficient-positive polynomials in
+$m=n-127\ge 0$. The first gives strict $\PF_2$ in the tail. The third
+enters through an exact factorization of the contiguous determinant
+together with a \emph{coupled monotonicity} lemma which is what makes
+the substitution of upper envelopes into $H$ legitimate
+(Appendix~\ref{app:envelopes}, Lemmas~\ref{lem:A3}--\ref{lem:A5});
+combined with $q$-monotonicity ($q_{n+2}\ge q_{n+1}$) this gives
+$D_n>0$ for all $n\ge127$.
+
+The monotonicity $q_{n+1}\ge q_n$ in the tail is precisely where the
+\emph{lower} bound of Proposition~\ref{prop:cumulant}(iii) enters.
+Indeed
+\[
+\log q_{n+1}-\log q_n
+=\Delta^{3}\kappa(n-2)-B_n,
+\qquad
+B_n=\log\frac{(2n+2)(2n+1)(2n-2)(2n-3)}{\bigl((2n)(2n-1)\bigr)^{2}}
+=-\frac{2}{(n-2)^{2}}+O(n^{-3}),
+\]
+with $B_n$ the logarithm of an explicit rational, and the cube
+representation together with (iii) bounds the cumulant term below by
+$-\frac{141}{142}\,(n-2)^{-2}$ (with the stronger constant $\frac34$
+below $T_{71}$), while $-B_n=2(n-2)^{-2}+O(n^{-3})$: the margin is
+essentially a factor of two, and the exact rational bookkeeping shows
+$\log q_{n+1}-\log q_n>0$ for every $n\ge 127$. An upper bound on
+$\kappa'''$ alone would say nothing here. At the seam, the certified
+enclosures extend through $\gamma_{130}$ and certify $q_n<1$ up to
+$n=128$, so for the ratio bounds the certified and analytic ranges
+genuinely overlap at $n\in\{127,128\}$ and agree there; for the
+contiguous determinants the certified range $2\le n\le 126$ and the
+analytic range $n\ge 127$ abut. Starts $m=0,1$ of the
+contiguous determinants are handled explicitly ($m=0$ is triangular;
+$m=1$ follows from $q_2<\tfrac12$ and $q_3>0$).
+
+This proves (ii)--(v) for all $n$, completing
+Theorem~\ref{thm:inputs}, and with it Theorem~\ref{thm:main}. \qed
+
+\section{Sharpness}\label{sec:sharp}
+
+The following two propositions were verified in exact rational
+arithmetic; they are reproduced by a short independent script in the
+artifact, and were re-verified independently by the authors' audit
+layer.
+
+\begin{proposition}\label{prop:cm1}
+Define $(a_n)_{0\le n\le 8}$ by $a_0=1$, $R_1=1$, $R_n=R_{n-1}q_n$ and
+\[
+(q_2,\dots,q_8)=\Bigl(\tfrac{9}{32},\ \tfrac{19}{32},\ \tfrac34,\
+\tfrac{25}{32},\ \tfrac{51}{64},\ \tfrac{15}{16},\ \tfrac{63}{64}\Bigr).
+\]
+Then $q$ is nondecreasing with $q_2\le\tfrac12$, and \emph{every}
+order-$3$ minor of $T(a)$ with rows and columns in $\{0,\dots,8\}$ is
+nonnegative; yet
+\[
+\det\bigl(a_{c_j-r_i}\bigr)_{\substack{r\in(0,1,2,3)\\ c\in(2,4,5,6)}}
+=-\frac{809511725379305979099}{19807040628566084398385987584}<0 .
+\]
+Hence window-$\PF_3$ together with all ratio conditions does not imply
+$\PF_4$.
+\end{proposition}
+
+\begin{proposition}\label{prop:cm2}
+Define $q_2=\tfrac12$ and $q_n=\tfrac{2n-3}{2n}$ for $n\ge3$, with
+$a_0=1$, $R_1=1$. The resulting positive sequence has entire
+generating function, satisfies all ratio conditions (R1)--(R4), and yet
+its degree-$3$ Jensen polynomial $J^{3,0}$ has discriminant
+$-\tfrac{27}{16}<0$ (so is not hyperbolic) and the order-$4$ minor with
+rows $(0,1,2,3)$ and columns $(1,2,3,4)$ equals $-\tfrac{5}{256}<0$.
+The simpler sequence $b_n=2^{-n(n-1)/2}$ ($q_n\equiv\tfrac12$)
+likewise satisfies (R1)--(R4) and has an order-$4$ minor equal to
+$-\tfrac{1}{64}$.
+\end{proposition}
+
+\begin{corollary}
+No consequence of the ratio conditions (R1)--(R4) --- nor of
+window-verified $\PF_3$ itself --- can prove $\PF_4$, nor degree-$3$
+Jensen hyperbolicity, for an abstract sequence. Any extension of
+Theorem~\ref{thm:main} up the ladder must use structural information
+about $\xi$ beyond these invariants.
+\end{corollary}
+
+\begin{remark}
+This corollary sharpens, at the level of exact finite certificates,
+the general expectation that generic positivity hypotheses cannot
+climb the P\'olya frequency ladder. It is also consistent with the
+observation of Farmer \cite{Farmer} that equivalences of RH tend to
+concentrate, rather than dilute, the original difficulty. For kernel
+--- rather than sequence --- total positivity in this landscape, see
+\cite{Michalowski26}, where the de Bruijn--Newman kernel is certified
+not to be $\mathrm{PF}_5$ although its low orders hold.
+\end{remark}
+
+\section{Computational methodology and reproducibility}\label{sec:comp}
+
+All computations enter the proof only through certified interval
+(ball) arithmetic with outward rounding, performed with Arb
+\cite{Johansson17} through \texttt{python-flint}. The assembly layer
+enforces three disciplines:
+
+\begin{enumerate}
+\item \emph{Fail-closed manifests.} Each proof stage is driven by a
+checker that recomputes its claims and refuses to emit its manifest
+unless every comparison is certified; undecidable comparisons abort.
+\item \emph{Pinned dependencies.} A stage consumes earlier stages only
+through files pinned by SHA-256 hash; the final assembly re-verifies
+the full hash chain, so no stale or edited intermediate can enter
+silently.
+\item \emph{Deterministic replay.} Every stage exposes a single
+command that replays its verification from the pinned inputs;
+the top-level replay reproduces the complete proof of
+Theorem~\ref{thm:inputs} and the symbolic expansions behind
+Theorems~\ref{thm:consec} and~\ref{thm:plucker}.
+\end{enumerate}
+
+The artifact further contains: the exact rational countermodels of
+\S\ref{sec:sharp} with an independent $30$-line verifier; the $500$
+random exact tests of each Pl\"ucker identity; and the audit note
+documenting the detection and repair of the aliasing gap in an earlier
+enclosure set, which we include deliberately as part of the
+verification history.
+
+\smallskip
+\noindent\textbf{Artifact.} The frozen supplementary archive
+\texttt{xi-pf3-artifact-v1.zip} contains the proof engines,
+certificates, pinned SHA-256 manifest, and a one-command fail-closed
+replay.  A permanent repository URL or DOI will be inserted after the
+archive is deposited.
+
+\section{Discussion}\label{sec:discussion}
+
+Theorem~\ref{thm:main} places the first unconditional rung on the
+Toeplitz side of the P\'olya frequency ladder for $\xi$ beyond
+log-concavity, forty years after \cite{CNV86} and fifteen after the
+degree-$3$ Jensen statement of \cite{DL11}. We stress what it does
+\emph{not} do: by \S\ref{sec:sharp}, the method is exactly calibrated
+at order $3$, and no statement about $\PF_4$, higher Jensen degrees, or
+RH follows. The countermodels quantify the obstruction: the ratio
+invariants $(R_n,q_n)$, and even full window positivity at order $3$,
+carry no information about order $4$.
+
+What would be needed next is a preservation mechanism special to
+$\xi$. One concrete formulation, which we leave as a problem, arises
+from the exact Laguerre representation of the Jensen polynomials of
+$\xi$ as positive mixtures of hyperbolic Laguerre polynomials against
+the de Bruijn--Newman density: generic positive mixing does not
+preserve hyperbolicity (a two-atom counterexample exists already in
+degree $2$), so any proof must identify a rigidity of this specific
+density --- while \cite{Michalowski26} shows that kernel-level total
+positivity of the same density fails at order $5$ and therefore cannot
+be that rigidity. The difficulty of RH, viewed from this ladder, is
+thereby localized rather than diminished.
+
+\section{Disclosure and acknowledgements}\label{sec:disclosure}
+
+The mathematics in this paper was produced in an extended research
+programme carried out by autonomous large-language-model agents
+operating over a shared persistent memory, under human direction, with
+an independent AI auditor layer; every mathematical claim was
+subsequently reduced to either a human-readable proof (as presented
+above), an exact rational certificate, or a certified ball-arithmetic
+computation with deterministic replay. The human author directed the
+programme, made all publication decisions, and takes full
+responsibility for the correctness of the content. The complete
+research log (some 1,300 hypothesis records, including the failed
+routes and the exact countermodels that redirected the programme) is
+preserved and available on request.
+
+\appendix
+
+\section{Explicit tail envelopes}\label{app:envelopes}
+
+We work in the normalization of \S\ref{sec:inputs}:
+$\kappa(t)=\log\int_0^\infty u^{2t}\Phi(u)\,du$ and
+$\log a_n=\kappa(n)-\log(2n)!$. Throughout $n\ge 127$, so every
+cumulant argument lies in $[n-2,\,n+1]\subset[125,\infty)$. The only
+computer-dependent ingredients of the tail are
+Proposition~\ref{prop:cumulant} itself and the single certificate of
+Lemma~\ref{lem:A5}; Lemmas~\ref{lem:A1}--\ref{lem:A4} are
+self-contained.
+
+\subsection*{Envelopes}
+Set
+\[
+f_n:=\frac{(n-1)(2n-3)}{n(2n-1)},\qquad
+u_n:=\frac{4}{5(n-2)},\qquad
+v_n:=\frac{11}{20(n-2)^{2}},
+\]
+so that $\log q_n=\Delta^{2}\kappa(n-2)+\log f_n$ and
+$\log(q_{n+1}/q_n)=\Delta^{3}\kappa(n-2)+\log(f_{n+1}/f_n)$.
+Proposition~\ref{prop:cumulant}(i)--(ii) give
+$\Delta^{2}\kappa(n-2)\le u_n$ and $\Delta^{3}\kappa(n-2)\le v_n$, and
+with $e^{w}\le 1/(1-w)$ for $0\le w<1$ we obtain the \emph{rational}
+envelopes
+\[
+q_n\ \le\ X_n:=\frac{f_n}{1-u_n},
+\qquad
+\frac{q_{n+1}}{q_n}\ \le\ S_n:=\frac{f_{n+1}/f_n}{1-v_n},
+\qquad
+q_{n+1}\ \le\ Y_n:=S_nX_n .
+\]
+
+\begin{lemma}\label{lem:A1}
+$X_n<1$ for all $n\ge 4$.
+\end{lemma}
+
+\begin{proof}
+$X_n<1$ is $u_n<1-f_n=\frac{8n-6}{2n(2n-1)}$, i.e.\
+$4\cdot 2n(2n-1)<5(n-2)(8n-6)$, i.e.\ $24n^{2}-102n+60>0$, which holds
+for $n\ge 4$.
+\end{proof}
+
+\begin{lemma}\label{lem:A2}
+$Y_n<1$ for all $n\ge 6$.
+\end{lemma}
+
+\begin{proof}
+Since $Y_n=f_{n+1}/\bigl((1-u_n)(1-v_n)\bigr)$ and
+$(1-u_n)(1-v_n)>1-u_n-v_n$, it suffices that
+$u_n+v_n\le 1-f_{n+1}=\frac{8n+2}{(2n+2)(2n+1)}$. Clearing the
+positive denominators, this is
+$(16n-21)(4n^{2}+6n+2)\le 20(8n+2)(n-2)^{2}$, i.e.\
+$96n^{3}-612n^{2}+574n+202\ge 0$, which holds for $n\ge 6$.
+\end{proof}
+
+\subsection*{Exact determinant factorization}
+
+\begin{lemma}\label{lem:A3}
+With $x=q_n$, $y=q_{n+1}$, $z=q_{n+2}$,
+\[
+\frac{D_n}{a_n^{3}}
+=(1-y)^{2}-y^{2}(1-x)(1-z)
+=(1-y)\,H(x,y)+y^{2}(1-x)(z-y),
+\qquad
+H(x,y):=1-y-y^{2}(1-x).
+\]
+In particular, by $q$-monotonicity $z\ge y$,
+\[
+\frac{D_n}{a_n^{3}}\ \ge\ (1-y)\,H(x,y).
+\]
+\end{lemma}
+
+\begin{proof}
+Expressing the nine entries of $D_n$ through $a_n$ and the ratios and
+expanding gives $D_n/a_n^{3}=1-2y+xy^{2}+(1-x)y^{2}z$; both displayed
+forms are elementary rearrangements. (The identity is also replayed
+symbolically in the artifact and was checked on random rational
+sequences.)
+\end{proof}
+
+\subsection*{Coupled monotonicity}
+
+The function $H$ is \emph{increasing} in $x$, so substituting the
+upper envelope $X_n$ for $x$ directly in $H$ would be illegitimate.
+The correct substitution couples the two variables through the ratio.
+
+\begin{lemma}\label{lem:A4}
+Let $\widetilde H(x,s):=H(x,sx)=1-sx-s^{2}x^{2}(1-x)$. Then
+\[
+\frac{\partial\widetilde H}{\partial s}=-x\bigl(1+2sx(1-x)\bigr)<0,
+\qquad
+\frac{\partial\widetilde H}{\partial x}=s\bigl(-1+sx(3x-2)\bigr),
+\]
+and since $3x-2\le x$ for $x\le 1$, one has $sx(3x-2)\le sx^{2}<1$
+whenever $sx^{2}\le S_nX_n^{2}\le Y_n<1$; hence both partial
+derivatives are negative there. Consequently, if $q_n\le X_n$ and
+$q_{n+1}/q_n\le S_n$ with $Y_n=S_nX_n<1$, then
+\[
+H(q_n,q_{n+1})=\widetilde H\bigl(q_n,\tfrac{q_{n+1}}{q_n}\bigr)
+\ \ge\ \widetilde H(X_n,S_n)=H(X_n,Y_n).
+\]
+\end{lemma}
+
+\begin{proof}
+The two derivative identities are direct computations (the first is
+replayed symbolically in the artifact). Monotone descent in $s$ then in
+$x$ gives the inequality; all intermediate points satisfy the domain
+condition $sx^{2}<1$ because $x\le X_n$, $s\le S_n$ and
+$S_nX_n^{2}\le Y_n<1$ by Lemma~\ref{lem:A2}.
+\end{proof}
+
+\begin{lemma}\label{lem:A5}
+$H(X_n,Y_n)>0$ for every $n\ge 127$.
+\end{lemma}
+
+$H(X_n,Y_n)$ is an explicit rational function.  More precisely, with
+$m=n-127$,
+\[
+ H(X_n,Y_n)=
+ \frac{P(m)}
+ {(n+1)^2(2n+1)^2(5n-14)^3(20n^2-80n+69)^2},
+\]
+where
+\begin{align*}
+P(m)={}&66000m^9+71861600m^8+34728981600m^7
+       +9776538943040m^6\\
+ &+1766546204164425m^5+212447203445671919m^4\\
+ &+17002045136190509679m^3+872992942774568354661m^2\\
+ &+26091652886219863549980m
+       +345765753375849332067600.
+\end{align*}
+Every coefficient of $P$ is strictly positive and every denominator
+factor is positive for $n\ge127$, which proves the lemma directly.
+The identity is independently replayed in the artifact.  Sample exact
+values are $H(X_{127},Y_{127})=1.3878\ldots\times10^{-5}$ and
+$H(X_{200},Y_{200})=6.566\ldots\times10^{-6}$ (the true size is
+$\asymp n^{-2}$).
+
+Combining Lemmas~\ref{lem:A2}--\ref{lem:A5}: for $n\ge127$,
+$D_n/a_n^{3}\ge(1-q_{n+1})H(q_n,q_{n+1})
+\ge(1-Y_n)H(X_n,Y_n)>0$, which is the tail closure used in
+\S\ref{sec:inputs}.
+
+\begin{remark}\label{rem:sharp-envelopes}
+The certificate of Lemma~\ref{lem:A5} genuinely lives at second order:
+$1-Y_n$ and $Y_n^{2}(1-X_n)$ agree at order $n^{-1}$, and
+$H(X_n,Y_n)\asymp n^{-2}$. Two nearby traps are worth recording.
+First, the envelope \emph{constants} matter: doubling the exponent
+budgets (as happens if one miscounts the step normalization of
+$\kappa$) makes $H(X_n,Y_n)$ \emph{negative} for all large $n$
+(already $-1.77\times10^{-4}$ at $n=127$), so no certificate can
+exist. Second, the \emph{coupling} of Lemma~\ref{lem:A4} is essential:
+$H$ is increasing in its first argument, and an uncoupled substitution
+of upper envelopes is invalid. An earlier draft of this appendix fell
+into both traps at once; we record them explicitly since either alone
+silently destroys the tail closure.
+\end{remark}
+
+\begin{thebibliography}{99}
+
+\bibitem{ASW52} M.~Aissen, I.~J.~Schoenberg, A.~M.~Whitney,
+\emph{On the generating functions of totally positive sequences~I},
+J. Analyse Math. \textbf{2} (1952), 93--103.
+
+\bibitem{Edrei52} A.~Edrei,
+\emph{On the generating functions of totally positive sequences~II},
+J. Analyse Math. \textbf{2} (1952), 104--109.
+
+\bibitem{CNV86} G.~Csordas, T.~S.~Norfolk, R.~S.~Varga,
+\emph{The Riemann hypothesis and the Tur\'an inequalities},
+Trans. Amer. Math. Soc. \textbf{296} (1986), 521--541.
+
+\bibitem{DL11} D.~K.~Dimitrov, F.~R.~Lucas,
+\emph{Higher order Tur\'an inequalities for the Riemann $\xi$-function},
+Proc. Amer. Math. Soc. \textbf{139} (2011), 1013--1022.
+
+\bibitem{GORZ19} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier,
+\emph{Jensen polynomials for the Riemann zeta function and other
+sequences}, Proc. Natl. Acad. Sci. USA \textbf{116} (2019),
+11103--11110.
+
+\bibitem{GORTTW} M.~Griffin, K.~Ono, L.~Rolen, J.~Thorner, Z.~Tripp,
+I.~Wagner, \emph{Jensen polynomials for the Riemann xi function},
+arXiv:1910.01227.
+
+\bibitem{OSullivan} C.~O'Sullivan,
+\emph{Zeros of Jensen polynomials and asymptotics for the Riemann xi
+function}, arXiv:2007.13582.
+
+\bibitem{PolyaCollected} G.~P\'olya,
+\emph{\"Uber die algebraisch-funktionentheoretischen Untersuchungen von
+J.~L.~W.~V.~Jensen}, Kgl. Danske Vid. Sel. Math.-Fys. Medd. \textbf{7}
+(1927), 3--33.
+
+\bibitem{Fekete13} M.~Fekete, G.~P\'olya,
+\emph{\"Uber ein Problem von Laguerre},
+Rend. Circ. Mat. Palermo \textbf{34} (1912), 89--120.
+
+\bibitem{Karlin68} S.~Karlin, \emph{Total Positivity}, Vol.~I,
+Stanford University Press, 1968.
+
+\bibitem{Pinkus10} A.~Pinkus, \emph{Totally Positive Matrices},
+Cambridge Tracts in Mathematics \textbf{181}, Cambridge University
+Press, 2010.
+
+\bibitem{Hutchinson23} J.~I.~Hutchinson,
+\emph{On a remarkable class of entire functions},
+Trans. Amer. Math. Soc. \textbf{25} (1923), 325--332.
+
+\bibitem{RodgersTao} B.~Rodgers, T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6.
+
+\bibitem{Nuttall11} J.~Nuttall,
+\emph{Determinantal approach to a proof of the Riemann hypothesis},
+arXiv:1111.1128.
+
+\bibitem{Michalowski26} W.~Micha{\l}owski,
+\emph{On the P\'olya frequency order of the de Bruijn--Newman kernel:
+certified failure at order five and the Toeplitz threshold phenomenon},
+arXiv:2602.20313.
+
+\bibitem{Farmer} D.~W.~Farmer,
+\emph{Jensen polynomials are not a plausible route to proving the
+Riemann Hypothesis}, arXiv:2008.07206.
+
+\bibitem{PlattTrudgian} D.~Platt, T.~Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797.
+
+\bibitem{Johansson17} F.~Johansson,
+\emph{Arb: efficient arbitrary-precision midpoint-radius interval
+arithmetic}, IEEE Trans. Computers \textbf{66} (2017), 1281--1292.
+
+\end{thebibliography}
+
+\end{document}
