@@ -17,19 +17,22 @@ computer-assisted parts are supplied as a fail-closed, reproducible artifact.
 
 - [`paper/xi_pf3.pdf`](paper/xi_pf3.pdf): current compiled manuscript.
 - [`paper/xi_pf3.tex`](paper/xi_pf3.tex): current LaTeX source.
-- [`artifact-v1/`](artifact-v1): current v1.0.1 manifest-governed artifact files.
-- [`xi-pf3-artifact-v1.0.1.zip`](xi-pf3-artifact-v1.0.1.zip): current portable archive.
+- [`artifact-v1/`](artifact-v1): current v1.0.2 manifest-governed artifact files.
+- [`xi-pf3-artifact-v1.0.2.zip`](xi-pf3-artifact-v1.0.2.zip): current portable archive.
+- [`xi-pf3-artifact-v1.0.1.zip`](xi-pf3-artifact-v1.0.1.zip): previous portable archive.
 - [`xi-pf3-artifact-v1.zip`](xi-pf3-artifact-v1.zip): original v1.0.0 archive.
 - [`SHA256SUMS`](SHA256SUMS): checksums of the archive, manuscript, and replay
   entry files.
 - [`CITATION.cff`](CITATION.cff): citation metadata.
 
 The original v1.0.0 ZIP remains byte-for-byte identical to the archive deposited
-in the first repository commit. Version 1.0.1 changes packaging only: it adds
-the missing NumPy pin and makes one serialized Windows-path lookup portable.
-No mathematical inequality, certificate value, or theorem statement changed.
+in the first repository commit. Version 1.0.1 added the missing NumPy pin and
+made one serialized Windows-path lookup portable. Version 1.0.2 adds the Zenodo
+DOI, synchronizes the final manuscript source inside the artifact, and makes the
+ZIP builder byte-deterministic. No mathematical inequality, certificate value,
+or theorem statement changed in either maintenance release.
 
-The browsable `artifact-v1/` directory and the v1.0.1 ZIP contain all 266 files
+The browsable `artifact-v1/` directory and the v1.0.2 ZIP contain all 266 files
 governed by `MANIFEST.sha256.json`. Non-manifest Python bytecode caches and the
 auxiliary Windows-reserved filename `NUL.md` are intentionally not duplicated
 in the Git tree; neither is consumed by the replay.
@@ -78,7 +81,7 @@ layers for the computer-assisted steps.
 
 ## Reference environment and timing
 
-Version 1.0.1 is replayed automatically on Ubuntu 24.04 with CPython 3.11 and
+Version 1.0.2 is replayed automatically on Ubuntu 24.04 with CPython 3.11 and
 the exact versions in `artifact-v1/requirements.txt`. The repository view and
 the packaged ZIP are both checked without patching either copy.
 
@@ -95,6 +98,12 @@ took about 46 seconds. These are reference measurements, not performance
 guarantees. A peak-memory bound has not been certified.
 
 ## Integrity
+
+Current v1.0.2 archive SHA-256:
+
+```text
+127E4F08E1C31C5A0B74D1394134FC64CCF3FEAEDB1E78B0F3312FADE6652D5E
+```
 
 Portable v1.0.1 archive SHA-256:
 
@@ -115,8 +124,8 @@ these values.
 
 ## Citation
 
-Please use the metadata in [`CITATION.cff`](CITATION.cff). A DOI can be added
-after archival of the GitHub release.
+Please use the metadata in [`CITATION.cff`](CITATION.cff). The permanent archive
+DOI is [10.5281/zenodo.21360815](https://doi.org/10.5281/zenodo.21360815).
 
 ## Licenses
 

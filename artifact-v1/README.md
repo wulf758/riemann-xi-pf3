@@ -1,7 +1,9 @@
-# Xi PF3 proof artifact v1.0.1
+# Xi PF3 proof artifact v1.0.2
 
 This frozen supplementary artifact accompanies *The Taylor coefficients of the
 Riemann xi-function form a Polya frequency sequence of order 3*.
+
+Permanent archive: https://doi.org/10.5281/zenodo.21360815
 
 ## Scope
 

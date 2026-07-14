@@ -31,6 +31,12 @@ jobs:
       - name: Verify repository checksums
         run: sha256sum --check SHA256SUMS
 
+      - name: Rebuild packaged archive byte-for-byte
+        run: |
+          mkdir -p reports
+          python artifact-v1/tools/build_pf3_artifact.py --target "$RUNNER_TEMP/xi-pf3-artifact-v1.0.2" > reports/archive-build.json
+          cmp xi-pf3-artifact-v1.0.2.zip "$RUNNER_TEMP/xi-pf3-artifact-v1.0.2.zip"
+
       - name: Replay repository artifact
         run: |
           mkdir -p reports
@@ -40,9 +46,9 @@ jobs:
       - name: Replay packaged archive
         run: |
           mkdir -p audit-release
-          unzip -q xi-pf3-artifact-v1.0.1.zip -d audit-release
-          python audit-release/xi-pf3-artifact-v1.0.1/replay.py --verify-only > reports/archive-verify.json
-          python audit-release/xi-pf3-artifact-v1.0.1/replay.py > reports/archive-replay.json
+          unzip -q xi-pf3-artifact-v1.0.2.zip -d audit-release
+          python audit-release/xi-pf3-artifact-v1.0.2/replay.py --verify-only > reports/archive-verify.json
+          python audit-release/xi-pf3-artifact-v1.0.2/replay.py > reports/archive-replay.json
 
       - name: Build independent Linux summary
         run: |

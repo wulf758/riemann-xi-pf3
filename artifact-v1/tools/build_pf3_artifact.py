@@ -2,18 +2,22 @@
 """Build a self-contained, SHA-256-pinned Xi PF3 supplementary artifact."""
 from __future__ import annotations
 import argparse, hashlib, json, re, shutil, zipfile
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_TARGET = ROOT / "artifact" / "xi-pf3-artifact-v1.0.1"
+VERSION = "1.0.2"
+RELEASE_DATE = "2026-07-14"
+DOI = "10.5281/zenodo.21360815"
+DEFAULT_TARGET = ROOT / "artifact" / f"xi-pf3-artifact-v{VERSION}"
 TOOL_PATTERN = re.compile(r"^(?:rh_h13(?:1[0-9]|2[0-6])_|rh_h(?:80[0-9]|81[0-9]|218|908|920|927|943)|claude_(?:d3|h1319|kappa3)).*\.py$")
 RESEARCH_PATTERN = re.compile(r"^(?:h13(?:1[0-9]|2[0-6])_|h(?:80[0-9]|81[0-9]|908|920|927|943)|claude_(?:d3|h1319)).*\.(?:json|md)$")
-EXPLICIT_FILES = ["paper/xi_pf3.tex", "tools/rh_pf3_artifact_replay.py", "tools/build_pf3_artifact.py"]
-README = """# Xi PF3 proof artifact v1.0.1
+EXPLICIT_FILES = ["paper/xi_pf3.tex", "replay.py", "tools/build_pf3_artifact.py"]
+README = f"""# Xi PF3 proof artifact v{VERSION}
 
 This frozen supplementary artifact accompanies *The Taylor coefficients of the
 Riemann xi-function form a Polya frequency sequence of order 3*.
+
+Permanent archive: https://doi.org/{DOI}
 
 ## Scope
 
@@ -62,16 +66,25 @@ def selected_files() -> list[Path]:
     return sorted(files)
 
 def write_metadata(target: Path) -> None:
-    (target / "README.md").write_text(README, encoding="utf-8")
-    (target / "requirements.txt").write_text(
-        "sympy==1.14.0\npython-flint==0.8.0\nmpmath==1.3.0\nnumpy==2.3.1\n",
-        encoding="utf-8",
+    (target / "README.md").write_bytes(README.encode("utf-8"))
+    (target / "requirements.txt").write_bytes(
+        "sympy==1.14.0\npython-flint==0.8.0\nmpmath==1.3.0\nnumpy==2.3.1\n".encode("utf-8")
     )
-    (target / "ARTIFACT.json").write_text(json.dumps({
-        "schema": "xi_pf3_artifact.v1", "title": "Xi PF3 proof artifact", "version": "1.0.1",
-        "built_on": date.today().isoformat(), "entrypoint": "python replay.py",
-        "paper": "paper/xi_pf3.tex", "permanent_url_or_doi": None,
-    }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (target / "ARTIFACT.json").write_bytes((json.dumps({
+        "schema": "xi_pf3_artifact.v1", "title": "Xi PF3 proof artifact", "version": VERSION,
+        "built_on": RELEASE_DATE, "entrypoint": "python replay.py",
+        "paper": "paper/xi_pf3.tex", "permanent_url_or_doi": f"https://doi.org/{DOI}",
+    }, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+
+def write_deterministic_archive(target: Path, archive: Path) -> None:
+    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as handle:
+        for path in sorted(candidate for candidate in target.rglob("*") if candidate.is_file()):
+            name = (Path(target.name) / path.relative_to(target)).as_posix()
+            info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3
+            info.external_attr = 0o100644 << 16
+            handle.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
 
 def build(target: Path) -> tuple[Path, Path]:
     if target.exists():
@@ -80,8 +93,6 @@ def build(target: Path) -> tuple[Path, Path]:
     for source in selected_files():
         relative = source.relative_to(ROOT)
         destination = target / relative
-        if relative.as_posix() == "tools/rh_pf3_artifact_replay.py":
-            destination = target / "replay.py"
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
     write_metadata(target)
@@ -90,11 +101,9 @@ def build(target: Path) -> tuple[Path, Path]:
         records.append({"path": path.relative_to(target).as_posix(), "size_bytes": path.stat().st_size, "sha256": sha256(path)})
     manifest = {"schema": "xi_pf3_artifact_manifest.v1", "file_count": len(records), "files": records}
     manifest_path = target / "MANIFEST.sha256.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    archive = target.with_suffix(".zip")
-    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as handle:
-        for path in sorted(candidate for candidate in target.rglob("*") if candidate.is_file()):
-            handle.write(path, Path(target.name) / path.relative_to(target))
+    manifest_path.write_bytes((json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+    archive = target.with_name(target.name + ".zip")
+    write_deterministic_archive(target, archive)
     return manifest_path, archive
 
 def main() -> int:

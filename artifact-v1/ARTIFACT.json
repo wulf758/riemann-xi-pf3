@@ -1,9 +1,9 @@
 {
-  "built_on": "2026-07-12",
+  "built_on": "2026-07-14",
   "entrypoint": "python replay.py",
   "paper": "paper/xi_pf3.tex",
-  "permanent_url_or_doi": null,
+  "permanent_url_or_doi": "https://doi.org/10.5281/zenodo.21360815",
   "schema": "xi_pf3_artifact.v1",
   "title": "Xi PF3 proof artifact",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

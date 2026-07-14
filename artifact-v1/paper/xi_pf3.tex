@@ -1,12 +1,21 @@
 \documentclass[11pt]{amsart}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage[margin=1.15in]{geometry}
 \usepackage{xcolor}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+  pdftitle={The Taylor coefficients of the Riemann xi-function form a Polya frequency sequence of order 3},
+  pdfauthor={Cyril Rodaro},
+  pdfsubject={Polya frequency order of the Riemann xi-function coefficients},
+  pdfkeywords={Riemann xi-function, Polya frequency sequences, total positivity, Toeplitz minors}
+}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -23,10 +32,10 @@
 
 \title[The $\xi$ coefficients form a $\PF_3$ sequence]{The Taylor coefficients of the Riemann $\xi$-function\\ form a P\'olya frequency sequence of order $3$}
 
-% AUTHOR PLACEHOLDER — to be completed before submission
-\author{[Author name]}
-\address{[Affiliation or ``Independent researcher'']}
-\email{[email]}
+\author{Cyril Rodaro}
+\address{Independent researcher}
+\email{cyril-rodaro@outlook.fr}
+\thanks{Permanent archive: \href{https://doi.org/10.5281/zenodo.21360815}{doi:10.5281/zenodo.21360815}.}
 
 \date{July 2026}
 
@@ -102,6 +111,8 @@ if RH holds}. Total positivity of finite order therefore provides a
 ladder of unconditional statements converging to RH: for $r\ge 1$, the
 sequence is $\PF_r$ when every minor of $T(a)$ of order at most $r$ is
 nonnegative.
+Classical sources and modern treatments of this circle of ideas include
+\cite{Fekete13,Hutchinson23,Karlin68,Pinkus10,PolyaCollected}.
 
 The history of this ladder, and of its close relative built from Jensen
 polynomials, is short. Order $2$ --- log-concavity of $(a_n)$, which
@@ -194,8 +205,9 @@ $r=\infty$/$d=\infty$, where both are RH.
 \subsection*{Computer assistance and reproducibility}
 Steps (C) and parts of (D) are computer-assisted in the tradition of
 \cite{PlattTrudgian}: every numerical claim entering the proof is a
-certified ball-arithmetic enclosure with outward rounding, produced by
-open-source tools (Arb via \texttt{python-flint}), assembled by a
+certified ball-arithmetic enclosure with outward rounding, produced
+with Arb through the open-source \texttt{python-flint} bindings and
+assembled by a
 fail-closed checker that pins the exact inputs by cryptographic hash
 and refuses to report success unless every dependency replays. The
 complete artifact (code, certificates, manifests, replay instructions)
@@ -280,7 +292,7 @@ $(c_0,c_1,c_2)$.
 
 The proof splits into three families according to $c_0$.
 
-\subsection{Columns $(0,j,k)$}
+\subsection{Columns \texorpdfstring{$(0,j,k)$}{(0,j,k)}}
 An exact factorization gives
 \begin{equation}\label{eq:fam0}
 \minor{(0,1,2)}{(0,j,k)}
@@ -290,7 +302,7 @@ An exact factorization gives
 which is nonnegative by (R1) since $j-1<k-1$. (For $j\le 2$ the minor
 is triangular.)
 
-\subsection{Columns $(1,j,k)$}
+\subsection{Columns \texorpdfstring{$(1,j,k)$}{(1,j,k)}}
 With $G_c:=R_{c-1}\,(R_1-R_c)$ one has the exact factorization
 \begin{equation}\label{eq:fam1}
 \minor{(0,1,2)}{(1,j,k)}
@@ -302,7 +314,7 @@ Monotonicity of $c\mapsto G_c$ on $c\ge 2$ is exactly where (R2) and
 anchored inequality $q_2\le\tfrac12$ together with $q$ nondecreasing
 forces $G$ nonincreasing, hence \eqref{eq:fam1} is nonnegative.
 
-\subsection{Columns $(i,j,k)$, $i\ge 2$}
+\subsection{Columns \texorpdfstring{$(i,j,k)$, $i\ge 2$}{(i,j,k), i >= 2}}
 Here the minor factors as a positive product times the orientation
 determinant of the three planar points
 \[
@@ -330,7 +342,7 @@ of \S\ref{sec:sharp} show the conclusion cannot be strengthened to
 $\PF_4$.
 \end{remark}
 
-\section{The Pl\"ucker completion}\label{sec:plucker}
+\section{The \texorpdfstring{Pl\"ucker}{Plucker} completion}\label{sec:plucker}
 
 We prove Theorem~\ref{thm:plucker}. All identities keep the column
 triple $C=(c_0,c_1,c_2)$ fixed and vary rows; $\minor{(x,y,z)}{}$
@@ -350,7 +362,7 @@ strictly, term by term, because $R$ is strictly decreasing. Thus every
 order-$2$ minor is nonnegative, and strictly positive unless it is
 structurally zero.
 
-\subsection{The auxiliary row $d=c_1+1$}
+\subsection{The auxiliary row \texorpdfstring{$d=c_1+1$}{d = c1 + 1}}
 For any rows $i<j<d$ with $d:=c_1+1$, the row of $T(a)$ indexed by $d$
 restricted to the columns $C$ is $(0,0,a_{c_2-c_1-1})$, whence the
 exact factorization
@@ -433,7 +445,7 @@ $500$ random integer matrices each, in addition to the symbolic
 expansion replayed in the artifact.
 \end{remark}
 
-\section{The inputs for $\xi$: certified range and analytic tail}
+\section{The inputs for \texorpdfstring{$\xi$}{xi}: certified range and analytic tail}
 \label{sec:inputs}
 
 We now prove Theorem~\ref{thm:inputs}. Recall the classical
@@ -454,7 +466,7 @@ M_t:=\int_0^\infty u^{t}\,\Phi(u)\,du ,
 so $(M_t)_{t>0}$ is the moment family of a fixed positive density and
 in particular $a_n>0$, proving (i).
 
-\subsection{Certified range $2\le n\le 126$}
+\subsection{Certified range \texorpdfstring{$2\le n\le 126$}{2 <= n <= 126}}
 Rigorous enclosures of $\gamma_2,\dots,\gamma_{130}$ are computed in
 ball arithmetic with directed outward rounding, using a
 discretization of \eqref{eq:moment} whose aliasing error is bounded
@@ -568,13 +580,14 @@ $D_n>0$ for all $n\ge127$.
 The monotonicity $q_{n+1}\ge q_n$ in the tail is precisely where the
 \emph{lower} bound of Proposition~\ref{prop:cumulant}(iii) enters.
 Indeed
-\[
+\begin{align*}
 \log q_{n+1}-\log q_n
-=\Delta^{3}\kappa(n-2)-B_n,
-\qquad
-B_n=\log\frac{(2n+2)(2n+1)(2n-2)(2n-3)}{\bigl((2n)(2n-1)\bigr)^{2}}
-=-\frac{2}{(n-2)^{2}}+O(n^{-3}),
-\]
+  &=\Delta^{3}\kappa(n-2)-B_n,\\
+B_n
+  &=\log\frac{(2n+2)(2n+1)(2n-2)(2n-3)}
+    {\bigl((2n)(2n-1)\bigr)^{2}}\\
+  &=-\frac{2}{(n-2)^{2}}+O(n^{-3}).
+\end{align*}
 with $B_n$ the logarithm of an explicit rational, and the cube
 representation together with (iii) bounds the cumulant term below by
 $-\frac{141}{142}\,(n-2)^{-2}$ (with the stronger constant $\frac34$
@@ -597,7 +610,7 @@ Theorem~\ref{thm:inputs}, and with it Theorem~\ref{thm:main}. \qed
 
 The following two propositions were verified in exact rational
 arithmetic; they are reproduced by a short independent script in the
-artifact, and were re-verified independently by the authors' audit
+artifact, and were re-verified independently by the independent AI auditor
 layer.
 
 \begin{proposition}\label{prop:cm1}
@@ -679,10 +692,15 @@ verification history.
 
 \smallskip
 \noindent\textbf{Artifact.} The frozen supplementary archive
-\texttt{xi-pf3-artifact-v1.zip} contains the proof engines,
+\texttt{xi-pf3-artifact-v1.0.2.zip} contains the proof engines,
 certificates, pinned SHA-256 manifest, and a one-command fail-closed
-replay.  A permanent repository URL or DOI will be inserted after the
-archive is deposited.
+replay. The manuscript and artifact are archived together at
+\href{https://doi.org/10.5281/zenodo.21360815}{doi:10.5281/zenodo.21360815},
+and the versioned source is available at
+\url{https://github.com/wulf758/riemann-xi-pf3}.
+\par\noindent
+The archive's SHA-256 is listed
+in the deposited \texttt{SHA256SUMS} file.
 
 \section{Discussion}\label{sec:discussion}
 
@@ -703,7 +721,8 @@ $\xi$ as positive mixtures of hyperbolic Laguerre polynomials against
 the de Bruijn--Newman density: generic positive mixing does not
 preserve hyperbolicity (a two-atom counterexample exists already in
 degree $2$), so any proof must identify a rigidity of this specific
-density --- while \cite{Michalowski26} shows that kernel-level total
+density (for the de Bruijn--Newman constant itself, see
+\cite{RodgersTao}) --- while \cite{Michalowski26} shows that kernel-level total
 positivity of the same density fails at order $5$ and therefore cannot
 be that rigidity. The difficulty of RH, viewed from this ladder, is
 thereby localized rather than diminished.
@@ -863,10 +882,13 @@ values are $H(X_{127},Y_{127})=1.3878\ldots\times10^{-5}$ and
 $H(X_{200},Y_{200})=6.566\ldots\times10^{-6}$ (the true size is
 $\asymp n^{-2}$).
 
-Combining Lemmas~\ref{lem:A2}--\ref{lem:A5}: for $n\ge127$,
-$D_n/a_n^{3}\ge(1-q_{n+1})H(q_n,q_{n+1})
-\ge(1-Y_n)H(X_n,Y_n)>0$, which is the tail closure used in
-\S\ref{sec:inputs}.
+Combining Lemmas~\ref{lem:A2}--\ref{lem:A5}, for $n\ge127$ we have
+\[
+\frac{D_n}{a_n^{3}}
+\ge(1-q_{n+1})H(q_n,q_{n+1})
+\ge(1-Y_n)H(X_n,Y_n)>0.
+\]
+This is the tail closure used in \S\ref{sec:inputs}.
 
 \begin{remark}\label{rem:sharp-envelopes}
 The certificate of Lemma~\ref{lem:A5} genuinely lives at second order:
