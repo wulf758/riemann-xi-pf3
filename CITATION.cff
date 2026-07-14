@@ -7,10 +7,11 @@ authors:
     given-names: Cyril
     affiliation: Independent researcher
     email: cyril-rodaro@outlook.fr
-version: 1.0.1
-date-released: 2026-07-12
+version: 1.0.2
+date-released: 2026-07-14
+doi: 10.5281/zenodo.21360815
 repository-code: "https://github.com/wulf758/riemann-xi-pf3"
-url: "https://github.com/wulf758/riemann-xi-pf3"
+url: "https://doi.org/10.5281/zenodo.21360815"
 keywords:
   - Riemann xi-function
   - Pólya frequency sequences
@@ -26,4 +27,5 @@ preferred-citation:
       affiliation: Independent researcher
       email: cyril-rodaro@outlook.fr
   year: 2026
-  url: "https://github.com/wulf758/riemann-xi-pf3"
+  doi: 10.5281/zenodo.21360815
+  url: "https://doi.org/10.5281/zenodo.21360815"

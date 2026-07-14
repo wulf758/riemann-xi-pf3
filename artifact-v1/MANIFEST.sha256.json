@@ -3,18 +3,18 @@
   "files": [
     {
       "path": "ARTIFACT.json",
-      "sha256": "D27C5285A78D1701DF1598E27D8D9530DBEFFB85D0E0C932476993EFB352CB0E",
-      "size_bytes": 231
-    },
-    {
-      "path": "paper/xi_pf3.tex",
-      "sha256": "A8AFFD17C1A837B91DFA59DCB360A3DA6EF30FB5C62CE7AB783C8EF8E5D77629",
-      "size_bytes": 41343
+      "sha256": "F7A9FD77DCBD22381500EDB3D1B18CE6CD46C3C7FF2D19FFD28996F5AC2E6D5A",
+      "size_bytes": 259
     },
     {
       "path": "README.md",
-      "sha256": "E91F586A270AA5A5142B9000FB3A90F66463B084BEF7543CE62E3186766EB379",
-      "size_bytes": 1112
+      "sha256": "0E3C5846B1CCFC52E33B48655B31CE611965CA41B60DA694CC6B3E6BF44C5CAB",
+      "size_bytes": 1139
+    },
+    {
+      "path": "paper/xi_pf3.tex",
+      "sha256": "1F44641A8B20BAD669EEE42E053B19D62DBAC759DBC3A737BA8D4AB80570664C",
+      "size_bytes": 42382
     },
     {
       "path": "replay.py",
@@ -23,8 +23,8 @@
     },
     {
       "path": "requirements.txt",
-      "sha256": "58624DE1BE68D3EC42CEB99815D50CC3F9983518233BF703749835AEA721BA02",
-      "size_bytes": 65
+      "sha256": "FE15F1A5A9D1DF2336115F860F32EBC80F18443ADA4CC7564ED806D07D6D9EEC",
+      "size_bytes": 61
     },
     {
       "path": "research/riemann/claude_d3_alias_repaired_finite_certificate.json",
@@ -848,8 +848,8 @@
     },
     {
       "path": "tools/build_pf3_artifact.py",
-      "sha256": "D53956409179182DE4FCD6B149EEA6E640C196DFB26811B726EF256B0FE383B9",
-      "size_bytes": 5154
+      "sha256": "1FE508D28F20E46A5AB10CC6713625129EBBC88C84FF69E2ABB9217C4D58FE5B",
+      "size_bytes": 5677
     },
     {
       "path": "tools/claude_d3_alias_repaired_finite_certificate.py",
