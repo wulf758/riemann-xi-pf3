@@ -77,14 +77,14 @@ def write_metadata(target: Path) -> None:
     }, indent=2, sort_keys=True) + "\n").encode("utf-8"))
 
 def write_deterministic_archive(target: Path, archive: Path) -> None:
-    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as handle:
+    with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_STORED) as handle:
         for path in sorted(candidate for candidate in target.rglob("*") if candidate.is_file()):
             name = (Path(target.name) / path.relative_to(target)).as_posix()
             info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.compress_type = zipfile.ZIP_STORED
             info.create_system = 3
             info.external_attr = 0o100644 << 16
-            handle.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+            handle.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_STORED)
 
 def build(target: Path) -> tuple[Path, Path]:
     if target.exists():

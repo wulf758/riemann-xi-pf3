@@ -848,8 +848,8 @@
     },
     {
       "path": "tools/build_pf3_artifact.py",
-      "sha256": "89975540F364B8AB57EF30F68F230AA566DEEE092B2E4841F0CF577E4CCA257C",
-      "size_bytes": 5568
+      "sha256": "3760059BCF0EDEFBE63A465434379D1FBBE194785668F34AD68C64300A84DCBF",
+      "size_bytes": 5528
     },
     {
       "path": "tools/claude_d3_alias_repaired_finite_certificate.py",
