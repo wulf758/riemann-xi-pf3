@@ -63,7 +63,13 @@ def selected_files() -> list[Path]:
     missing = [str(path) for path in files if not path.is_file()]
     if missing:
         raise FileNotFoundError("missing selected artifact files: " + ", ".join(missing))
-    return sorted(files)
+    return sorted(files, key=lambda path: path.relative_to(ROOT).as_posix())
+
+def sorted_tree_files(root: Path) -> list[Path]:
+    return sorted(
+        (path for path in root.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(root).as_posix(),
+    )
 
 def write_metadata(target: Path) -> None:
     (target / "README.md").write_bytes(README.encode("utf-8"))
@@ -78,7 +84,7 @@ def write_metadata(target: Path) -> None:
 
 def write_deterministic_archive(target: Path, archive: Path) -> None:
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_STORED) as handle:
-        for path in sorted(candidate for candidate in target.rglob("*") if candidate.is_file()):
+        for path in sorted_tree_files(target):
             name = (Path(target.name) / path.relative_to(target)).as_posix()
             info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_STORED
@@ -97,7 +103,7 @@ def build(target: Path) -> tuple[Path, Path]:
         shutil.copy2(source, destination)
     write_metadata(target)
     records = []
-    for path in sorted(candidate for candidate in target.rglob("*") if candidate.is_file()):
+    for path in sorted_tree_files(target):
         records.append({"path": path.relative_to(target).as_posix(), "size_bytes": path.stat().st_size, "sha256": sha256(path)})
     manifest = {"schema": "xi_pf3_artifact_manifest.v1", "file_count": len(records), "files": records}
     manifest_path = target / "MANIFEST.sha256.json"

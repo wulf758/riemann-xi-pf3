@@ -7,14 +7,14 @@
       "size_bytes": 259
     },
     {
-      "path": "paper/xi_pf3.tex",
-      "sha256": "1F44641A8B20BAD669EEE42E053B19D62DBAC759DBC3A737BA8D4AB80570664C",
-      "size_bytes": 42382
-    },
-    {
       "path": "README.md",
       "sha256": "0E3C5846B1CCFC52E33B48655B31CE611965CA41B60DA694CC6B3E6BF44C5CAB",
       "size_bytes": 1139
+    },
+    {
+      "path": "paper/xi_pf3.tex",
+      "sha256": "1F44641A8B20BAD669EEE42E053B19D62DBAC759DBC3A737BA8D4AB80570664C",
+      "size_bytes": 42382
     },
     {
       "path": "replay.py",
@@ -848,8 +848,8 @@
     },
     {
       "path": "tools/build_pf3_artifact.py",
-      "sha256": "3760059BCF0EDEFBE63A465434379D1FBBE194785668F34AD68C64300A84DCBF",
-      "size_bytes": 5528
+      "sha256": "1FE508D28F20E46A5AB10CC6713625129EBBC88C84FF69E2ABB9217C4D58FE5B",
+      "size_bytes": 5677
     },
     {
       "path": "tools/claude_d3_alias_repaired_finite_certificate.py",
